@@ -1,0 +1,295 @@
+/* COLORES:
+azul mas fuerte: #3657F7
+azul mas oscuro: #1F58A5
+"violeta": #6243F7
+verde claro: #00FFCB
+verde oscuro: #00A987
+gris: #DAD9DE
+negro: #212121
+blanco: #ffffff
+ */
+
+ @import  url("../css/partials/header.css");
+ @import  url("../css/partials/footer.css");
+ @import  url("../css/partials/containerService.css");
+ @import url("../css/partials/botton.css");
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Roboto", sans-serif;
+    height: fit-content;
+  }
+
+   /* ------ MAIN ----- */
+
+   main {
+    width: 100%;
+    height: 100%;
+   }
+
+   section {
+    width: 100%;
+    height: 100%;
+   }
+
+   /* ------ section Search ----- */
+
+   .containerSearchBar {
+    width: 100%;
+    height: 60vh;
+    margin: 0em 0em 0em 0em;
+    background-image: url(../images/bkSections.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+   }
+
+   .title {
+    grid-area: title;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #ffff;
+    margin-bottom: 0.5em;
+    margin-top: 50px;
+    text-align: center;
+   }
+
+   .searchBar1 {
+    grid-area: searchBar1;
+    width: 70%;
+    height: 10px;
+   }
+
+   .searchBar2 {
+    grid-area: searchBar2;
+    width: 70%;
+    height: auto;
+   }
+
+   .searchBar3 {
+    grid-area: searchBar3;
+    width: 70%;
+    height: auto;
+    margin-bottom: 50px;
+   }
+
+   .searchBar1 i, .searchBar2 i,  .searchBar3 i {
+    position: absolute;
+    z-index: 22222;
+    margin-top: 6px;
+    margin-left: 10px;
+   }
+
+   .searchBar1 input, .searchBar2 input, .searchBar3 input {
+    width: 100%;
+    position: relative;
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    border: none;
+    padding-inline-start: 40px;
+    font-size: 13px;
+   }
+
+   .searchBar1 input::placeholder, .searchBar2 input::placeholder, .searchBar3 input::placeholder {
+    padding-inline-start: 0px;
+
+  }
+  
+  .searchBar1 .input:focus, .searchBar2 .input:focus, .searchBar3 .input:focus {
+    outline: 2px solid #00ffcb;
+  }
+
+   .containerSearchBar {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 130px 40px 40px 40px;
+    grid-template-areas: 
+      "title"
+      "searchBar1"
+      "searchBar2"
+      "searchBar3"
+    ;
+    justify-items: center;
+    gap: 10px;
+   }
+
+  /* ------ section Coder Laywer service Grid ----- */
+
+  .category {
+    grid-area: category;
+  }
+
+  .category h2 {
+    grid-area: category;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .category h2 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #6243f7;
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    padding: 0.5em 0.5em;
+  }
+
+  .containerService {
+    grid-area: containerService;
+  }
+
+  /* Container Service */
+
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .cardCurso {
+    background-color: #000000;
+  }
+
+  .cardCurso:hover {
+    border: 3px solid #00ffcb;
+  }
+
+  .sub {
+    color: #ffff;
+  }
+
+.preBtnCart1 {
+  left: 0;
+}
+.nxtBtnCart1 {
+  right: 0;
+}
+.preBtnCart1 i,
+.nxtBtnCart1 i {
+  opacity: 0.2;
+}
+.preBtnCart1:hover i,
+.nxtBtnCart1:hover i {
+  opacity: 1;
+}
+
+.sectionBkg {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "category"
+      "containerService"
+    ;
+    justify-items: center;
+    height: auto;
+  }
+
+
+/** TABLET */
+@media screen and (min-width: 600px) {
+  
+ 
+/* ------ section Coder Laywer Search  Grid ----- */
+
+.containerSearchBar {
+    height: 40vh;
+}
+
+.title {
+    font-size: 2.5rem;
+   }
+
+   .searchBar1, .searchBar2, .searchBar3 {
+    width: 40%;
+   }
+/* ------ section Coder Laywer categories Grid ----- */
+
+  .categoryFirst h2{
+      font-size: 2rem;
+    }
+  .category h2 {
+      font-size: 2rem;
+  }
+  .nameCourses .navListService .navItem {
+    font-size: 1.2rem;
+  }
+
+  .containerCursos {
+    margin: 0em auto;
+    width: auto;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .containerCardsServices {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .sectionBkg {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+      "category category"
+      "containerService containerService"
+    ;
+    justify-items: center;
+    height: auto;
+  }
+
+}
+
+/** DESKTOP */
+@media screen and (min-width : 1024px){
+
+/* ------ section Coder Laywer Search  Grid ----- */
+.containerSearchBar {
+    height: 40vh;
+}
+
+.title {
+    font-size: 3rem;
+    }
+
+.searchBar1, .searchBar2, .searchBar3 {
+    width: 30%;
+}
+
+/* ------ section Coder Laywer service Grid ----- */
+
+  .categoryFirst h2{
+      font-size: 2.5rem;
+    }
+  .category h2 {
+      font-size: 2.5rem;
+  }
+  .nameCourses .navListService .navItem {
+    font-size: 1.5rem;
+  }
+
+  .containerCursos {
+    margin: 0em auto;
+    width: auto;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .containerCardsServices {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+ 
+}

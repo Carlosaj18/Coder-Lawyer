@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NavBar - Community</title>
+    <script
+      src="https://kit.fontawesome.com/3964fc737d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/community.css" />
+  </head>
+  <body>
+    <header id="topHeader">
+      <nav class="navBar">
+        <!-- container Logo & Search Bar -->
+        <div class="containerLeft">
+          <!-- Logo Coder Lawyer-->
+          <a class="logo" href="../index.html">
+            <img src="../images/LogoCoderLawyer.jpg" alt="Logo Coder Lawyer" />
+          </a>
+          <div class="search">
+            <i class="fas fa-search"></i>
+            <input
+              class="input"
+              type="search"
+              name="buscar"
+              placeholder="What do you want to Learning?"
+            />
+          </div>
+        </div>
+        <!-- shopping car & subMenu - Change if it is guest or student/teacher-->
+        <div class="containerRight">
+          <!-- icons -->
+          <div class="buttonsIcons">
+            <!-- shopping Cart Icon -->
+            <button class="shoppingCart" onclick="openNav()">
+              <i class="fas fa-shopping-cart"></i>
+            </button>
+            <!-- profile Icon -->
+            <div class="dropDown">
+              <button class="dropbtn">
+                <i class="far fa-user-circle"></i>
+              </button>
+              <!-- submenu students-->
+              <div class="dropdownContent" id="subMenu">
+                <div class="dropHeader">
+                  <i class="far fa-user-circle"></i>
+                  <h4>Hi Student, Carlos!</h4>
+                </div>
+                <!-- submenu Links -->
+                <ul class="content">
+                  <li class="navList">
+                    <a href="../subMenuSections/myCourses.html">My Courses</a>
+                  </li>
+                  <li class="navList">
+                    <a href="../subMenuSections/mySchools.html">My Schools</a>
+                  </li>
+                  <li class="navList">
+                    <a href="../subMenuSections/myChallanges.html"
+                      >My Challanges</a
+                    >
+                  </li>
+                </ul>
+                <ul class="content">
+                  <li class="navList">
+                    <a href="../subMenuSections/configuration.html"
+                      >Configuration</a
+                    >
+                  </li>
+                  <li class="navList">Payment Methods</li>
+                  <li class="navList">
+                    <a href="../subMenuSections/purchaseHistory.html"
+                      >Purchase History</a
+                    >
+                  </li>
+                </ul>
+                <ul class="content">
+                  <li class="navList">Languages</li>
+                </ul>
+                <ul class="content">
+                  <li class="navList">
+                    <a href="../subMenuSections/help.html">Help</a>
+                  </li>
+                  <li class="navList"><a href="#"> Log out </a></li>
+                </ul>
+              </div>
+              <!-- submenu guest -->
+              <div class="dropdownContent" id="subMenuGuest">
+                <ul class="outline">
+                  <li><a href="#">Registration</a></li>
+                  <li><a href="#">Login</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- heart Icon -->
+            <button class="heart">
+              <i class="far fa-heart"></i>
+            </button>
+          </div>
+        </div>
+        <!-- NabBar redirections Links -->
+        <div class="buttonResponsive" id="toggleButton">
+          <!-- App Menu Responsive-->
+          <i class="fas fa-bars"> </i>
+          <!-- navbar links - Change if it is guest, student or teacher -->
+          <div class="containerLinks" id="navBarStudent">
+            <ul class="navList">
+              <li class="navItem">
+                <a class="border" href="../navBarSections/services.html"
+                  >Courses</a
+                >
+              </li>
+              <li class="navItem">
+                <a class="border" href="../navBarSections/teachers.html"
+                  >Teachers</a
+                >
+              </li>
+              <li class="navItem">
+                <a class="border" href="../navBarSections/community.html"
+                  >Community</a
+                >
+              </li>
+              <li class="navItem">
+                <a class="border" href="../navBarSections/blog.html">Blog</a>
+              </li>
+              <li class="navItem">
+                <a class="border" href="#">En</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- section Search -->
+      <section>
+        <div class="containerSearchBar">
+          <div class="titleHeader">
+            <p>Community</p>
+          </div>
+          <div class="searchBar1">
+            <i class="fas fa-search"></i>
+            <input
+              class="input"
+              type="search"
+              name="buscar"
+              placeholder="How can we help?"
+            />
+          </div>
+          <div class="categories">
+            <div class="sections1">Best Courses</div>
+            <div class="sections2">How to het a Job?</div>
+            <div class="sections3">Questions Challanges</div>
+          </div>
+        </div>
+      </section>
+      <!-- section categories -->
+      <section class="sectionText">
+        <div class="containerText">
+          <div class="ContainerMainSearch">
+            <p class="title">Questions Challanges</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. A lectus
+              eros lorem amet odio nunc id semper volutpat. Rhoncus,
+              pellentesque tincidunt nisi felis, fermentum ut. Vestibulum donec
+              purus euismod orci. Volutpat, nulla condimentum arcu, pulvinar
+              tincidunt.
+            </p>
+          </div>
+          <div class="ContainerAnswers">
+            <p class="title">Quiz 1</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. A lectus
+              eros lorem amet odio nunc id semper volutpat. Rhoncus,
+              pellentesque tincidunt nisi felis, fermentum ut. Vestibulum donec
+              purus euismod orci. Volutpat, nulla condimentum arcu, pulvinar
+              tincidunt.
+            </p>
+          </div>
+          <div class="ContainerAnswers">
+            <p class="title">Quiz 2</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. A lectus
+              eros lorem amet odio nunc id semper volutpat. Rhoncus,
+              pellentesque tincidunt nisi felis, fermentum ut. Vestibulum donec
+              purus euismod orci. Volutpat, nulla condimentum arcu, pulvinar
+              tincidunt.
+            </p>
+          </div>
+          <div class="ContainerAnswers">
+            <p class="title">Quiz 3</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. A lectus
+              eros lorem amet odio nunc id semper volutpat. Rhoncus,
+              pellentesque tincidunt nisi felis, fermentum ut. Vestibulum donec
+              purus euismod orci. Volutpat, nulla condimentum arcu, pulvinar
+              tincidunt.
+            </p>
+          </div>
+        </div>
+        <div class="containerArticles">
+          <div class="articles">Articulos Sugeridos</div>
+          <p><a href="#">> lorem ipsu blabla</a></p>
+          <p><a href="#">> lorem ipsu blabla</a></p>
+          <p><a href="#">> lorem ipsu blabla</a></p>
+          <p><a href="#">> lorem ipsu blabla</a></p>
+          <p><a href="#">> lorem ipsu blabla</a></p>
+          <p><a href="#">> lorem ipsu blabla</a></p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <p>Creado por:</p>
+        <ul>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/carlos-alberto-jaramillo-portilla-732552113"
+              target="_blank"
+            >
+              Carlos Jaramillo
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="redesFooter">
+        <a href="#" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

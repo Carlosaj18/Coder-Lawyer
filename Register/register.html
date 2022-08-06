@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <script
+      src="https://kit.fontawesome.com/3964fc737d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/register.css" />
+  </head>
+  <body>
+    <header>
+      <div class="imageLoginMobile">
+        <img src="../images/LogoCoderLawyer.jpg" alt="logo" class="logo" />
+      </div>
+      <div class="hamburger">
+        <i class="fas fa-bars"> </i>
+      </div>
+    </header>
+    <main class="mainContent">
+      <!-- Left Container-->
+      <section class="leftContainer">
+        <div class="containerBkg">
+          <div class="flexBkgLogin">
+            <div>
+              <img
+                src="../images/LogoCoderLawyer.jpg"
+                alt="logo"
+                class="logo"
+              />
+            </div>
+            <ul class="icons">
+              <li type="none">
+                <i class="fab fa-facebook-f" aria-hidden="true"> </i>
+              </li>
+              <li type="none">
+                <i class="fab fa-instagram" aria-hidden="true"> </i>
+              </li>
+              <li type="none">
+                <i class="fab fa-linkedin-in" aria-hidden="true"> </i>
+              </li>
+              <li type="none">
+                <i class="fab fa-whatsapp" aria-hidden="true"> </i>
+              </li>
+            </ul>
+            <div class="cr">Creado por - Carlos Jaramillo</div>
+          </div>
+        </div>
+      </section>
+      <!-- Rigth Container-->
+      <section class="rightContainer">
+        <div class="title">
+          <p class="register">Registration</p>
+        </div>
+        <div class="flexIcon">
+          <div class="circulo">
+            <i class="fab fa-google" aria-hidden="true"></i>
+          </div>
+          <div class="circulo">
+            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+          </div>
+          <div class="circulo">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+          </div>
+        </div>
+        <form
+          class="containerForm"
+          action="/users/login"
+          method="POST"
+          style="width: 60%"
+        >
+          <div class="fields">
+            <label for="username"></label>
+            <input
+              placeholder="Username"
+              type="username"
+              name="username"
+              class="inputForm"
+              id="username"
+            />
+            <div class="textDanger"></div>
+          </div>
+          <div class="fields">
+            <label for="password"></label>
+            <input
+              placeholder="Password"
+              type="password"
+              name="password"
+              class="inputForm"
+              id="password"
+            />
+            <div class="text-danger"></div>
+          </div>
+          <div class="fields">
+            <label for="userRol:"></label>
+            <select name="userRol" id="userRol" class="inputForm">
+              <option value="" selected>Student</option>
+              <option value="">Teacher</option>
+            </select>
+          </div>
+          
+          <div class="fields">
+            <input
+              class="bot-tyc"
+              type="checkbox"
+              name="terminosCondiciones"
+              required
+            />
+            <label class="checkboxConditions">
+              Terms & Conditions
+            </label>
+          </div>
+          <button type="submit" class="registerButton">Register</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <p>Creado por:</p>
+        <ul>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/carlos-alberto-jaramillo-portilla-732552113"
+              target="_blank"
+            >
+              Carlos Jaramillo
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="redesFooter">
+        <a href="#" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

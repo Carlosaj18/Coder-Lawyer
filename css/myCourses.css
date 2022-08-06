@@ -1,0 +1,325 @@
+/* COLORES:
+azul mas fuerte: #3657F7
+azul mas oscuro: #1F58A5
+"violeta": #6243F7
+verde claro: #00FFCB
+verde oscuro: #00A987
+gris: #DAD9DE
+negro: #212121
+blanco: #ffffff
+ */
+
+ @import  url("../css/partials/header.css");
+ @import  url("../css/partials/footer.css");
+ @import  url("../css/partials/containerService.css");
+ @import url("../css/partials/containerImg.css");
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Roboto", sans-serif;
+    height: fit-content;
+  }
+
+   /* ------ MAIN ----- */
+
+   main {
+    width: 100%;
+    height: 100%;
+   }
+
+   section {
+    width: 100%;
+    height: 100%;
+   }
+
+   /* ------ section Search ----- */
+
+   .containerSearchBar {
+    width: 100%;
+    height: 60vh;
+    margin: 0em 0em 0em 0em;
+    background-image: url(../images/bkSections.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+   }
+
+   .title {
+    grid-area: title;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #ffff;
+    margin-bottom: 0.5em;
+    margin-top: 50px;
+    text-align: center;
+   }
+
+   .searchBar {
+    grid-area: searchBar;
+    width: 70%;
+    height: 10px;
+    margin-bottom: 50px;
+   }
+
+   .searchBar i {
+    position: absolute;
+    z-index: 22222;
+    margin-top: 6px;
+    margin-left: 10px;
+   }
+
+   .searchBar input {
+    width: 100%;
+    position: relative;
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    border: none;
+    padding-inline-start: 40px;
+    font-size: 13px;
+   }
+
+   .searchBar1 input::placeholder {
+    padding-inline-start: 0px;
+
+  }
+  
+  .searchBar .input:focus  {
+    outline: 2px solid #00ffcb;
+  }
+
+   .containerSearchBar {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 130px 40px;
+    grid-template-areas: 
+      "title"
+      "searchBar"
+    ;
+    justify-items: center;
+    gap: 10px;
+   }
+
+  /* ------ section Coder Laywer service Grid ----- */
+
+  .category {
+    grid-area: category;
+  }
+
+  .categoryTitle {
+    grid-area: category;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .category h2 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #6243f7;
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    padding: 0.5em 0.5em;
+  }
+
+  .containerService {
+    grid-area: containerService;
+  }
+
+  /* Container Service */
+
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .cardCurso {
+    background-color: #000000;
+  }
+
+  .cardCurso:hover {
+    border: 3px solid #00ffcb;
+  }
+
+  .sub {
+    color: #ffff;
+  }
+
+.preBtnCart1 {
+  left: 0;
+}
+.nxtBtnCart1 {
+  right: 0;
+}
+.preBtnCart1 i,
+.nxtBtnCart1 i {
+  opacity: 0.2;
+}
+.preBtnCart1:hover i,
+.nxtBtnCart1:hover i {
+  opacity: 1;
+}
+
+.mainSection {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "category"
+      "containerService"
+    ;
+    justify-items: center;
+    height: auto;
+}
+
+/**  section teacher by course */
+
+.backGround {
+    width: 100%;
+    height: 60vh;
+    margin: 0em 0em 0em 0em;
+    background-image: url(../images/bkg-teachers2.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center top;
+}
+/* ContainerImg */
+.containerProfes {
+    grid-area: containerProfes;
+}
+.infoTeacher {
+    grid-area: infoTeacher;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.subInfo {
+    background-color: #6243f7;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffff;
+}
+
+.backGround {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "containerProfes"
+      "infoTeacher"
+    ;
+    justify-items: center;
+    height: auto;
+}
+
+/** TABLET */
+@media screen and (min-width: 600px) {
+  
+ 
+/* ------ section Coder Laywer Search  Grid ----- */
+
+.containerSearchBar {
+    height: 40vh;
+}
+
+.title {
+    font-size: 2.5rem;
+   }
+
+   .searchBar {
+    width: 40%;
+   }
+/* ------ section Coder Laywer categories Grid ----- */
+
+  .categoryFirst h2{
+      font-size: 2rem;
+    }
+  .category h2 {
+      font-size: 2rem;
+  }
+  .nameCourses .navListService .navItem {
+    font-size: 1.2rem;
+  }
+
+  .containerCursos {
+    margin: 0em auto;
+    width: auto;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .containerCardsServices {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+}
+
+/** DESKTOP */
+@media screen and (min-width : 1024px){
+
+/* ------ section Coder Laywer Search  Grid ----- */
+.containerSearchBar {
+    height: 40vh;
+}
+
+.title {
+    font-size: 3rem;
+    }
+
+.searchBar {
+    width: 30%;
+}
+
+/* ------ section Coder Laywer service Grid ----- */
+
+  .categoryFirst h2{
+      font-size: 2.5rem;
+    }
+  .category h2 {
+      font-size: 2.5rem;
+  }
+  .nameCourses .navListService .navItem {
+    font-size: 1.5rem;
+  }
+
+  .containerCursos {
+    margin: 0em auto;
+    width: auto;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .containerCardsServices {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .backGround {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "containerProfes infoTeacher"
+    ;
+    justify-items: center;
+    align-items: center;
+    height: auto;
+}
+ 
+}

@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Logged - Student</title>
+    <script
+      src="https://kit.fontawesome.com/3964fc737d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/partials/header.css" />
+    <link rel="stylesheet" href="../css/partials/footer.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header id="topHeader">
+      <nav class="navBar">
+        <!-- container Logo & Search Bar -->
+        <div class="containerLeft">
+          <!-- Logo Coder Lawyer-->
+          <a class="logo" href="./index.html">
+            <img src="./images/LogoCoderLawyer.jpg" alt="Logo Coder Lawyer" />
+          </a>
+          <div class="search">
+            <i class="fas fa-search"></i>
+            <input
+              class="input"
+              type="search"
+              name="buscar"
+              placeholder="What do you want to Learning?"
+            />
+          </div>
+        </div>
+        <!-- shopping car & subMenu - Change if it is guest or student/teacher-->
+        <div class="containerRight">
+          <!-- icons -->
+          <div class="buttonsIcons">
+            <!-- shopping Cart Icon -->
+            <button class="shoppingCart" onclick="openNav()">
+              <i class="fas fa-shopping-cart"></i>
+            </button>
+            <!-- profile Icon -->
+            <div class="dropDown">
+              <button class="dropbtn">
+                <i class="far fa-user-circle"></i>
+              </button>
+              <!-- submenu students-->
+              <div class="dropdownContent" id="subMenu">
+                <div class="dropHeader">
+                  <i class="far fa-user-circle"></i>
+                  <h4>Hi Student, Carlos!</h4>
+                </div>
+                <!-- submenu Links -->
+                <ul class="content">
+                  <li class="navList">
+                    <a href="./subMenuSections/myCourses.html">My Courses</a>
+                  </li>
+                  <li class="navList">
+                    <a href="./subMenuSections/mySchools.html">My Schools</a>
+                  </li>
+                  <li class="navList">
+                    <a href="./subMenuSections/myChallanges.html"
+                      >My Challanges</a
+                    >
+                  </li>
+                </ul>
+                <ul class="content">
+                  <li class="navList">
+                    <a href="./subMenuSections/configuration.html"
+                      >Configuration</a
+                    >
+                  </li>
+                  <li class="navList">Payment Methods</li>
+                  <li class="navList">
+                    <a href="./subMenuSections/purchaseHistory.html"
+                      >Purchase History</a
+                    >
+                  </li>
+                </ul>
+                <ul class="content">
+                  <li class="navList">Languages</li>
+                </ul>
+                <ul class="content">
+                  <li class="navList">
+                    <a href="./subMenuSections/help.html">Help</a>
+                  </li>
+                  <li class="navList"><a href="#"> Log out </a></li>
+                </ul>
+              </div>
+              <!-- submenu guest -->
+              <div class="dropdownContent" id="subMenuGuest">
+                <ul class="outline">
+                  <li><a href="#">Registration</a></li>
+                  <li><a href="#">Login</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- heart Icon -->
+            <button class="heart">
+              <i class="far fa-heart"></i>
+            </button>
+          </div>
+        </div>
+        <!-- NabBar redirections Links -->
+        <div class="buttonResponsive" id="toggleButton">
+          <!-- App Menu Responsive-->
+          <i class="fas fa-bars"> </i>
+          <!-- navbar links - Change if it is guest, student or teacher -->
+          <div class="containerLinks" id="navBarStudent">
+            <ul class="navList">
+              <li class="navItem">
+                <a class="border" href="./navBarSections/services.html"
+                  >Courses</a
+                >
+              </li>
+              <li class="navItem">
+                <a class="border" href="./navBarSections/teachers.html"
+                  >Teachers</a
+                >
+              </li>
+              <li class="navItem">
+                <a class="border" href="./navBarSections/community.html"
+                  >Community</a
+                >
+              </li>
+              <li class="navItem">
+                <a class="border" href="./navBarSections/blog.html">Blog</a>
+              </li>
+              <li class="navItem">
+                <a class="border" href="#">En</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- section Main Carrusel -->
+      <section>
+        <div class="mainCarrusel">
+          <!-- img 1 -->
+          <div class="mySlides fade">
+            <img class="image" src="./images/carrusel01.png" />
+            <div class="contentText">
+              <p class="text">Start your experience now</p>
+              <p class="text">Sign up today</p>
+              <p class="text">It only takes a few minutes</p>
+            </div>
+          </div>
+          <!-- img 2 -->
+          <div class="mySlides-fade-deactivate">
+            <img class="imagen" src="/images/carrusel02.png" />
+            <div class="flex-form">
+              <div class="text-one">
+                <h2>¿Te gustaría enseñar con nosotros?</h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Alias, illo minima quidem nihil quae earum ex quas maxime at
+                  nulla deleniti aliquid modi atque minus iusto consequuntur
+                  quibusdam cupiditate sequi.
+                </p>
+                <p class="subtitle">
+                  ¿Que esperas?
+                  <strong>forma parte de la comunidad</strong>
+                  hola al mundo!
+                </p>
+              </div>
+              <div class="form-carrusel">
+                <div class="flex-icon">
+                  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                  <a href="#" onclick="signOut();">Sign out</a>
+                </div>
+                <div class="form-one">
+                  <form action="users/login" method="POST">
+                    <div class="flexInput">
+                      <div class="contentColumn">
+                        <div class="contentInput">
+                          <!-- nombre -->
+                          <label for="nombre">Nombre:</label>
+                          <input type="text" name="name" id="input-two" />
+                        </div>
+                        <div class="contentInput">
+                          <label for="phone">Celular:</label>
+                          <input type="text" name="phone" id="input-two" />
+                        </div>
+                        <div class="contentInput">
+                          <label for="password">Contraseña:</label>
+                          <input
+                            type="password"
+                            name="contrasena"
+                            id="input-two"
+                          />
+                        </div>
+                        <div class="contentInput">
+                          <label for="genre">Sexo:</label>
+                          <select required name="gender" id="gender">
+                            <label for="Soy:"></label>
+                            <option name="gender" value="Mujer">Mujer</option>
+                            <option name="gender" value="Hombre">Hombre</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="contentColumn">
+                        <div class="contentInput">
+                          <label for="phone">Apellido:</label>
+                          <input type="text" name="last_name" id="input-two" />
+                        </div>
+                        <div class="contentInput">
+                          <label for="email">Email:</label>
+                          <input type="email" name="email" id="input-two" />
+                        </div>
+                        <div class="contentInput">
+                          <label for="validationPassword"
+                            >Repetir contraseña:</label
+                          >
+                          <input
+                            type="password"
+                            name="validationPassword"
+                            id="input-two"
+                          />
+                        </div>
+                        <div class="contentInput">
+                          <label for="email">Soy:</label>
+                          <select required name="userRol" id="user">
+                            <label for="Soy:"></label>
+                            <option name="rol" value="profesor">
+                              Profesor
+                            </option>
+                            <option name="rol" value="estudiante">
+                              Estudiante
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flexTerminos">
+                      <input
+                        class="bot-tyc"
+                        type="checkbox"
+                        name="terminosCondiciones"
+                        required
+                      />
+                      <label class="term-y-cond">
+                        Acepto los términos y condiciones
+                      </label>
+                    </div>
+                    <button
+                      type="submit"
+                      class="register"
+                      style="margin-bottom: 1em"
+                    >
+                      Registrate
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- img 3 -->
+          <div class="mySlides-fade-deactivate">
+            <img class="imagen" src="/images/carrusel03.png" />
+            <div class="flex-form">
+              <div class="form-carrusel two">
+                <div class="flex-icon">
+                  <div class="circulo">
+                    <i class="fab fa-google"></i>
+                  </div>
+                  <div class="circulo">
+                    <i class="fab fa-facebook-f"></i>
+                  </div>
+                  <div class="circulo">
+                    <i class="fab fa-linkedin-in"></i>
+                  </div>
+                </div>
+                <div class="form-one">
+                  <form action="users/login" method="POST">
+                    <div class="flexInput">
+                      <div class="contentColumn">
+                        <div class="contentInput">
+                          <!-- nombre -->
+                          <label for="nombre">Nombre:</label>
+                          <input type="text" name="name" id="input-two" />
+                        </div>
+                        <div class="contentInput">
+                          <label for="phone">Celular:</label>
+                          <input type="text" name="phone" id="input-two" />
+                        </div>
+                        <div class="contentInput">
+                          <label for="password">Contraseña:</label>
+                          <input
+                            type="password"
+                            name="contrasena"
+                            id="input-two"
+                          />
+                        </div>
+                        <div class="contentInput">
+                          <label for="genre">Sexo:</label>
+                          <select required name="gender" id="gender">
+                            <label for="Soy:"></label>
+                            <option name="gender" value="Mujer">Mujer</option>
+                            <option name="gender" value="Hombre">Hombre</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="contentColumn">
+                        <div class="contentInput">
+                          <label for="phone">Apellido:</label>
+                          <input type="text" name="last_name" id="input-two" />
+                        </div>
+                        <div class="contentInput">
+                          <label for="email">Email:</label>
+                          <input type="email" name="email" id="input-two" />
+                        </div>
+                        <div class="contentInput">
+                          <label for="validationPassword"
+                            >Repetir contraseña:</label
+                          >
+                          <input
+                            type="password"
+                            name="validationPassword"
+                            id="input-two"
+                          />
+                        </div>
+                        <div class="contentInput">
+                          <label for="email">Soy:</label>
+                          <select required name="userRol" id="user">
+                            <label for="Soy:"></label>
+                            <option name="rol" value="profesor">
+                              Profesor
+                            </option>
+                            <option name="rol" value="estudiante">
+                              Estudiante
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flexTerminos">
+                      <input
+                        class="bot-tyc"
+                        type="checkbox"
+                        name="terminosCondiciones"
+                        required
+                      />
+                      <label class="term-y-cond">
+                        Acepto los términos y condiciones
+                      </label>
+                    </div>
+                    <button
+                      type="submit"
+                      class="register"
+                      style="margin-bottom: 1em"
+                    >
+                      Registrate
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="text-one">
+                <h2>Te gustaría aprender con nosotros?</h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Alias, illo minima quidem nihil quae earum ex quas maxime at
+                  nulla deleniti aliquid modi atque minus iusto consequuntur
+                  quibusdam cupiditate sequi.
+                </p>
+                <p class="subtitle">
+                  Que esperas?
+                  <strong>forma parte de la comunidad</strong>
+                  hola al mundo!
+                </p>
+              </div>
+            </div>
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <div class="contentDot">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+      </section>
+      <!-- section Characteristics -->
+      <section>
+        <div class="contentCharacteristics">
+          <div class="characteristics">
+            <div class="circle">
+              <i class="far fa-user-circle"></i>
+            </div>
+            <h3 class="titleCharacterisitc">caracteritica 1</h3>
+            <p class="parraCharacterisitc">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora
+              ea quod voluptate nisi nihil soluta vero quia excepturi.
+            </p>
+          </div>
+          <div class="characteristics">
+            <div class="circle">
+              <i class="far fa-user-circle"></i>
+            </div>
+            <h3 class="titleCharacterisitc">caracteritica 2</h3>
+            <p class="parraCharacterisitc">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora
+              ea quod voluptate nisi nihil soluta vero quia excepturi.
+            </p>
+          </div>
+          <div class="characteristics">
+            <div class="circle">
+              <i class="far fa-user-circle"></i>
+            </div>
+            <h3 class="titleCharacterisitc">caracteritica 3</h3>
+            <p class="parraCharacterisitc">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora
+              ea quod voluptate nisi nihil soluta vero quia excepturi.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- section Carrusel Coder Laywer Teachers -->
+      <section>
+        <div class="sectionTeachers">
+          <div class="descriptionTeachers">
+            <div class="teacherInfo">
+              <div class="header"><h3>OUR TEACHERS</h3></div>
+              <div class="info">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Adipiscing ut diam arcu vivamus erat dictum. Ipsum scelerisque
+                  aenean cursus id quis enim sagittis nullam sodales. Integer
+                  augue id cursus massa duis donec gravida. Non faucibus rmentum
+                </p>
+              </div>
+            </div>
+            <button class="preBtn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="nxtBtn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="serviceContainer">
+              <div class="serviceCard">
+                <div class="serviceImg">
+                  <span class="nameCouse">Course</span>
+                  <i class="far fa-user-circle"></i>
+                  <h2>Francisco Marquina</h2>
+                  <h4>DIGITAL LAW</h4>
+                  <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aueaque dolor recusandae modi qui, fuga distinctio saepe
+                    culpa soluta facere.
+                  </p>
+                </div>
+                <div class="serviceInfo">
+                  <button>
+                    <a href="/users/login" style="text-decoration: none">
+                      <i class="fas fa-shopping-cart"></i> Agregar al carrito
+                    </a>
+                  </button>
+                </div>
+              </div>
+              <div class="serviceCard">
+                <div class="serviceImg">
+                  <span class="nameSchool">School</span>
+                  <i class="far fa-user-circle"></i>
+                  <h2>Francisco Marquina</h2>
+                  <h4>DIGITAL LAW</h4>
+                  <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aueaque dolor recusandae modi qui, fuga distinctio saepe
+                    culpa soluta facere.
+                  </p>
+                </div>
+                <div class="serviceInfo">
+                  <button>
+                    <a href="/users/login" style="text-decoration: none">
+                      <i class="fas fa-shopping-cart"></i> Agregar al carrito
+                    </a>
+                  </button>
+                </div>
+              </div>
+              <div class="serviceCard">
+                <div class="serviceImg">
+                  <span class="nameCouse">Course</span>
+                  <i class="far fa-user-circle"></i>
+                  <h2>Francisco Marquina</h2>
+                  <h4>DIGITAL LAW</h4>
+                  <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aueaque dolor recusandae modi qui, fuga distinctio saepe
+                    culpa soluta facere.
+                  </p>
+                </div>
+                <div class="serviceInfo">
+                  <button>
+                    <a href="/users/login" style="text-decoration: none">
+                      <i class="fas fa-shopping-cart"></i> Agregar al carrito
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="buttonInfo">
+              <button class="button" type="submit">
+                <a href="./navBarSections/teachers.html">See More</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- sections cards & stadisticas-->
+      <section class="containerCards">
+        <div class="est" id="sectionEstadisticas">
+          <div class="titleEstadisticas">
+            <h2>Coder Lawyer has</h2>
+          </div>
+          <div class="cantidades">
+            <div class="info">
+              <p class="number">+50</p>
+              <p class="text">Teachers</p>
+            </div>
+            <div class="info">
+              <p class="number">+500</p>
+              <p class="text">Students</p>
+            </div>
+            <div class="info">
+              <p class="number">+150</p>
+              <p class="text">Courses</p>
+            </div>
+            <div class="info">
+              <p class="number">+30</p>
+              <p class="text">Certifications</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section service-->
+      <section class="sectionBkg">
+        <button class="preBtnCart1">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="nxtBtnCart1">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="containerServices">
+          <div class="categoryFirst">
+            <h2>Keep learning</h2>
+          </div>
+          <div class="nameCourses">
+            <ul class="navListService">
+              <li class="navItem">LEGAL TECH</li>
+              <li class="navItem">LAW - NLP</li>
+              <li class="navItem">LAW - BIG DATA</li>
+            </ul>
+          </div>
+          <div class="containerCardsServices">
+            <div class="containerCursos">
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">See Course</button>
+              </div>
+            </div>
+            <div class="containerCursos">
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">See Course</button>
+              </div>
+            </div>
+            <div class="containerCursos">
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">See Course</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="containerServices">
+          <div class="category">
+            <h2>Keep learning</h2>
+          </div>
+          <div class="nameCourses">
+            <ul class="navListService">
+              <li class="navItem">LEGAL TECH</li>
+              <li class="navItem">LAW - NLP</li>
+              <li class="navItem">LAW - BIG DATA</li>
+            </ul>
+          </div>
+          <div class="containerCardsServices">
+            <div class="containerCursos">
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">See Course</button>
+              </div>
+            </div>
+            <div class="containerCursos">
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">See Course</button>
+              </div>
+            </div>
+            <div class="containerCursos">
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">See Course</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="containerServices">
+          <div class="category">
+            <h2>Keep learning</h2>
+          </div>
+          <div class="nameCourses">
+            <ul class="navListService">
+              <li class="navItem">LEGAL TECH</li>
+              <li class="navItem">LAW - NLP</li>
+              <li class="navItem">LAW - BIG DATA</li>
+            </ul>
+          </div>
+          <div class="containerCardsServices">
+            <div class="containerCursos">
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">See Course</button>
+              </div>
+            </div>
+            <div class="containerCursos">
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">See Course</button>
+              </div>
+            </div>
+            <div class="containerCursos">
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">See Course</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="containerChallanges">
+        <div class="containerServices">
+          <div class="category">
+            <h2>Keep learning</h2>
+          </div>
+          <div class="nameCourses">
+            <ul class="navListService">
+              <li class="navItem">LEGAL TECH</li>
+              <li class="navItem">LAW - NLP</li>
+              <li class="navItem">LAW - BIG DATA</li>
+            </ul>
+          </div>
+          <div class="containerCardsServices">
+            <div class="containerCursos">
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">See Course</button>
+              </div>
+            </div>
+            <div class="containerCursos">
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">See Course</button>
+              </div>
+            </div>
+            <div class="containerCursos">
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">See Course</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="containerServices">
+          <div class="category">
+            <h2>Keep learning</h2>
+          </div>
+          <div class="nameCourses">
+            <ul class="navListService">
+              <li class="navItem">LEGAL TECH</li>
+              <li class="navItem">LAW - NLP</li>
+              <li class="navItem">LAW - BIG DATA</li>
+            </ul>
+          </div>
+          <div class="containerCardsServices">
+            <div class="containerCursos">
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">See Course</button>
+              </div>
+            </div>
+            <div class="containerCursos">
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">See Course</button>
+              </div>
+            </div>
+            <div class="containerCursos">
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">See Course</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="containerServices">
+          <div class="category">
+            <h2>Keep learning</h2>
+          </div>
+          <div class="nameCourses">
+            <ul class="navListService">
+              <li class="navItem">LEGAL TECH</li>
+              <li class="navItem">LAW - NLP</li>
+              <li class="navItem">LAW - BIG DATA</li>
+            </ul>
+          </div>
+          <div class="containerCardsServices">
+            <div class="containerCursos">
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">See Course</button>
+              </div>
+            </div>
+            <div class="containerCursos">
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">See Course</button>
+              </div>
+            </div>
+            <div class="containerCursos">
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">See Course</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section Coder Layer graduated students-->
+      <section class="containerCardsStudents">
+        <div class="containerStudents"><h2>OUR GRADUATED STUDENTS</h2></div>
+        <div class="serviceContainer">
+          <button class="preBtn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="nxtBtn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="nameCouse">Course</span>
+              <i class="far fa-user-circle"></i>
+              <h2>Francisco Marquina</h2>
+              <h4>DIGITAL LAW</h4>
+              <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aueaque
+                dolor recusandae modi qui, fuga distinctio saepe culpa soluta
+                facere.
+              </p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <a href="/users/login" style="text-decoration: none">
+                  <i class="fas fa-shopping-cart"></i> Agregar al carrito
+                </a>
+              </button>
+            </div>
+          </div>
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="nameSchool">School</span>
+              <i class="far fa-user-circle"></i>
+              <h2>Francisco Marquina</h2>
+              <h4>DIGITAL LAW</h4>
+              <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aueaque
+                dolor recusandae modi qui, fuga distinctio saepe culpa soluta
+                facere.
+              </p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <a href="/users/login" style="text-decoration: none">
+                  <i class="fas fa-shopping-cart"></i> Agregar al carrito
+                </a>
+              </button>
+            </div>
+          </div>
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="nameCouse">Course</span>
+              <i class="far fa-user-circle"></i>
+              <h2>Francisco Marquina</h2>
+              <h4>DIGITAL LAW</h4>
+              <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aueaque
+                dolor recusandae modi qui, fuga distinctio saepe culpa soluta
+                facere.
+              </p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <a href="/users/login" style="text-decoration: none">
+                  <i class="fas fa-shopping-cart"></i> Agregar al carrito
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section Coder Lawyer download App -->
+      <section class="containerApp">
+        <div class="containerImageApp">
+          <img src="./images/imageApp.png" alt="App Coder Lawyer" />
+        </div>
+      </section>
+      <!-- section Frequent questions -->
+      <section>
+
+      </section>
+      <!-- section contact -->
+      <section id="contacto">
+        <div class="contactoHome">
+          <div class="flexContacto">
+            <div class="titleContact">
+              <h3>Hi!</h3>
+              <p>
+                Send us your question and in the shortest time you will be
+                starting to communicate with the world.
+              </p>
+              <div class="redes">
+                <ul>
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fab fa-facebook-f"></i>
+                      <span> coderlawyer</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fab fa-instagram"></i>
+                      <span> coderlawyer</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fab fa-linkedin-in"></i>
+                      <span> coderlawyer</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">
+                      <i class="fab fa-whatsapp"></i>
+                      <span> 3187936659 </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="formulario">
+              <form action="/comment" method="post">
+                <input
+                  class="input-form"
+                  type="text"
+                  name="nameContact"
+                  id="nombre"
+                  placeholder="Nombre y Apellido"
+                />
+                <input
+                  class="input-form"
+                  type="email"
+                  name="emailContact"
+                  id="email"
+                  placeholder="Email"
+                />
+                <textarea
+                  class="input-form"
+                  name="consultaContact"
+                  id="consulta"
+                  cols="30"
+                  rows="10"
+                  placeholder="Tu consulta:"
+                ></textarea>
+                <button type="submit" class="enviar">Send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <p>Creado por:</p>
+        <ul>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/carlos-alberto-jaramillo-portilla-732552113"
+              target="_blank"
+            >
+              Carlos Jaramillo
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="redesFooter">
+        <a href="#" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
