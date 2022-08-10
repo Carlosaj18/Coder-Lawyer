@@ -10,9 +10,10 @@ blanco: #ffffff
  */
 
  @import  url("../css/partials/header.css");
- @import  url("../css/partials/footer.css");
+ @import url("../css/partials/backGround.css");
  @import  url("../css/partials/containerService.css");
  @import  url("../css/myChallanges.css");
+ @import  url("../css/partials/footer.css");
 
  * {
     margin: 0;
