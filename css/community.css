@@ -1,5 +1,6 @@
 @import  url("../css/partials/header.css");
 @import  url("../css/partials/footer.css");
+@import url("../css/partials/articles.css");
 
 * {
     margin: 0;
