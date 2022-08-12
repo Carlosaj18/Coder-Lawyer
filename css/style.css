@@ -472,7 +472,7 @@ blanco: #ffffff
   100% {
     /*width: 170px;
     background: rgb(0,255,203);*/
-    background: linear-gradient(left,rgba(98,67,247,1) 36%);
+    background: linear-gradient(left,rgba(98,67,247,1) 35%);
     transform: scale(1);
   }
 }
