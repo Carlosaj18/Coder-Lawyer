@@ -149,11 +149,17 @@ blanco: #ffffff
     padding: 0.5em 0.5em;
   }
 
+  .navItem a {
+    border: transparent;
+    text-decoration: none;
+  }
+
   .containerLinks .navList .navItem .border {
     text-decoration: none;
     font-weight: 300;
     font-size: 1rem;
     color: #fff;
+    width: 100%;
   }
 
   .containerLinks .navList .navItem a:after {
@@ -390,8 +396,8 @@ blanco: #ffffff
   .containerLinks {
     width: auto;
     position: absolute;
-    top: 40px;
-    right: 217px;
+    top: 11px;
+    right: 199px;
   }
   .containerLinks .navList .navItem .border {
     font-size: 1.2rem;

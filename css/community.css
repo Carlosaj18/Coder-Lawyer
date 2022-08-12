@@ -172,7 +172,7 @@
 
   /*** Articles */
   
-  /*.containerArticles {
+  .containerArticles {
     grid-area: containerArticles;
   }
   .containerArticles {
@@ -201,7 +201,7 @@
     justify-content: center;
     align-items: center;
     margin: 0.5em;
-  }*/
+  }
 
   a {
     text-decoration: none;
@@ -216,24 +216,6 @@
     grid-area: accordion;
   }
 
-  .accordion {
-    width: 100%;
-    margin: 15px;
-  }
-
-
-.accordion-item {
-  display: flex;
-    flex-direction: column;
-    background-color: #6243f7;
-    padding: 1em;
-    height: auto;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    border-radius: 5px;
-    margin: 15px;
-}
 
 .accordion-body {
   border: 2px solid #00ffcb;
