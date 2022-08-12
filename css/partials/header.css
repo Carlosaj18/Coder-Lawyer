@@ -390,7 +390,7 @@ blanco: #ffffff
   .containerLinks {
     width: auto;
     position: absolute;
-    top: 15px;
+    top: 40px;
     right: 217px;
   }
   .containerLinks .navList .navItem .border {

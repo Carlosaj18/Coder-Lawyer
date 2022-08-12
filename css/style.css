@@ -67,7 +67,7 @@ blanco: #ffffff
   .mySlides .contentText {
     position: absolute;
     top: 0.8em;
-    right: 1em;
+    right: 0.8em;
     box-sizing: border-box;
   }
 
@@ -75,7 +75,7 @@ blanco: #ffffff
     color: #fff;
     background-color: #3657f7;
     border-radius: 25px;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 300;
     padding: 0.5em 1em;
     margin: 0.5em auto;
@@ -105,7 +105,7 @@ blanco: #ffffff
 .next {
   cursor: pointer;
   position: absolute;
-  top: 30%;
+  top: 0%;
   width: auto;
   padding: 16px;
   margin-top: 105px;
@@ -161,7 +161,7 @@ blanco: #ffffff
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
   }
 
   .circle {
@@ -172,6 +172,10 @@ blanco: #ffffff
     height: 120px;
     border-radius: 50%;
     margin-bottom: 0.5em;
+  }
+
+  .circle:hover {
+    transform: scale(1.2) rotate(45deg);
   }
 
   .characteristics .circle i {
@@ -198,7 +202,7 @@ blanco: #ffffff
 
   .parraCharacterisitc {
     font-size: 0.8rem;
-    color: #212121;
+    color: #fff;
     text-align: center;
     width: 50%;
   }
@@ -221,9 +225,9 @@ blanco: #ffffff
 
 .sectionTeachers {
   width: 100%;
-  height: 90vh;
+  height: auto;
   margin: 0em 0em 0em 0em;
-  background-image: url(../images/bkg-teachers2.png);
+  /*background-image: url(../images/bkg-teachers2.png);*/
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -231,6 +235,7 @@ blanco: #ffffff
   background-size: cover;
   background-position: center top;
   position: relative;
+  margin-bottom: 50px;
 }
 
 /*.descriptionTeachers {
@@ -245,6 +250,10 @@ blanco: #ffffff
   position: relative;
 }*/
 
+.serviceCard .serviceImg {
+  border: 3px solid #6243F7;
+}
+
 .teacherInfo {
   grid-area: teacherInfo;
   display: flex;
@@ -255,16 +264,15 @@ blanco: #ffffff
 }
 
 .header h3{
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-transform: capitalize;
   color: #6243f7;
   margin-bottom: 0.5em;
-  margin-top: 0.5em;
+  margin-top: 1.5em;
   text-align: center;
 }
 
 .info p {
-  padding: 15px;
   font-size: 0.8rem;
   color: #212121;
   text-align: center;
@@ -275,7 +283,7 @@ blanco: #ffffff
   overflow-y: hidden;
   overflow-x: auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   scroll-behavior: smooth;
   gap: 25px;
@@ -287,8 +295,8 @@ blanco: #ffffff
 }
 .serviceCard {
   flex: 0 0 auto;
-  width: 200px;
-  height: 350px;
+  width: 300px;
+  height: 200px;
 }
 .serviceImg {
   position: relative;
@@ -298,7 +306,7 @@ blanco: #ffffff
   background-color: black;
   border-radius: 25px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   transition: all 0.5s;
@@ -309,13 +317,35 @@ blanco: #ffffff
   margin-bottom: 22px;
   padding-top: 4px;
 }
-.serviceImg h2 {
-  font-size: 0.6rem;
+
+.headerInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.serviceImg button h2 a {
+  font-size: 1rem;
   text-align: center;
   color: #3651F7;
 }
+
+.serviceImg button {
+  outline: none;
+  border: none;
+  background-color: black;
+}
+
+.serviceCard:hover .serviceImg button {
+  background-color: #212121;
+  transition: all 0s;
+}
+
+.serviceCard:hover .serviceImg {
+  border: 3px solid #6243F7;
+}
+
 .serviceImg h4 {
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-align: center;
   color: #3651F7;
   text-transform: uppercase;
@@ -333,7 +363,7 @@ blanco: #ffffff
   padding: 5px;
   font-size: 12px;
 }
-.nameSchool {
+.color {
   position: absolute;
   background-color: greenyellow;
   border-radius: 15px;
@@ -426,6 +456,27 @@ blanco: #ffffff
   align-items: center;
 }
 
+@keyframes un_efecto {
+  0% {
+    transform: scale(1);
+  }
+  25%{ 
+      transform: scale(1.5);}
+  50%{ 
+    /*background: rgb(0,255,203);
+    background: linear-gradient(right, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 36%); */
+    transform: scale(1);
+  }
+    75%{ 
+      transform: scale(1.5);}
+  100% {
+    /*width: 170px;
+    background: rgb(0,255,203);*/
+    background: linear-gradient(left,rgba(98,67,247,1) 36%);
+    transform: scale(1);
+  }
+}
+
 .descriptionTeachers .button {
   display: flex;
   align-items: center;
@@ -433,7 +484,7 @@ blanco: #ffffff
   font-size: 1rem;
 }
 
-.button {
+.buttonInfo .button {
   width: 140px;
   height: 40px;
   border-radius: 14px;
@@ -442,18 +493,28 @@ blanco: #ffffff
   color: #00ffcb;
   background-color: #6243f7;
   margin-top: 1em;
-  top: 64px;
-
+  transition: 0.5 opacity ease-in-out;
 }
 
 .button a {
   text-decoration: none;
-  color: #ffff;
+  color: #212121;
 }
 
-.button:hover {
-  color: #00ffcb;
-  background-color: black;
+.buttonInfo .button:hover {
+  animation-name: un_efecto;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1.5s;
+  animation-delay: 0s;
+   /*background: rgb(0,255,203);
+   background: linear-gradient(90deg, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 77%); 
+   width: 160px;
+   height: 50px;*/
+}
+
+.buttonInfo .button a:hover {
+  color: black;
 }
 
 .descriptionTeachers {
@@ -469,7 +530,6 @@ blanco: #ffffff
     margin-top: 50px;
 }
 
-
   /* ------ section Coder Laywer Stadistics Grid ----- */
 
   .titleEstadisticas {
@@ -478,16 +538,17 @@ blanco: #ffffff
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
+    height: fit-content;
 
   }
 
   .titleEstadisticas h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
-    color: #212121;
+    color: #fff;
     height: auto;
+    margin-bottom: 1em;
   }
   
   .cantidades {
@@ -502,30 +563,29 @@ blanco: #ffffff
   }
 
   .cantidades .number {
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 600;
     color: #6243f7;
     text-align: center;
-    margin-top: 0.5em;
+    margin: 0;
   }
   .cantidades .text {
-    font-size: 20px;
+    font-size: 1.3rem;
     font-weight: 600;
-    color: #212121;
+    color: #fff;
     text-align: center;
+    margin: 0;
   }
 
   .est {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto;
-    gap: 1rem;
+    grid-template-rows: auto auto ;
     grid-template-areas: 
       "titleEstadisticas"
       "cantidades"
     ;
     justify-items: center;
-    height: 100vh;
   }
 
   /* ------ section Coder Laywer service Grid ----- */
@@ -538,7 +598,6 @@ blanco: #ffffff
     background-size: cover;
     background-position: center top;
     position: relative;
-  
   }
 
   .category h2 {
@@ -549,10 +608,10 @@ blanco: #ffffff
   }
 
   .categoryFirst h2{
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-transform: capitalize;
     color: #6243f7;
-    margin-top: 11em;
+    margin-top: 1em;
     margin-left: 1em;
     margin-bottom: 0.5em;
     text-transform: uppercase;
@@ -560,7 +619,7 @@ blanco: #ffffff
   }
 
   .category h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-transform: capitalize;
     color: #6243f7;
     margin-left: 1em;
@@ -590,6 +649,7 @@ blanco: #ffffff
 
   .navItem {
     text-decoration: none;
+    font-size: 1rem;
   }
 
   /** Container Service */
@@ -656,24 +716,37 @@ blanco: #ffffff
 
 /* ------ section Coder Laywer students Grid ----- */
 
+.containerCardsStudents {
+  width: 100%;
+  height: 1400px;
+  margin: 0em 0em 0em 0em;
+  background-image: url(../images/bkg-teachers2.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+}
 .containerStudents {
   grid-area: containerStudents;
+
 }
 
-.containerStudents {
-  font-size: 1.5rem;
+.containerStudents h2 {
+  font-size: 2rem;
   text-transform: capitalize;
   color: #6243f7;
-  margin-bottom: 0.5em;
-  margin-top: 0.5em;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  margin-top: 1rem;
 }
 
 .containerStudents {
   text-align: center;
+  height: auto;
 }
 
 .serviceContainer {
@@ -687,13 +760,11 @@ blanco: #ffffff
 .containerCardsStudents {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: auto;
+  grid-template-rows: auto 1fr;
   grid-template-areas: 
     "containerStudents"
     "serviceContainer"
   ;
-  justify-items: start;
-  height: auto;
   gap: 2em;
 }
 
@@ -727,7 +798,7 @@ blanco: #ffffff
 .titleContact p {
   font-size: 20px;
   font-weight: 400;
-  color: black;
+  color: #fff;
   padding: 0.2em 1em 1em;
 }
 
@@ -748,11 +819,11 @@ blanco: #ffffff
   font-weight: 400;
 }
 .titleContact .redes a i {
-  color: black;
+  color: #00FFCB;
 }
 
 .titleContact .redes a span {
-  color: black;
+  color: #fff;
   font-size: 20px;
 }
 
@@ -860,7 +931,7 @@ textarea::placeholder {
 /** Section Characterisitcs Grid + Flex Box */
 
 .contentCharacteristics {
-  height: auto;
+  height: 100%;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
@@ -869,7 +940,7 @@ textarea::placeholder {
 .characteristics {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: auto auto auto;
   grid-template-areas: 
     "circle"
     "titleCharacterisitc"
@@ -880,14 +951,17 @@ textarea::placeholder {
 }
 
 .circle {
-  width: 160px;
-  height: 160px;
+  width: 170px;
+  height: 170px;
+}
+
+.circle:hover {
+  transform: scale(1);
 }
 
 .characteristics .circle i {
   font-size: 100px;
   margin-top: 27px;
-
 }
 
 .titleCharacterisitc {
@@ -904,7 +978,12 @@ textarea::placeholder {
 
 .sectionTeachers {
   width: 100%;
-  height: 100vh;
+  height: auto;
+}
+
+.serviceContainer {
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .header h3{
   font-size: 2rem;
@@ -912,12 +991,6 @@ textarea::placeholder {
 
 .info p {
   font-size: 1rem;
-}
-
-.serviceCard {
-  flex: 0 0 auto;
-  width: 250px;
-  height: 400px;
 }
 
 .serviceImg i {
@@ -936,7 +1009,7 @@ textarea::placeholder {
   font-size: 14px;
 }
 .description {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 .serviceInfo button {
   font-size: 1rem;
@@ -1007,6 +1080,21 @@ textarea::placeholder {
   }
 
   /* ------ section Coder Laywer students Grid REVIEW ----- */
+
+  .containerCardsStudents {
+    height: 1500px;
+  }
+  .containerCardsStudents {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-areas: 
+      "containerStudents"
+      "serviceContainer"
+    ;
+    align-items: center;
+    gap: 2em;
+  }
 
   /* ------ section App ----- */
 
@@ -1117,7 +1205,7 @@ GRID OVER GRID
 
 .sectionTeachers {
   width: 100%;
-  height: 1300px;
+  height: auto;
 }
 .header h3{
   font-size: 3rem;
@@ -1126,12 +1214,6 @@ GRID OVER GRID
 .info p {
   font-size: 1.2rem;
   margin-bottom: 30px;
-}
-
-.serviceCard {
-  flex: 0 0 auto;
-  width: 300px;
-  height: 450px;
 }
 
 .serviceImg i {
@@ -1150,7 +1232,7 @@ GRID OVER GRID
   font-size: 16px;
 }
 .description {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 .serviceInfo button {
   font-size: 1rem;
@@ -1184,7 +1266,8 @@ GRID OVER GRID
   }
 
   .titleEstadisticas h2 {
-    font-size: 2rem;
+    margin-top: 0.5rem;
+    font-size: 4rem;
   }
 
   .cantidades .number {
@@ -1195,6 +1278,10 @@ GRID OVER GRID
   }
   .est {
     height: auto;
+  }
+
+  .est {
+    gap: 5rem;
   }
 
   .cantidades {
@@ -1234,7 +1321,7 @@ GRID OVER GRID
 
   .containerChallanges {
     width: 100%;
-    height: 1500px;
+    height: auto;
     margin: 0em 0em 0em 0em;
     background-image: url(../images/bkg-services2.png);
     background-repeat: no-repeat;
@@ -1244,6 +1331,17 @@ GRID OVER GRID
   }
 
   /* ------ section Coder Laywer students Grid REVIEW ----- */
+  .containerCardsStudents {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+      "containerStudents"
+      "serviceContainer"
+    ;
+    align-items: center;
+    gap: 2em;
+  }
 
   /* ------ section App ----- */
 
@@ -1267,6 +1365,7 @@ GRID OVER GRID
     background-size: cover;
     background-position: center top;
     position: relative;
+    border-radius: 100px;
   }
   .flexContacto {
     width: 100%;

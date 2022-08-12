@@ -13,8 +13,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/partials/header.css" />
-    <link rel="stylesheet" href="../css/partials/footer.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -146,7 +146,7 @@
           <!-- img 1 -->
           <div class="mySlides fade">
             <img class="image" src="./images/carrusel01.png" />
-            <div class="contentText">
+            <div class="contentText" data-aos="zoom-out-left">
               <p class="text">Start your experience now</p>
               <p class="text">Sign up today</p>
               <p class="text">It only takes a few minutes</p>
@@ -389,7 +389,7 @@
       <!-- section Characteristics -->
       <section>
         <div class="contentCharacteristics">
-          <div class="characteristics">
+          <div class="characteristics" data-aos="zoom-in">
             <div class="circle">
               <i class="far fa-user-circle"></i>
             </div>
@@ -399,7 +399,7 @@
               ea quod voluptate nisi nihil soluta vero quia excepturi.
             </p>
           </div>
-          <div class="characteristics">
+          <div class="characteristics" data-aos="zoom-in">
             <div class="circle">
               <i class="far fa-user-circle"></i>
             </div>
@@ -409,7 +409,7 @@
               ea quod voluptate nisi nihil soluta vero quia excepturi.
             </p>
           </div>
-          <div class="characteristics">
+          <div class="characteristics" data-aos="zoom-in">
             <div class="circle">
               <i class="far fa-user-circle"></i>
             </div>
@@ -443,64 +443,92 @@
               <i class="fas fa-chevron-right"></i>
             </button>
             <div class="serviceContainer">
-              <div class="serviceCard">
+              <div class="serviceCard" data-aos="flip-up">
                 <div class="serviceImg">
                   <span class="nameCouse">Course</span>
-                  <i class="far fa-user-circle"></i>
-                  <h2>Francisco Marquina</h2>
+                  <div class="headerInfo">
+                    <i class="far fa-user-circle"></i>
+                    <button>
+                      <h2>
+                        <a
+                          href="../Desarrollo Web/navBarSections/detailTeachers.html"
+                          style="text-decoration: none"
+                          >Francisco Marquina</a
+                        >
+                      </h2>
+                    </button>
+                  </div>
                   <h4>DIGITAL LAW</h4>
                   <p class="description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aueaque dolor recusandae modi qui, fuga distinctio saepe
-                    culpa soluta facere.
+                    Aueaque dolor recusandae modi qui.
                   </p>
                 </div>
-                <div class="serviceInfo">
-                  <button>
-                    <a href="/users/login" style="text-decoration: none">
-                      <i class="fas fa-shopping-cart"></i> Agregar al carrito
-                    </a>
-                  </button>
-                </div>
               </div>
-              <div class="serviceCard">
+              <div class="serviceCard" data-aos="flip-up">
                 <div class="serviceImg">
-                  <span class="nameSchool">School</span>
-                  <i class="far fa-user-circle"></i>
-                  <h2>Francisco Marquina</h2>
+                  <span class="nameCouse color">School</span>
+                  <div class="headerInfo">
+                    <i class="far fa-user-circle"></i>
+                    <button>
+                      <h2>
+                        <a
+                          href="../Desarrollo Web/navBarSections/detailTeachers.html"
+                          style="text-decoration: none"
+                          >Francisco Marquina</a
+                        >
+                      </h2>
+                    </button>
+                  </div>
                   <h4>DIGITAL LAW</h4>
                   <p class="description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aueaque dolor recusandae modi qui, fuga distinctio saepe
-                    culpa soluta facere.
+                    Aueaque dolor recusandae modi qui.
                   </p>
                 </div>
-                <div class="serviceInfo">
-                  <button>
-                    <a href="/users/login" style="text-decoration: none">
-                      <i class="fas fa-shopping-cart"></i> Agregar al carrito
-                    </a>
-                  </button>
-                </div>
               </div>
-              <div class="serviceCard">
+              <div class="serviceCard" data-aos="flip-up">
                 <div class="serviceImg">
                   <span class="nameCouse">Course</span>
-                  <i class="far fa-user-circle"></i>
-                  <h2>Francisco Marquina</h2>
+                  <div class="headerInfo">
+                    <i class="far fa-user-circle"></i>
+                    <button>
+                      <h2>
+                        <a
+                          href="../Desarrollo Web/navBarSections/detailTeachers.html"
+                          style="text-decoration: none"
+                          >Francisco Marquina</a
+                        >
+                      </h2>
+                    </button>
+                  </div>
                   <h4>DIGITAL LAW</h4>
                   <p class="description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aueaque dolor recusandae modi qui, fuga distinctio saepe
-                    culpa soluta facere.
+                    Aueaque dolor recusandae modi qui.
                   </p>
                 </div>
-                <div class="serviceInfo">
-                  <button>
-                    <a href="/users/login" style="text-decoration: none">
-                      <i class="fas fa-shopping-cart"></i> Agregar al carrito
-                    </a>
-                  </button>
+              </div>
+              <div class="serviceCard" data-aos="flip-up">
+                <div class="serviceImg">
+                  <span class="nameCouse color">School</span>
+                  <div class="headerInfo">
+                    <i class="far fa-user-circle"></i>
+                    <button>
+                      <h2>
+                        <a
+                          href="../Desarrollo Web/navBarSections/detailTeachers.html"
+                          style="text-decoration: none"
+                          >Francisco Marquina</a
+                        >
+                      </h2>
+                    </button>
+                  </div>
+                  <h4>DIGITAL LAW</h4>
+                  <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aueaque dolor recusandae modi qui.
+                  </p>
                 </div>
               </div>
             </div>
@@ -520,19 +548,19 @@
           </div>
           <div class="cantidades">
             <div class="info">
-              <p class="number">+50</p>
+              <p class="number" data-aos="zoom-out">+50</p>
               <p class="text">Teachers</p>
             </div>
             <div class="info">
-              <p class="number">+500</p>
+              <p class="number" data-aos="zoom-out">+500</p>
               <p class="text">Students</p>
             </div>
             <div class="info">
-              <p class="number">+150</p>
+              <p class="number" data-aos="zoom-out">+150</p>
               <p class="text">Courses</p>
             </div>
             <div class="info">
-              <p class="number">+30</p>
+              <p class="number" data-aos="zoom-out">+30</p>
               <p class="text">Certifications</p>
             </div>
           </div>
@@ -540,12 +568,12 @@
       </section>
       <!-- Section service-->
       <section class="sectionBkg">
-        <button class="preBtnCart1">
+        <!--<button class="preBtnCart1">
           <i class="fas fa-chevron-left"></i>
         </button>
         <button class="nxtBtnCart1">
           <i class="fas fa-chevron-right"></i>
-        </button>
+        </button>-->
         <div class="containerServices">
           <div class="categoryFirst">
             <h2>Keep learning</h2>
@@ -558,7 +586,11 @@
             </ul>
           </div>
           <div class="containerCardsServices">
-            <div class="containerCursos">
+            <div
+              class="containerCursos"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
               <div class="cardCurso">
                 <div style="width: 100%">
                   <p class="nombreCurso">Legal Tech</p>
@@ -568,10 +600,22 @@
                   </div>
                   <p class="precioCurso">$2400 por hora</p>
                 </div>
-                <button class="btn verCurso">See Course</button>
+                <button class="btn verCurso">
+                  <a
+                    href="../Desarrollo Web/navBarSections/detailServices.html"
+                    id="myBtn"
+                    class="reservar"
+                    style="text-decoration: none;"
+                    >See Course</a
+                  >
+                </button>
               </div>
             </div>
-            <div class="containerCursos">
+            <div
+              class="containerCursos"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
               <div class="cardCurso">
                 <div style="width: 100%">
                   <p class="nombreCurso">Legal Tech</p>
@@ -581,10 +625,22 @@
                   </div>
                   <p class="precioCurso">$2400 por hora</p>
                 </div>
-                <button class="btn verCurso">See Course</button>
+                <button class="btn verCurso">
+                  <a
+                    href="../Desarrollo Web/navBarSections/detailServices.html"
+                    id="myBtn"
+                    class="reservar"
+                    style="text-decoration: none;"
+                    >See Course</a
+                  >
+                </button>
               </div>
             </div>
-            <div class="containerCursos">
+            <div
+              class="containerCursos"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
               <div class="cardCurso">
                 <div style="width: 100%">
                   <p class="nombreCurso">Legal Tech</p>
@@ -594,60 +650,15 @@
                   </div>
                   <p class="precioCurso">$2400 por hora</p>
                 </div>
-                <button class="btn verCurso">See Course</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="containerServices">
-          <div class="category">
-            <h2>Keep learning</h2>
-          </div>
-          <div class="nameCourses">
-            <ul class="navListService">
-              <li class="navItem">LEGAL TECH</li>
-              <li class="navItem">LAW - NLP</li>
-              <li class="navItem">LAW - BIG DATA</li>
-            </ul>
-          </div>
-          <div class="containerCardsServices">
-            <div class="containerCursos">
-              <div class="cardCurso">
-                <div style="width: 100%">
-                  <p class="nombreCurso">Legal Tech</p>
-                  <div class="sub">
-                    <p class="diasCurso">Lunes, Miércoles</p>
-                    <p class="diasCurso">18:00 pm</p>
-                  </div>
-                  <p class="precioCurso">$2400 por hora</p>
-                </div>
-                <button class="btn verCurso">See Course</button>
-              </div>
-            </div>
-            <div class="containerCursos">
-              <div class="cardCurso">
-                <div style="width: 100%">
-                  <p class="nombreCurso">Legal Tech</p>
-                  <div class="sub">
-                    <p class="diasCurso">Lunes, Miércoles</p>
-                    <p class="diasCurso">18:00 pm</p>
-                  </div>
-                  <p class="precioCurso">$2400 por hora</p>
-                </div>
-                <button class="btn verCurso">See Course</button>
-              </div>
-            </div>
-            <div class="containerCursos">
-              <div class="cardCurso">
-                <div style="width: 100%">
-                  <p class="nombreCurso">Legal Tech</p>
-                  <div class="sub">
-                    <p class="diasCurso">Lunes, Miércoles</p>
-                    <p class="diasCurso">18:00 pm</p>
-                  </div>
-                  <p class="precioCurso">$2400 por hora</p>
-                </div>
-                <button class="btn verCurso">See Course</button>
+                <button class="btn verCurso">
+                  <a
+                    href="../Desarrollo Web/navBarSections/detailServices.html"
+                    id="myBtn"
+                    class="reservar"
+                    style="text-decoration: none;"
+                    >See Course</a
+                  >
+                </button>
               </div>
             </div>
           </div>
@@ -664,7 +675,11 @@
             </ul>
           </div>
           <div class="containerCardsServices">
-            <div class="containerCursos">
+            <div
+              class="containerCursos"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
               <div class="cardCurso">
                 <div style="width: 100%">
                   <p class="nombreCurso">Legal Tech</p>
@@ -674,10 +689,22 @@
                   </div>
                   <p class="precioCurso">$2400 por hora</p>
                 </div>
-                <button class="btn verCurso">See Course</button>
+                <button class="btn verCurso">
+                  <a
+                    href="../Desarrollo Web/navBarSections/detailServices.html"
+                    id="myBtn"
+                    class="reservar"
+                    style="text-decoration: none;"
+                    >See Course</a
+                  >
+                </button>
               </div>
             </div>
-            <div class="containerCursos">
+            <div
+              class="containerCursos"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
               <div class="cardCurso">
                 <div style="width: 100%">
                   <p class="nombreCurso">Legal Tech</p>
@@ -687,10 +714,22 @@
                   </div>
                   <p class="precioCurso">$2400 por hora</p>
                 </div>
-                <button class="btn verCurso">See Course</button>
+                <button class="btn verCurso">
+                  <a
+                    href="../Desarrollo Web/navBarSections/detailServices.html"
+                    id="myBtn"
+                    class="reservar"
+                    style="text-decoration: none;"
+                    >See Course</a
+                  >
+                </button>
               </div>
             </div>
-            <div class="containerCursos">
+            <div
+              class="containerCursos"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
               <div class="cardCurso">
                 <div style="width: 100%">
                   <p class="nombreCurso">Legal Tech</p>
@@ -700,7 +739,104 @@
                   </div>
                   <p class="precioCurso">$2400 por hora</p>
                 </div>
-                <button class="btn verCurso">See Course</button>
+                <button class="btn verCurso">
+                  <a
+                    href="../Desarrollo Web/navBarSections/detailServices.html"
+                    id="myBtn"
+                    class="reservar"
+                    style="text-decoration: none;"
+                    >See Course</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="containerServices">
+          <div class="category">
+            <h2>Keep learning</h2>
+          </div>
+          <div class="nameCourses">
+            <ul class="navListService">
+              <li class="navItem">LEGAL TECH</li>
+              <li class="navItem">LAW - NLP</li>
+              <li class="navItem">LAW - BIG DATA</li>
+            </ul>
+          </div>
+          <div class="containerCardsServices">
+            <div
+              class="containerCursos"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">
+                  <a
+                    href="../Desarrollo Web/navBarSections/detailServices.html"
+                    id="myBtn"
+                    class="reservar"
+                    style="text-decoration: none;"
+                    >See Course</a
+                  >
+                </button>
+              </div>
+            </div>
+            <div
+              class="containerCursos"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">
+                  <a
+                    href="../Desarrollo Web/navBarSections/detailServices.html"
+                    id="myBtn"
+                    class="reservar"
+                    style="text-decoration: none;"
+                    >See Course</a
+                  >
+                </button>
+              </div>
+            </div>
+            <div
+              class="containerCursos"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">
+                  <a
+                    href="../Desarrollo Web/navBarSections/detailServices.html"
+                    id="myBtn"
+                    class="reservar"
+                    style="text-decoration: none;"
+                    >See Course</a
+                  >
+                </button>
               </div>
             </div>
           </div>
@@ -719,7 +855,11 @@
             </ul>
           </div>
           <div class="containerCardsServices">
-            <div class="containerCursos">
+            <div
+              class="containerCursos"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
               <div class="cardCurso">
                 <div style="width: 100%">
                   <p class="nombreCurso">Legal Tech</p>
@@ -732,7 +872,11 @@
                 <button class="btn verCurso">See Course</button>
               </div>
             </div>
-            <div class="containerCursos">
+            <div
+              class="containerCursos"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
               <div class="cardCurso">
                 <div style="width: 100%">
                   <p class="nombreCurso">Legal Tech</p>
@@ -745,60 +889,11 @@
                 <button class="btn verCurso">See Course</button>
               </div>
             </div>
-            <div class="containerCursos">
-              <div class="cardCurso">
-                <div style="width: 100%">
-                  <p class="nombreCurso">Legal Tech</p>
-                  <div class="sub">
-                    <p class="diasCurso">Lunes, Miércoles</p>
-                    <p class="diasCurso">18:00 pm</p>
-                  </div>
-                  <p class="precioCurso">$2400 por hora</p>
-                </div>
-                <button class="btn verCurso">See Course</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="containerServices">
-          <div class="category">
-            <h2>Keep learning</h2>
-          </div>
-          <div class="nameCourses">
-            <ul class="navListService">
-              <li class="navItem">LEGAL TECH</li>
-              <li class="navItem">LAW - NLP</li>
-              <li class="navItem">LAW - BIG DATA</li>
-            </ul>
-          </div>
-          <div class="containerCardsServices">
-            <div class="containerCursos">
-              <div class="cardCurso">
-                <div style="width: 100%">
-                  <p class="nombreCurso">Legal Tech</p>
-                  <div class="sub">
-                    <p class="diasCurso">Lunes, Miércoles</p>
-                    <p class="diasCurso">18:00 pm</p>
-                  </div>
-                  <p class="precioCurso">$2400 por hora</p>
-                </div>
-                <button class="btn verCurso">See Course</button>
-              </div>
-            </div>
-            <div class="containerCursos">
-              <div class="cardCurso">
-                <div style="width: 100%">
-                  <p class="nombreCurso">Legal Tech</p>
-                  <div class="sub">
-                    <p class="diasCurso">Lunes, Miércoles</p>
-                    <p class="diasCurso">18:00 pm</p>
-                  </div>
-                  <p class="precioCurso">$2400 por hora</p>
-                </div>
-                <button class="btn verCurso">See Course</button>
-              </div>
-            </div>
-            <div class="containerCursos">
+            <div
+              class="containerCursos"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
               <div class="cardCurso">
                 <div style="width: 100%">
                   <p class="nombreCurso">Legal Tech</p>
@@ -825,7 +920,11 @@
             </ul>
           </div>
           <div class="containerCardsServices">
-            <div class="containerCursos">
+            <div
+              class="containerCursos"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
               <div class="cardCurso">
                 <div style="width: 100%">
                   <p class="nombreCurso">Legal Tech</p>
@@ -835,10 +934,22 @@
                   </div>
                   <p class="precioCurso">$2400 por hora</p>
                 </div>
-                <button class="btn verCurso">See Course</button>
+                <button class="btn verCurso">
+                  <a
+                    href="../Desarrollo Web/navBarSections/detailServices.html"
+                    id="myBtn"
+                    class="reservar"
+                    style="text-decoration: none;"
+                    >See Course</a
+                  >
+                </button>
               </div>
             </div>
-            <div class="containerCursos">
+            <div
+              class="containerCursos"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
               <div class="cardCurso">
                 <div style="width: 100%">
                   <p class="nombreCurso">Legal Tech</p>
@@ -848,10 +959,22 @@
                   </div>
                   <p class="precioCurso">$2400 por hora</p>
                 </div>
-                <button class="btn verCurso">See Course</button>
+                <button class="btn verCurso">
+                  <a
+                    href="../Desarrollo Web/navBarSections/detailServices.html"
+                    id="myBtn"
+                    class="reservar"
+                    style="text-decoration: none;"
+                    >See Course</a
+                  >
+                </button>
               </div>
             </div>
-            <div class="containerCursos">
+            <div
+              class="containerCursos"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
               <div class="cardCurso">
                 <div style="width: 100%">
                   <p class="nombreCurso">Legal Tech</p>
@@ -861,14 +984,111 @@
                   </div>
                   <p class="precioCurso">$2400 por hora</p>
                 </div>
-                <button class="btn verCurso">See Course</button>
+                <button class="btn verCurso">
+                  <a
+                    href="../Desarrollo Web/navBarSections/detailServices.html"
+                    id="myBtn"
+                    class="reservar"
+                    style="text-decoration: none;"
+                    >See Course</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="containerServices">
+          <div class="category">
+            <h2>Keep learning</h2>
+          </div>
+          <div class="nameCourses">
+            <ul class="navListService">
+              <li class="navItem">LEGAL TECH</li>
+              <li class="navItem">LAW - NLP</li>
+              <li class="navItem">LAW - BIG DATA</li>
+            </ul>
+          </div>
+          <div class="containerCardsServices">
+            <div
+              class="containerCursos"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">
+                  <a
+                    href="../Desarrollo Web/navBarSections/detailServices.html"
+                    id="myBtn"
+                    class="reservar"
+                    style="text-decoration: none;"
+                    >See Course</a
+                  >
+                </button>
+              </div>
+            </div>
+            <div
+              class="containerCursos"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">
+                  <a
+                    href="../Desarrollo Web/navBarSections/detailServices.html"
+                    id="myBtn"
+                    class="reservar"
+                    style="text-decoration: none;"
+                    >See Course</a
+                  >
+                </button>
+              </div>
+            </div>
+            <div
+              class="containerCursos"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">
+                  <a
+                    href="../Desarrollo Web/navBarSections/detailServices.html"
+                    id="myBtn"
+                    class="reservar"
+                    style="text-decoration: none;"
+                    >See Course</a
+                  >
+                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
       <!-- section Coder Layer graduated students-->
-      <section class="containerCardsStudents">
+      <!-- <section class="containerCardsStudents">
         <div class="containerStudents"><h2>OUR GRADUATED STUDENTS</h2></div>
         <div class="serviceContainer">
           <button class="preBtn">
@@ -879,67 +1099,205 @@
           </button>
           <div class="serviceCard">
             <div class="serviceImg">
-              <span class="nameCouse">Course</span>
-              <i class="far fa-user-circle"></i>
-              <h2>Francisco Marquina</h2>
+              <span class="nameCouse color">School</span>
+              <div class="headerInfo">
+                <i class="far fa-user-circle"></i>
+                <button>
+                  <h2>
+                    <a href"#" style="text-decoration: none"
+                      >Francisco Marquina</a
+                    >
+                  </h2>
+                </button>
+              </div>
               <h4>DIGITAL LAW</h4>
               <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aueaque
-                dolor recusandae modi qui, fuga distinctio saepe culpa soluta
-                facere.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aueaque dolor recusandae modi qui.
               </p>
-            </div>
-            <div class="serviceInfo">
-              <button>
-                <a href="/users/login" style="text-decoration: none">
-                  <i class="fas fa-shopping-cart"></i> Agregar al carrito
-                </a>
-              </button>
-            </div>
-          </div>
-          <div class="serviceCard">
-            <div class="serviceImg">
-              <span class="nameSchool">School</span>
-              <i class="far fa-user-circle"></i>
-              <h2>Francisco Marquina</h2>
-              <h4>DIGITAL LAW</h4>
-              <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aueaque
-                dolor recusandae modi qui, fuga distinctio saepe culpa soluta
-                facere.
-              </p>
-            </div>
-            <div class="serviceInfo">
-              <button>
-                <a href="/users/login" style="text-decoration: none">
-                  <i class="fas fa-shopping-cart"></i> Agregar al carrito
-                </a>
-              </button>
             </div>
           </div>
           <div class="serviceCard">
             <div class="serviceImg">
               <span class="nameCouse">Course</span>
-              <i class="far fa-user-circle"></i>
-              <h2>Francisco Marquina</h2>
+              <div class="headerInfo">
+                <i class="far fa-user-circle"></i>
+                <button>
+                  <h2>
+                    <a href"#" style="text-decoration: none"
+                      >Francisco Marquina</a
+                    >
+                  </h2>
+                </button>
+              </div>
               <h4>DIGITAL LAW</h4>
               <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aueaque
-                dolor recusandae modi qui, fuga distinctio saepe culpa soluta
-                facere.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aueaque dolor recusandae modi qui.
               </p>
             </div>
-            <div class="serviceInfo">
-              <button>
-                <a href="/users/login" style="text-decoration: none">
-                  <i class="fas fa-shopping-cart"></i> Agregar al carrito
-                </a>
+          </div>
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="nameCouse color">School</span>
+              <div class="headerInfo">
+                <i class="far fa-user-circle"></i>
+                <button>
+                  <h2>
+                    <a href"#" style="text-decoration: none"
+                      >Francisco Marquina</a
+                    >
+                  </h2>
+                </button>
+              </div>
+              <h4>DIGITAL LAW</h4>
+              <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aueaque dolor recusandae modi qui.
+              </p>
+            </div>
+          </div>
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="nameCouse">Course</span>
+              <div class="headerInfo">
+                <i class="far fa-user-circle"></i>
+                <button>
+                  <h2>
+                    <a href"#" style="text-decoration: none"
+                      >Francisco Marquina</a
+                    >
+                  </h2>
+                </button>
+              </div>
+              <h4>DIGITAL LAW</h4>
+              <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aueaque dolor recusandae modi qui.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>-->
+      <!-- section Coder Lawyer download App -->
+      <section>
+        <div class="sectionTeachers">
+          <div class="descriptionTeachers">
+            <div class="teacherInfo">
+              <div class="header"><h3>OUR STUDENTS</h3></div>
+              <div class="info">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Adipiscing ut diam arcu vivamus erat dictum. Ipsum scelerisque
+                  aenean cursus id quis enim sagittis nullam sodales. Integer
+                  augue id cursus massa duis donec gravida. Non faucibus rmentum
+                </p>
+              </div>
+            </div>
+            <button class="preBtn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="nxtBtn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="serviceContainer">
+              <div class="serviceCard" data-aos="flip-up">
+                <div class="serviceImg">
+                  <span class="nameCouse">Course</span>
+                  <div class="headerInfo">
+                    <i class="far fa-user-circle"></i>
+                    <button>
+                      <h2>
+                        <a
+                          href="../Desarrollo Web/navBarSections/detailTeachers.html"
+                          style="text-decoration: none"
+                          >Francisco Marquina</a
+                        >
+                      </h2>
+                    </button>
+                  </div>
+                  <h4>DIGITAL LAW</h4>
+                  <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aueaque dolor recusandae modi qui.
+                  </p>
+                </div>
+              </div>
+              <div class="serviceCard" data-aos="flip-up">
+                <div class="serviceImg">
+                  <span class="nameCouse color">School</span>
+                  <div class="headerInfo">
+                    <i class="far fa-user-circle"></i>
+                    <button>
+                      <h2>
+                        <a
+                          href="../Desarrollo Web/navBarSections/detailTeachers.html"
+                          style="text-decoration: none"
+                          >Francisco Marquina</a
+                        >
+                      </h2>
+                    </button>
+                  </div>
+                  <h4>DIGITAL LAW</h4>
+                  <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aueaque dolor recusandae modi qui.
+                  </p>
+                </div>
+              </div>
+              <div class="serviceCard" data-aos="flip-up">
+                <div class="serviceImg">
+                  <span class="nameCouse">Course</span>
+                  <div class="headerInfo">
+                    <i class="far fa-user-circle"></i>
+                    <button>
+                      <h2>
+                        <a
+                          href="../Desarrollo Web/navBarSections/detailTeachers.html"
+                          style="text-decoration: none"
+                          >Francisco Marquina</a
+                        >
+                      </h2>
+                    </button>
+                  </div>
+                  <h4>DIGITAL LAW</h4>
+                  <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aueaque dolor recusandae modi qui.
+                  </p>
+                </div>
+              </div>
+              <div class="serviceCard" data-aos="flip-up">
+                <div class="serviceImg">
+                  <span class="nameCouse color">School</span>
+                  <div class="headerInfo">
+                    <i class="far fa-user-circle"></i>
+                    <button>
+                      <h2>
+                        <a
+                          href="../Desarrollo Web/navBarSections/detailTeachers.html"
+                          style="text-decoration: none"
+                          >Francisco Marquina</a
+                        >
+                      </h2>
+                    </button>
+                  </div>
+                  <h4>DIGITAL LAW</h4>
+                  <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aueaque dolor recusandae modi qui.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="buttonInfo">
+              <button class="button" type="submit">
+                <a href="./navBarSections/teachers.html">See More</a>
               </button>
             </div>
           </div>
         </div>
       </section>
-      <!-- section Coder Lawyer download App -->
       <section class="containerApp">
         <div class="containerImageApp">
           <img src="./images/imageApp.png" alt="App Coder Lawyer" />
@@ -1046,5 +1404,8 @@
         </a>
       </div>
     </footer>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
