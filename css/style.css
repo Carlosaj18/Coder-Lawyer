@@ -48,6 +48,16 @@ blanco: #ffffff
     box-sizing: border-box;
   }
 
+  .carousel {
+    border: 1px solid red;
+    height: auto;
+  }
+
+  .carousel img{
+    width: 100%;
+    display: block;
+  }
+
   .mySlides-fade-deactivate {
     display: none;
   }
@@ -80,6 +90,13 @@ blanco: #ffffff
     padding: 0.5em 1em;
     margin: 0.5em auto;
     width: 100%;
+  }
+
+  .carousel-caption {
+    color: #3657f7;
+    border-radius: 25px;
+    font-size: 2rem;
+    font-weight: 600;
   }
 
    /* ------ Dots ----- */
