@@ -11,6 +11,7 @@ blanco: #ffffff
  */
 
 @import  url("../css/partials/header.css");
+@import url("../css/partials/backGround.css");
 @import  url("../css/partials/footer.css");
 
 
@@ -25,15 +26,19 @@ blanco: #ffffff
     height: fit-content;
   }
 
-  .backGround {
-    background-color: #212121;
-    height: fit-content;
-    margin: 0em auto;
-    padding: 10% 0%;
+  h1 {
+    color: #fff;
+    text-align: center;
+  }
+
+  .table {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .header {
+    background-color: #00FFCB;
   }
 
   .containerTable {

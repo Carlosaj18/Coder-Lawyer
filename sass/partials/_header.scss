@@ -31,158 +31,159 @@ blanco: #ffffff
     z-index: 1;
   }
 
-  /* ------ containerLeft ----- */
-  .containerLeft {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
+  .navBar {
 
-  .navBar .containerLeft .logo img {
-    width: 7em;
-    border-radius: 50%;
-  }
+    /* ------ containerLeft ----- */
+    .containerLeft {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
 
-  .navBar .containerLeft .search {
-    display: none;
-  }
+      .logo {
+          img {
+            width: 7em;
+            border-radius: 50%;
+          }
+      }
+      
+      .search {
+        display: none;
+        width: 60%;
+        margin-right: 10px;
 
-  .navBar .containerLeft .search {
-    width: 60%;
-    margin-right: 10px;
-  }
+        i {
+          position: absolute;
+          z-index: 22222;
+          margin-top: 6px;
+          margin-left: 10px;
+        }
+        input {
+          width: 100%;
+          position: relative;
+          padding: 0.5em 1em;
+          border-radius: 50px;
+          border: none;
+          padding-inline-start: 40px;
+          font-size: 13px;
+        }
+      
+        input::placeholder {
+          padding-inline-start: 0px;
+      
+        }
 
-  .navBar .containerLeft .search i {
-    position: absolute;
-    z-index: 22222;
-    margin-top: 6px;
-    margin-left: 10px;
-  }
+        .input:focus {
+          outline: 2px solid #00ffcb;
+        }
 
-  .navBar .containerLeft .search input {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 40px;
-    font-size: 13px;
-  }
+      }
+    }
 
-  .navBar .containerLeft .search input::placeholder {
-    padding-inline-start: 0px;
+    /* ------ containerRight ----- */
 
-  }
-  
-  .navBar .containerLeft .search .input:focus {
-    outline: 2px solid #00ffcb;
-  }
+  .containerRight {
+      display: flex;
+      direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      padding: 13px;
+      position: absolute;
+      top: 20px;
+      right: 30px;
 
-/* ------ containerRight ----- */
+      .buttonsIcons  {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        width: fit-content;
+        font-size: 0.8rem;
 
-.containerRight {
-    display: flex;
-    direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    padding: 13px;
-    position: absolute;
-    top: 20px;
-    right: 30px;
+        i {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          width: fit-content;
+        }
+
+        i.fa-user-circle {
+          font-size: 2.5rem;
+          margin: 0.2em;
+          color: #fff;
+        }
+
+      }
 }
-.containerRight .buttonsIcons  {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-    align-items: center;
-    width: fit-content;
-    font-size: 0.8rem;
-  }
 
-  .containerRight .buttonsIcons i.fa-user-circle {
-    font-size: 2.5rem;
-    margin: 0.2em;
-    color: #fff;
-  }
-
-  .containerRight .buttonsIcons i {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    width: fit-content;
-  }
-
-
-/* ------ buttonResponsive ----- */
+    /* ------ buttonResponsive ----- */
 
   .buttonResponsive{
     color: #ffff;
     font-size: 25px;
-  }
 
-  .buttonResponsive i{
-    margin-top: 10px;
-    margin-left: 13px;
+    i{
+      margin-top: 10px;
+      margin-left: 13px;
+    }
+
+     /* ------ containerLinks ----- */
+
+   .containerLinks{
+    display: none;
+
+    .navList {
+        display: none;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        
+        .navItem {
+            padding: 0.5em 0.5em;
+
+            a {
+                border: transparent;
+                text-decoration: none;
+            }
+
+            a:after {
+                content: "";
+                display: block;
+                height: 1.5px;
+                background: #00ffcb;
+                transform: scaleX(0);
+                transition: transform 0.5s;
+                margin-top: 5px;
+                opacity: 0.5;
+            }
+
+            a:hover:after {
+                transform: scaleX(1);
+                transition: transform 0.3s;
+                height: 1.5px;
+                opacity: 1;
+            }
+            
+            .border {
+                text-decoration: none;
+                font-weight: 300;
+                font-size: 1rem;
+                color: #fff;
+                width: 100%;
+            }
+        }
+    }
+}
+
+  }
+  .buttonResponsive:hover .containerLinks {
+    display: flex;
   }
 
   .buttonResponsive:hover {
     color: #00ffcb;
   }
 
-   /* ------ containerLinks ----- */
-
-   /*.containerLinks{
-    display: none;
-   }
-   .navList {
-    display: none;
-   }
-
-  .navList {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .navItem {
-    padding: 0.5em 0.5em;
-  }
-
-  .navItem a {
-    border: transparent;
-    text-decoration: none;
-  }
-
-  .containerLinks .navList .navItem .border {
-    text-decoration: none;
-    font-weight: 300;
-    font-size: 1rem;
-    color: #fff;
-    width: 100%;
-  }
-
-  .containerLinks .navList .navItem a:after {
-    content: "";
-    display: block;
-    height: 1.5px;
-    background: #00ffcb;
-    transform: scaleX(0);
-    transition: transform 0.5s;
-    margin-top: 5px;
-    opacity: 0.5;
-  }
-
-  .containerLinks .navList .navItem a:hover:after {
-    transform: scaleX(1);
-    transition: transform 0.3s;
-    height: 1.5px;
-    opacity: 1;
-  }
-
-  .buttonResponsive:hover .containerLinks {
-    display: flex;
-  }/*
 
  /* ------ subMenu ----- */
  .dropDown {
@@ -462,3 +463,7 @@ blanco: #ffffff
   }
  
 }
+
+  }
+
+  
