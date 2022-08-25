@@ -8,12 +8,42 @@ gris: #DAD9DE
 negro: #212121
 blanco: #ffffff
  */
-@import url("../css/partials/backGround.css");
 @import url("../css/partials/containerService.css");
 @import url("../css/myChallanges.css");
 @import url("../css/partials/footer.css");
 /** SCSS */
-@im @import "fuentes";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+body main {
+  width: 100%;
+  height: 100%;
+}
+body main section {
+  width: 100%;
+  height: 100%;
+}
+
+.containerBody {
+  background-color: #212121;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
 /* COLORES:
 azul mas fuerte: #3657F7
 azul mas oscuro: #1F58A5
@@ -51,10 +81,6 @@ header {
   /* ------ containerLeft ----- */
   /* ------ containerRight ----- */
   /* ------ buttonResponsive ----- */
-  /* ------ containerLinks ----- */
-  /* ------ subMenu ----- */
-  /** TABLET */
-  /** DESKTOP */
 }
 .navBar .containerLeft {
   display: flex;
@@ -119,8 +145,12 @@ header {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.8rem;
+  /* ------ subMenu ----- */
+  /*.dropDown ul.outline {
+    border-bottom: none;
+  }*/
 }
-.navBar .containerRight .buttonsIcons i {
+.navBar .containerRight .buttonsIcons button i {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -128,71 +158,15 @@ header {
   width: -moz-fit-content;
   width: fit-content;
 }
-.navBar .containerRight .buttonsIcons i.fa-user-circle {
+.navBar .containerRight .buttonsIcons button i.fa-user-circle {
   font-size: 2.5rem;
   margin: 0.2em;
   color: #fff;
 }
-.navBar .buttonResponsive {
-  color: white;
-  font-size: 25px;
-}
-.navBar .buttonResponsive i {
-  margin-top: 10px;
-  margin-left: 13px;
-}
-.navBar .buttonResponsive:hover {
-  color: #00ffcb;
-}
-.navBar .containerLinks {
-  display: none;
-}
-.navBar .containerLinks .navList {
-  display: none;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-}
-.navBar .containerLinks .navList .navItem {
-  padding: 0.5em 0.5em;
-}
-.navBar .containerLinks .navList .navItem a {
-  border: transparent;
-  text-decoration: none;
-}
-.navBar .containerLinks .navList .navItem a:after {
-  content: "";
-  display: block;
-  height: 1.5px;
-  background: #00ffcb;
-  transform: scaleX(0);
-  transition: transform 0.5s;
-  margin-top: 5px;
-  opacity: 0.5;
-}
-.navBar .containerLinks .navList .navItem a:hover:after {
-  transform: scaleX(1);
-  transition: transform 0.3s;
-  height: 1.5px;
-  opacity: 1;
-}
-.navBar .containerLinks .navList .navItem .border {
-  text-decoration: none;
-  font-weight: 300;
-  font-size: 1rem;
-  color: #fff;
-  width: 100%;
-}
-.navBar .buttonResponsive:hover .containerLinks {
-  display: flex;
-}
-.navBar .dropDown {
+.navBar .containerRight .buttonsIcons .dropDown {
   position: relative;
 }
-.navBar .dropdownContent {
-  display: none;
-}
-.navBar .dropbtn {
+.navBar .containerRight .buttonsIcons .dropDown .dropbtn {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -200,11 +174,11 @@ header {
   width: -moz-fit-content;
   width: fit-content;
 }
-.navBar .dropDown:hover .dropbtn i {
+.navBar .containerRight .buttonsIcons .dropDown .dropbtn i {
   background-color: transparent;
   color: #00ffcb;
 }
-.navBar .dropdownContent {
+.navBar .containerRight .buttonsIcons .dropDown .dropdownContent {
   display: none;
   position: absolute;
   background-color: #212121;
@@ -220,10 +194,7 @@ header {
   padding: 1em auto;
   border: 1px solid #00ffcb;
 }
-.navBar .dropDown:hover .dropdownContent {
-  display: block;
-}
-.navBar .dropHeader {
+.navBar .containerRight .buttonsIcons .dropDown .dropdownContent .dropHeader {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -231,31 +202,26 @@ header {
   padding: 1em 0em;
   border-bottom: 1px solid #00ffcb;
 }
-.navBar .dropHeader h4 {
+.navBar .containerRight .buttonsIcons .dropDown .dropdownContent .dropHeader h4 {
   margin-left: 0.5em;
 }
-.navBar .dropDown .dropdownContent .content {
+.navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content {
   list-style: none;
   border-bottom: 1px solid #00ffcb;
 }
-.navBar .dropDown .dropdownContent .content .navList a {
+.navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList {
+  font-size: 0.8rem;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList a {
   text-decoration: none;
   font-weight: 300;
   font-size: 0.8rem;
   color: #fff;
 }
-.navBar .dropDown .dropdownContent .content .navList {
-  font-size: 0.8rem;
-}
-.navBar .dropDown ul.outline {
-  border-bottom: none;
-}
-.navBar .dropDown ul li {
-  padding: 0.5em 1em;
-  font-size: 1rem;
-  font-weight: 300;
-}
-.navBar .dropDown .dropdownContent .content .navList a:after {
+.navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList a:after {
   content: "";
   display: block;
   height: 1.5px;
@@ -265,136 +231,179 @@ header {
   margin-top: 5px;
   opacity: 0.5;
 }
-.navBar .dropDown .dropdownContent .content .navList a:hover:after {
+.navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList a:hover:after {
   transform: scaleX(1);
   transition: transform 0.3s;
   height: 1.5px;
   opacity: 1;
 }
-.navBar #subMenuGuest {
+.navBar .containerRight .buttonsIcons .dropDown #subMenuGuest {
   display: none;
 }
+.navBar .containerRight .buttonsIcons .dropDown:hover .dropdownContent {
+  display: block;
+}
+.navBar .buttonResponsive {
+  color: white;
+  font-size: 25px;
+  /* ------ containerLinks ----- */
+}
+.navBar .buttonResponsive i {
+  margin-top: 10px;
+  margin-left: 13px;
+}
+.navBar .buttonResponsive .containerLinks {
+  display: none;
+}
+.navBar .buttonResponsive .containerLinks .navList {
+  display: none;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.navBar .buttonResponsive .containerLinks .navList .navItem {
+  padding: 0.5em 0.5em;
+}
+.navBar .buttonResponsive .containerLinks .navList .navItem a {
+  border: transparent;
+  text-decoration: none;
+}
+.navBar .buttonResponsive .containerLinks .navList .navItem a:after {
+  content: "";
+  display: block;
+  height: 1.5px;
+  background: #00ffcb;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  margin-top: 5px;
+  opacity: 0.5;
+}
+.navBar .buttonResponsive .containerLinks .navList .navItem a:hover:after {
+  transform: scaleX(1);
+  transition: transform 0.3s;
+  height: 1.5px;
+  opacity: 1;
+}
+.navBar .buttonResponsive .containerLinks .navList .navItem .border {
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #fff;
+  width: 100%;
+}
+.navBar .buttonResponsive:hover .containerLinks {
+  display: flex;
+}
+.navBar .buttonResponsive:hover {
+  color: #00ffcb;
+}
+
 @media screen and (min-width: 600px) {
+  /* ------ containerLeft ----- */
   .navBar {
-    /* ------ HEADER ----- */
-    /* ------ containerLeft ----- */
     /* ------ containerRight ----- */
     /* ------ buttonResponsive ----- */
-    /* ------ containerLinks ----- */
-    /* ------ subMenu ----- */
-  }
-  .navBar header {
-    width: 100%;
-    height: auto;
-    background: #212121;
-    padding: 1em 1em;
-    position: relative;
-    z-index: 1;
   }
   .navBar .containerLeft {
     justify-content: start;
   }
-  .navBar .navBar .containerLeft .logo img {
+  .navBar .containerLeft .logo img {
     width: 9em;
     border-radius: 50%;
   }
-  .navBar .navBar .containerLeft .search {
+  .navBar .containerLeft .search {
     display: block;
     width: 60%;
     margin-left: 15px;
   }
-  .navBar .navBar .containerLeft .search input {
+  .navBar .containerLeft .search input {
     width: 70%;
   }
-  .navBar .containerRight .buttonsIcons i.fa-user-circle {
+  .navBar .containerRight .buttonsIcons button i.fa-user-circle {
     font-size: 2.7rem;
+  }
+  .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList {
+    font-size: 1rem;
+  }
+  .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList a {
+    font-size: 1rem;
   }
   .navBar .containerRight .buttonsIcons i {
     font-size: 1rem;
   }
   .navBar .buttonResponsive {
     font-size: 30px;
+    /* ------ containerLinks ----- */
   }
-  .navBar .containerLinks .navList .navItem .border {
+  .navBar .buttonResponsive .containerLinks .navList .navItem .border {
     font-size: 1.2rem;
   }
-  .navBar .dropDown .dropdownContent .content .navList a {
-    font-size: 1rem;
-  }
-  .navBar .dropDown .dropdownContent .content .navList {
-    font-size: 1rem;
-  }
 }
+/** DESKTOP */
 @media screen and (min-width: 1024px) {
   .navBar {
-    /* ------ HEADER ----- */
-    /* ------ containerLeft ----- */
     /* ------ containerRight ----- */
     /* ------ buttonResponsive ----- */
-    /* ------ containerLinks ----- */
-    /* ------ subMenu ----- */
-  }
-  .navBar header {
-    width: 100%;
-    height: auto;
-    background: #212121;
-    padding: 1em 1em;
-    position: relative;
-    z-index: 1;
   }
   .navBar .containerLeft {
     justify-content: space-between;
     width: 40%;
   }
-  .navBar .navBar .containerLeft .logo img {
-    width: 9em;
+  .navBar .containerLeft .logo img {
+    width: 10em;
+    border-radius: 50%;
   }
-  .navBar .navBar .containerLeft .search {
+  .navBar .containerLeft .search {
     display: block;
-    width: 60%;
     margin-left: 15px;
   }
-  .navBar .navBar .containerLeft .search input {
+  .navBar .containerLeft .search input {
     width: 100%;
   }
-  .navBar .containerRight .buttonsIcons i.fa-user-circle {
+  .navBar .containerRight .buttonsIcons button i.fa-user-circle {
     font-size: 3rem;
   }
-  .navBar .containerRight .buttonsIcons i {
+  .navBar .containerRight .buttonsIcons button i {
     font-size: 1.4rem;
+  }
+  .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList {
+    font-size: 1rem;
+  }
+  .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList a {
+    font-size: 1rem;
+  }
+  .navBar .buttonResponsive {
+    font-size: 30px;
+    /* ------ containerLinks ----- */
   }
   .navBar .buttonResponsive i {
     display: none;
   }
-  .navBar .containerLinks {
+  .navBar .buttonResponsive .containerLinks {
     width: auto;
     position: absolute;
     top: 11px;
     right: 199px;
-  }
-  .navBar .containerLinks .navList .navItem .border {
-    font-size: 1.2rem;
-  }
-  .navBar .containerLinks {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
-  .navBar .navList {
+  .navBar .buttonResponsive .containerLinks .navList {
     list-style: none;
     display: flex;
     flex-direction: row;
   }
-  .navBar .navItem {
+  .navBar .buttonResponsive .containerLinks .navList .navItem {
     padding: 1em 0.5em;
   }
-  .navBar .containerLinks .navList .navItem .border {
+  .navBar .buttonResponsive .containerLinks .navList .navItem .border {
+    font-size: 1.2rem;
     text-decoration: none;
     font-weight: 300;
     font-size: 1rem;
     color: #fff;
   }
-  .navBar .containerLinks .navList .navItem a:after {
+  .navBar .buttonResponsive .containerLinks .navList .navItem a:after {
     content: "";
     display: block;
     height: 1.5px;
@@ -404,26 +413,13 @@ header {
     margin-top: 5px;
     opacity: 0.5;
   }
-  .navBar .containerLinks .navList .navItem a:hover:after {
+  .navBar .buttonResponsive .containerLinks .navList .navItem a:hover:after {
     transform: scaleX(1);
     transition: transform 0.3s;
     height: 1.5px;
     opacity: 1;
   }
-  .navBar .dropDown .dropdownContent .content .navList a {
-    font-size: 1rem;
-  }
-  .navBar .dropDown .dropdownContent .content .navList {
-    font-size: 1rem;
-  }
-  .navBar .dropdownContent {
-    width: 200px;
-  }
-  .navBar .dropHeader {
-    font-size: 1rem;
-  }
 }
-
 /* ------ section Main Carrusel ----- */
 /** Flexbox */
 .mainCarrusel {

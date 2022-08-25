@@ -9,14 +9,13 @@ negro: #212121
 blanco: #ffffff
  */
 
-
- @import url("../css/partials/backGround.css");
  @import  url("../css/partials/containerService.css");
  @import  url("../css/myChallanges.css");
  @import  url("../css/partials/footer.css");
 
  /** SCSS */
 
+ @import "variables";
  @import "generals";
  @import "fuentes";
  @import "./partials/header.scss";
