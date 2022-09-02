@@ -1,0 +1,18 @@
+@mixin flex-container-row-center {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
+
+.serviceImg {
+   @include flex-container-row-center;
+}
+
+@mixin sizes($width, $height) {
+    height: $height;
+    width: $width;
+ }
+ .serviceImg {
+    @include sizes(100%, 95%);
+ }
+ 

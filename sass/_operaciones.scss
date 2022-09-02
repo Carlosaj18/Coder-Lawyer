@@ -1,0 +1,9 @@
+$ancho: 100%;
+$black:  #212121;;
+$green: #33D374;
+
+.carousel {
+    background-color: $black;
+    max-width:$ancho;
+    /*max-width: $ancho/2; */ /* Ancho de 360*/
+}
