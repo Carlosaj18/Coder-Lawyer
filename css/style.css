@@ -1,22 +1,25 @@
-/* COLORES:
-azul mas fuerte: #3657F7
-azul mas oscuro: #1F58A5
-"violeta": #6243F7
-verde claro: #00FFCB
-verde oscuro: #00A987
-gris: #DAD9DE
-negro: #212121
-blanco: #ffffff
- */
-@import url("../css/partials/containerService.css");
-@import url("../css/myChallanges.css");
-@import url("../css/partials/footer.css");
-/** SCSS */
+/** SCSS - GENERALS */ /** Backgorund */
+/** Size */
+/** size card teachers & students */
+/** size services */
+/** size students */
+/** size form */
+/** Weight */
+/** Color */
+/** color card teachers & students */
+/** Color numbers */
+/** color services */
+/** color form */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import "./partials/footer.css";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /*font-size: $sizePharagrap;*/
+}
+* p {
+  color: #ffffff;
 }
 
 body {
@@ -44,6 +47,13 @@ body main section {
   font-family: "Open Sans", sans-serif;
 }
 
+.carousel {
+  background-color: #212121;
+  max-width: 100%;
+  /*max-width: $ancho/2; */ /* Ancho de 360*/
+}
+
+/** SCSS - PARTIALS */
 /* COLORES:
 azul mas fuerte: #3657F7
 azul mas oscuro: #1F58A5
@@ -420,141 +430,8 @@ header {
     opacity: 1;
   }
 }
-.carousel {
-  background-color: #212121;
-  max-width: 100%;
-  /*max-width: $ancho/2; */ /* Ancho de 360*/
-}
-
-/* ------ section Main Carrusel ----- */
-/** Flexbox */
-.mainCarrusel {
-  max-width: 100%;
-  position: relative;
-  margin: auto;
-  box-sizing: border-box;
-}
-
-.carousel img {
-  width: 100%;
-  display: block;
-}
-
-.mySlides-fade-deactivate {
-  display: none;
-}
-
-.mySlides {
-  display: flex;
-  flex-direction: column;
-}
-
-.mainCarrusel img.image {
-  width: 100%;
-  display: block;
-  /*position: absolute;
-  top: -7px;*/
-}
-
-.mySlides .contentText {
-  position: absolute;
-  top: 0.8em;
-  right: 0.8em;
-  box-sizing: border-box;
-}
-
-.contentText .text {
-  color: #fff;
-  background-color: #3657f7;
-  border-radius: 25px;
-  font-size: 12px;
-  font-weight: 300;
-  padding: 0.5em 1em;
-  margin: 0.5em auto;
-  width: 100%;
-}
-
-.carousel-caption {
-  color: #3657f7;
-  border-radius: 25px;
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-/* ------ Dots ----- */
-.contentDot {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 20vh;
-  width: 100%;
-}
-
-.contentDot {
-  bottom: 2px;
-}
-
-.dot {
-  height: 10px;
-  width: 10px;
-}
-
-/* ------ Prev & Next ------ */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 0%;
-  width: auto;
-  padding: 16px;
-  margin-top: 105px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: #212121;
-}
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-/** Section Characterisitcs Grid + Flex Box */
+/* ------ section Main Carrusel with Boostrapp----- */
+/* ------ Section Characterisitcs ----- */
 .contentCharacteristics {
   display: flex;
   flex-direction: column;
@@ -563,52 +440,9 @@ header {
   align-items: center;
   width: 100%;
   height: 110vh;
+  padding-top: 80px;
 }
-
-.circle {
-  grid-area: circle;
-  background-color: #6243f7;
-  color: #00ffcb;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-bottom: 0.5em;
-}
-
-.circle:hover {
-  transform: scale(1.2) rotate(45deg);
-}
-
-.characteristics .circle i {
-  font-size: 80px;
-  display: flex;
-  justify-content: center;
-  margin-top: 17px;
-}
-
-.titleCharacterisitc {
-  grid-area: titleCharacterisitc;
-}
-
-.titleCharacterisitc {
-  font-size: 1.3rem;
-  text-transform: capitalize;
-  color: #6243f7;
-  margin-bottom: 0.5em;
-}
-
-.parraCharacterisitc {
-  grid-area: parraCharacterisitc;
-}
-
-.parraCharacterisitc {
-  font-size: 0.8rem;
-  color: #fff;
-  text-align: center;
-  width: 50%;
-}
-
-.characteristics {
+.contentCharacteristics .characteristics {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto;
@@ -617,59 +451,85 @@ header {
   margin-top: 50px;
   gap: 10px;
 }
+.contentCharacteristics .characteristics .circle {
+  grid-area: circle;
+  background-color: #6243f7;
+  color: #00ffcb;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 0.5em;
+}
+.contentCharacteristics .characteristics .circle i {
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  margin-top: 17px;
+}
+.contentCharacteristics .characteristics .circle:hover {
+  transform: scale(1.2) rotate(45deg);
+}
+.contentCharacteristics .characteristics .titleCharacterisitc {
+  grid-area: titleCharacterisitc;
+}
+.contentCharacteristics .characteristics .titleCharacterisitc {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #6243f7;
+  margin-bottom: 0.5em;
+}
+.contentCharacteristics .characteristics .parraCharacterisitc {
+  grid-area: parraCharacterisitc;
+}
+.contentCharacteristics .characteristics .parraCharacterisitc {
+  font-size: 0.8rem;
+  color: #fff;
+  text-align: center;
+  width: 50%;
+}
 
-/* ------ section Coder Laywer Teachers Grid ----- */
+/* ------ section Coder Laywer Teachers  ----- */
 .sectionTeachers {
   width: 100%;
   height: auto;
   margin: 0em 0em 0em 0em;
-  /*background-image: url(../images/bkg-teachers2.png);*/
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
   position: relative;
   margin-bottom: 50px;
 }
-
-/*.descriptionTeachers {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: space-between;
-  justify-content: space-around;
-  width: 100%;
-  height: inherit;
-  padding: 10px;
-  position: relative;
-}*/
-.serviceCard .serviceImg {
-  border: 3px solid #6243F7;
+.sectionTeachers .descriptionTeachers {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: "teacherInfo" "serviceContainer" "buttonInfo";
+  justify-items: center;
+  margin-top: 50px;
 }
-
-.teacherInfo {
+.sectionTeachers .descriptionTeachers .teacherInfo {
   grid-area: teacherInfo;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: auto;
 }
-
-.header h3 {
-  font-size: 2rem;
-  text-transform: capitalize;
-  color: #6243f7;
+.sectionTeachers .descriptionTeachers .teacherInfo .header {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #6243F7;
+  height: auto;
   margin-bottom: 0.5em;
-  margin-top: 1.5em;
-  text-align: center;
+  margin-top: 0.5em;
 }
-
-.info p {
+.sectionTeachers .descriptionTeachers .info p {
   font-size: 0.8rem;
-  color: #212121;
   text-align: center;
+  padding: 2em;
 }
-
-.serviceContainer {
+.sectionTeachers .serviceContainer {
   grid-area: serviceContainer;
   overflow-y: hidden;
   overflow-x: auto;
@@ -680,18 +540,13 @@ header {
   gap: 25px;
   /*padding: 0 10vw 0 1vw;*/
 }
-
-.serviceContainer::-webkit-scrollbar {
-  display: none;
-}
-
-.serviceCard {
+.sectionTeachers .serviceContainer .serviceCard {
   flex: 0 0 auto;
   width: 300px;
   height: 200px;
 }
-
-.serviceImg {
+.sectionTeachers .serviceContainer .serviceCard .serviceImg {
+  border: 2px solid #6243F7;
   position: relative;
   overflow: hidden;
   background-color: black;
@@ -699,61 +554,7 @@ header {
   display: flex;
   transition: all 0.5s;
 }
-
-.serviceImg {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.serviceImg {
-  height: 95%;
-  width: 100%;
-}
-
-.serviceImg i {
-  font-size: 80px;
-  color: #3651F7;
-  margin-bottom: 22px;
-  padding-top: 4px;
-}
-
-.headerInfo {
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
-}
-
-.serviceImg button h2 a {
-  font-size: 1rem;
-  text-align: center;
-  color: #3651F7;
-}
-
-.serviceImg button {
-  outline: none;
-  border: none;
-  background-color: black;
-}
-
-.serviceCard:hover .serviceImg button {
-  background-color: #212121;
-  transition: all 0s;
-}
-
-.serviceCard:hover .serviceImg {
-  border: 3px solid #6243F7;
-}
-
-.serviceImg h4 {
-  font-size: 1.3rem;
-  text-align: center;
-  color: #3651F7;
-  text-transform: uppercase;
-  padding-top: 5px;
-}
-
-.nameCouse, .color {
+.sectionTeachers .serviceContainer .serviceCard .serviceImg .nameCouse, .sectionTeachers .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .color, .sectionStudents .descriptionStudents .sectionTeachers .serviceContainer .serviceCard .serviceImg .color, .sectionTeachers .serviceContainer .serviceCard .serviceImg .color {
   position: absolute;
   background-color: orange;
   border-radius: 15px;
@@ -764,102 +565,90 @@ header {
   padding: 5px;
   font-size: 12px;
 }
-
-.color {
+.sectionTeachers .serviceContainer .serviceCard .serviceImg .color {
   background-color: greenyellow;
 }
-
-.description {
+.sectionTeachers .serviceContainer .serviceCard .serviceImg .headerInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.sectionTeachers .serviceContainer .serviceCard .serviceImg .headerInfo i {
+  font-size: 6rem;
+  color: #3651F7;
+  padding-top: 4px;
+  margin-bottom: 15px;
+  margin-top: 22px;
+  margin-left: 25px;
+}
+.sectionTeachers .serviceContainer .serviceCard .serviceImg .headerInfo button {
+  outline: none;
+  border: none;
+  background-color: black;
+}
+.sectionTeachers .serviceContainer .serviceCard .serviceImg .headerInfo button a {
+  font-size: 1rem;
+  text-align: center;
+  color: #3651F7;
+}
+.sectionTeachers .serviceContainer .serviceCard .serviceImg h4 {
+  font-size: 1.3rem;
+  text-align: center;
+  color: #3651F7;
+  text-transform: uppercase;
+  padding-top: 5px;
+  position: absolute;
+}
+.sectionTeachers .serviceContainer .serviceCard .serviceImg .description {
   margin-top: 5em;
-  width: 150px;
+  width: 200px;
   text-align: center;
   border: none;
   transition: 0.5s;
   opacity: 0;
   font-size: 0.8rem;
-  color: #fff;
+  color: #ffffff;
   transition: all 0.5s;
-  margin-right: 1em;
+  position: absolute;
 }
-
-.serviceCard:hover .description {
-  opacity: 1;
+.sectionTeachers .serviceContainer .serviceCard .serviceImg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-
-.serviceCard:hover .serviceImg {
+.sectionTeachers .serviceContainer .serviceCard .serviceImg {
+  height: 95%;
+  width: 100%;
+}
+.sectionTeachers .serviceContainer .serviceCard:hover .serviceImg button {
+  background-color: #212121;
+  border-radius: 15px;
+  transition: all 0s;
+}
+.sectionTeachers .serviceContainer .serviceCard:hover a {
+  margin-bottom: 20px;
+}
+.sectionTeachers .serviceContainer .serviceCard:hover .serviceImg {
   background-color: #212121;
 }
-
-.serviceInfo {
-  width: 100%;
-  height: 100%;
-  padding-top: 10px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  top: -1.5em;
+.sectionTeachers .serviceContainer .serviceCard:hover .serviceImg {
+  border: 1px solid #00FFCB;
 }
-
-.serviceInfo button {
-  position: absolute;
-  outline: none;
-  border: none;
-  width: 80%;
-  border-radius: 25px;
-  padding: 0.5em 1em;
-  font-size: 0.8rem;
-  background-color: black;
-}
-
-.serviceInfo button i {
-  color: #3651F7;
-}
-
-.serviceInfo button a {
-  color: #3651F7;
-}
-
-.preBtn,
-.nxtBtn {
-  border: none;
-  width: 5vw;
-  height: 80%;
-  position: absolute;
-  top: 50;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-  cursor: pointer;
-  z-index: 9;
-  color: #00FFCB;
-}
-
-.preBtn {
-  left: 0;
-}
-
-.nxtBtn {
-  right: 0;
-}
-
-.preBtn i,
-.nxtBtn i {
-  opacity: 0.2;
-}
-
-.preBtn:hover i,
-.nxtBtn:hover i {
+.sectionTeachers .serviceContainer .serviceCard:hover .description {
   opacity: 1;
 }
-
-.buttonInfo {
+.sectionTeachers .serviceContainer .serviceCard:hover i {
+  opacity: 0;
+}
+.sectionTeachers .serviceContainer::-webkit-scrollbar {
+  display: none;
+}
+.sectionTeachers .buttonInfo {
   grid-area: buttonInfo;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 @-webkit-keyframes un_efecto {
   0% {
     transform: scale(1);
@@ -882,7 +671,6 @@ header {
     transform: scale(1);
   }
 }
-
 @keyframes un_efecto {
   0% {
     transform: scale(1);
@@ -905,14 +693,11 @@ header {
     transform: scale(1);
   }
 }
-.descriptionTeachers .button {
+.sectionTeachers .buttonInfo .button {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
-}
-
-.buttonInfo .button {
   width: 140px;
   height: 40px;
   border-radius: 14px;
@@ -923,13 +708,11 @@ header {
   margin-top: 1em;
   transition: 0.5 opacity ease-in-out;
 }
-
-.button a {
+.sectionTeachers .buttonInfo .button a {
   text-decoration: none;
   color: #212121;
 }
-
-.buttonInfo .button:hover {
+.sectionTeachers .buttonInfo .button:hover {
   -webkit-animation-name: un_efecto;
           animation-name: un_efecto;
   -webkit-animation-iteration-count: infinite;
@@ -945,22 +728,19 @@ header {
   width: 160px;
   height: 50px;*/
 }
-
-.buttonInfo .button a:hover {
+.sectionTeachers .buttonInfo .button a:hover {
   color: black;
 }
 
-.descriptionTeachers {
+/* ------ section Coder Laywer Stadistics  ----- */
+.est {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: auto;
-  grid-template-areas: "teacherInfo" "serviceContainer" "buttonInfo";
+  grid-template-rows: auto auto;
+  grid-template-areas: "titleEstadisticas" "cantidades";
   justify-items: center;
-  margin-top: 50px;
 }
-
-/* ------ section Coder Laywer Stadistics Grid ----- */
-.titleEstadisticas {
+.est .titleEstadisticas {
   grid-area: titleEstadisticas;
   text-align: center;
   display: flex;
@@ -970,154 +750,43 @@ header {
   height: -moz-fit-content;
   height: fit-content;
 }
-
-.titleEstadisticas h2 {
+.est .titleEstadisticas h2 {
   text-align: center;
   font-size: 3rem;
   font-weight: 700;
-  color: #fff;
+  color: #6243F7;
   height: auto;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
 }
-
-.cantidades {
+.est .cantidades {
   grid-area: cantidades;
   display: flex;
   flex-direction: column;
 }
-
-.info {
+.est .cantidades .info {
   display: flex;
   flex-direction: column;
 }
-
-.cantidades .number {
+.est .cantidades .info .number {
   font-size: 6rem;
   font-weight: 600;
-  color: #6243f7;
+  color: #6243F7;
   text-align: center;
   margin: 0;
 }
-
-.cantidades .text {
-  font-size: 1.3rem;
+.est .cantidades .info .text {
+  font-size: 1.5rem;
   font-weight: 600;
-  color: #fff;
+  color: #ffffff;
   text-align: center;
   margin: 0;
 }
-
-.est {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: auto auto;
-  grid-template-areas: "titleEstadisticas" "cantidades";
-  justify-items: center;
+.est .cantidades .info:hover {
+  transform: scale(1.2);
 }
 
 /* ------ section Coder Laywer service Grid ----- */
-.sectionBkg {
-  width: 100%;
-  height: auto;
-  background-image: url(../images/bkg-services1.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
-  position: relative;
-}
-
-.category h2 {
-  grid-area: category;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.categoryFirst h2 {
-  font-size: 2rem;
-  text-transform: capitalize;
-  color: #6243f7;
-  margin-top: 1em;
-  margin-left: 1em;
-  margin-bottom: 0.5em;
-  text-transform: uppercase;
-  padding: 0.5em 0.5em;
-}
-
-.category h2 {
-  font-size: 2rem;
-  text-transform: capitalize;
-  color: #6243f7;
-  margin-left: 1em;
-  margin-bottom: 0.5em;
-  text-transform: uppercase;
-  padding: 0.5em 0.5em;
-}
-
-.nameCourses {
-  grid-area: nameCourses;
-}
-
-.nameCourses {
-  font-size: 0.8rem;
-  text-transform: capitalize;
-  color: white;
-  text-transform: uppercase;
-  text-align: end;
-}
-
-.navListService {
-  display: flex;
-  flex-direction: row;
-  border-bottom: 1.5px solid #6243f7;
-  margin-left: 1.2em;
-  list-style: none;
-}
-
-.navItem {
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-/** Container Service */
-.cardCurso:hover {
-  border: 3px solid #00ffcb;
-}
-
-.preBtnCart1,
-.nxtBtnCart1 {
-  border: none;
-  width: 5vw;
-  height: 52%;
-  position: absolute;
-  top: 50;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-  cursor: pointer;
-  z-index: 9;
-  color: #00FFCB;
-}
-
-.preBtnCart1 {
-  left: 0;
-}
-
-.nxtBtnCart1 {
-  right: 0;
-}
-
-.preBtnCart1 i,
-.nxtBtnCart1 i {
-  opacity: 0.2;
-}
-
-.preBtnCart1:hover i,
-.nxtBtnCart1:hover i {
-  opacity: 1;
-}
-
 .containerServices {
   display: grid;
   grid-template-columns: auto;
@@ -1126,222 +795,488 @@ header {
   justify-items: start;
   height: auto;
 }
-
-/* ------ section Coder Laywer service Grid ----- */
-.containerChallanges {
-  width: 100%;
-  height: auto;
-  background-image: url(../images/bkg-services3.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
-  position: relative;
-}
-
-/* ------ section Coder Laywer students Grid ----- */
-.containerCardsStudents {
-  width: 100%;
-  height: 1400px;
-  margin: 0em 0em 0em 0em;
-  background-image: url(../images/bkg-teachers2.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
-  position: relative;
-}
-
-.containerStudents {
-  grid-area: containerStudents;
-}
-
-.containerStudents h2 {
+.containerServices .categoryFirst h2 {
   font-size: 2rem;
   text-transform: capitalize;
-  color: #6243f7;
+  color: #6243F7;
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  padding: 0.5em 0.5em;
+}
+.containerServices .category {
+  grid-area: category;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.containerServices .category h2 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #6243F7;
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  padding: 0.5em 0.5em;
+}
+.containerServices .nameCourses {
+  grid-area: nameCourses;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: end;
+}
+.containerServices .nameCourses .navListService {
+  display: flex;
+  flex-direction: row;
+  /*border-bottom: 1.5px solid #6243f7;*/
+  margin-left: 1.2em;
+  list-style: none;
+}
+.containerServices .nameCourses .navListService .navItem {
+  text-decoration: none;
+  font-size: 1rem;
+}
+.containerServices .containerCardsServices {
+  grid-area: containerCardsServices;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
+  flex-direction: column;
 }
-
-.containerStudents {
-  text-align: center;
+.containerServices .containerCardsServices .containerCursos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0em auto;
+  width: 100%;
+  padding: 20px;
+}
+.containerServices .containerCardsServices .containerCursos .cardCurso {
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 2em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 300px;
+  margin: 1em;
+  box-sizing: border-box;
+  border: 1px solid #6243F7;
+}
+.containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  border-bottom: 1.5px solid #6243F7;
+  margin-bottom: 0.5em;
+  width: 100%;
   height: auto;
 }
+.containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+  display: flex;
+}
+.containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1em;
+  border: 1px solid #6243F7;
+  padding: 0.3em;
+  border-radius: 5px;
+  display: none;
+}
+.containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso:hover {
+  background-color: #00FFCB;
+  color: black;
+}
+.containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
+  background-color: #6243F7;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #212121;
+  padding: 0.5em 1em;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 1em;
+}
+.containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
+  text-decoration: none;
+  color: black;
+}
+.containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso:hover .reservar {
+  color: #ffffff;
+}
+.containerServices .containerCardsServices .containerCursos .cardCurso:hover {
+  border: 1px solid #00ffcb;
+  background-color: #212121;
+}
+.containerServices .containerCardsServices .containerCursos .cardCurso:hover .precioCurso {
+  display: flex;
+}
+.containerServices .nameCourses .navItem:after {
+  content: "";
+  display: block;
+  height: 1.5px;
+  background: #00ffcb;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  margin-top: 5px;
+  opacity: 0.5;
+}
+.containerServices .nameCourses .navItem:hover:after {
+  transform: scaleX(1);
+  transition: transform 0.3s;
+  height: 1.5px;
+  opacity: 1;
+}
 
-.serviceContainer {
+/* ------ section Coder Laywer students ----- */
+.sectionStudents .descriptionStudents {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: "studentInfo" "serviceContainer" "buttonInfo";
+  justify-items: center;
+  margin-top: 50px;
+}
+.sectionStudents .descriptionStudents .studentInfo {
+  grid-area: studentInfo;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+.sectionStudents .descriptionStudents .studentInfo .header {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #6243F7;
+  height: auto;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+.sectionStudents .descriptionStudents .studentInfo .info p {
+  font-size: 0.8rem;
+  color: #ffffff;
+  text-align: center;
+  padding: 2em;
+}
+.sectionStudents .descriptionStudents .serviceContainer {
   grid-area: serviceContainer;
-  margin-bottom: 1em;
+  overflow-y: hidden;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  scroll-behavior: smooth;
+  gap: 25px;
+  /*padding: 0 10vw 0 1vw;*/
+}
+.sectionStudents .descriptionStudents .serviceContainer .serviceCard {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 200px;
+}
+.sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg {
+  border: 2px solid #6243F7;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  border-radius: 25px;
+  display: flex;
+  transition: all 0.5s;
+}
+.sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .nameCouse, .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .color {
+  position: absolute;
+  background-color: orange;
+  border-radius: 15px;
+  color: black;
+  right: 10px;
+  top: 10px;
+  text-transform: capitalize;
+  padding: 5px;
+  font-size: 12px;
+}
+.sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .color {
+  background-color: greenyellow;
+}
+.sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .headerInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .headerInfo i {
+  font-size: 80px;
+  color: #3651F7;
+  margin-bottom: 22px;
+  padding-top: 4px;
+}
+.sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .headerInfo button {
+  outline: none;
+  border: none;
+  background-color: black;
+}
+.sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .headerInfo button a {
+  font-size: 1rem;
+  text-align: center;
+  color: #3651F7;
+}
+.sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg h4 {
+  font-size: 1.3rem;
+  text-align: center;
+  color: #3651F7;
+  text-transform: uppercase;
+  padding-top: 5px;
+}
+.sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .description {
+  margin-top: 5em;
+  width: 150px;
+  text-align: center;
+  border: none;
+  transition: 0.5s;
+  opacity: 0;
+  font-size: 0.8rem;
+  color: #ffffff;
+  transition: all 0.5s;
+  margin-right: 1em;
+}
+.sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg {
+  height: 95%;
+  width: 100%;
+}
+.sectionStudents .descriptionStudents .serviceContainer .serviceCard:hover .serviceImg button {
+  background-color: #212121;
+  border-radius: 15px;
+  transition: all 0s;
+}
+.sectionStudents .descriptionStudents .serviceContainer .serviceCard:hover a {
+  margin-bottom: 20px;
+}
+.sectionStudents .descriptionStudents .serviceContainer .serviceCard:hover .serviceImg {
+  background-color: #212121;
+}
+.sectionStudents .descriptionStudents .serviceContainer .serviceCard:hover .serviceImg {
+  border: 1px solid #00FFCB;
+}
+.sectionStudents .descriptionStudents .serviceContainer .serviceCard:hover .description {
+  opacity: 1;
+}
+.sectionStudents .descriptionStudents .serviceContainer::-webkit-scrollbar {
+  display: none;
+}
+.sectionStudents .descriptionStudents .buttonInfo {
+  grid-area: buttonInfo;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.containerCardsStudents {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto 1fr;
-  grid-template-areas: "containerStudents" "serviceContainer";
-  gap: 2em;
+.sectionStudents .descriptionStudents .buttonInfo .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  width: 140px;
+  height: 40px;
+  border-radius: 14px;
+  border: transparent;
+  position: relative;
+  background-color: #6243f7;
+  margin-top: 1em;
+  transition: 0.5 opacity ease-in-out;
+}
+.sectionStudents .descriptionStudents .buttonInfo .button a {
+  text-decoration: none;
+  color: #212121;
+}
+.sectionStudents .descriptionStudents .buttonInfo .button:hover {
+  -webkit-animation-name: un_efecto;
+          animation-name: un_efecto;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  /*background: rgb(0,255,203);
+  background: linear-gradient(90deg, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 77%); 
+  width: 160px;
+  height: 50px;*/
+}
+.sectionStudents .descriptionStudents .buttonInfo .button a:hover {
+  color: black;
 }
 
-/* ------ section App ----- */
-.containerApp .containerImageApp {
+/* ------ section Coder Lawyer download App ----- */
+.containerImageApp {
   margin: 2em 0;
   width: auto;
 }
-
 .containerImageApp img {
   width: 100%;
 }
 
 /* ------ section contact ----- */
-.titleContact {
-  grid-area: titleContact;
-  display: flex;
-  flex-direction: column;
-}
-
-.titleContact {
-  width: 100%;
-  text-align: center;
-}
-
-.titleContact h3 {
-  font-size: 55px;
-  color: #00ffcb;
-  font-weight: 600;
-}
-
-.titleContact p {
-  font-size: 20px;
-  font-weight: 400;
-  color: #fff;
-  padding: 0.2em 1em 1em;
-}
-
-.titleContact .redes ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.titleContact .redes li {
-  margin: 0.5em 0em;
-}
-
-.titleContact .redes a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 45px;
-  font-weight: 400;
-}
-
-.titleContact .redes a i {
-  color: #00FFCB;
-}
-
-.titleContact .redes a span {
-  color: #fff;
-  font-size: 20px;
-}
-
-.formulario {
-  grid-area: formulario;
-}
-
-.flexContacto .formulario {
-  width: 100%;
-  padding: 20px;
-}
-
-.flexContacto .formulario .input-form {
-  display: block;
-  width: 100%;
-  margin: 1em auto;
-  background-color: #00ffcb;
-  padding: 0.5em 1em;
-  border-radius: 15px;
-  border: none;
-  font-size: 1rem;
-  color: #212121;
-}
-
-input::-moz-placeholder {
-  color: #212121;
-  opacity: 1;
-}
-
-input:-ms-input-placeholder {
-  color: #212121;
-  opacity: 1;
-}
-
-.flexContacto .formulario .input-form,
-input::placeholder {
-  color: #212121;
-  opacity: 1;
-}
-
-.input-form:focus,
-input:focus,
-input[type]:focus {
-  outline: 0 none;
-}
-
-.flexContacto .formulario .consulta {
-  display: block;
-  width: 100%;
-  margin: 1em auto;
-  background-color: #00ffcb;
-  padding: 0.5em 1em;
-  border-radius: 15px;
-  border: none;
-  font-size: 1rem;
-  color: #212121;
-}
-
-textarea::-moz-placeholder {
-  color: #212121;
-  opacity: 1;
-  font-family: "Roboto", sans-serif;
-}
-
-textarea:-ms-input-placeholder {
-  color: #212121;
-  opacity: 1;
-  font-family: "Roboto", sans-serif;
-}
-
-.consulta,
-textarea::placeholder {
-  color: #212121;
-  opacity: 1;
-  font-family: "Roboto", sans-serif;
-}
-
-.flexContacto .formulario button.enviar {
-  border: none;
-  background-color: #6243F7;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 500;
-  width: 200px;
-  padding: 1em;
-  text-transform: capitalize;
-  border-radius: 15px;
-  float: right;
-}
-
-.flexContacto {
+.contactoHome .flexContacto {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
   grid-template-areas: "titleContact" "formulario";
   justify-items: start;
   height: auto;
+}
+.contactoHome .flexContacto .titleContact {
+  grid-area: titleContact;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+.contactoHome .flexContacto .titleContact h3 {
+  font-size: 55px;
+  color: #00ffcb;
+  font-weight: 600;
+}
+.contactoHome .flexContacto .titleContact p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  padding: 0.2em 1em 1em;
+}
+.contactoHome .flexContacto .titleContact .redes ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contactoHome .flexContacto .titleContact .redes ul li {
+  margin: 0.5em 0em;
+}
+.contactoHome .flexContacto .titleContact .redes ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 45px;
+  font-weight: 400;
+}
+.contactoHome .flexContacto .titleContact .redes ul li a i {
+  color: #00FFCB;
+}
+.contactoHome .flexContacto .titleContact .redes ul li a span {
+  color: #fff;
+  font-size: 20px;
+}
+.contactoHome .flexContacto .formulario {
+  grid-area: formulario;
+  width: 100%;
+  padding: 20px;
+}
+.contactoHome .flexContacto .formulario form .input-form {
+  display: block;
+  width: 100%;
+  margin: 1em auto;
+  background-color: #00ffcb;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+  color: #212121;
+}
+.contactoHome .flexContacto .formulario form input::-moz-placeholder {
+  color: #212121;
+  opacity: 1;
+}
+.contactoHome .flexContacto .formulario form input:-ms-input-placeholder {
+  color: #212121;
+  opacity: 1;
+}
+.contactoHome .flexContacto .formulario form .input-form,
+.contactoHome .flexContacto .formulario form input::placeholder {
+  color: #212121;
+  opacity: 1;
+}
+.contactoHome .flexContacto .formulario form .input-form:focus,
+.contactoHome .flexContacto .formulario form input:focus,
+.contactoHome .flexContacto .formulario form input[type]:focus {
+  outline: 0 none;
+}
+.contactoHome .flexContacto .formulario form textarea::-moz-placeholder {
+  color: #212121;
+  opacity: 1;
+}
+.contactoHome .flexContacto .formulario form textarea:-ms-input-placeholder {
+  color: #212121;
+  opacity: 1;
+}
+.contactoHome .flexContacto .formulario form textarea::placeholder {
+  color: #212121;
+  opacity: 1;
+}
+.contactoHome .flexContacto .formulario form textarea::-moz-placeholder #consulta {
+  display: block;
+  width: 100%;
+  margin: 1em auto;
+  background-color: #00ffcb;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+  color: #212121;
+}
+.contactoHome .flexContacto .formulario form textarea:-ms-input-placeholder #consulta {
+  display: block;
+  width: 100%;
+  margin: 1em auto;
+  background-color: #00ffcb;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+  color: #212121;
+}
+.contactoHome .flexContacto .formulario form textarea::placeholder #consulta {
+  display: block;
+  width: 100%;
+  margin: 1em auto;
+  background-color: #00ffcb;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+  color: #212121;
+}
+.contactoHome .flexContacto .formulario form button.enviar {
+  border: none;
+  background-color: #6243F7;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 200px;
+  padding: 1em;
+  text-transform: capitalize;
+  border-radius: 15px;
+  float: right;
 }
 
 /** TABLET */
@@ -1423,7 +1358,7 @@ textarea::placeholder {
   .serviceImg h4 {
     font-size: 1rem;
   }
-  .nameCouse, .color {
+  .nameCouse, .sectionTeachers .serviceContainer .serviceCard .serviceImg .color, .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .color {
     font-size: 14px;
   }
   .nameSchool {
@@ -1599,7 +1534,7 @@ textarea::placeholder {
   .serviceImg h4 {
     font-size: 1.2rem;
   }
-  .nameCouse, .color {
+  .nameCouse, .sectionTeachers .serviceContainer .serviceCard .serviceImg .color, .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .color {
     font-size: 18px;
   }
   .nameSchool {

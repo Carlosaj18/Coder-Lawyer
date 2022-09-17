@@ -1,0 +1,45 @@
+
+footer {
+    background-color: #212121;
+    height: 120px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    .footer {
+        color: #00ffcb;
+        font-size: 1rem;
+        font-weight: 300;
+
+        p {
+            display: inline-block;
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                display: inline-block;
+
+                a {
+                    text-decoration: none;
+                    color: #00ffcb;
+                }
+            }
+        }
+
+      }
+    .redesFooter{
+        grid-area: redesFooter;
+
+        a {
+            text-decoration: none;
+            color: #00ffcb;
+            font-size: 1rem;
+            margin-right: 0.5em;
+          }
+    }
+}
+

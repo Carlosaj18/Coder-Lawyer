@@ -1,2 +1,71 @@
+/** Backgorund */
 $fondo: #212121;
-$sizeTitle: 1rem;
+
+/** Size */
+$sizeTitle: 3rem;
+$sizeSubtitle: 2rem;
+$sizePharagrap: 0.8rem;
+
+/** size card teachers & students */
+$sizeNamesCard: 1rem;
+$sizePhotoCard: 6rem;
+$sizeTitleCard: 1.3rem;
+$sizeNumberStadistics: 6rem;
+$sizeTitleStadistics: 1.5rem;
+
+/** size services */
+$sizeTitleService: 2rem;
+$sizeNameService: 0.8rem;
+$sizeCardService: 300px;
+$sizeNameService: 1.5rem;
+$sizePrecioService: 1rem;
+
+/** size students */
+$studentsCardWidth: 300px;
+$studentsCardHeight: 200px;
+
+/** size form */
+$sizePharagrapForm: 1rem;
+$sizeButtonEnviar: 1rem;
+
+
+/** Weight */
+$fontWeight: 700;
+$fontWeightStadistics: 600;
+$fontWeightService: 600;
+
+/** Color */
+$colorTitle: #6243F7;
+$colorParragrap: #ffffff;
+
+/** color card teachers & students */
+$colorCard: black;
+$colorNameCard: #3651F7;
+$colorTitleCard: #3651F7;
+$colorPhotoCard: #3651F7;
+$colorBackgroundButtonCard: black;
+$colorBorderCard: 2px solid #6243F7;
+$colorBorderCardHover: 1px solid #00FFCB;
+$colorBackgroundButtonHover: #212121;
+$colorButton: #6243f7;
+
+/** Color numbers */
+$colorNumbersStadistics: #6243F7;
+
+/** color services */
+$colorTitleServices: #6243F7;
+$colorTextSeverices: #ffffff;
+$colorPrecioBackgroundHover: #00FFCB;
+$colorPrecioHover: black;
+$colorBackgroundCardService: black;
+$borderBottomService: 1.5px solid #6243F7;
+$borderPrecioService: 1px solid #6243F7;
+$backgroundColorButton: #6243F7;
+$colorTransitionService: #212121;
+$colorServiceHover: 1px solid #00ffcb;
+$colorCardBorder: 1px solid #6243F7;
+
+/** color form */
+$colorForm: #212121;
+$backgroundColorForm: #00ffcb;
+$backgroundColorButtonForm: #6243F7;

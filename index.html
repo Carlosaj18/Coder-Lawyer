@@ -147,246 +147,8 @@
       </nav>
     </header>
     <main class="containerBody">
-      <!-- section Main Carrusel -->
+      <!-- section Main Carrusel with Boostrap-->
       <section>
-        <!--<div class="mainCarrusel">
-          <div class="mySlides fade">
-            <img class="image" src="./images/carrusel01.png" />
-            <div class="contentText" data-aos="zoom-out-left ">
-              <p class="text">Start your experience now</p>
-              <p class="text">Sign up today</p>
-              <p class="text">It only takes a few minutes</p>
-            </div>
-          </div>
-          <div class="mySlides-fade-deactivate">
-            <img class="imagen" src="/images/carrusel02.png" />
-            <div class="flex-form">
-              <div class="text-one">
-                <h2>¿Te gustaría enseñar con nosotros?</h2>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Alias, illo minima quidem nihil quae earum ex quas maxime at
-                  nulla deleniti aliquid modi atque minus iusto consequuntur
-                  quibusdam cupiditate sequi.
-                </p>
-                <p class="subtitle">
-                  ¿Que esperas?
-                  <strong>forma parte de la comunidad</strong>
-                  hola al mundo!
-                </p>
-              </div>
-              <div class="form-carrusel">
-                <div class="flex-icon">
-                  <div class="g-signin2" data-onsuccess="onSignIn"></div>
-                  <a href="#" onclick="signOut();">Sign out</a>
-                </div>
-                <div class="form-one">
-                  <form action="users/login" method="POST">
-                    <div class="flexInput">
-                      <div class="contentColumn">
-                        <div class="contentInput">
-                          <label for="nombre">Nombre:</label>
-                          <input type="text" name="name" id="input-two" />
-                        </div>
-                        <div class="contentInput">
-                          <label for="phone">Celular:</label>
-                          <input type="text" name="phone" id="input-two" />
-                        </div>
-                        <div class="contentInput">
-                          <label for="password">Contraseña:</label>
-                          <input
-                            type="password"
-                            name="contrasena"
-                            id="input-two"
-                          />
-                        </div>
-                        <div class="contentInput">
-                          <label for="genre">Sexo:</label>
-                          <select required name="gender" id="gender">
-                            <label for="Soy:"></label>
-                            <option name="gender" value="Mujer">Mujer</option>
-                            <option name="gender" value="Hombre">Hombre</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="contentColumn">
-                        <div class="contentInput">
-                          <label for="phone">Apellido:</label>
-                          <input type="text" name="last_name" id="input-two" />
-                        </div>
-                        <div class="contentInput">
-                          <label for="email">Email:</label>
-                          <input type="email" name="email" id="input-two" />
-                        </div>
-                        <div class="contentInput">
-                          <label for="validationPassword"
-                            >Repetir contraseña:</label
-                          >
-                          <input
-                            type="password"
-                            name="validationPassword"
-                            id="input-two"
-                          />
-                        </div>
-                        <div class="contentInput">
-                          <label for="email">Soy:</label>
-                          <select required name="userRol" id="user">
-                            <label for="Soy:"></label>
-                            <option name="rol" value="profesor">
-                              Profesor
-                            </option>
-                            <option name="rol" value="estudiante">
-                              Estudiante
-                            </option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="flexTerminos">
-                      <input
-                        class="bot-tyc"
-                        type="checkbox"
-                        name="terminosCondiciones"
-                        required
-                      />
-                      <label class="term-y-cond">
-                        Acepto los términos y condiciones
-                      </label>
-                    </div>
-                    <button
-                      type="submit"
-                      class="register"
-                      style="margin-bottom: 1em"
-                    >
-                      Registrate
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mySlides-fade-deactivate">
-            <img class="imagen" src="/images/carrusel03.png" />
-            <div class="flex-form">
-              <div class="form-carrusel two">
-                <div class="flex-icon">
-                  <div class="circulo">
-                    <i class="fab fa-google"></i>
-                  </div>
-                  <div class="circulo">
-                    <i class="fab fa-facebook-f"></i>
-                  </div>
-                  <div class="circulo">
-                    <i class="fab fa-linkedin-in"></i>
-                  </div>
-                </div>
-                <div class="form-one">
-                  <form action="users/login" method="POST">
-                    <div class="flexInput">
-                      <div class="contentColumn">
-                        <div class="contentInput">
-                          <label for="nombre">Nombre:</label>
-                          <input type="text" name="name" id="input-two" />
-                        </div>
-                        <div class="contentInput">
-                          <label for="phone">Celular:</label>
-                          <input type="text" name="phone" id="input-two" />
-                        </div>
-                        <div class="contentInput">
-                          <label for="password">Contraseña:</label>
-                          <input
-                            type="password"
-                            name="contrasena"
-                            id="input-two"
-                          />
-                        </div>
-                        <div class="contentInput">
-                          <label for="genre">Sexo:</label>
-                          <select required name="gender" id="gender">
-                            <label for="Soy:"></label>
-                            <option name="gender" value="Mujer">Mujer</option>
-                            <option name="gender" value="Hombre">Hombre</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="contentColumn">
-                        <div class="contentInput">
-                          <label for="phone">Apellido:</label>
-                          <input type="text" name="last_name" id="input-two" />
-                        </div>
-                        <div class="contentInput">
-                          <label for="email">Email:</label>
-                          <input type="email" name="email" id="input-two" />
-                        </div>
-                        <div class="contentInput">
-                          <label for="validationPassword"
-                            >Repetir contraseña:</label
-                          >
-                          <input
-                            type="password"
-                            name="validationPassword"
-                            id="input-two"
-                          />
-                        </div>
-                        <div class="contentInput">
-                          <label for="email">Soy:</label>
-                          <select required name="userRol" id="user">
-                            <label for="Soy:"></label>
-                            <option name="rol" value="profesor">
-                              Profesor
-                            </option>
-                            <option name="rol" value="estudiante">
-                              Estudiante
-                            </option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="flexTerminos">
-                      <input
-                        class="bot-tyc"
-                        type="checkbox"
-                        name="terminosCondiciones"
-                        required
-                      />
-                      <label class="term-y-cond">
-                        Acepto los términos y condiciones
-                      </label>
-                    </div>
-                    <button
-                      type="submit"
-                      class="register"
-                      style="margin-bottom: 1em"
-                    >
-                      Registrate
-                    </button>
-                  </form>
-                </div>
-              </div>
-              <div class="text-one">
-                <h2>Te gustaría aprender con nosotros?</h2>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Alias, illo minima quidem nihil quae earum ex quas maxime at
-                  nulla deleniti aliquid modi atque minus iusto consequuntur
-                  quibusdam cupiditate sequi.
-                </p>
-                <p class="subtitle">
-                  Que esperas?
-                  <strong>forma parte de la comunidad</strong>
-                  hola al mundo!
-                </p>
-              </div>
-            </div>
-          </div>
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-          <div class="contentDot">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-          </div>
-        </div>-->
         <div
           id="carouselExampleDark"
           class="carousel carousel-dark slide"
@@ -428,7 +190,7 @@
             </div>
             <div class="carousel-item" data-bs-interval="2000">
               <img
-                src="./images/carrusel01.png"
+                src="./images/carrusel02.png"
                 class="d-block w-100"
                 alt="..."
               />
@@ -439,7 +201,7 @@
             </div>
             <div class="carousel-item">
               <img
-                src="./images/carrusel01.png"
+                src="./images/carrusel03.png"
                 class="d-block w-100"
                 alt="..."
               />
@@ -509,7 +271,7 @@
         <div class="sectionTeachers">
           <div class="descriptionTeachers">
             <div class="teacherInfo">
-              <div class="header"><h3>OUR TEACHERS</h3></div>
+              <div class="header">OUR TEACHERS</div>
               <div class="info">
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -519,12 +281,6 @@
                 </p>
               </div>
             </div>
-            <button class="preBtn">
-              <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="nxtBtn">
-              <i class="fas fa-chevron-right"></i>
-            </button>
             <div class="serviceContainer">
               <div class="serviceCard" data-aos="flip-up">
                 <div class="serviceImg">
@@ -532,13 +288,11 @@
                   <div class="headerInfo">
                     <i class="far fa-user-circle"></i>
                     <button>
-                      <h2>
-                        <a
-                          href="../Desarrollo Web/navBarSections/detailTeachers.html"
-                          style="text-decoration: none"
-                          >Francisco Marquina</a
-                        >
-                      </h2>
+                      <a
+                        href="../navBarSections/detailTeachers.html"
+                        style="text-decoration: none"
+                        >Francisco Marquina</a
+                      >
                     </button>
                   </div>
                   <h4>DIGITAL LAW</h4>
@@ -549,17 +303,15 @@
               </div>
               <div class="serviceCard" data-aos="flip-up">
                 <div class="serviceImg">
-                  <span class="nameCouse color">School</span>
+                  <span class="nameCouse color">Course</span>
                   <div class="headerInfo">
                     <i class="far fa-user-circle"></i>
                     <button>
-                      <h2>
-                        <a
-                          href="../Desarrollo Web/navBarSections/detailTeachers.html"
-                          style="text-decoration: none"
-                          >Francisco Marquina</a
-                        >
-                      </h2>
+                      <a
+                        href="../navBarSections/detailTeachers.html"
+                        style="text-decoration: none"
+                        >Francisco Marquina</a
+                      >
                     </button>
                   </div>
                   <h4>DIGITAL LAW</h4>
@@ -574,13 +326,11 @@
                   <div class="headerInfo">
                     <i class="far fa-user-circle"></i>
                     <button>
-                      <h2>
-                        <a
-                          href="../Desarrollo Web/navBarSections/detailTeachers.html"
-                          style="text-decoration: none"
-                          >Francisco Marquina</a
-                        >
-                      </h2>
+                      <a
+                        href="../navBarSections/detailTeachers.html"
+                        style="text-decoration: none"
+                        >Francisco Marquina</a
+                      >
                     </button>
                   </div>
                   <h4>DIGITAL LAW</h4>
@@ -591,17 +341,15 @@
               </div>
               <div class="serviceCard" data-aos="flip-up">
                 <div class="serviceImg">
-                  <span class="nameCouse color">School</span>
+                  <span class="nameCouse color">Course</span>
                   <div class="headerInfo">
                     <i class="far fa-user-circle"></i>
                     <button>
-                      <h2>
-                        <a
-                          href="../Desarrollo Web/navBarSections/detailTeachers.html"
-                          style="text-decoration: none"
-                          >Francisco Marquina</a
-                        >
-                      </h2>
+                      <a
+                        href="../navBarSections/detailTeachers.html"
+                        style="text-decoration: none"
+                        >Francisco Marquina</a
+                      >
                     </button>
                   </div>
                   <h4>DIGITAL LAW</h4>
@@ -619,8 +367,8 @@
           </div>
         </div>
       </section>
-      <!-- sections cards & stadisticas-->
-      <section class="containerCards">
+      <!-- sections stadistics-->
+      <section>
         <div class="est" id="sectionEstadisticas">
           <div class="titleEstadisticas">
             <h2>Coder Lawyer has</h2>
@@ -646,13 +394,7 @@
         </div>
       </section>
       <!-- Section service-->
-      <section class="sectionBkg">
-        <!--<button class="preBtnCart1">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="nxtBtnCart1">
-          <i class="fas fa-chevron-right"></i>
-        </button>-->
+      <section>
         <div class="containerServices">
           <div class="categoryFirst">
             <h2>Keep learning</h2>
@@ -681,7 +423,31 @@
                 </div>
                 <button class="btn verCurso">
                   <a
-                    href="../Desarrollo Web/navBarSections/detailServices.html"
+                    href="../navBarSections/detailServices.html"
+                    id="myBtn"
+                    class="reservar"
+                    >See Course</a
+                  >
+                </button>
+              </div>
+            </div>
+            <div
+              class="containerCursos"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">
+                  <a
+                    href="../navBarSections/detailServices.html"
                     id="myBtn"
                     class="reservar"
                     style="text-decoration: none"
@@ -706,32 +472,7 @@
                 </div>
                 <button class="btn verCurso">
                   <a
-                    href="../Desarrollo Web/navBarSections/detailServices.html"
-                    id="myBtn"
-                    class="reservar"
-                    style="text-decoration: none"
-                    >See Course</a
-                  >
-                </button>
-              </div>
-            </div>
-            <div
-              class="containerCursos"
-              data-aos="fade-up"
-              data-aos-duration="300"
-            >
-              <div class="cardCurso">
-                <div style="width: 100%">
-                  <p class="nombreCurso">Legal Tech</p>
-                  <div class="sub">
-                    <p class="diasCurso">Lunes, Miércoles</p>
-                    <p class="diasCurso">18:00 pm</p>
-                  </div>
-                  <p class="precioCurso">$2400 por hora</p>
-                </div>
-                <button class="btn verCurso">
-                  <a
-                    href="../Desarrollo Web/navBarSections/detailServices.html"
+                    href="../navBarSections/detailServices.html"
                     id="myBtn"
                     class="reservar"
                     style="text-decoration: none"
@@ -744,7 +485,93 @@
         </div>
         <div class="containerServices">
           <div class="category">
-            <h2>Keep learning</h2>
+            <h2>COURSES</h2>
+          </div>
+          <div class="nameCourses">
+            <ul class="navListService">
+              <li class="navItem">LEGAL TECH</li>
+              <li class="navItem">LAW - NLP</li>
+              <li class="navItem">LAW - BIG DATA</li>
+            </ul>
+          </div>
+          <div class="containerCardsServices">
+            <div
+              class="containerCursos"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">
+                  <a
+                    href="../navBarSections/detailServices.html"
+                    id="myBtn"
+                    class="reservar"
+                    >See Course</a
+                  >
+                </button>
+              </div>
+            </div>
+            <div
+              class="containerCursos"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">
+                  <a
+                    href="../navBarSections/detailServices.html"
+                    id="myBtn"
+                    class="reservar"
+                    >See Course</a
+                  >
+                </button>
+              </div>
+            </div>
+            <div
+              class="containerCursos"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
+              <div class="cardCurso">
+                <div style="width: 100%">
+                  <p class="nombreCurso">Legal Tech</p>
+                  <div class="sub">
+                    <p class="diasCurso">Lunes, Miércoles</p>
+                    <p class="diasCurso">18:00 pm</p>
+                  </div>
+                  <p class="precioCurso">$2400 por hora</p>
+                </div>
+                <button class="btn verCurso">
+                  <a
+                    href="../navBarSections/detailServices.html"
+                    id="myBtn"
+                    class="reservar"
+                    >See Course</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="containerServices">
+          <div class="category">
+            <h2>SCHOOL</h2>
           </div>
           <div class="nameCourses">
             <ul class="navListService">
@@ -833,7 +660,7 @@
         </div>
         <div class="containerServices">
           <div class="category">
-            <h2>Keep learning</h2>
+            <h2>CHALLENGES</h2>
           </div>
           <div class="nameCourses">
             <ul class="navListService">
@@ -859,10 +686,9 @@
                 </div>
                 <button class="btn verCurso">
                   <a
-                    href="../Desarrollo Web/navBarSections/detailServices.html"
+                    href="../navBarSections/detailServices.html"
                     id="myBtn"
                     class="reservar"
-                    style="text-decoration: none"
                     >See Course</a
                   >
                 </button>
@@ -884,10 +710,9 @@
                 </div>
                 <button class="btn verCurso">
                   <a
-                    href="../Desarrollo Web/navBarSections/detailServices.html"
+                    href="../navBarSections/detailServices.html"
                     id="myBtn"
                     class="reservar"
-                    style="text-decoration: none"
                     >See Course</a
                   >
                 </button>
@@ -909,10 +734,9 @@
                 </div>
                 <button class="btn verCurso">
                   <a
-                    href="../Desarrollo Web/navBarSections/detailServices.html"
+                    href="../navBarSections/detailServices.html"
                     id="myBtn"
                     class="reservar"
-                    style="text-decoration: none"
                     >See Course</a
                   >
                 </button>
@@ -921,349 +745,12 @@
           </div>
         </div>
       </section>
-      <section class="containerChallanges">
-        <div class="containerServices">
-          <div class="category">
-            <h2>Keep learning</h2>
-          </div>
-          <div class="nameCourses">
-            <ul class="navListService">
-              <li class="navItem">LEGAL TECH</li>
-              <li class="navItem">LAW - NLP</li>
-              <li class="navItem">LAW - BIG DATA</li>
-            </ul>
-          </div>
-          <div class="containerCardsServices">
-            <div
-              class="containerCursos"
-              data-aos="fade-up"
-              data-aos-duration="300"
-            >
-              <div class="cardCurso">
-                <div style="width: 100%">
-                  <p class="nombreCurso">Legal Tech</p>
-                  <div class="sub">
-                    <p class="diasCurso">Lunes, Miércoles</p>
-                    <p class="diasCurso">18:00 pm</p>
-                  </div>
-                  <p class="precioCurso">$2400 por hora</p>
-                </div>
-                <button class="btn verCurso">See Course</button>
-              </div>
-            </div>
-            <div
-              class="containerCursos"
-              data-aos="fade-up"
-              data-aos-duration="300"
-            >
-              <div class="cardCurso">
-                <div style="width: 100%">
-                  <p class="nombreCurso">Legal Tech</p>
-                  <div class="sub">
-                    <p class="diasCurso">Lunes, Miércoles</p>
-                    <p class="diasCurso">18:00 pm</p>
-                  </div>
-                  <p class="precioCurso">$2400 por hora</p>
-                </div>
-                <button class="btn verCurso">See Course</button>
-              </div>
-            </div>
-            <div
-              class="containerCursos"
-              data-aos="fade-up"
-              data-aos-duration="300"
-            >
-              <div class="cardCurso">
-                <div style="width: 100%">
-                  <p class="nombreCurso">Legal Tech</p>
-                  <div class="sub">
-                    <p class="diasCurso">Lunes, Miércoles</p>
-                    <p class="diasCurso">18:00 pm</p>
-                  </div>
-                  <p class="precioCurso">$2400 por hora</p>
-                </div>
-                <button class="btn verCurso">See Course</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="containerServices">
-          <div class="category">
-            <h2>Keep learning</h2>
-          </div>
-          <div class="nameCourses">
-            <ul class="navListService">
-              <li class="navItem">LEGAL TECH</li>
-              <li class="navItem">LAW - NLP</li>
-              <li class="navItem">LAW - BIG DATA</li>
-            </ul>
-          </div>
-          <div class="containerCardsServices">
-            <div
-              class="containerCursos"
-              data-aos="fade-up"
-              data-aos-duration="300"
-            >
-              <div class="cardCurso">
-                <div style="width: 100%">
-                  <p class="nombreCurso">Legal Tech</p>
-                  <div class="sub">
-                    <p class="diasCurso">Lunes, Miércoles</p>
-                    <p class="diasCurso">18:00 pm</p>
-                  </div>
-                  <p class="precioCurso">$2400 por hora</p>
-                </div>
-                <button class="btn verCurso">
-                  <a
-                    href="../Desarrollo Web/navBarSections/detailServices.html"
-                    id="myBtn"
-                    class="reservar"
-                    style="text-decoration: none"
-                    >See Course</a
-                  >
-                </button>
-              </div>
-            </div>
-            <div
-              class="containerCursos"
-              data-aos="fade-up"
-              data-aos-duration="300"
-            >
-              <div class="cardCurso">
-                <div style="width: 100%">
-                  <p class="nombreCurso">Legal Tech</p>
-                  <div class="sub">
-                    <p class="diasCurso">Lunes, Miércoles</p>
-                    <p class="diasCurso">18:00 pm</p>
-                  </div>
-                  <p class="precioCurso">$2400 por hora</p>
-                </div>
-                <button class="btn verCurso">
-                  <a
-                    href="../Desarrollo Web/navBarSections/detailServices.html"
-                    id="myBtn"
-                    class="reservar"
-                    style="text-decoration: none"
-                    >See Course</a
-                  >
-                </button>
-              </div>
-            </div>
-            <div
-              class="containerCursos"
-              data-aos="fade-up"
-              data-aos-duration="300"
-            >
-              <div class="cardCurso">
-                <div style="width: 100%">
-                  <p class="nombreCurso">Legal Tech</p>
-                  <div class="sub">
-                    <p class="diasCurso">Lunes, Miércoles</p>
-                    <p class="diasCurso">18:00 pm</p>
-                  </div>
-                  <p class="precioCurso">$2400 por hora</p>
-                </div>
-                <button class="btn verCurso">
-                  <a
-                    href="../Desarrollo Web/navBarSections/detailServices.html"
-                    id="myBtn"
-                    class="reservar"
-                    style="text-decoration: none"
-                    >See Course</a
-                  >
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="containerServices">
-          <div class="category">
-            <h2>Keep learning</h2>
-          </div>
-          <div class="nameCourses">
-            <ul class="navListService">
-              <li class="navItem">LEGAL TECH</li>
-              <li class="navItem">LAW - NLP</li>
-              <li class="navItem">LAW - BIG DATA</li>
-            </ul>
-          </div>
-          <div class="containerCardsServices">
-            <div
-              class="containerCursos"
-              data-aos="fade-up"
-              data-aos-duration="300"
-            >
-              <div class="cardCurso">
-                <div style="width: 100%">
-                  <p class="nombreCurso">Legal Tech</p>
-                  <div class="sub">
-                    <p class="diasCurso">Lunes, Miércoles</p>
-                    <p class="diasCurso">18:00 pm</p>
-                  </div>
-                  <p class="precioCurso">$2400 por hora</p>
-                </div>
-                <button class="btn verCurso">
-                  <a
-                    href="../Desarrollo Web/navBarSections/detailServices.html"
-                    id="myBtn"
-                    class="reservar"
-                    style="text-decoration: none"
-                    >See Course</a
-                  >
-                </button>
-              </div>
-            </div>
-            <div
-              class="containerCursos"
-              data-aos="fade-up"
-              data-aos-duration="300"
-            >
-              <div class="cardCurso">
-                <div style="width: 100%">
-                  <p class="nombreCurso">Legal Tech</p>
-                  <div class="sub">
-                    <p class="diasCurso">Lunes, Miércoles</p>
-                    <p class="diasCurso">18:00 pm</p>
-                  </div>
-                  <p class="precioCurso">$2400 por hora</p>
-                </div>
-                <button class="btn verCurso">
-                  <a
-                    href="../Desarrollo Web/navBarSections/detailServices.html"
-                    id="myBtn"
-                    class="reservar"
-                    style="text-decoration: none"
-                    >See Course</a
-                  >
-                </button>
-              </div>
-            </div>
-            <div
-              class="containerCursos"
-              data-aos="fade-up"
-              data-aos-duration="300"
-            >
-              <div class="cardCurso">
-                <div style="width: 100%">
-                  <p class="nombreCurso">Legal Tech</p>
-                  <div class="sub">
-                    <p class="diasCurso">Lunes, Miércoles</p>
-                    <p class="diasCurso">18:00 pm</p>
-                  </div>
-                  <p class="precioCurso">$2400 por hora</p>
-                </div>
-                <button class="btn verCurso">
-                  <a
-                    href="../Desarrollo Web/navBarSections/detailServices.html"
-                    id="myBtn"
-                    class="reservar"
-                    style="text-decoration: none"
-                    >See Course</a
-                  >
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- section Coder Layer graduated students-->
-      <!-- <section class="containerCardsStudents">
-        <div class="containerStudents"><h2>OUR GRADUATED STUDENTS</h2></div>
-        <div class="serviceContainer">
-          <button class="preBtn">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button class="nxtBtn">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-          <div class="serviceCard">
-            <div class="serviceImg">
-              <span class="nameCouse color">School</span>
-              <div class="headerInfo">
-                <i class="far fa-user-circle"></i>
-                <button>
-                  <h2>
-                    <a href"#" style="text-decoration: none"
-                      >Francisco Marquina</a
-                    >
-                  </h2>
-                </button>
-              </div>
-              <h4>DIGITAL LAW</h4>
-              <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aueaque dolor recusandae modi qui.
-              </p>
-            </div>
-          </div>
-          <div class="serviceCard">
-            <div class="serviceImg">
-              <span class="nameCouse">Course</span>
-              <div class="headerInfo">
-                <i class="far fa-user-circle"></i>
-                <button>
-                  <h2>
-                    <a href"#" style="text-decoration: none"
-                      >Francisco Marquina</a
-                    >
-                  </h2>
-                </button>
-              </div>
-              <h4>DIGITAL LAW</h4>
-              <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aueaque dolor recusandae modi qui.
-              </p>
-            </div>
-          </div>
-          <div class="serviceCard">
-            <div class="serviceImg">
-              <span class="nameCouse color">School</span>
-              <div class="headerInfo">
-                <i class="far fa-user-circle"></i>
-                <button>
-                  <h2>
-                    <a href"#" style="text-decoration: none"
-                      >Francisco Marquina</a
-                    >
-                  </h2>
-                </button>
-              </div>
-              <h4>DIGITAL LAW</h4>
-              <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aueaque dolor recusandae modi qui.
-              </p>
-            </div>
-          </div>
-          <div class="serviceCard">
-            <div class="serviceImg">
-              <span class="nameCouse">Course</span>
-              <div class="headerInfo">
-                <i class="far fa-user-circle"></i>
-                <button>
-                  <h2>
-                    <a href"#" style="text-decoration: none"
-                      >Francisco Marquina</a
-                    >
-                  </h2>
-                </button>
-              </div>
-              <h4>DIGITAL LAW</h4>
-              <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aueaque dolor recusandae modi qui.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>-->
-      <!-- section Coder Lawyer download App -->
+      <!-- section Carrusel Coder Laywer Students -->
       <section>
-        <div class="sectionTeachers">
-          <div class="descriptionTeachers">
-            <div class="teacherInfo">
-              <div class="header"><h3>OUR STUDENTS</h3></div>
+        <div class="sectionStudents">
+          <div class="descriptionStudents">
+            <div class="studentInfo">
+              <div class="header">OUR STUDENTS</div>
               <div class="info">
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -1273,12 +760,6 @@
                 </p>
               </div>
             </div>
-            <button class="preBtn">
-              <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="nxtBtn">
-              <i class="fas fa-chevron-right"></i>
-            </button>
             <div class="serviceContainer">
               <div class="serviceCard" data-aos="flip-up">
                 <div class="serviceImg">
@@ -1286,13 +767,11 @@
                   <div class="headerInfo">
                     <i class="far fa-user-circle"></i>
                     <button>
-                      <h2>
-                        <a
-                          href="../Desarrollo Web/navBarSections/detailTeachers.html"
-                          style="text-decoration: none"
-                          >Francisco Marquina</a
-                        >
-                      </h2>
+                      <a
+                        href="../navBarSections/detailTeachers.html"
+                        style="text-decoration: none"
+                        >Francisco Marquina</a
+                      >
                     </button>
                   </div>
                   <h4>DIGITAL LAW</h4>
@@ -1307,13 +786,11 @@
                   <div class="headerInfo">
                     <i class="far fa-user-circle"></i>
                     <button>
-                      <h2>
-                        <a
-                          href="../Desarrollo Web/navBarSections/detailTeachers.html"
-                          style="text-decoration: none"
-                          >Francisco Marquina</a
-                        >
-                      </h2>
+                      <a
+                        href="../navBarSections/detailTeachers.html"
+                        style="text-decoration: none"
+                        >Francisco Marquina</a
+                      >
                     </button>
                   </div>
                   <h4>DIGITAL LAW</h4>
@@ -1328,13 +805,11 @@
                   <div class="headerInfo">
                     <i class="far fa-user-circle"></i>
                     <button>
-                      <h2>
-                        <a
-                          href="../Desarrollo Web/navBarSections/detailTeachers.html"
-                          style="text-decoration: none"
-                          >Francisco Marquina</a
-                        >
-                      </h2>
+                      <a
+                        href="../navBarSections/detailTeachers.html"
+                        style="text-decoration: none"
+                        >Francisco Marquina</a
+                      >
                     </button>
                   </div>
                   <h4>DIGITAL LAW</h4>
@@ -1349,13 +824,11 @@
                   <div class="headerInfo">
                     <i class="far fa-user-circle"></i>
                     <button>
-                      <h2>
-                        <a
-                          href="../Desarrollo Web/navBarSections/detailTeachers.html"
-                          style="text-decoration: none"
-                          >Francisco Marquina</a
-                        >
-                      </h2>
+                      <a
+                        href="../navBarSections/detailTeachers.html"
+                        style="text-decoration: none"
+                        >Francisco Marquina</a
+                      >
                     </button>
                   </div>
                   <h4>DIGITAL LAW</h4>
@@ -1373,15 +846,16 @@
           </div>
         </div>
       </section>
-      <section class="containerApp">
+      <!-- section Coder Lawyer download App -->
+      <section>
         <div class="containerImageApp">
           <img src="./images/imageApp.png" alt="App Coder Lawyer" />
         </div>
       </section>
-      <!-- section Frequent questions -->
+      <!-- section Frequent questions Boostrap-->
       <section></section>
       <!-- section contact -->
-      <section id="contacto">
+      <section>
         <div class="contactoHome">
           <div class="flexContacto">
             <div class="titleContact">

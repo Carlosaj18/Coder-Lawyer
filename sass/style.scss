@@ -1,155 +1,18 @@
-/* COLORES:
-azul mas fuerte: #3657F7
-azul mas oscuro: #1F58A5
-"violeta": #6243F7
-verde claro: #00FFCB
-verde oscuro: #00A987
-gris: #DAD9DE
-negro: #212121
-blanco: #ffffff
- */
-
- @import  url("../css/partials/containerService.css");
- @import  url("../css/myChallanges.css");
- @import  url("../css/partials/footer.css");
-
- /** SCSS */
-
+ /** SCSS - GENERALS */
  @import "variables";
  @import "generals";
  @import "fuentes";
- @import "./partials/header.scss";
  @import "operaciones";
 
-   /* ------ section Main Carrusel ----- */
+  /** SCSS - PARTIALS */
+ @import "./partials/header.scss";
+ @import  "./partials/footer.css";
+ 
+  /* ------ section Main Carrusel with Boostrapp----- */
 
-   /** Flexbox */
-   .mainCarrusel {
-    max-width: 100%;
-    position: relative;
-    margin: auto;
-    box-sizing: border-box;
-  }
-
-  .carousel img{
-    width: 100%;
-    display: block;
-  }
-
-  .mySlides-fade-deactivate {
-    display: none;
-  }
-
-  .mySlides {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .mainCarrusel img.image {
-    width: 100%;
-    display: block;
-    /*position: absolute;
-    top: -7px;*/
-  }
-
-  .mySlides .contentText {
-    position: absolute;
-    top: 0.8em;
-    right: 0.8em;
-    box-sizing: border-box;
-  }
-
-  .contentText .text {
-    color: #fff;
-    background-color: #3657f7;
-    border-radius: 25px;
-    font-size: 12px;
-    font-weight: 300;
-    padding: 0.5em 1em;
-    margin: 0.5em auto;
-    width: 100%;
-  }
-
-  .carousel-caption {
-    color: #3657f7;
-    border-radius: 25px;
-    font-size: 2rem;
-    font-weight: 600;
-  }
-
-   /* ------ Dots ----- */
-   .contentDot {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 20vh;
-    width: 100%;
-  }
-  .contentDot {
-    bottom: 2px;
-  }
-  .dot {
-    height: 10px;
-    width: 10px;
-  }
-
-  /* ------ Prev & Next ------ */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 0%;
-  width: auto;
-  padding: 16px;
-  margin-top: 105px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: #212121;
-}
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-  /** Section Characterisitcs Grid + Flex Box */
-
+  /* ------ Section Characterisitcs ----- */
   .contentCharacteristics {
+
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -157,401 +20,318 @@ blanco: #ffffff
     align-items: center;
     width: 100%;
     height: 110vh;
-  }
-
-  .circle {
-    grid-area: circle;
-    background-color: #6243f7;
-    color: #00ffcb;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin-bottom: 0.5em;
-  }
-
-  .circle:hover {
-    transform: scale(1.2) rotate(45deg);
-  }
-
-  .characteristics .circle i {
-    font-size: 80px;
-    display: flex;
-    justify-content: center;
-    margin-top: 17px;
-  }
-
-  .titleCharacterisitc {
-    grid-area: titleCharacterisitc;
-  }
-
-  .titleCharacterisitc {
-    font-size: 1.3rem;
-    text-transform: capitalize;
-    color: #6243f7;
-    margin-bottom: 0.5em;
-  }
-
-  .parraCharacterisitc {
-    grid-area: parraCharacterisitc;
-  }
-
-  .parraCharacterisitc {
-    font-size: 0.8rem;
-    color: #fff;
-    text-align: center;
-    width: 50%;
-  }
-
-  .characteristics {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-template-areas: 
-      "circle"
-      "titleCharacterisitc"
-      "parraCharacterisitc"
-    ;
-    justify-items: center;
-    margin-top: 50px;
-    gap: 10px;
-  }
-
-  /* ------ section Coder Laywer Teachers Grid ----- */
-
-.sectionTeachers {
-  width: 100%;
-  height: auto;
-  margin: 0em 0em 0em 0em;
-  /*background-image: url(../images/bkg-teachers2.png);*/
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: center top;
-  position: relative;
-  margin-bottom: 50px;
-}
-
-/*.descriptionTeachers {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: space-between;
-  justify-content: space-around;
-  width: 100%;
-  height: inherit;
-  padding: 10px;
-  position: relative;
-}*/
-
-.serviceCard .serviceImg {
-  border: 3px solid #6243F7;
-}
-
-.teacherInfo {
-  grid-area: teacherInfo;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    padding-top: 80px;
   
-}
+    .characteristics {
 
-.header h3{
-  font-size: 2rem;
-  text-transform: capitalize;
-  color: #6243f7;
-  margin-bottom: 0.5em;
-  margin-top: 1.5em;
-  text-align: center;
-}
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      grid-template-areas: 
+        "circle"
+        "titleCharacterisitc"
+        "parraCharacterisitc"
+      ;
+      justify-items: center;
+      margin-top: 50px;
+      gap: 10px;
 
-.info p {
-  font-size: 0.8rem;
-  color: #212121;
-  text-align: center;
-}
+      .circle {
+        grid-area: circle;
+        background-color: #6243f7;
+        color: #00ffcb;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-bottom: 0.5em;
 
-.serviceContainer {
-  grid-area: serviceContainer;
-  overflow-y: hidden;
-  overflow-x: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  scroll-behavior: smooth;
-  gap: 25px;
-  /*padding: 0 10vw 0 1vw;*/
+        i {
+          font-size: 80px;
+          display: flex;
+          justify-content: center;
+          margin-top: 17px;
+        }
 
-}
-.serviceContainer::-webkit-scrollbar {
-  display: none;
-}
-.serviceCard {
-  flex: 0 0 auto;
-  width: 300px;
-  height: 200px;
-}
-.serviceImg {
-  position: relative;
-  overflow: hidden;
-  background-color: black;
-  border-radius: 25px;
-  display: flex;
-  transition: all 0.5s;
-}
+      }
+    
+      .circle:hover {
+        transform: scale(1.2) rotate(45deg);
+      }
 
-@import "mixin";
+      .titleCharacterisitc {
+        grid-area: titleCharacterisitc;
+      }
+    
+      .titleCharacterisitc {
+        font-size: $sizeSubtitle;
+        text-transform: capitalize;
+        color: #6243f7;
+        margin-bottom: 0.5em;
+      }
+    
+      .parraCharacterisitc {
+        grid-area: parraCharacterisitc;
+      }
+    
+      .parraCharacterisitc {
+        font-size: $sizePharagrap;
+        color: #fff;
+        text-align: center;
+        width: 50%;
+      }
 
-.serviceImg i {
-  font-size: 80px;
-  color: #3651F7;
-  margin-bottom: 22px;
-  padding-top: 4px;
-}
-
-.headerInfo {
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
-}
-.serviceImg button h2 a {
-  font-size: 1rem;
-  text-align: center;
-  color: #3651F7;
-}
-
-.serviceImg button {
-  outline: none;
-  border: none;
-  background-color: black;
-}
-
-.serviceCard:hover .serviceImg button {
-  background-color: #212121;
-  transition: all 0s;
-}
-
-.serviceCard:hover .serviceImg {
-  border: 3px solid #6243F7;
-}
-
-.serviceImg h4 {
-  font-size: 1.3rem;
-  text-align: center;
-  color: #3651F7;
-  text-transform: uppercase;
-  padding-top: 5px;;
-}
-
-@import 'claseExtend';
-
-.description {
-  margin-top: 5em;
-  width: 150px;
-  text-align: center;
-  border: none;
-  transition: 0.5s;
-  opacity: 0;
-  font-size: 0.8rem;
-  color: #fff;
-  transition: all 0.5s;
-  margin-right: 1em;
-}
-.serviceCard:hover .description {
-  opacity: 1;
-}
-.serviceCard:hover .serviceImg {
-  background-color: #212121;
-}
-.serviceInfo {
-  width: 100%;
-  height: 100%;
-  padding-top: 10px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  top: -1.5em;
-}
-.serviceInfo button {
-  position: absolute;
-  outline: none;
-  border: none;
-  width: 80%;
-  border-radius: 25px;
-  padding: 0.5em 1em;
-  font-size: 0.8rem;
-  background-color: black;
-}
-
-.serviceInfo button i {
-  color: #3651F7;
-}
-
-.serviceInfo button a {
-  color: #3651F7;
-}
-
-.preBtn ,
-.nxtBtn {
-  border: none;
-  width: 5vw;
-  height: 80%;
-  position: absolute;
-  top: 50;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-  cursor: pointer;
-  z-index: 9;
-  color: #00FFCB;
-}
-.preBtn {
-  left: 0;
-}
-.nxtBtn {
-  right: 0;
-}
-.preBtn i,
-.nxtBtn i {
-  opacity: 0.2;
-}
-.preBtn:hover i,
-.nxtBtn:hover i {
-  opacity: 1;
-}
-
-.buttonInfo {
-  grid-area: buttonInfo;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@keyframes un_efecto {
-  0% {
-    transform: scale(1);
+    }
   }
-  25%{ 
-      transform: scale(1.5);}
-  50%{ 
-    /*background: rgb(0,255,203);
-    background: linear-gradient(right, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 36%); */
-    transform: scale(1);
-  }
-    75%{ 
-      transform: scale(1.5);}
-  100% {
-    /*width: 170px;
-    background: rgb(0,255,203);*/
-    background: linear-gradient(left,rgba(98,67,247,1) 35%);
-    transform: scale(1);
-  }
-}
 
-.descriptionTeachers .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-}
-
-.buttonInfo .button {
-  width: 140px;
-  height: 40px;
-  border-radius: 14px;
-  border: transparent;
-  position: relative;
-  color: #00ffcb;
-  background-color: #6243f7;
-  margin-top: 1em;
-  transition: 0.5 opacity ease-in-out;
-}
-
-.button a {
-  text-decoration: none;
-  color: #212121;
-}
-
-.buttonInfo .button:hover {
-  animation-name: un_efecto;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  animation-duration: 1.5s;
-  animation-delay: 0s;
-   /*background: rgb(0,255,203);
-   background: linear-gradient(90deg, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 77%); 
-   width: 160px;
-   height: 50px;*/
-}
-
-.buttonInfo .button a:hover {
-  color: black;
-}
-
-.descriptionTeachers {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-template-areas: 
-      "teacherInfo"
-      "serviceContainer"
-      "buttonInfo"
-    ;
-    justify-items: center;
-    margin-top: 50px;
-}
-
-  /* ------ section Coder Laywer Stadistics Grid ----- */
-
-  .titleEstadisticas {
-    grid-area: titleEstadisticas;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: fit-content;
+  @media screen and (min-width: 600px) {
 
   }
 
-  .titleEstadisticas h2 {
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 700;
-    color: #fff;
+  @media screen and (min-width : 1024px){ 
+
+  }
+
+  /* ------ section Coder Laywer Teachers  ----- */
+  .sectionTeachers {
+    width: 100%;
     height: auto;
-    margin-bottom: 1em;
-  }
+    margin: 0em 0em 0em 0em;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+    margin-bottom: 50px;
+
+    .descriptionTeachers {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      grid-template-areas: 
+        "teacherInfo"
+        "serviceContainer"
+        "buttonInfo"
+      ;
+      justify-items: center;
+      margin-top: 50px;
+
+      .teacherInfo {
+        grid-area: teacherInfo;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+
+        .header {
+          text-align: center;
+          font-size: $sizeTitle;
+          font-weight: $fontWeight;
+          color: $colorTitle;
+          height: auto;
+          margin-bottom: 0.5em;
+          margin-top: 0.5em;
+          }
+        }
+        .info {
+          p {
+            font-size: $sizePharagrap;
+            text-align: center;
+            padding: 2em;
+          }
+        }
+      }
+
+      .serviceContainer {
+        grid-area: serviceContainer;
+        overflow-y: hidden;
+        overflow-x: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        scroll-behavior: smooth;
+        gap: 25px;
+
+        /*padding: 0 10vw 0 1vw;*/
+        .serviceCard {
+          flex: 0 0 auto;
+          width: 300px;
+          height: 200px;
+
+          .serviceImg {
+            border: $colorBorderCard;
+            position: relative;
+            overflow: hidden;
+            background-color: $colorCard;
+            border-radius: 25px;
+            display: flex;
+            transition: all 0.5s;
+
+            @import 'claseExtend';
+
+            .headerInfo {
+              display: flex;
+              flex-direction: column;
+              padding: 15px;
+
+              i {
+                font-size: $sizePhotoCard;
+                color: $colorPhotoCard;
+                padding-top: 4px;
+                margin-bottom: 15px;
+                margin-top: 22px;
+                margin-left: 25px;
+              }
+              button {
+                outline: none;
+                border: none;
+                background-color: $colorBackgroundButtonCard;
+                a {
+                  font-size: $sizeNamesCard;
+                  text-align: center;
+                  color: $colorNameCard;
+                }
+              }
+            }
+            h4 {
+              font-size: $sizeTitleCard;
+              text-align: center;
+              color: $colorTitleCard;
+              text-transform: uppercase;
+              padding-top: 5px;
+              position:absolute;
+
+            }
+            .description {
+              margin-top: 5em;
+              width: 200px;
+              text-align: center;
+              border: none;
+              transition: 0.5s;
+              opacity: 0;
+              font-size: $sizePharagrap;
+              color: $colorParragrap;
+              transition: all 0.5s;
+              position: absolute;
+            }
+    
+          }
+
+          @import "mixin";
+
+          &:hover .serviceImg button {
+            background-color: #212121;
+            border-radius: 15px;
+            transition: all 0s;
+            
+          }
   
-  .cantidades {
-    grid-area: cantidades;
-    display: flex;
-    flex-direction: column;
+          &:hover a {
+            margin-bottom: 20px;
+          }
+  
+          &:hover .serviceImg {
+            background-color: #212121;
+          }
+  
+          &:hover .serviceImg {
+            border: $colorBorderCardHover;
+          }
+  
+          &:hover .description {
+            opacity: 1;
+          }
+
+          &:hover i {
+            opacity: 0;
+          }
+        }
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+
+      .buttonInfo {
+        grid-area: buttonInfo;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @keyframes un_efecto {
+          0% {
+            transform: scale(1);
+          }
+          25%{ 
+              transform: scale(1.5);}
+          50%{ 
+            /*background: rgb(0,255,203);
+            background: linear-gradient(right, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 36%); */
+            transform: scale(1);
+          }
+            75%{ 
+              transform: scale(1.5);}
+          100% {
+            /*width: 170px;
+            background: rgb(0,255,203);*/
+            background: linear-gradient(left,rgba(98,67,247,1) 35%);
+            transform: scale(1);
+          }
+        }
+
+        .button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1rem;
+          width: 140px;
+          height: 40px;
+          border-radius: 14px;
+          border: transparent;
+          position: relative;
+          color: #00ffcb;
+          background-color: #6243f7;
+          margin-top: 1em;
+          transition: 0.5 opacity ease-in-out;
+
+          a {
+            text-decoration: none;
+            color: #212121;
+          }
+
+        }
+      }
+
+      .buttonInfo .button:hover {
+        animation-name: un_efecto;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1.5s;
+        animation-delay: 0s;
+        /*background: rgb(0,255,203);
+        background: linear-gradient(90deg, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 77%); 
+        width: 160px;
+        height: 50px;*/
+      }
+
+      .buttonInfo .button a:hover {
+        color: black;
+      }
   }
 
-  .info {
-    display: flex;
-    flex-direction: column;
+  @media screen and (min-width: 600px) {
+
   }
 
-  .cantidades .number {
-    font-size: 6rem;
-    font-weight: 600;
-    color: #6243f7;
-    text-align: center;
-    margin: 0;
-  }
-  .cantidades .text {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #fff;
-    text-align: center;
-    margin: 0;
+  @media screen and (min-width : 1024px){ 
+    
   }
 
+  /* ------ section Coder Laywer Stadistics  ----- */
   .est {
+
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto auto ;
@@ -560,318 +340,535 @@ blanco: #ffffff
       "cantidades"
     ;
     justify-items: center;
+
+    .titleEstadisticas {
+      grid-area: titleEstadisticas;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: fit-content;
+
+      h2 {
+        text-align: center;
+        font-size: $sizeTitle;
+        font-weight: $fontWeight;
+        color: $colorTitle;
+        height: auto;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+      }
+    }
+
+    .cantidades {
+      grid-area: cantidades;
+      display: flex;
+      flex-direction: column;
+
+      .info {
+        display: flex;
+        flex-direction: column;
+
+        .number {
+          font-size: $sizeNumberStadistics;
+          font-weight: $fontWeightStadistics;
+          color: $colorNumbersStadistics;
+          text-align: center;
+          margin: 0;
+        }
+        
+        .text {
+          font-size: $sizeTitleStadistics;
+          font-weight: $fontWeightStadistics;
+          color: $colorParragrap;
+          text-align: center;
+          margin: 0;
+        }
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+
+  }
+
+  @media screen and (min-width : 1024px){ 
+    
   }
 
   /* ------ section Coder Laywer service Grid ----- */
-
-  .sectionBkg {
-    width: 100%;
-    height: auto;
-    background-image: url(../images/bkg-services1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-    position: relative;
-  }
-
-  .category h2 {
-    grid-area: category;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
-  .categoryFirst h2{
-    font-size: 2rem;
-    text-transform: capitalize;
-    color: #6243f7;
-    margin-top: 1em;
-    margin-left: 1em;
-    margin-bottom: 0.5em;
-    text-transform: uppercase;
-    padding: 0.5em 0.5em;
-  }
-
-  .category h2 {
-    font-size: 2rem;
-    text-transform: capitalize;
-    color: #6243f7;
-    margin-left: 1em;
-    margin-bottom: 0.5em;
-    text-transform: uppercase;
-    padding: 0.5em 0.5em;
-  }
-
-  .nameCourses {
-    grid-area: nameCourses;
-  }
-  .nameCourses {
-    font-size: 0.8rem;
-    text-transform: capitalize;
-    color: #ffff;
-    text-transform: uppercase;
-    text-align:end; 
-  }
-
-  .navListService {
-    display: flex;
-    flex-direction: row;
-    border-bottom: 1.5px solid #6243f7;
-    margin-left: 1.2em;
-    list-style: none;
-  }
-
-  .navItem {
-    text-decoration: none;
-    font-size: 1rem;
-  }
-
-  /** Container Service */
-
-  .cardCurso:hover {
-    border: 3px solid #00ffcb;
-  }
-
-  .preBtnCart1 ,
-.nxtBtnCart1 {
-  border: none;
-  width: 5vw;
-  height: 52%;
-  position: absolute;
-  top: 50;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-  cursor: pointer;
-  z-index: 9;
-  color: #00FFCB;
-}
-
-.preBtnCart1 {
-  left: 0;
-}
-.nxtBtnCart1 {
-  right: 0;
-}
-.preBtnCart1 i,
-.nxtBtnCart1 i {
-  opacity: 0.2;
-}
-.preBtnCart1:hover i,
-.nxtBtnCart1:hover i {
-  opacity: 1;
-}
-
   .containerServices {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: 
-      "category"
-      "nameCourses"
-      "containerCardsServices"
-    ;
-    justify-items: start;
-    height: auto;
-  }
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      grid-template-areas: 
+        "category"
+        "nameCourses"
+        "containerCardsServices"
+      ;
+      justify-items: start;
+      height: auto;
 
-  /* ------ section Coder Laywer service Grid ----- */
-  .containerChallanges {
-    width: 100%;
-    height: auto;
-    background-image: url(../images/bkg-services3.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-    position: relative;
+    .categoryFirst {
+
+      h2 {
+        font-size: $sizeTitleService;
+        text-transform: capitalize;
+        color: $colorTitleServices;
+        margin-top: 1em;
+        margin-left: 1em;
+        margin-bottom: 0.5em;
+        text-transform: uppercase;
+        padding: 0.5em 0.5em;
+      }
+
+    }
+    .category {
+      grid-area: category;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      h2 {
+        font-size: $sizeTitleService;
+        text-transform: capitalize;
+        color: $colorTitleServices;
+        margin-top: 1em;
+        margin-left: 1em;
+        margin-bottom: 0.5em;
+        text-transform: uppercase;
+        padding: 0.5em 0.5em;
+      }
+    }
+    .nameCourses {
+      grid-area: nameCourses;
+      font-size: $sizeNameService;
+      text-transform: capitalize;
+      color: $colorTextSeverices;
+      text-transform: uppercase;
+      text-align:end; 
+
+      .navListService {
+        display: flex;
+        flex-direction: row;
+        /*border-bottom: 1.5px solid #6243f7;*/
+        margin-left: 1.2em;
+        list-style: none;
+
+        .navItem {
+          text-decoration: none;
+          font-size: 1rem;
+        }
+      }
+    }
+    
+    @import "containerService";
+
+    .nameCourses .navItem:after {
+      content: "";
+      display: block;
+      height: 1.5px;
+      background: #00ffcb;
+      transform: scaleX(0);
+      transition: transform 0.5s;
+      margin-top: 5px;
+      opacity: 0.5;
+    }
   
+    .nameCourses .navItem:hover:after {
+      transform: scaleX(1);
+      transition: transform 0.3s;
+      height: 1.5px;
+      opacity: 1;
+    }
+
   }
 
-/* ------ section Coder Laywer students Grid ----- */
+  @media screen and (min-width: 600px) {
 
-.containerCardsStudents {
-  width: 100%;
-  height: 1400px;
-  margin: 0em 0em 0em 0em;
-  background-image: url(../images/bkg-teachers2.png);
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: center top;
-  position: relative;
-}
-.containerStudents {
-  grid-area: containerStudents;
+  }
 
-}
+  @media screen and (min-width : 1024px){ 
+    
+  }
 
-.containerStudents h2 {
-  font-size: 2rem;
-  text-transform: capitalize;
-  color: #6243f7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-}
+/* ------ section Coder Laywer students ----- */
+  .sectionStudents {
+    
+    .descriptionStudents {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      grid-template-areas: 
+        "studentInfo"
+        "serviceContainer"
+        "buttonInfo"
+      ;
+      justify-items: center;
+      margin-top: 50px;
 
-.containerStudents {
-  text-align: center;
-  height: auto;
-}
+      .studentInfo {
+        grid-area: studentInfo;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
 
-.serviceContainer {
-  grid-area: serviceContainer;
-  margin-bottom: 1em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+        .header {
+          text-align: center;
+          font-size: $sizeTitle;
+          font-weight: $fontWeight;
+          color: $colorTitle;
+          height: auto;
+          margin-bottom: 0.5em;
+          margin-top: 0.5em;
+          }
 
-.containerCardsStudents {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto 1fr;
-  grid-template-areas: 
-    "containerStudents"
-    "serviceContainer"
-  ;
-  gap: 2em;
-}
+          .info {
+            p {
+              font-size: $sizePharagrap;
+              color: $colorParragrap;
+              text-align: center;
+              padding: 2em;
+            }
+          }
+        }
 
-/* ------ section App ----- */
+        .serviceContainer {
+          grid-area: serviceContainer;
+          overflow-y: hidden;
+          overflow-x: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          scroll-behavior: smooth;
+          gap: 25px;
+  
+          /*padding: 0 10vw 0 1vw;*/
+          .serviceCard {
+            flex: 0 0 auto;
+            width: $studentsCardWidth;
+            height: $studentsCardHeight;
+  
+            .serviceImg {
+              border: $colorBorderCard;
+              position: relative;
+              overflow: hidden;
+              background-color: $colorBackgroundButtonCard;
+              border-radius: 25px;
+              display: flex;
+              transition: all 0.5s;
+  
+              @import 'claseExtend';
+  
+              .headerInfo {
+                display: flex;
+                flex-direction: column;
+                padding: 15px;
+  
+                i {
+                  font-size: 80px;
+                  color: $colorPhotoCard;
+                  margin-bottom: 22px;
+                  padding-top: 4px;
+                }
+                button {
+                  outline: none;
+                  border: none;
+                  background-color: $colorBackgroundButtonCard;
+                  a {
+                    font-size: $sizeNamesCard;
+                    text-align: center;
+                    color: $colorNameCard;
+                  }
+                }
+              }
+              h4 {
+                font-size: $sizeTitleCard;
+                text-align: center;
+                color: $colorTitleCard;
+                text-transform: uppercase;
+                padding-top: 5px;
+              }
+              .description {
+                margin-top: 5em;
+                width: 150px;
+                text-align: center;
+                border: none;
+                transition: 0.5s;
+                opacity: 0;
+                font-size: $sizePharagrap;
+                color: $colorParragrap;
+                transition: all 0.5s;
+                margin-right: 1em;
+              }
+      
+            }
+  
+            @import "mixin";
 
-.containerApp .containerImageApp{
-  margin: 2em 0;
-  width: auto;
-}
-.containerImageApp img {
-  width: 100%
-}
+            &:hover .serviceImg button {
+              
+              background-color: $colorBackgroundButtonHover;
+              border-radius: 15px;
+              transition: all 0s;
+              
+            }
+    
+            &:hover a {
+              margin-bottom: 20px;
+            }
+    
+            &:hover .serviceImg {
+              background-color: $colorBackgroundButtonHover;
+            }
+    
+            &:hover .serviceImg {
+              border: $colorBorderCardHover;
+            }
+    
+            &:hover .description {
+              opacity: 1;
+            }
+          }
+  
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+
+        .buttonInfo {
+          grid-area: buttonInfo;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+  
+          .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            width: 140px;
+            height: 40px;
+            border-radius: 14px;
+            border: transparent;
+            position: relative;
+            background-color: $colorButton;
+            margin-top: 1em;
+            transition: 0.5 opacity ease-in-out;
+  
+            a {
+              text-decoration: none;
+              color: #212121;
+            }
+
+            &:hover {
+              animation-name: un_efecto;
+              animation-iteration-count: infinite;
+              animation-timing-function: ease-in-out;
+              animation-duration: 1.5s;
+              animation-delay: 0s;
+              /*background: rgb(0,255,203);
+              background: linear-gradient(90deg, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 77%); 
+              width: 160px;
+              height: 50px;*/
+            }
+      
+            & a:hover {
+              color: black;
+            }  
+  
+          } 
+        }
+      }
+  }
+
+  @media screen and (min-width: 600px) {
+
+  }
+
+  @media screen and (min-width : 1024px){ 
+    
+  }
+
+/* ------ section Coder Lawyer download App ----- */
+  .containerImageApp{
+    margin: 2em 0;
+    width: auto;
+
+    img {
+      width: 100%
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+
+  }
+
+  @media screen and (min-width : 1024px){ 
+    
+  }
 
 /* ------ section contact ----- */
+  .contactoHome {
+    .flexContacto {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      grid-template-areas: 
+        "titleContact"
+        "formulario"
+      ;
+      justify-items: start;
+      height: auto;
+      .titleContact {
+        grid-area: titleContact;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
 
-.titleContact {
-  grid-area: titleContact;
-  display: flex;
-  flex-direction: column;
-}
+        h3 {
+          font-size: 55px;
+          color: #00ffcb;
+          font-weight: 600;
+        }
 
-.titleContact {
-  width: 100%;
-  text-align: center;
-}
-.titleContact h3 {
-  font-size: 55px;
-  color: #00ffcb;
-  font-weight: 600;
-}
-.titleContact p {
-  font-size: 20px;
-  font-weight: 400;
-  color: #fff;
-  padding: 0.2em 1em 1em;
-}
+        p {
+          font-size: 20px;
+          font-weight: 400;
+          color: #fff;
+          padding: 0.2em 1em 1em;
+        }
 
-.titleContact .redes ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.titleContact .redes li {
-  margin: 0.5em 0em;
-}
-.titleContact .redes a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 45px;
-  font-weight: 400;
-}
-.titleContact .redes a i {
-  color: #00FFCB;
-}
+        .redes {
+          ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-.titleContact .redes a span {
-  color: #fff;
-  font-size: 20px;
-}
+            li {
+              margin: 0.5em 0em;
 
-.formulario {
-  grid-area:formulario;
-}
+              a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 45px;
+                font-weight: 400;
 
-.flexContacto .formulario {
-  width: 100%;
-  padding: 20px;
-}
-.flexContacto .formulario .input-form {
-  display: block;
-  width: 100%;
-  margin: 1em auto;
-  background-color: #00ffcb;
-  padding: 0.5em 1em;
-  border-radius: 15px;
-  border: none;
-  font-size: 1rem;
-  color: #212121;
-}
-.flexContacto .formulario .input-form,
-input::placeholder {
-color: #212121;
-opacity: 1;
-}
-.input-form:focus,
-input:focus,
-input[type]:focus {
-outline: 0 none;
-}
-.flexContacto .formulario .consulta {
-  display: block;
-  width: 100%;
-  margin: 1em auto;
-  background-color: #00ffcb;
-  padding: 0.5em 1em;
-  border-radius: 15px;
-  border: none;
-  font-size: 1rem;
-  color: #212121;
-}
+                i {
+                  color: #00FFCB;
+                }
 
-.consulta,
-textarea::placeholder {
-  color: #212121;
-  opacity: 1;
-  font-family: "Roboto", sans-serif;
-}
-.flexContacto .formulario button.enviar {
-  border: none;
-  background-color: #6243F7;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 500;
-  width: 200px;
-  padding: 1em;
-  text-transform: capitalize;
-  border-radius: 15px;
-  float: right;
-}
+                span {
+                  color: #fff;
+                  font-size: 20px;
+                }
 
-.flexContacto{
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  grid-template-areas: 
-    "titleContact"
-    "formulario"
-  ;
-  justify-items: start;
-  height: auto;
-}
+              }
+
+            }
+
+          }
+        }
+
+      }
+      .formulario {
+        grid-area:formulario;
+        width: 100%;
+        padding: 20px;
+
+        form {
+          .input-form {
+            display: block;
+            width: 100%;
+            margin: 1em auto;
+            background-color: $backgroundColorForm;
+            padding: 0.5em 1em;
+            border-radius: 15px;
+            border: none;
+            font-size: $sizePharagrapForm;
+            color: $colorForm;
+          }
+
+          .input-form,
+            input::placeholder {
+            color: $colorForm;
+            opacity: 1;
+          }
+
+          .input-form:focus,
+            input:focus,
+            input[type]:focus {
+            outline: 0 none;
+          }
+
+          textarea::placeholder {
+            color: $colorForm;
+            opacity: 1;
+          
+            #consulta {
+              display: block;
+              width: 100%;
+              margin: 1em auto;
+              background-color: $backgroundColorForm;
+              padding: 0.5em 1em;
+              border-radius: 15px;
+              border: none;
+              font-size: 1rem;
+              color: $colorForm;
+            }
+
+          }
+
+          button.enviar {
+            border: none;
+            background-color: $backgroundColorButtonForm;
+            color: $colorParragrap;
+            font-size: $sizeButtonEnviar;
+            font-weight: 500;
+            width: 200px;
+            padding: 1em;
+            text-transform: capitalize;
+            border-radius: 15px;
+            float: right;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+
+  }
+
+  @media screen and (min-width : 1024px){ 
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /** TABLET */
 @media screen and (min-width: 600px) {
