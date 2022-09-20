@@ -1,7 +1,9 @@
 /** SCSS - GENERALS */ /** Backgorund */
+/** Size header*/
 /** Size */
 /** size card teachers & students */
 /** size services */
+/** 300*2*/
 /** size students */
 /** size form */
 /** Weight */
@@ -10,6 +12,8 @@
 /** Color numbers */
 /** color services */
 /** color form */
+/** $media screen and (min-width: 600px) */
+/** @media screen and (min-width : 1024px) */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import "./partials/footer.css";
 * {
@@ -54,66 +58,42 @@ body main section {
 }
 
 /** SCSS - PARTIALS */
-/* COLORES:
-azul mas fuerte: #3657F7
-azul mas oscuro: #1F58A5
-"violeta": #6243F7
-verde claro: #00FFCB
-verde oscuro: #00A987
-gris: #DAD9DE
-negro: #212121
-blanco: #ffffff
- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
 /* ------ HEADER ----- */
-header {
+header .navBar {
+  position: fixed;
+  z-index: 1;
   width: 100%;
   height: auto;
   background: #212121;
-  padding: 1em 1em;
-  position: relative;
-  z-index: 1;
-}
-
-.navBar {
   /* ------ containerLeft ----- */
   /* ------ containerRight ----- */
   /* ------ buttonResponsive ----- */
 }
-.navBar .containerLeft {
+header .navBar .containerLeft {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
-.navBar .containerLeft .logo img {
-  width: 7em;
+header .navBar .containerLeft .logo {
+  margin-top: 1em;
+}
+header .navBar .containerLeft .logo img {
+  width: 8em;
   border-radius: 50%;
 }
-.navBar .containerLeft .search {
+header .navBar .containerLeft .search {
   display: none;
   width: 60%;
   margin-right: 10px;
 }
-.navBar .containerLeft .search i {
+header .navBar .containerLeft .search i {
   position: absolute;
   z-index: 22222;
   margin-top: 6px;
   margin-left: 10px;
 }
-.navBar .containerLeft .search input {
+header .navBar .containerLeft .search input {
   width: 100%;
   position: relative;
   padding: 0.5em 1em;
@@ -123,20 +103,20 @@ header {
           padding-inline-start: 40px;
   font-size: 13px;
 }
-.navBar .containerLeft .search input::-moz-placeholder {
+header .navBar .containerLeft .search input::-moz-placeholder {
   padding-inline-start: 0px;
 }
-.navBar .containerLeft .search input:-ms-input-placeholder {
+header .navBar .containerLeft .search input:-ms-input-placeholder {
   padding-inline-start: 0px;
 }
-.navBar .containerLeft .search input::placeholder {
+header .navBar .containerLeft .search input::placeholder {
   -webkit-padding-start: 0px;
           padding-inline-start: 0px;
 }
-.navBar .containerLeft .search .input:focus {
+header .navBar .containerLeft .search .input:focus {
   outline: 2px solid #00ffcb;
 }
-.navBar .containerRight {
+header .navBar .containerRight {
   display: flex;
   direction: row;
   flex-wrap: wrap;
@@ -146,7 +126,7 @@ header {
   top: 20px;
   right: 30px;
 }
-.navBar .containerRight .buttonsIcons {
+header .navBar .containerRight .buttonsIcons {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
@@ -154,13 +134,11 @@ header {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  background-color: transparent;
   /* ------ subMenu ----- */
-  /*.dropDown ul.outline {
-    border-bottom: none;
-  }*/
 }
-.navBar .containerRight .buttonsIcons button i {
+header .navBar .containerRight .buttonsIcons button i {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -168,15 +146,15 @@ header {
   width: -moz-fit-content;
   width: fit-content;
 }
-.navBar .containerRight .buttonsIcons button i.fa-user-circle {
-  font-size: 2.5rem;
+header .navBar .containerRight .buttonsIcons button i.fa-user-circle {
+  font-size: 4rem;
   margin: 0.2em;
   color: #fff;
 }
-.navBar .containerRight .buttonsIcons .dropDown {
+header .navBar .containerRight .buttonsIcons .dropDown {
   position: relative;
 }
-.navBar .containerRight .buttonsIcons .dropDown .dropbtn {
+header .navBar .containerRight .buttonsIcons .dropDown .dropbtn {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -184,16 +162,16 @@ header {
   width: -moz-fit-content;
   width: fit-content;
 }
-.navBar .containerRight .buttonsIcons .dropDown .dropbtn i {
+header .navBar .containerRight .buttonsIcons .dropDown .dropbtn i {
   background-color: transparent;
   color: #00ffcb;
 }
-.navBar .containerRight .buttonsIcons .dropDown .dropdownContent {
+header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent {
   display: none;
   position: absolute;
   background-color: #212121;
   color: #fff;
-  width: 180px;
+  width: 250px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -204,7 +182,7 @@ header {
   padding: 1em auto;
   border: 1px solid #00ffcb;
 }
-.navBar .containerRight .buttonsIcons .dropDown .dropdownContent .dropHeader {
+header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .dropHeader {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -212,26 +190,34 @@ header {
   padding: 1em 0em;
   border-bottom: 1px solid #00ffcb;
 }
-.navBar .containerRight .buttonsIcons .dropDown .dropdownContent .dropHeader h4 {
-  margin-left: 0.5em;
+header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .dropHeader i {
+  font-size: 3.5rem;
+  padding-left: 1rem;
+  background-color: transparent;
+  color: #00ffcb;
 }
-.navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content {
+header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .dropHeader h4 {
+  margin-left: 0, 5em;
+  font-size: 1.5rem;
+  color: #00ffcb;
+  text-align: center;
+}
+header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content {
   list-style: none;
   border-bottom: 1px solid #00ffcb;
 }
-.navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList {
-  font-size: 0.8rem;
-  padding: 0.5em 1em;
-  font-size: 1rem;
+header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList {
+  padding: 0.5em 0.1em;
   font-weight: 300;
+  font-size: 1.2rem;
 }
-.navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList a {
+header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList a {
   text-decoration: none;
   font-weight: 300;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   color: #fff;
 }
-.navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList a:after {
+header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList a:after {
   content: "";
   display: block;
   height: 1.5px;
@@ -241,44 +227,45 @@ header {
   margin-top: 5px;
   opacity: 0.5;
 }
-.navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList a:hover:after {
+header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList a:hover:after {
   transform: scaleX(1);
   transition: transform 0.3s;
   height: 1.5px;
   opacity: 1;
 }
-.navBar .containerRight .buttonsIcons .dropDown #subMenuGuest {
+header .navBar .containerRight .buttonsIcons .dropDown #subMenuGuest {
   display: none;
 }
-.navBar .containerRight .buttonsIcons .dropDown:hover .dropdownContent {
+header .navBar .containerRight .buttonsIcons .dropDown:hover .dropdownContent {
   display: block;
 }
-.navBar .buttonResponsive {
+header .navBar .buttonResponsive {
   color: white;
-  font-size: 25px;
+  font-size: 2.5rem;
   /* ------ containerLinks ----- */
 }
-.navBar .buttonResponsive i {
-  margin-top: 10px;
+header .navBar .buttonResponsive i {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   margin-left: 13px;
 }
-.navBar .buttonResponsive .containerLinks {
+header .navBar .buttonResponsive .containerLinks {
   display: none;
 }
-.navBar .buttonResponsive .containerLinks .navList {
+header .navBar .buttonResponsive .containerLinks .navList {
   display: none;
   list-style: none;
   display: flex;
   flex-direction: column;
 }
-.navBar .buttonResponsive .containerLinks .navList .navItem {
+header .navBar .buttonResponsive .containerLinks .navList .navItem {
   padding: 0.5em 0.5em;
 }
-.navBar .buttonResponsive .containerLinks .navList .navItem a {
+header .navBar .buttonResponsive .containerLinks .navList .navItem a {
   border: transparent;
   text-decoration: none;
 }
-.navBar .buttonResponsive .containerLinks .navList .navItem a:after {
+header .navBar .buttonResponsive .containerLinks .navList .navItem:after {
   content: "";
   display: block;
   height: 1.5px;
@@ -288,132 +275,139 @@ header {
   margin-top: 5px;
   opacity: 0.5;
 }
-.navBar .buttonResponsive .containerLinks .navList .navItem a:hover:after {
+header .navBar .buttonResponsive .containerLinks .navList .navItem:hover:after {
   transform: scaleX(1);
   transition: transform 0.3s;
   height: 1.5px;
   opacity: 1;
 }
-.navBar .buttonResponsive .containerLinks .navList .navItem .border {
+header .navBar .buttonResponsive .containerLinks .navList .navItem .border {
   text-decoration: none;
   font-weight: 300;
-  font-size: 1rem;
-  color: #fff;
+  font-size: 1.2rem;
+  color: #ffffff;
   width: 100%;
 }
-.navBar .buttonResponsive:hover .containerLinks {
+header .navBar .buttonResponsive:hover .containerLinks {
   display: flex;
 }
-.navBar .buttonResponsive:hover {
+header .navBar .buttonResponsive:hover {
   color: #00ffcb;
 }
-
 @media screen and (min-width: 600px) {
-  /* ------ containerLeft ----- */
-  .navBar {
+  header .navBar {
     /* ------ containerRight ----- */
     /* ------ buttonResponsive ----- */
   }
-  .navBar .containerLeft {
+  header .navBar .containerLeft {
     justify-content: start;
   }
-  .navBar .containerLeft .logo img {
-    width: 9em;
+  header .navBar .containerLeft .logo img {
+    width: 10em;
     border-radius: 50%;
   }
-  .navBar .containerLeft .search {
+  header .navBar .containerLeft .search {
     display: block;
     width: 60%;
     margin-left: 15px;
   }
-  .navBar .containerLeft .search input {
+  header .navBar .containerLeft .search input {
     width: 70%;
   }
-  .navBar .containerRight .buttonsIcons button i.fa-user-circle {
+  header .navBar .containerRight .buttonsIcons button i.fa-user-circle {
+    font-size: 4.2rem;
+  }
+  header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList {
+    font-size: 1.3rem;
+  }
+  header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList a {
+    font-size: 1.3rem;
+  }
+  header .navBar .containerRight .buttonsIcons i {
+    font-size: 1.3rem;
+  }
+  header .navBar .buttonResponsive {
     font-size: 2.7rem;
-  }
-  .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList {
-    font-size: 1rem;
-  }
-  .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList a {
-    font-size: 1rem;
-  }
-  .navBar .containerRight .buttonsIcons i {
-    font-size: 1rem;
-  }
-  .navBar .buttonResponsive {
-    font-size: 30px;
     /* ------ containerLinks ----- */
   }
-  .navBar .buttonResponsive .containerLinks .navList .navItem .border {
-    font-size: 1.2rem;
+  header .navBar .buttonResponsive .containerLinks .navList .navItem .border {
+    font-size: 1.3rem;
   }
 }
-/** DESKTOP */
 @media screen and (min-width: 1024px) {
-  .navBar {
+  header .navBar {
     /* ------ containerRight ----- */
     /* ------ buttonResponsive ----- */
   }
-  .navBar .containerLeft {
+  header .navBar .containerLeft {
     justify-content: space-between;
     width: 40%;
   }
-  .navBar .containerLeft .logo img {
+  header .navBar .containerLeft .logo img {
     width: 10em;
     border-radius: 50%;
+    margin-bottom: 1em;
   }
-  .navBar .containerLeft .search {
+  header .navBar .containerLeft .search {
     display: block;
-    margin-left: 15px;
+    margin-left: 20px;
   }
-  .navBar .containerLeft .search input {
+  header .navBar .containerLeft .search input {
     width: 100%;
   }
-  .navBar .containerRight .buttonsIcons button i.fa-user-circle {
-    font-size: 3rem;
+  header .navBar .containerRight {
+    padding: 12px;
+    top: 12px;
+    right: 11px;
   }
-  .navBar .containerRight .buttonsIcons button i {
+  header .navBar .containerRight .buttonsIcons {
+    position: absolute;
+    top: 1;
+    right: 1;
+  }
+  header .navBar .containerRight .buttonsIcons button i.fa-user-circle {
+    font-size: sizeIconProfileQ1024;
+  }
+  header .navBar .containerRight .buttonsIcons button i {
     font-size: 1.4rem;
   }
-  .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList {
-    font-size: 1rem;
+  header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent {
+    width: 300px;
   }
-  .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList a {
-    font-size: 1rem;
+  header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList {
+    font-size: 1.2rem;
   }
-  .navBar .buttonResponsive {
+  header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList a {
+    font-size: 1.2rem;
+  }
+  header .navBar .buttonResponsive {
     font-size: 30px;
-    /* ------ containerLinks ----- */
   }
-  .navBar .buttonResponsive i {
+  header .navBar .buttonResponsive i {
     display: none;
   }
-  .navBar .buttonResponsive .containerLinks {
+  header .navBar .buttonResponsive .containerLinks {
     width: auto;
     position: absolute;
-    top: 11px;
-    right: 199px;
+    top: 14px;
+    right: 200px;
     display: flex;
     flex-direction: row;
     align-items: center;
   }
-  .navBar .buttonResponsive .containerLinks .navList {
+  header .navBar .buttonResponsive .containerLinks .navList {
     list-style: none;
     display: flex;
     flex-direction: row;
   }
-  .navBar .buttonResponsive .containerLinks .navList .navItem {
+  header .navBar .buttonResponsive .containerLinks .navList .navItem {
     padding: 1em 0.5em;
   }
-  .navBar .buttonResponsive .containerLinks .navList .navItem .border {
-    font-size: 1.2rem;
+  header .navBar .buttonResponsive .containerLinks .navList .navItem a {
+    border: transparent;
     text-decoration: none;
-    font-weight: 300;
-    font-size: 1rem;
-    color: #fff;
   }
-  .navBar .buttonResponsive .containerLinks .navList .navItem a:after {
+  header .navBar .buttonResponsive .containerLinks .navList .navItem:after {
     content: "";
     display: block;
     height: 1.5px;
@@ -423,13 +417,33 @@ header {
     margin-top: 5px;
     opacity: 0.5;
   }
-  .navBar .buttonResponsive .containerLinks .navList .navItem a:hover:after {
+  header .navBar .buttonResponsive .containerLinks .navList .navItem:hover:after {
     transform: scaleX(1);
     transition: transform 0.3s;
     height: 1.5px;
     opacity: 1;
   }
+  header .navBar .buttonResponsive .containerLinks .navList .navItem .border {
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 300;
+    color: #fff;
+  }
 }
+@media screen and (min-width: 1200px) {
+  header .navBar .containerRight {
+    top: 12px;
+    right: 30px;
+  }
+  header .navBar .buttonResponsive {
+    font-size: 30px;
+  }
+  header .navBar .buttonResponsive .containerLinks {
+    top: 16px;
+    right: 261px;
+  }
+}
+
 /* ------ section Main Carrusel with Boostrapp----- */
 /* ------ Section Characterisitcs ----- */
 .contentCharacteristics {
@@ -487,6 +501,75 @@ header {
   text-align: center;
   width: 50%;
 }
+@media screen and (min-width: 600px) {
+  .contentCharacteristics {
+    height: 100%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+  }
+  .contentCharacteristics .characteristics {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    gap: 10px;
+  }
+  .contentCharacteristics .characteristics .circle {
+    width: 12rem;
+    height: 12rem;
+  }
+  .contentCharacteristics .characteristics .circle i {
+    font-size: 140px;
+    margin-top: 27px;
+  }
+  .contentCharacteristics .characteristics .circle:hover {
+    transform: scale(1.2);
+  }
+  .contentCharacteristics .characteristics .titleCharacterisitc {
+    font-size: 2.2rem;
+  }
+  .contentCharacteristics .characteristics .parraCharacterisitc {
+    font-size: 1.2rem;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contentCharacteristics {
+    height: 100vh;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .contentCharacteristics .characteristics {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    gap: 40px;
+    margin: 1em;
+  }
+  .contentCharacteristics .characteristics .circle {
+    width: 14rem;
+    height: 14rem;
+  }
+  .contentCharacteristics .characteristics .circle i {
+    font-size: 160px;
+    margin-top: 27px;
+  }
+  .contentCharacteristics .characteristics .circle:hover {
+    transform: scale(1.2);
+  }
+  .contentCharacteristics .characteristics .titleCharacterisitc {
+    font-size: 2.5rem;
+  }
+  .contentCharacteristics .characteristics .parraCharacterisitc {
+    font-size: 1.4rem;
+    width: 100%;
+  }
+}
 
 /* ------ section Coder Laywer Teachers  ----- */
 .sectionTeachers {
@@ -522,7 +605,7 @@ header {
   color: #6243F7;
   height: auto;
   margin-bottom: 0.5em;
-  margin-top: 0.5em;
+  margin-top: 1em;
 }
 .sectionTeachers .descriptionTeachers .info p {
   font-size: 0.8rem;
@@ -554,7 +637,7 @@ header {
   display: flex;
   transition: all 0.5s;
 }
-.sectionTeachers .serviceContainer .serviceCard .serviceImg .nameCouse, .sectionTeachers .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .color, .sectionStudents .descriptionStudents .sectionTeachers .serviceContainer .serviceCard .serviceImg .color, .sectionTeachers .serviceContainer .serviceCard .serviceImg .color {
+.sectionTeachers .serviceContainer .serviceCard .serviceImg .nameCouse {
   position: absolute;
   background-color: orange;
   border-radius: 15px;
@@ -565,8 +648,22 @@ header {
   padding: 5px;
   font-size: 12px;
 }
-.sectionTeachers .serviceContainer .serviceCard .serviceImg .color {
+.sectionTeachers .serviceContainer .serviceCard .serviceImg .nameCousecolor {
+  /*@extend .nameCouse;*/
   background-color: greenyellow;
+}
+@media screen and (min-width: 600px) {
+  .sectionTeachers .serviceContainer .serviceCard .serviceImg .nameCouse {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sectionTeachers .serviceContainer .serviceCard .serviceImg .nameCouse {
+    font-size: 1.2rem;
+  }
+}
+.sectionTeachers .serviceContainer .serviceCard .serviceImg .nameCouse {
+  font-size: 0.8rem;
 }
 .sectionTeachers .serviceContainer .serviceCard .serviceImg .headerInfo {
   display: flex;
@@ -703,7 +800,7 @@ header {
   border-radius: 14px;
   border: transparent;
   position: relative;
-  color: #00ffcb;
+  color: #00FFCB;
   background-color: #6243f7;
   margin-top: 1em;
   transition: 0.5 opacity ease-in-out;
@@ -712,7 +809,7 @@ header {
   text-decoration: none;
   color: #212121;
 }
-.sectionTeachers .buttonInfo .button:hover {
+.sectionTeachers .buttonInfo .button.button:hover {
   -webkit-animation-name: un_efecto;
           animation-name: un_efecto;
   -webkit-animation-iteration-count: infinite;
@@ -728,8 +825,125 @@ header {
   width: 160px;
   height: 50px;*/
 }
-.sectionTeachers .buttonInfo .button a:hover {
+.sectionTeachers .buttonInfo .button.button a:hover {
   color: black;
+}
+@media screen and (min-width: 600px) {
+  .sectionTeachers {
+    width: 100%;
+    height: auto;
+  }
+  .sectionTeachers .descriptionTeachers {
+    margin-top: 0px;
+  }
+  .sectionTeachers .descriptionTeachers .teacherInfo .header {
+    font-size: 3.7rem;
+    margin-bottom: 0em;
+    margin-top: 0em;
+  }
+  .sectionTeachers .descriptionTeachers .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sectionTeachers .descriptionTeachers .info p {
+    font-size: 1.2rem;
+    width: 70%;
+  }
+  .sectionTeachers .serviceContainer {
+    /*padding: 0 10vw 0 1vw;*/
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 15px;
+  }
+  .sectionTeachers .serviceContainer .serviceCard {
+    width: 450px;
+    height: 300px;
+  }
+  .sectionTeachers .serviceContainer .serviceCard .serviceImg .nameCouse {
+    font-size: 1.2rem;
+  }
+  .sectionTeachers .serviceContainer .serviceCard .serviceImg .headerInfo i {
+    font-size: 8rem;
+    margin-top: 60px;
+    margin-left: 67px;
+  }
+  .sectionTeachers .serviceContainer .serviceCard .serviceImg .headerInfo button a {
+    font-size: 1.8rem;
+  }
+  .sectionTeachers .serviceContainer .serviceCard .serviceImg h4 {
+    font-size: 2rem;
+  }
+  .sectionTeachers .serviceContainer .serviceCard .serviceImg .description {
+    width: 250px;
+    font-size: 1.2rem;
+  }
+  .sectionTeachers .buttonInfo .button {
+    font-size: 1.5rem;
+    width: 13rem;
+    height: 5rem;
+  }
+  .sectionTeachers .buttonInfo .button a {
+    text-decoration: none;
+    color: #212121;
+  }
+  .sectionTeachers .buttonInfo .button.button:hover {
+    -webkit-animation-name: un_efecto;
+            animation-name: un_efecto;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    /*background: rgb(0,255,203);
+    background: linear-gradient(90deg, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 77%); 
+    width: 160px;
+    height: 50px;*/
+  }
+  .sectionTeachers .buttonInfo .button.button a:hover {
+    color: black;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sectionTeachers {
+    width: 100%;
+    height: auto;
+  }
+  .sectionTeachers .descriptionTeachers .teacherInfo .header {
+    font-size: 4rem;
+  }
+  .sectionTeachers .descriptionTeachers .info p {
+    font-size: 1.4rem;
+    width: 80%;
+  }
+  .sectionTeachers .serviceContainer .serviceCard {
+    width: 450px;
+    height: 300px;
+  }
+  .sectionTeachers .serviceContainer .serviceCard .serviceImg .nameCouse {
+    font-size: 1.2rem;
+  }
+  .sectionTeachers .serviceContainer .serviceCard .serviceImg .headerInfo i {
+    font-size: 9rem;
+    margin-top: 41px;
+    margin-left: 74px;
+  }
+  .sectionTeachers .serviceContainer .serviceCard .serviceImg .headerInfo button a {
+    font-size: 2rem;
+  }
+  .sectionTeachers .serviceContainer .serviceCard .serviceImg h4 {
+    font-size: 2rem;
+  }
+  .sectionTeachers .serviceContainer .serviceCard .serviceImg .description {
+    width: 250px;
+    font-size: 1.4rem;
+  }
+  .sectionTeachers .buttonInfo .button a {
+    text-decoration: none;
+  }
 }
 
 /* ------ section Coder Laywer Stadistics  ----- */
@@ -763,6 +977,7 @@ header {
   grid-area: cantidades;
   display: flex;
   flex-direction: column;
+  padding: 15px;
 }
 .est .cantidades .info {
   display: flex;
@@ -784,6 +999,36 @@ header {
 }
 .est .cantidades .info:hover {
   transform: scale(1.2);
+}
+@media screen and (min-width: 600px) {
+  .est h2 {
+    font-size: 3.7rem;
+  }
+  .est .cantidades .info .number {
+    font-size: 7rem;
+  }
+  .est .cantidades .info .text {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .est {
+    height: 80vh;
+  }
+  .est h2 {
+    font-size: 4rem;
+  }
+  .est .cantidades {
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 50px;
+  }
+  .est .cantidades .info .number {
+    font-size: 8rem;
+  }
+  .est .cantidades .info .text {
+    font-size: 2.5rem;
+  }
 }
 
 /* ------ section Coder Laywer service Grid ----- */
@@ -823,7 +1068,6 @@ header {
 }
 .containerServices .nameCourses {
   grid-area: nameCourses;
-  font-size: 1.5rem;
   text-transform: capitalize;
   color: #ffffff;
   text-transform: uppercase;
@@ -838,7 +1082,7 @@ header {
 }
 .containerServices .nameCourses .navListService .navItem {
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 .containerServices .containerCardsServices {
   grid-area: containerCardsServices;
@@ -846,14 +1090,15 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-right: 1rem;
 }
 .containerServices .containerCardsServices .containerCursos {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0em auto;
-  width: 100%;
   padding: 20px;
+  flex: 0 0 auto;
 }
 .containerServices .containerCardsServices .containerCursos .cardCurso {
   background-color: black;
@@ -904,7 +1149,7 @@ header {
 }
 .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
   background-color: #6243F7;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
   color: #212121;
@@ -927,6 +1172,61 @@ header {
 .containerServices .containerCardsServices .containerCursos .cardCurso:hover .precioCurso {
   display: flex;
 }
+@media screen and (min-width: 600px) {
+  .containerServices .containerCardsServices {
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 15px;
+    justify-content: space-around;
+    scroll-behavior: smooth;
+    gap: 25px;
+  }
+  .containerServices .containerCardsServices .containerCursos {
+    flex: 0 0 auto;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso {
+    width: 350px;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
+    font-size: 2.2rem;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
+    width: 100%;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
+    font-size: 1.2rem;
+    display: flex;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
+    font-size: 1.2rem;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
+    text-decoration: none;
+    color: black;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .containerServices .containerCardsServices .containerCursos .cardCurso {
+    width: 350px;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
+    font-size: 2.5rem;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
+    width: 100%;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
+    font-size: 1.4rem;
+    display: flex;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
+    font-size: 1.2rem;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
+    text-decoration: none;
+    color: black;
+  }
+}
 .containerServices .nameCourses .navItem:after {
   content: "";
   display: block;
@@ -942,6 +1242,320 @@ header {
   transition: transform 0.3s;
   height: 1.5px;
   opacity: 1;
+}
+@media screen and (min-width: 600px) {
+  .containerServices .categoryFirst h2 {
+    font-size: 2.2rem;
+  }
+  .containerServices .category h2 {
+    font-size: 2.2rem;
+  }
+  .containerServices .nameCourses .navListService {
+    margin-left: 1.2rem;
+  }
+  .containerServices .nameCourses .navListService .navItem {
+    font-size: 1.4rem;
+  }
+  .containerServices .containerCardsServices {
+    grid-area: containerCardsServices;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 1rem;
+  }
+  .containerServices .containerCardsServices .containerCursos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0em auto;
+    padding: 20px;
+    flex: 0 0 auto;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso {
+    background-color: black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 2em;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 300px;
+    margin: 1em;
+    box-sizing: border-box;
+    border: 1px solid #6243F7;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    border-bottom: 1.5px solid #6243F7;
+    margin-bottom: 0.5em;
+    width: 100%;
+    height: auto;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    display: flex;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1em;
+    border: 1px solid #6243F7;
+    padding: 0.3em;
+    border-radius: 5px;
+    display: none;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso:hover {
+    background-color: #00FFCB;
+    color: black;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
+    background-color: #6243F7;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #212121;
+    padding: 0.5em 1em;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 1em;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
+    text-decoration: none;
+    color: black;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso:hover .reservar {
+    color: #ffffff;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso:hover {
+    border: 1px solid #00ffcb;
+    background-color: #212121;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso:hover .precioCurso {
+    display: flex;
+  }
+}
+@media screen and (min-width: 600px) and (min-width: 600px) {
+  .containerServices .containerCardsServices {
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 15px;
+    justify-content: space-around;
+    scroll-behavior: smooth;
+    gap: 25px;
+  }
+  .containerServices .containerCardsServices .containerCursos {
+    flex: 0 0 auto;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso {
+    width: 350px;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
+    font-size: 2.2rem;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
+    width: 100%;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
+    font-size: 1.2rem;
+    display: flex;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
+    font-size: 1.2rem;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
+    text-decoration: none;
+    color: black;
+  }
+}
+@media screen and (min-width: 600px) and (min-width: 1024px) {
+  .containerServices .containerCardsServices .containerCursos .cardCurso {
+    width: 350px;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
+    font-size: 2.5rem;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
+    width: 100%;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
+    font-size: 1.4rem;
+    display: flex;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
+    font-size: 1.2rem;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
+    text-decoration: none;
+    color: black;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .containerServices .categoryFirst h2 {
+    font-size: 2.5rem;
+  }
+  .containerServices .category h2 {
+    font-size: 2.5rem;
+  }
+  .containerServices .nameCourses .navListService {
+    margin-left: 1.2rem;
+  }
+  .containerServices .nameCourses .navListService .navItem {
+    font-size: 1.6rem;
+  }
+  .containerServices .containerCardsServices {
+    grid-area: containerCardsServices;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 1rem;
+  }
+  .containerServices .containerCardsServices .containerCursos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0em auto;
+    padding: 20px;
+    flex: 0 0 auto;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso {
+    background-color: black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 2em;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 300px;
+    margin: 1em;
+    box-sizing: border-box;
+    border: 1px solid #6243F7;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    border-bottom: 1.5px solid #6243F7;
+    margin-bottom: 0.5em;
+    width: 100%;
+    height: auto;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    display: flex;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1em;
+    border: 1px solid #6243F7;
+    padding: 0.3em;
+    border-radius: 5px;
+    display: none;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso:hover {
+    background-color: #00FFCB;
+    color: black;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
+    background-color: #6243F7;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #212121;
+    padding: 0.5em 1em;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 1em;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
+    text-decoration: none;
+    color: black;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso:hover .reservar {
+    color: #ffffff;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso:hover {
+    border: 1px solid #00ffcb;
+    background-color: #212121;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso:hover .precioCurso {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 600px) {
+  .containerServices .containerCardsServices {
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 15px;
+    justify-content: space-around;
+    scroll-behavior: smooth;
+    gap: 25px;
+  }
+  .containerServices .containerCardsServices .containerCursos {
+    flex: 0 0 auto;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso {
+    width: 350px;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
+    font-size: 2.2rem;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
+    width: 100%;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
+    font-size: 1.2rem;
+    display: flex;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
+    font-size: 1.2rem;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
+    text-decoration: none;
+    color: black;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  .containerServices .containerCardsServices .containerCursos .cardCurso {
+    width: 350px;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
+    font-size: 2.5rem;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
+    width: 100%;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
+    font-size: 1.4rem;
+    display: flex;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
+    font-size: 1.2rem;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
+    text-decoration: none;
+    color: black;
+  }
 }
 
 /* ------ section Coder Laywer students ----- */
@@ -1001,7 +1615,7 @@ header {
   display: flex;
   transition: all 0.5s;
 }
-.sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .nameCouse, .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .color {
+.sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .nameCouse {
   position: absolute;
   background-color: orange;
   border-radius: 15px;
@@ -1012,8 +1626,19 @@ header {
   padding: 5px;
   font-size: 12px;
 }
-.sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .color {
+.sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .nameCousecolor {
+  /*@extend .nameCouse;*/
   background-color: greenyellow;
+}
+@media screen and (min-width: 600px) {
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .nameCouse {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .nameCouse {
+    font-size: 1.2rem;
+  }
 }
 .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .headerInfo {
   display: flex;
@@ -1021,7 +1646,7 @@ header {
   padding: 15px;
 }
 .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .headerInfo i {
-  font-size: 80px;
+  font-size: 6rem;
   color: #3651F7;
   margin-bottom: 22px;
   padding-top: 4px;
@@ -1053,7 +1678,7 @@ header {
   font-size: 0.8rem;
   color: #ffffff;
   transition: all 0.5s;
-  margin-right: 1em;
+  margin-right: 1.2em;
 }
 .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg {
   display: flex;
@@ -1127,6 +1752,192 @@ header {
 .sectionStudents .descriptionStudents .buttonInfo .button a:hover {
   color: black;
 }
+@media screen and (min-width: 600px) {
+  .sectionStudents .descriptionStudents .studentInfo .header {
+    text-align: center;
+    font-size: 3.7rem;
+  }
+  .sectionStudents .descriptionStudents .studentInfo .info p {
+    font-size: 1.2rem;
+  }
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard {
+    flex: 0 0 auto;
+    width: 400px;
+    height: 300px;
+  }
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg {
+    width: 100%;
+    height: 95%;
+  }
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .nameCouse {
+    position: absolute;
+    background-color: orange;
+    border-radius: 15px;
+    color: black;
+    right: 10px;
+    top: 10px;
+    text-transform: capitalize;
+    padding: 5px;
+    font-size: 12px;
+  }
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .nameCousecolor {
+    /*@extend .nameCouse;*/
+    background-color: greenyellow;
+  }
+}
+@media screen and (min-width: 600px) and (min-width: 600px) {
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .nameCouse {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 600px) and (min-width: 1024px) {
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .nameCouse {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .headerInfo i {
+    font-size: 8rem;
+    margin-left: 20px;
+  }
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .headerInfo button a {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg h4 {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .description {
+    margin-top: 4em;
+    width: 200px;
+    font-size: 1rem;
+    margin-right: 1.2em;
+  }
+}
+@media screen and (min-width: 600px) {
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 600px) {
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg {
+    height: 95%;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .sectionStudents .descriptionStudents .buttonInfo .button {
+    font-size: 1.5rem;
+    width: 13rem;
+    height: 5rem;
+  }
+  .sectionStudents .descriptionStudents .buttonInfo .button a {
+    text-decoration: none;
+    color: #212121;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sectionStudents .descriptionStudents .studentInfo .header {
+    font-size: 4rem;
+  }
+  .sectionStudents .descriptionStudents .studentInfo .info {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .sectionStudents .descriptionStudents .studentInfo .info p {
+    font-size: 1.4rem;
+    width: 80%;
+  }
+  .sectionStudents .descriptionStudents .serviceContainer {
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 15px;
+  }
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard {
+    flex: 0 0 auto;
+    width: 450px;
+    height: 380px;
+  }
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg {
+    width: 100%;
+    height: 95%;
+  }
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .nameCouse {
+    position: absolute;
+    background-color: orange;
+    border-radius: 15px;
+    color: black;
+    right: 10px;
+    top: 10px;
+    text-transform: capitalize;
+    padding: 5px;
+    font-size: 12px;
+  }
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .nameCousecolor {
+    /*@extend .nameCouse;*/
+    background-color: greenyellow;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 600px) {
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .nameCouse {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .nameCouse {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .headerInfo i {
+    font-size: 9rem;
+    margin-left: 20px;
+  }
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .headerInfo button a {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg h4 {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .description {
+    margin-top: 4em;
+    width: 200px;
+    font-size: 1.4rem;
+    margin-right: 1.2em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg {
+    height: 95%;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sectionStudents .descriptionStudents .buttonInfo .button {
+    margin-bottom: 4rem;
+  }
+  .sectionStudents .descriptionStudents .buttonInfo .button a {
+    text-decoration: none;
+    color: #212121;
+  }
+}
 
 /* ------ section Coder Lawyer download App ----- */
 .containerImageApp {
@@ -1141,10 +1952,12 @@ header {
 .contactoHome .flexContacto {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: auto;
+  grid-template-rows: auto auto;
   grid-template-areas: "titleContact" "formulario";
   justify-items: start;
-  height: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .contactoHome .flexContacto .titleContact {
   grid-area: titleContact;
@@ -1278,500 +2091,60 @@ header {
   border-radius: 15px;
   float: right;
 }
-
-/** TABLET */
 @media screen and (min-width: 600px) {
-  /* ------ section Main Carrusel ----- */
-  .contentText .text {
-    font-size: 18px;
-  }
-  /* ------ Dots ----- REVISAR LOS PUNTOS */
-  .contentDot {
-    bottom: -335px;
-    z-index: 9;
-  }
-  .dot {
-    height: 10px;
-    width: 10px;
-  }
-  /* ------ Prev & Next ------ */
-  .prev,
-.next {
-    position: absolute;
-    top: 30%;
-    margin-top: 105px;
-  }
-  /** Section Characterisitcs Grid + Flex Box */
-  .contentCharacteristics {
-    height: 100%;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-  }
-  .characteristics {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: "circle" "titleCharacterisitc" "parraCharacterisitc";
+  .contactoHome .flexContacto {
     justify-items: center;
-    gap: 10px;
   }
-  .circle {
-    width: 170px;
-    height: 170px;
-  }
-  .circle:hover {
-    transform: scale(1);
-  }
-  .characteristics .circle i {
-    font-size: 100px;
-    margin-top: 27px;
-  }
-  .titleCharacterisitc {
-    font-size: 1.5rem;
-  }
-  .parraCharacterisitc {
-    font-size: 1rem;
-    width: 50%;
-  }
-  /* ------ section Coder Laywer Teachers Grid ----- */
-  .sectionTeachers {
+  .contactoHome .flexContacto .titleContact {
     width: 100%;
-    height: auto;
   }
-  .serviceContainer {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .header h3 {
-    font-size: 2rem;
-  }
-  .info p {
-    font-size: 1rem;
-  }
-  .serviceImg i {
-    font-size: 90px;
-  }
-  .serviceImg h2 {
-    font-size: 0.9rem;
-  }
-  .serviceImg h4 {
-    font-size: 1rem;
-  }
-  .nameCouse, .sectionTeachers .serviceContainer .serviceCard .serviceImg .color, .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .color {
-    font-size: 14px;
-  }
-  .nameSchool {
-    font-size: 14px;
-  }
-  .description {
-    font-size: 0.8rem;
-  }
-  .serviceInfo button {
-    font-size: 1rem;
-  }
-  .preBtn,
-.nxtBtn {
-    font-size: 1rem;
-  }
-  .descriptionTeachers .button {
-    font-size: 1.2rem;
-  }
-  .button {
-    width: 160px;
-    height: 50px;
-  }
-  .button a {
-    font-size: 1.5rem;
-  }
-  /* ------ section Coder Laywer Stadistics Grid ----- */
-  .titleEstadisticas {
-    height: inherit;
-  }
-  .titleEstadisticas h2 {
-    font-size: 3rem;
-  }
-  .cantidades .number {
-    font-size: 80px;
-  }
-  .cantidades .text {
-    font-size: 40px;
-  }
-  .est {
-    height: auto;
-  }
-  /* ------ section Coder Laywer service Grid ----- */
-  .categoryFirst h2 {
-    font-size: 2rem;
-  }
-  .category h2 {
-    font-size: 2rem;
-  }
-  .nameCourses .navListService .navItem {
-    font-size: 1.2rem;
-  }
-  .containerCursos {
-    margin: 0em auto;
-    width: auto;
-    justify-content: start;
-    align-items: start;
-  }
-  .containerCardsServices {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  /* ------ section Coder Laywer students Grid REVIEW ----- */
-  .containerCardsStudents {
-    height: 1500px;
-  }
-  .containerCardsStudents {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto 1fr 1fr;
-    grid-template-areas: "containerStudents" "serviceContainer";
-    align-items: center;
-    gap: 2em;
-  }
-  /* ------ section App ----- */
-  /* ------ section contact ----- */
-  .titleContact .redes ul {
-    flex-direction: row;
-    margin: 25px;
-  }
-  .titleContact .redes li {
-    margin: 1.5em 1em;
-  }
-  .titleContact .redes ul li a {
-    display: flex;
-    flex-direction: column;
-  }
-}
-/** DESKTOP */
-@media screen and (min-width: 1024px) {
-  /* ------ section Main Carrusel ----- */
-  .contentText .text {
-    font-size: 20px;
-  }
-  .mySlides .contentText {
-    top: 2.8em;
-  }
-  /* ------ Dots ----- REVISAR LOS PUNTOS */
-  .contentDot {
-    bottom: -335px;
-    z-index: 9;
-  }
-  .dot {
-    height: 10px;
-    width: 10px;
-  }
-  /* ------ Prev & Next ------ */
-  .prev,
-.next {
-    position: absolute;
-    top: 30%;
-    margin-top: 105px;
-  }
-  /** Section Characterisitcs Grid + Flex Box */
-  .circle {
-    width: 180px;
-    height: 180px;
-  }
-  .characteristics .circle i {
-    font-size: 100px;
-    margin-top: 27px;
-  }
-  .titleCharacterisitc {
-    font-size: 1.5rem;
-  }
-  .parraCharacterisitc {
-    width: 50%;
-    font-size: 1rem;
-  }
-  .contentCharacteristics {
-    flex-direction: row;
-  }
-  .characteristics {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    width: 300px;
-  }
-  /* =================================================================
-  GRID OVER GRID
-  .characteristics {
-    grid-area: characteristics;
-  }
-  .contentCharacteristics {
-    display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: auto;
-      gap: 1rem;
-      width: 50%;
-      grid-template-areas: 
-        "characteristics characteristics characteristics"
-      ;
-      justify-items: center;
-      margin-top: 50px;
-  }*/
-  /* ------ section Coder Laywer Teachers Grid ----- */
-  .sectionTeachers {
-    width: 100%;
-    height: auto;
-  }
-  .header h3 {
-    font-size: 3rem;
-  }
-  .info p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-  }
-  .serviceImg i {
-    font-size: 100px;
-  }
-  .serviceImg h2 {
-    font-size: 1rem;
-  }
-  .serviceImg h4 {
-    font-size: 1.2rem;
-  }
-  .nameCouse, .sectionTeachers .serviceContainer .serviceCard .serviceImg .color, .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg .color {
-    font-size: 18px;
-  }
-  .nameSchool {
-    font-size: 16px;
-  }
-  .description {
-    font-size: 0.8rem;
-  }
-  .serviceInfo button {
-    font-size: 1rem;
-  }
-  .preBtn,
-.nxtBtn {
-    font-size: 1.2rem;
-  }
-  .descriptionTeachers .button {
-    font-size: 1.2rem;
-  }
-  .button {
-    width: 170px;
-    height: 60px;
-    margin-bottom: 30px;
-    top: 40px;
-  }
-  .button a {
-    font-size: 1.5rem;
-  }
-  /* ------ section Coder Laywer Stadistics Grid ----- */
-  .titleEstadisticas {
-    height: inherit;
-  }
-  .titleEstadisticas h2 {
-    margin-top: 0.5rem;
-    font-size: 4rem;
-  }
-  .cantidades .number {
-    font-size: 80px;
-  }
-  .cantidades .text {
-    font-size: 35px;
-  }
-  .est {
-    height: auto;
-  }
-  .est {
-    gap: 5rem;
-  }
-  .cantidades {
-    flex-direction: row;
-    gap: inherit;
-  }
-  .info {
-    flex-direction: column;
-  }
-  /* ------ section Coder Laywer service Grid ----- */
-  .categoryFirst h2 {
-    font-size: 2.5rem;
-  }
-  .category h2 {
-    font-size: 2.5rem;
-  }
-  .nameCourses .navListService .navItem {
-    font-size: 1.5rem;
-  }
-  .containerCursos {
-    margin: 0em auto;
-    width: auto;
-    justify-content: start;
-    align-items: start;
-  }
-  .containerCardsServices {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  /* ------ section Coder Laywer challanges Grid  ----- */
-  .containerChallanges {
-    width: 100%;
-    height: auto;
-    margin: 0em 0em 0em 0em;
-    background-image: url(../images/bkg-services2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-    position: relative;
-  }
-  /* ------ section Coder Laywer students Grid REVIEW ----- */
-  .containerCardsStudents {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    grid-template-areas: "containerStudents" "serviceContainer";
-    align-items: center;
-    gap: 2em;
-  }
-  /* ------ section App ----- */
-  /* ------ section contact ----- */
-  #contactoHome {
-    box-sizing: border-box;
-    width: 100vw;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-  .contactoHome {
-    /*width: 1440px;*/
-    width: 100%;
-    height: 725px;
-    margin: 5em 0em 0em 0em;
-    background-image: url(../images/bkg-contacto.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-    position: relative;
-    border-radius: 100px;
-  }
-  .flexContacto {
-    width: 100%;
-    padding: 0em 2em;
-    position: absolute;
-    top: 15em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .titleContact {
-    grid-area: titleContact;
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-  }
-  .titleContact h3 {
-    font-size: 55px;
-    color: #00ffcb;
+  .contactoHome .flexContacto .titleContact h3 {
+    font-size: 3.7rem;
     font-weight: 600;
   }
-  .titleContact p {
-    font-size: 15px;
+  .contactoHome .flexContacto .titleContact p {
+    font-size: 1.2rem;
     font-weight: 400;
-    color: white;
-    padding: 0.2em 0em 1em;
   }
-  .titleContact .redes ul {
-    list-style: none;
-    flex-direction: column;
+  .contactoHome .flexContacto .titleContact .redes ul {
+    flex-direction: row;
+    gap: 20px;
   }
-  .titleContact .redes li {
-    margin: 0.5em 0em;
+  .contactoHome .flexContacto .titleContact .redes ul li a i {
+    font-size: 3rem;
   }
-  .titleContact .redes a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 25px;
+  .contactoHome .flexContacto .titleContact .redes ul li a span {
+    font-size: 1.2rem;
+  }
+  .contactoHome .flexContacto .formulario {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contactoHome .flexContacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "titleContact formulario";
+  }
+  .contactoHome .flexContacto .titleContact {
+    width: 100%;
+  }
+  .contactoHome .flexContacto .titleContact h3 {
+    font-size: 4rem;
+    font-weight: 600;
+  }
+  .contactoHome .flexContacto .titleContact p {
+    font-size: 1.4rem;
     font-weight: 400;
-    display: flex;
-    flex-direction: row;
   }
-  .titleContact .redes ul li a {
-    display: flex;
-    flex-direction: row;
+  .contactoHome .flexContacto .titleContact .redes ul li a i {
+    font-size: 3.5rem;
   }
-  .titleContact .redes a span {
-    color: #fff;
+  .contactoHome .flexContacto .titleContact .redes ul li a span {
+    font-size: 1.4rem;
   }
-  .titleContact .redes ul li a i {
-    color: #00ffcb;
-    margin-right: 25px;
-  }
-  .flexContacto .formulario {
-    width: 40%;
-  }
-  .flexContacto .formulario .input-form {
-    display: block;
-    width: 100%;
-    margin: 1em auto;
-    background-color: #00ffcb;
-    padding: 0.5em 1em;
-    border-radius: 15px;
-    border: none;
-    font-size: 1rem;
-    color: #212121;
-  }
-  input::-moz-placeholder {
-    color: #212121;
-    opacity: 1;
-  }
-  input:-ms-input-placeholder {
-    color: #212121;
-    opacity: 1;
-  }
-  .flexContacto .formulario .input-form,
-input::placeholder {
-    color: #212121;
-    opacity: 1;
-  }
-  .input-form:focus,
-input:focus,
-input[type]:focus {
-    outline: 0 none;
-  }
-  .flexContacto .formulario .consulta {
-    display: block;
-    width: 100%;
-    margin: 1em auto;
-    background-color: #00ffcb;
-    padding: 0.5em 1em;
-    border-radius: 15px;
-    border: none;
-    font-size: 1rem;
-    color: #212121;
-  }
-  textarea::-moz-placeholder {
-    color: #212121;
-    opacity: 1;
-    font-family: "Roboto", sans-serif;
-  }
-  textarea:-ms-input-placeholder {
-    color: #212121;
-    opacity: 1;
-    font-family: "Roboto", sans-serif;
-  }
-  .consulta,
-textarea::placeholder {
-    color: #212121;
-    opacity: 1;
-    font-family: "Roboto", sans-serif;
-  }
-  .flexContacto .formulario button.enviar {
-    border: none;
-    background-color: #6243F7;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 500;
-    width: 200px;
-    padding: 1em;
-    text-transform: capitalize;
-    border-radius: 15px;
-    float: right;
+  .contactoHome .flexContacto .formulario {
+    width: 90%;
   }
 }/*# sourceMappingURL=style.css.map */

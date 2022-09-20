@@ -7,14 +7,15 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-right: 1rem;;
 
     .containerCursos {
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0em auto;
-        width: 100%;
         padding: 20px;
+        flex: 0 0 auto;
 
         .cardCurso {
             background-color: $colorBackgroundCardService;
@@ -67,7 +68,7 @@
 
             .btn.verCurso {
                 background-color: $backgroundColorButton;
-                font-size: 15px;
+                font-size: $sizeVerService;
                 font-weight: 600;
                 text-transform: uppercase;
                 color: #212121;
@@ -94,7 +95,97 @@
             display: flex;
         }
     }
+
+    @media screen and (min-width: 600px) {
+
+        & {
+            flex-wrap: wrap;
+            flex-direction: row;
+            padding: 15px;
+            justify-content: space-around;
+            scroll-behavior: smooth;
+            gap: 25px;
+        
+            .containerCursos {
+                flex: 0 0 auto;
+        
+    
+                .cardCurso {
+                    width: $sizeCardServiceQ600;
+                    
+
+                    div {
+                        .nombreCurso {
+                            font-size: $sizeSubtitleMediaQ600;
+  
+                        }
+                        .sub {
+                            width: 100%;
+
+                        }
+                        .precioCurso {
+                            font-size: $sizeParaMediaQ600;
+                            display: flex;
+                        }                 
+                    }
+        
+                    .btn.verCurso {
+                        font-size: $sizeParaMediaQ600;
+        
+                        .reservar {
+                            text-decoration: none;
+                            color: black;
+                        }
+                    }
+                    
+                }
+        
+            }
+        }
+    
+    }
+    
+    @media screen and (min-width : 1024px){ 
+
+        & {
+        
+            .containerCursos {
+
+                .cardCurso {
+                    width: $sizeCardServiceQ600;
+                    
+                    div {
+                        .nombreCurso {
+                            font-size: $sizeSubtitleMediaQ1024;
+  
+                        }
+                        .sub {
+                            width: 100%;
+
+                        }
+                        .precioCurso {
+                            font-size: $sizeParaMediaQ1024;
+                            display: flex;
+                        }                 
+                    }
+        
+                    .btn.verCurso {
+                        font-size: $sizeParaMediaQ600;
+        
+                        .reservar {
+                            text-decoration: none;
+                            color: black;
+                        }
+                    }
+                    
+                }
+        
+            }
+        }
+          
+    }
 }
+
 
 
 

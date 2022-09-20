@@ -81,14 +81,100 @@
       }
 
     }
+
+    @media screen and (min-width: 600px) {
+
+      & {
+        height: 100%;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0px;
+  
+        .characteristics {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto auto;
+          justify-items: center;
+          gap: 10px;
+  
+          .circle {
+            width: $sizeCircleCharacterMediaQ600;
+            height: $sizeCircleCharacterMediaQ600;
+  
+            i {
+              font-size: 140px;
+              margin-top: 27px;
+            }
+  
+            &:hover {
+              transform: scale(1.2);
+            }
+  
+          }
+  
+          .titleCharacterisitc {
+            font-size: $sizeSubtitleMediaQ600;
+          
+          }
+  
+          .parraCharacterisitc {
+            font-size: $sizeParaMediaQ600;
+            width: 50%;
+          }
+          
+        }
+      
+      }
+
   }
 
-  @media screen and (min-width: 600px) {
+    @media screen and (min-width : 1024px){ 
 
+    & {
+      height: 100vh;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+
+      .characteristics {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        align-items: center;
+        gap: 40px;
+        margin: 1em;;
+        
+
+        .circle {
+          width: $sizeCircleCharacterMediaQ1024;
+          height: $sizeCircleCharacterMediaQ1024;
+
+          i {
+            font-size: 160px;
+            margin-top: 27px;
+          
+          }
+
+          &:hover {
+            transform: scale(1.2);
+          }
+
+        }
+
+        .titleCharacterisitc {
+          font-size: $sizeSubtitleMediaQ1024;
+        
+        }
+
+        .parraCharacterisitc {
+          font-size: $sizeParaMediaQ1024;
+          width: 100%;
+        }
+      }
+    }
   }
-
-  @media screen and (min-width : 1024px){ 
-
   }
 
   /* ------ section Coder Laywer Teachers  ----- */
@@ -105,7 +191,7 @@
     position: relative;
     margin-bottom: 50px;
 
-    .descriptionTeachers {
+      .descriptionTeachers {
       display: grid;
       grid-template-columns: 100%;
       grid-template-rows: auto;
@@ -132,7 +218,7 @@
           color: $colorTitle;
           height: auto;
           margin-bottom: 0.5em;
-          margin-top: 0.5em;
+          margin-top: 1em;
           }
         }
         .info {
@@ -170,6 +256,10 @@
             transition: all 0.5s;
 
             @import 'claseExtend';
+
+            .nameCouse {
+              font-size: $sizeNameCard;
+            }
 
             .headerInfo {
               display: flex;
@@ -285,14 +375,14 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: 1rem;
+          font-size: $sizeTitleButton;
           width: 140px;
           height: 40px;
           border-radius: 14px;
           border: transparent;
           position: relative;
-          color: #00ffcb;
-          background-color: #6243f7;
+          color: $colorTextButton;
+          background-color: $colorButton;
           margin-top: 1em;
           transition: 0.5 opacity ease-in-out;
 
@@ -301,32 +391,195 @@
             color: #212121;
           }
 
+          &.button:hover {
+            animation-name: un_efecto;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-duration: 1.5s;
+            animation-delay: 0s;
+            /*background: rgb(0,255,203);
+            background: linear-gradient(90deg, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 77%); 
+            width: 160px;
+            height: 50px;*/
+          }
+    
+          &.button a:hover {
+            color: black;
+          }
+
         }
       }
 
-      .buttonInfo .button:hover {
-        animation-name: un_efecto;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-        animation-duration: 1.5s;
-        animation-delay: 0s;
-        /*background: rgb(0,255,203);
-        background: linear-gradient(90deg, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 77%); 
-        width: 160px;
-        height: 50px;*/
+      @media screen and (min-width: 600px) {
+
+        &{
+          width: 100%;
+          height: auto;
+
+          .descriptionTeachers {
+            margin-top: 0px;
+                
+            .teacherInfo {
+          
+              .header {
+                font-size: $sizeTitleQ600;
+                margin-bottom: 0em;
+                margin-top: 0em;
+                }
+              }
+              .info {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p {
+                  font-size: $sizeParaMediaQ600;
+                  width: 70%;
+                }
+              }
+            }
+      
+            .serviceContainer {
+              /*padding: 0 10vw 0 1vw;*/
+              flex-wrap: wrap;
+              flex-direction: row;
+              padding: 15px;
+
+              .serviceCard {
+                width: 450px;
+                height: 300px;
+      
+                .serviceImg {   
+                  .nameCouse {
+                    font-size:$sizeNameCardQ600;
+                  }   
+                  .headerInfo {
+     
+                    i {
+                      font-size: $sizePhotoCardQ600;
+                      margin-top: 60px;
+                      margin-left: 67px;
+                      
+                    }
+                    button {
+                      a {
+                        font-size: $sizeNamesCardQ600;
+                      }
+                    }
+                  }
+                  h4 {
+                    font-size: $sizeTitleCardQ600;  
+                  }
+                  .description {
+                    width: 250px;
+                    font-size: $sizeParaMediaQ600;
+                  }
+                }
+              }
+            }
+      
+            .buttonInfo {      
+              .button {
+                font-size: 1.5rem;
+                width: $sizeButtonWithQ600;
+                height: $sizeButtonHeightQ600;
+          
+      
+                a {
+                  text-decoration: none;
+                  color: #212121;
+                }
+      
+                &.button:hover {
+                  animation-name: un_efecto;
+                  animation-iteration-count: infinite;
+                  animation-timing-function: ease-in-out;
+                  animation-duration: 1.5s;
+                  animation-delay: 0s;
+                  /*background: rgb(0,255,203);
+                  background: linear-gradient(90deg, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 77%); 
+                  width: 160px;
+                  height: 50px;*/
+                }
+          
+                &.button a:hover {
+                  color: black;
+                }
+      
+              }
+            }
+        }
+
       }
+   
+      @media screen and (min-width : 1024px){ 
 
-      .buttonInfo .button a:hover {
-        color: black;
+        &{
+          width: 100%;
+          height: auto;
+
+          .descriptionTeachers {
+
+            .teacherInfo {
+          
+              .header {
+                font-size: $sizeTitleQ1024;
+                }
+              }
+              .info {
+
+                p {
+                  font-size: $sizeParaMediaQ1024;
+                  width: 80%;
+                }
+              }
+            }
+      
+            .serviceContainer {
+
+              .serviceCard {
+                width: 450px;
+                height: 300px;
+      
+                .serviceImg {   
+                  .nameCouse {
+                    font-size:$sizeNameCardQ600;
+                  }   
+                  .headerInfo {
+     
+                    i {
+                      font-size: $sizePhotoCardQ1024;
+                      margin-top: 41px;
+                      margin-left: 74px;
+                      
+                    }
+                    button {
+                      a {
+                        font-size: $sizeNamesCardQ1024;
+                      }
+                    }
+                  }
+                  h4 {
+                    font-size: $sizeTitleCardQ600;  
+                  }
+                  .description {
+                    width: 250px;
+                    font-size: $sizeParaMediaQ1024;
+                  }
+                }
+              }
+            }
+      
+            .buttonInfo {      
+              .button {
+                
+                a {
+                  text-decoration: none;
+                  
+                }
+              }
+            }
+        }
       }
-  }
-
-  @media screen and (min-width: 600px) {
-
-  }
-
-  @media screen and (min-width : 1024px){ 
-    
   }
 
   /* ------ section Coder Laywer Stadistics  ----- */
@@ -364,6 +617,7 @@
       grid-area: cantidades;
       display: flex;
       flex-direction: column;
+      padding: 15px;
 
       .info {
         display: flex;
@@ -390,14 +644,58 @@
         }
       }
     }
-  }
 
-  @media screen and (min-width: 600px) {
+    @media screen and (min-width: 600px) {
 
-  }
+    & {
 
-  @media screen and (min-width : 1024px){ 
+      h2 {
+        font-size: $sizeTitleQ600;
+      }
+    }
+
+    .cantidades {
+      .info {
+        .number {
+          font-size: $sizeNumberStadisticsQ600;
+        }
+        
+        .text {
+          font-size: $sizeSubtitleMediaQ600;
+        }
+      }
+    }
+
+    }
+  
+    @media screen and (min-width : 1024px){ 
+
+      & {
+        height: 80vh;
+
+        h2 {
+          font-size: $sizeTitleQ1024;
+        }
+      }
+  
+      .cantidades {
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 50px;
     
+        .info {
+          .number {
+            font-size: $sizeNumberStadisticsQ1024;
+          }
+          
+          .text {
+            font-size: $sizeSubtitleMediaQ1024;
+          }
+        }
+      }
+      
+    }
+
   }
 
   /* ------ section Coder Laywer service Grid ----- */
@@ -446,7 +744,7 @@
     }
     .nameCourses {
       grid-area: nameCourses;
-      font-size: $sizeNameService;
+      
       text-transform: capitalize;
       color: $colorTextSeverices;
       text-transform: uppercase;
@@ -461,12 +759,14 @@
 
         .navItem {
           text-decoration: none;
-          font-size: 1rem;
+          font-size: $sizeNameServiceSubHeader;
         }
       }
     }
-    
+
+
     @import "containerService";
+
 
     .nameCourses .navItem:after {
       content: "";
@@ -486,14 +786,75 @@
       opacity: 1;
     }
 
-  }
+    @media screen and (min-width: 600px) {
 
-  @media screen and (min-width: 600px) {
+      & {
+  
+      .categoryFirst {
+  
+        h2 {
+          font-size: $sizeSubtitleMediaQ600;
+        }
+  
+      }
+      .category {
+  
+        h2 {
+          font-size: $sizeSubtitleMediaQ600;
+ 
+        }
+      }
+      .nameCourses {
+      
+        .navListService {
+          margin-left: 1.2rem;
+  
+          .navItem {
+            font-size: $sizeSubHeaderServiceQ600;
+          }
+        }
+      }
+      
+      @import "containerService";
 
-  }
+    }
+  
+    }
 
-  @media screen and (min-width : 1024px){ 
+    @media screen and (min-width : 1024px){ 
+
+      & {
+  
+        .categoryFirst {
     
+          h2 {
+            font-size: $sizeSubtitleMediaQ1024;
+          }
+    
+        }
+        .category {
+    
+          h2 {
+            font-size: $sizeSubtitleMediaQ1024;
+   
+          }
+        }
+        .nameCourses {
+        
+          .navListService {
+            margin-left: 1.2rem;
+    
+            .navItem {
+              font-size: $sizeSubHeaderServiceQ1024;
+            }
+          }
+        }
+        
+        @import "containerService";
+  
+      }
+      
+    }
   }
 
 /* ------ section Coder Laywer students ----- */
@@ -572,7 +933,7 @@
                 padding: 15px;
   
                 i {
-                  font-size: 80px;
+                  font-size: $sizePhotoCard;
                   color: $colorPhotoCard;
                   margin-bottom: 22px;
                   padding-top: 4px;
@@ -605,7 +966,7 @@
                 font-size: $sizePharagrap;
                 color: $colorParragrap;
                 transition: all 0.5s;
-                margin-right: 1em;
+                margin-right: 1.2em;
               }
       
             }
@@ -686,14 +1047,184 @@
           } 
         }
       }
-  }
 
-  @media screen and (min-width: 600px) {
+      @media screen and (min-width: 600px) {
 
-  }
+        .descriptionStudents{
 
-  @media screen and (min-width : 1024px){ 
     
+          .studentInfo {
+   
+    
+            .header {
+              text-align: center;
+              font-size: $sizeTitleQ600;
+              }
+    
+              .info {
+                p {
+                  font-size: $sizeParaMediaQ600;
+                }
+              }
+            }
+    
+            .serviceContainer {
+      
+              .serviceCard {
+                flex: 0 0 auto;
+                width: 400px;
+                height: 300px;
+      
+                .serviceImg {
+                  width: $sizeStudentsCardWidthQ600;
+                  height: $sizeStudentsCardHeightQ600;
+                  
+                  @import 'claseExtend';
+      
+                  .headerInfo {
+      
+                    i {
+                      font-size: $sizePhotoCardQ600;
+                      margin-left: 20px;
+                  
+                    }
+                    button {
+   
+                      a {
+                        font-size: $sizeNamesCardQ600;
+   
+                      }
+                    }
+                  }
+                  h4 {
+                    font-size: $sizeTitleCardQ600;
+
+                  }
+                  .description {
+                    margin-top: 4em;
+                    width: 200px;
+                    font-size: $sizeParaCardStudentsMediaQ600;
+                    margin-right: 1.2em;
+                    
+                  }
+          
+                }
+      
+                @import "mixin";
+    
+              }
+      
+            }
+    
+            .buttonInfo {
+
+      
+              .button {
+
+                font-size: 1.5rem;
+                width: $sizeButtonWithQ600;
+                height: $sizeButtonHeightQ600;
+
+      
+                a {
+                  text-decoration: none;
+                  color: #212121;
+                }
+
+              } 
+            }
+          }
+      }
+
+      
+      @media screen and (min-width : 1024px){ 
+
+        .descriptionStudents{
+          
+          .studentInfo {
+            .header {
+              font-size: $sizeTitleQ1024;
+              }    
+              .info {
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                p {
+                  font-size: $sizeParaMediaQ1024;
+                  width: 80%;
+                }
+              }
+            }
+    
+            .serviceContainer {
+
+              flex-wrap: wrap;
+              flex-direction: row; 
+              padding: 15px;     
+      
+              .serviceCard {
+                flex: 0 0 auto;
+                width: 450px;
+                height: 380px;
+      
+                .serviceImg {
+                  width: $sizeStudentsCardWidthQ600;
+                  height: $sizeStudentsCardHeightQ600;
+                  
+                  @import 'claseExtend';
+      
+                  .headerInfo {
+      
+                    i {
+                      font-size: $sizePhotoCardQ1024;
+                      margin-left: 20px;
+                  
+                    }
+                    button {
+   
+                      a {
+                        font-size: $sizeNamesCardQ1024;
+   
+                      }
+                    }
+                  }
+                  h4 {
+                    font-size: $sizeTitleCardQ600;
+
+                  }
+                  .description {
+                    margin-top: 4em;
+                    width: 200px;
+                    font-size: $sizeParaMediaQ1024;
+                    margin-right: 1.2em;
+                    
+                  }
+          
+                }
+      
+                @import "mixin";
+    
+              }
+      
+            }
+    
+            .buttonInfo {
+
+      
+              .button {
+
+                margin-bottom: 4rem;
+      
+                a {
+                  text-decoration: none;
+                  color: #212121;
+                }
+
+              } 
+            }
+          }
+        
+      }
   }
 
 /* ------ section Coder Lawyer download App ----- */
@@ -706,26 +1237,18 @@
     }
   }
 
-  @media screen and (min-width: 600px) {
-
-  }
-
-  @media screen and (min-width : 1024px){ 
-    
-  }
-
 /* ------ section contact ----- */
   .contactoHome {
     .flexContacto {
       display: grid;
       grid-template-columns: auto;
-      grid-template-rows: auto;
+      grid-template-rows: auto auto;
       grid-template-areas: 
         "titleContact"
         "formulario"
       ;
       justify-items: start;
-      height: auto;
+      height: fit-content;
       .titleContact {
         grid-area: titleContact;
         display: flex;
@@ -843,611 +1366,114 @@
         }
       }
     }
-  }
 
-  @media screen and (min-width: 600px) {
+    @media screen and (min-width: 600px) {
 
-  }
-
-  @media screen and (min-width : 1024px){ 
+      & {
+        .flexContacto {
+          justify-items: center;
+        
+          .titleContact {
+            width: 100%;
+            h3 {
+              font-size: $sizeTitleQ600;
+              font-weight: 600;
+            }
     
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/** TABLET */
-@media screen and (min-width: 600px) {
+            p {
+              font-size: $sizeParaMediaQ600;
+              font-weight: 400;
+              
+            }
+    
+            .redes {
+              ul {
+                flex-direction: row;
+                gap: 20px;
+                li {    
+                  a {    
+                    i {
+                      font-size: $sizeSocialIcionQ600;
+                    }
+    
+                    span {
+                      font-size: $sizeParaMediaQ600;
+                    }
+    
+                  }
+    
+                }
+    
+              }
+            }
+    
+          }
+          .formulario {
+            width: 90%;
+            
+          }
+        }
   
- /* ------ section Main Carrusel ----- */
+      }
 
-  .contentText .text {
-    font-size: 18px;
-  }
-
-  /* ------ Dots ----- REVISAR LOS PUNTOS */
-
-  .contentDot {
-    bottom: -335px;
-    z-index: 9;
-  }
-  .dot {
-    height: 10px;
-    width: 10px;
-  }
-
-  /* ------ Prev & Next ------ */
-
-  .prev,
-.next {
-  position: absolute;
-  top: 30%;
-  margin-top: 105px;
-}
-
-/** Section Characterisitcs Grid + Flex Box */
-
-.contentCharacteristics {
-  height: 100%;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-
-}
-.characteristics {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
-  grid-template-areas: 
-    "circle"
-    "titleCharacterisitc"
-    "parraCharacterisitc"
-  ;
-  justify-items: center;
-  gap: 10px;
-}
-
-.circle {
-  width: 170px;
-  height: 170px;
-}
-
-.circle:hover {
-  transform: scale(1);
-}
-
-.characteristics .circle i {
-  font-size: 100px;
-  margin-top: 27px;
-}
-
-.titleCharacterisitc {
-  font-size: 1.5rem;
-
-}
-
-.parraCharacterisitc {
-  font-size: 1rem;
-  width: 50%;
-}
-
-/* ------ section Coder Laywer Teachers Grid ----- */
-
-.sectionTeachers {
-  width: 100%;
-  height: auto;
-}
-
-.serviceContainer {
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.header h3{
-  font-size: 2rem;
-}
-
-.info p {
-  font-size: 1rem;
-}
-
-.serviceImg i {
-  font-size: 90px;
-}
-.serviceImg h2 {
-  font-size: 0.9rem;
-}
-.serviceImg h4 {
-  font-size: 1rem;
-}
-.nameCouse {
-  font-size: 14px;
-}
-.nameSchool {
-  font-size: 14px;
-}
-.description {
-  font-size: 0.8rem;
-}
-.serviceInfo button {
-  font-size: 1rem;
-}
-
-.preBtn ,
-.nxtBtn {
-  font-size: 1rem;
-}
-
-.descriptionTeachers .button {
-  font-size: 1.2rem;
-}
-
-.button {
-  width: 160px;
-  height: 50px;
-
-}
-
-.button a {
-  font-size: 1.5rem;
-}
-
-  /* ------ section Coder Laywer Stadistics Grid ----- */
-
-  .titleEstadisticas {
-    height: inherit;
-  }
-
-  .titleEstadisticas h2 {
-    font-size: 3rem;
-  }
-
-  .cantidades .number {
-    font-size: 80px;
-  }
-  .cantidades .text {
-    font-size: 40px;
-  }
-
-  .est {
-    height: auto;
-  }
-
-    /* ------ section Coder Laywer service Grid ----- */
-
-  .categoryFirst h2{
-      font-size: 2rem;
     }
-  .category h2 {
-      font-size: 2rem;
-  }
-  .nameCourses .navListService .navItem {
-    font-size: 1.2rem;
-  }
+  
+    @media screen and (min-width : 1024px){ 
 
-  .containerCursos {
-    margin: 0em auto;
-    width: auto;
-    justify-content: start;
-    align-items: start;
-  }
+      & {
+        .flexContacto {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto;
+          grid-template-areas: 
+            "titleContact formulario";
 
-  .containerCardsServices {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  /* ------ section Coder Laywer students Grid REVIEW ----- */
-
-  .containerCardsStudents {
-    height: 1500px;
-  }
-  .containerCardsStudents {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto 1fr 1fr;
-    grid-template-areas: 
-      "containerStudents"
-      "serviceContainer"
-    ;
-    align-items: center;
-    gap: 2em;
-  }
-
-  /* ------ section App ----- */
-
-  /* ------ section contact ----- */
-
-  .titleContact .redes ul {
-    flex-direction: row;
-    margin: 25px;
-  }
-
-  .titleContact .redes li {
-    margin: 1.5em 1em;
-  }
-
-  .titleContact .redes ul li a {
-    display: flex;
-    flex-direction: column;
-  }
-
-}
-
-/** DESKTOP */
-@media screen and (min-width : 1024px){
-
- /* ------ section Main Carrusel ----- */
-
-  .contentText .text {
-    font-size: 20px;
-  }
-
-  .mySlides .contentText {
-    top: 2.8em;
-  }
-
-  /* ------ Dots ----- REVISAR LOS PUNTOS */
-
-  .contentDot {
-    bottom: -335px;
-    z-index: 9;
-  }
-  .dot {
-    height: 10px;
-    width: 10px;
-  }
-
-  /* ------ Prev & Next ------ */
-
-  .prev,
-.next {
-  position: absolute;
-  top: 30%;
-  margin-top: 105px;
-}
-
-/** Section Characterisitcs Grid + Flex Box */
-
-.circle {
-  width: 180px;
-  height: 180px;
-}
-
-.characteristics .circle i {
-  font-size: 100px;
-  margin-top: 27px;
-
-}
-
-.titleCharacterisitc {
-  font-size: 1.5rem;
-
-}
-
-.parraCharacterisitc {
-  width: 50%;
-  font-size: 1rem;
-
-}
-
-.contentCharacteristics {
-  flex-direction: row;
-}
-
-.characteristics {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  width: 300px;
-}
-/* =================================================================
-GRID OVER GRID
-.characteristics {
-  grid-area: characteristics;
-}
-.contentCharacteristics {
-  display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 1rem;
-    width: 50%;
-    grid-template-areas: 
-      "characteristics characteristics characteristics"
-    ;
-    justify-items: center;
-    margin-top: 50px;
-}*/
-
-/* ------ section Coder Laywer Teachers Grid ----- */
-
-.sectionTeachers {
-  width: 100%;
-  height: auto;
-}
-.header h3{
-  font-size: 3rem;
-}
-
-.info p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-.serviceImg i {
-  font-size: 100px;
-}
-.serviceImg h2 {
-  font-size: 1rem;
-}
-.serviceImg h4 {
-  font-size: 1.2rem;
-}
-.nameCouse {
-  font-size: 18px;
-}
-.nameSchool {
-  font-size: 16px;
-}
-.description {
-  font-size: 0.8rem;
-}
-.serviceInfo button {
-  font-size: 1rem;
-}
-
-.preBtn ,
-.nxtBtn {
-  font-size: 1.2rem;
-}
-
-.descriptionTeachers .button {
-  font-size: 1.2rem;
-}
-
-.button {
-  width: 170px;
-  height: 60px;
-  margin-bottom: 30px;
-  top: 40px;
-
-}
-
-.button a {
-  font-size: 1.5rem;
-}
-
-  /* ------ section Coder Laywer Stadistics Grid ----- */
-
-  .titleEstadisticas {
-    height: inherit;
-  }
-
-  .titleEstadisticas h2 {
-    margin-top: 0.5rem;
-    font-size: 4rem;
-  }
-
-  .cantidades .number {
-    font-size: 80px;
-  }
-  .cantidades .text {
-    font-size: 35px;
-  }
-  .est {
-    height: auto;
-  }
-
-  .est {
-    gap: 5rem;
-  }
-
-  .cantidades {
-    flex-direction: row;
-    gap: inherit;
-  }
-
-  .info {
-    flex-direction: column;
-  }
-
-    /* ------ section Coder Laywer service Grid ----- */
-
-  .categoryFirst h2{
-      font-size: 2.5rem;
+        
+          .titleContact {
+            width: 100%;
+            h3 {
+              font-size: $sizeTitleQ1024;
+              font-weight: 600;
+            }
+    
+            p {
+              font-size: $sizeParaMediaQ1024;
+              font-weight: 400;
+              
+            }
+    
+            .redes {
+              ul {
+                
+                li {    
+                  a {    
+                    i {
+                      font-size: $sizeSocialIcionQ1024;
+                    }
+    
+                    span {
+                      font-size: $sizeParaMediaQ1024;
+                    }
+    
+                  }
+    
+                }
+    
+              }
+            }
+    
+          }
+          .formulario {
+            width: 90%;
+            
+          }
+        }
+  
+      }
+      
     }
-  .category h2 {
-      font-size: 2.5rem;
-  }
-  .nameCourses .navListService .navItem {
-    font-size: 1.5rem;
   }
 
-  .containerCursos {
-    margin: 0em auto;
-    width: auto;
-    justify-content: start;
-    align-items: start;
-  }
 
-  .containerCardsServices {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
 
-  /* ------ section Coder Laywer challanges Grid  ----- */
-
-  .containerChallanges {
-    width: 100%;
-    height: auto;
-    margin: 0em 0em 0em 0em;
-    background-image: url(../images/bkg-services2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-    position: relative;
-  }
-
-  /* ------ section Coder Laywer students Grid REVIEW ----- */
-  .containerCardsStudents {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-      "containerStudents"
-      "serviceContainer"
-    ;
-    align-items: center;
-    gap: 2em;
-  }
-
-  /* ------ section App ----- */
-
-  /* ------ section contact ----- */
-
-  #contactoHome {
-    box-sizing: border-box;
-    width: 100vw;
-    height: fit-content;
-  }
-  .contactoHome {
-    /*width: 1440px;*/
-    width: 100%;
-    height: 725px;
-    margin: 5em 0em 0em 0em;
-    background-image: url(../images/bkg-contacto.png);
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center top;
-    position: relative;
-    border-radius: 100px;
-  }
-  .flexContacto {
-    width: 100%;
-    padding: 0em 2em;
-    position: absolute;
-    top: 15em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .titleContact {
-    grid-area: titleContact;
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-  }
-  .titleContact h3 {
-    font-size: 55px;
-    color: #00ffcb;
-    font-weight: 600;
-  }
-  .titleContact p {
-    font-size: 15px;
-    font-weight: 400;
-    color: #ffff;
-    padding: 0.2em 0em 1em;
-  }
-
-  .titleContact .redes ul {
-    list-style: none;
-    flex-direction: column;
-  }
-  .titleContact .redes li {
-    margin: 0.5em 0em;
-  }
-  .titleContact .redes a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 25px;
-    font-weight: 400;
-    display: flex;
-    flex-direction: row;
-  }
-  .titleContact .redes ul li a {
-    display: flex;
-    flex-direction: row; 
-  }
-
-  .titleContact .redes a span {
-    color: #fff;
-  }
   
-  .titleContact .redes ul li a i {
-    color: #00ffcb;
-    margin-right: 25px;
-  }
-  .flexContacto .formulario {
-    width: 40%;
-  }
-  .flexContacto .formulario .input-form {
-    display: block;
-    width: 100%;
-    margin: 1em auto;
-    background-color: #00ffcb;
-    padding: 0.5em 1em;
-    border-radius: 15px;
-    border: none;
-    font-size: 1rem;
-    color: #212121;
-  }
-  
-  .flexContacto .formulario .input-form,
-  input::placeholder {
-  color: #212121;
-  opacity: 1;
-  }
-  .input-form:focus,
-  input:focus,
-  input[type]:focus {
-  outline: 0 none;
-  }
-  .flexContacto .formulario .consulta {
-    display: block;
-    width: 100%;
-    margin: 1em auto;
-    background-color: #00ffcb;
-    padding: 0.5em 1em;
-    border-radius: 15px;
-    border: none;
-    font-size: 1rem;
-    color: #212121;
-  }
-  
-  .consulta,
-  textarea::placeholder {
-    color: #212121;
-    opacity: 1;
-    font-family: "Roboto", sans-serif;
-  }
-  .flexContacto .formulario button.enviar {
-    border: none;
-    background-color: #6243F7;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 500;
-    width: 200px;
-    padding: 1em;
-    text-transform: capitalize;
-    border-radius: 15px;
-    float: right;
-  }
-  
-}

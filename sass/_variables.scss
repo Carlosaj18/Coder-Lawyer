@@ -1,6 +1,16 @@
 /** Backgorund */
 $fondo: #212121;
 
+/** Size header*/
+$sizeLogoHeader:8em;
+$sizeButtonIconsHeader: 1rem;
+$sizeIconProfile: 4rem;
+$sizeSubHeadingsSubMenu: 1.2rem;
+$sizeHeadingSubMenu: 1.5rem;
+$sizeIconProfileSubMenu: 3.5rem;
+$sizeHambuergerMenu: 2.5rem;
+$sizeSubTitlesMenu: 1.2rem;
+
 /** Size */
 $sizeTitle: 3rem;
 $sizeSubtitle: 2rem;
@@ -10,19 +20,24 @@ $sizePharagrap: 0.8rem;
 $sizeNamesCard: 1rem;
 $sizePhotoCard: 6rem;
 $sizeTitleCard: 1.3rem;
+$sizeNameCard: 0.8rem;
 $sizeNumberStadistics: 6rem;
 $sizeTitleStadistics: 1.5rem;
+$sizeTitleButton: 1rem;
 
 /** size services */
 $sizeTitleService: 2rem;
 $sizeNameService: 0.8rem;
-$sizeCardService: 300px;
+$sizeCardService: 300px; /** 300*2*/
 $sizeNameService: 1.5rem;
 $sizePrecioService: 1rem;
+$sizeVerService: 1rem;
+$sizeNameServiceSubHeader: 1.2rem;
 
 /** size students */
 $studentsCardWidth: 300px;
 $studentsCardHeight: 200px;
+$sizeNameCourse: 12px;
 
 /** size form */
 $sizePharagrapForm: 1rem;
@@ -37,6 +52,7 @@ $fontWeightService: 600;
 /** Color */
 $colorTitle: #6243F7;
 $colorParragrap: #ffffff;
+$colorHeader: #ffffff;
 
 /** color card teachers & students */
 $colorCard: black;
@@ -47,6 +63,7 @@ $colorBackgroundButtonCard: black;
 $colorBorderCard: 2px solid #6243F7;
 $colorBorderCardHover: 1px solid #00FFCB;
 $colorBackgroundButtonHover: #212121;
+$colorTextButton: #00FFCB; 
 $colorButton: #6243f7;
 
 /** Color numbers */
@@ -69,3 +86,42 @@ $colorCardBorder: 1px solid #6243F7;
 $colorForm: #212121;
 $backgroundColorForm: #00ffcb;
 $backgroundColorButtonForm: #6243F7;
+
+
+/** $media screen and (min-width: 600px) */
+$sizeIconProfileQ600: 4.2rem;
+$sizeSubTitlesMenuQ600: 1.3rem;
+$sizeLogoHeaderQ600:10em;
+$sizeHambuergerMenuQ600: 2.7rem;
+$sizeSubtitleMediaQ600: 2.2rem; 
+$sizeParaMediaQ600: 1.2rem;
+$sizeCircleCharacterMediaQ600: 12rem;
+$sizeTitleQ600: 3.7rem;
+$sizePhotoCardQ600: 8rem;
+$sizeNamesCardQ600: 1.8rem;
+$sizeTitleCardQ600: 2rem;
+$sizeNameCardQ600: 1.2rem;
+$sizeButtonWithQ600: 13rem;
+$sizeButtonHeightQ600: 5rem;
+$sizeNumberStadisticsQ600: 7rem;
+$sizeSubHeaderServiceQ600: 1.4rem;
+$sizeCardServiceQ600: 350px;
+$sizeStudentsCardWidthQ600:100%;
+$sizeStudentsCardHeightQ600: 95%;
+$sizeParaCardStudentsMediaQ600: 1rem;
+$sizeNameCourseQ600: 1rem;
+$sizeSocialIcionQ600: 3rem;
+
+/** @media screen and (min-width : 1024px) */
+$sizeIconProfileQ1024: 4.5rem;
+$sizeSubTitlesMenuQ1024: 1.2rem;
+$sizeSubtitleMediaQ1024: 2.5rem; 
+$sizeParaMediaQ1024: 1.4rem;
+$sizeCircleCharacterMediaQ1024: 14rem;
+$sizeTitleQ1024: 4rem;
+$sizePhotoCardQ1024: 9rem;
+$sizeNamesCardQ1024: 2rem;
+$sizeNumberStadisticsQ1024: 8rem;
+$sizeSubHeaderServiceQ1024: 1.6rem;
+$sizeNameCourseQ1024: 1.2rem;
+$sizeSocialIcionQ1024: 3.5rem;

@@ -1,478 +1,501 @@
-/* COLORES:
-azul mas fuerte: #3657F7
-azul mas oscuro: #1F58A5
-"violeta": #6243F7
-verde claro: #00FFCB
-verde oscuro: #00A987
-gris: #DAD9DE
-negro: #212121
-blanco: #ffffff
- */
-
- * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: "Roboto", sans-serif;
-    height: fit-content;
-  }
 
   /* ------ HEADER ----- */
 
   header {
-    width: 100%;
-    height: auto;
-    background: #212121;
-    padding: 1em 1em;
-    position: relative;
-    z-index: 1;
-  }
-
-  .navBar {
-
-    /* ------ containerLeft ----- */
-    .containerLeft {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-
-      .logo {
-          img {
-            width: 7em;
-            border-radius: 50%;
-          }
-      }
-      
-      .search {
-        display: none;
-        width: 60%;
-        margin-right: 10px;
-
-        i {
-          position: absolute;
-          z-index: 22222;
-          margin-top: 6px;
-          margin-left: 10px;
-        }
-        input {
-          width: 100%;
-          position: relative;
-          padding: 0.5em 1em;
-          border-radius: 50px;
-          border: none;
-          padding-inline-start: 40px;
-          font-size: 13px;
-        }
-      
-        input::placeholder {
-          padding-inline-start: 0px;
-      
-        }
-
-        .input:focus {
-          outline: 2px solid #00ffcb;
-        }
-
-      }
-    }
-
-    /* ------ containerRight ----- */
-
-    .containerRight {
-      display: flex;
-      direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      padding: 13px;
-      position: absolute;
-      top: 20px;
-      right: 30px;
-
-      .buttonsIcons  {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-end;
-        align-items: center;
-        width: fit-content;
-        font-size: 0.8rem;
-
-        button {
-
-          i {
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            width: fit-content;
-          }
-  
-          i.fa-user-circle {
-            font-size: 2.5rem;
-            margin: 0.2em;
-            color: #fff;
-          }
-
-        }
-      
-        /* ------ subMenu ----- */
-        .dropDown {
-          position: relative;
-
-          .dropbtn {
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            width: fit-content;
-
-            i {
-              background-color: transparent;
-              color: #00ffcb;
-            }
-
-          }
-
-          .dropdownContent {
-            display: none;
-            position: absolute;
-            background-color: #212121;
-            color: #fff;
-            width: 180px;
-            height: fit-content;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.475);
-            z-index: 1;
-            right: -47px;
-            border-radius: 25px;
-            padding: 1em auto;
-            border: 1px solid #00ffcb;
-
-            .dropHeader {
-              display: flex;
-              flex-direction: row;
-              justify-content: flex-start;
-              align-items: center;
-              padding: 1em 0em;
-              border-bottom: 1px solid #00ffcb;
-
-              h4 {
-                margin-left: 0.5em;
-              }
-            }
-
-            .content {
-              list-style: none;
-              border-bottom: 1px solid #00ffcb;
-
-              .navList {
-
-                font-size: 0.8rem;
-                padding: 0.5em 1em;
-                font-size: 1rem;
-                font-weight: 300;
-
-                a {
-                  text-decoration: none;
-                  font-weight: 300;
-                  font-size: 0.8rem;
-                  color: #fff;
-                }
-
-                a:after {
-                  content: "";
-                  display: block;
-                  height: 1.5px;
-                  background: #00ffcb;
-                  transform: scaleX(0);
-                  transition: transform 0.5s;
-                  margin-top: 5px;
-                  opacity: 0.5;
-                }
-
-                a:hover:after {
-                  transform: scaleX(1);
-                  transition: transform 0.3s;
-                  height: 1.5px;
-                  opacity: 1;
-                }
-
-              }
-
-
-            }
-
-
-          }
-
-          #subMenuGuest {
-            display: none;
-          }
-
-        }
-
-          .dropDown:hover .dropdownContent {
-            display: block;
-        }
-
-
-        /*.dropDown ul.outline {
-          border-bottom: none;
-        }*/
- 
-        
-
-      }
-}
-    /* ------ buttonResponsive ----- */
-
-    .buttonResponsive{
-      color: #ffff;
-      font-size: 25px;
-
-      i{
-        margin-top: 10px;
-        margin-left: 13px;
-      }
-
-      /* ------ containerLinks ----- */
-
-    .containerLinks{
-      display: none;
-
-      .navList {
-          display: none;
-          list-style: none;
-          display: flex;
-          flex-direction: column;
-          
-          .navItem {
-              padding: 0.5em 0.5em;
-
-              a {
-                  border: transparent;
-                  text-decoration: none;
-              }
-
-              a:after {
-                  content: "";
-                  display: block;
-                  height: 1.5px;
-                  background: #00ffcb;
-                  transform: scaleX(0);
-                  transition: transform 0.5s;
-                  margin-top: 5px;
-                  opacity: 0.5;
-              }
-
-              a:hover:after {
-                  transform: scaleX(1);
-                  transition: transform 0.3s;
-                  height: 1.5px;
-                  opacity: 1;
-              }
-              
-              .border {
-                  text-decoration: none;
-                  font-weight: 300;
-                  font-size: 1rem;
-                  color: #fff;
-                  width: 100%;
-              }
-          }
-      }
-  }
-
-    }
-    .buttonResponsive:hover .containerLinks {
-      display: flex;
-    }
-    .buttonResponsive:hover {
-      color: #00ffcb;
-    }
-}
-
-@media screen and (min-width: 600px) {
-  /* ------ containerLeft ----- */
-
-  .navBar {
-      .containerLeft {
-      justify-content: start;
-
-      .logo {
-        img {
-          width: 9em;
-          border-radius: 50%;
-        }
-      }
-      .search {
-        display: block;
-        width: 60%;
-        margin-left: 15px;
-      }
-
-      .search input {
-        width: 70%;
-      }
-    }
-
-    /* ------ containerRight ----- */
-      .containerRight {
-        .buttonsIcons {
-
-          button {
-            i.fa-user-circle {
-              font-size: 2.7rem;
-            }
-          }
-
-          .dropDown {
-            .dropdownContent {
-              .content {
-                .navList {
-                  font-size: 1rem;
-                  a {
-                    font-size: 1rem;
-                  }
-                }
-              }
-            }
-
-          }
-        
-      }
-
-      .buttonsIcons i {
-        font-size: 1rem;
-      }
-    }
-
-    /* ------ buttonResponsive ----- */
-      .buttonResponsive{
-        font-size: 30px;
-
-    /* ------ containerLinks ----- */
-      .containerLinks {
-        .navList {
-          .navItem {
-            .border {
-              font-size: 1.2rem;
-            }
-          }
-        }
-      }
-
-    }
-  }
-}
-
-/** DESKTOP */
-@media screen and (min-width : 1024px){
-
-  .navBar {
-    .containerLeft {
-      justify-content: space-between;
-      width: 40%;
-    .logo {
-      img {
-        width: 10em;
-        border-radius: 50%;
-      }
-    }
-    .search {
-      display: block;
-      margin-left: 15px;
-    }
-
-    .search input {
+    .navBar {
+      position: fixed;
+      z-index: 1;
       width: 100%;
-    }
-  }
+      height: auto;
+      background: #212121;
 
-  /* ------ containerRight ----- */
-    .containerRight {
-      .buttonsIcons {
-
-        button {
-          i.fa-user-circle {
-            font-size: 3rem;
-          }
-
-          i {
-            font-size: 1.4rem;
-          }
-        }
-
-        .dropDown {
-          .dropdownContent {
-            .content {
-              .navList {
-                font-size: 1rem;
-                a {
-                  font-size: 1rem;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
-  /* ------ buttonResponsive ----- */
-    .buttonResponsive{
-      font-size: 30px;
-      
-      i {
-        display: none;
-      }
-
-    /* ------ containerLinks ----- */
-      .containerLinks {
-        width: auto;
-        position: absolute;
-        top: 11px;
-        right: 199px;
+      /* ------ containerLeft ----- */
+      .containerLeft {
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: space-between;
 
-        .navList {
-          list-style: none;
+        .logo {
+            margin-top: 1em;
+            img {
+              width: $sizeLogoHeader;
+              border-radius: 50%;
+            }
+        }
+        
+        .search {
+          display: none;
+          width: 60%;
+          margin-right: 10px;
+  
+          i {
+            position: absolute;
+            z-index: 22222;
+            margin-top: 6px;
+            margin-left: 10px;
+          }
+          input {
+            width: 100%;
+            position: relative;
+            padding: 0.5em 1em;
+            border-radius: 50px;
+            border: none;
+            padding-inline-start: 40px;
+            font-size: 13px;
+          }
+        
+          input::placeholder {
+            padding-inline-start: 0px;
+        
+          }
+  
+          .input:focus {
+            outline: 2px solid #00ffcb;
+          }
+  
+        }
+      }
+  
+      /* ------ containerRight ----- */
+  
+      .containerRight {
+        display: flex;
+        direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        padding: 13px;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+  
+        .buttonsIcons  {
           display: flex;
-          flex-direction: row;
-          .navItem {
-            padding: 1em 0.5em;
-            .border {
-              font-size: 1.2rem;
-              text-decoration: none;
-              font-weight: 300;
-              font-size: 1rem;
+          flex-flow: row nowrap;
+          justify-content: flex-end;
+          align-items: center;
+          width: fit-content;
+          font-size: $sizeButtonIconsHeader;
+          background-color: transparent;
+  
+          button {
+  
+            i {
+              background-color: transparent;
+              border: none;
+              cursor: pointer;
+              width: fit-content;
+            }
+    
+            i.fa-user-circle {
+              font-size: $sizeIconProfile;
+              margin: 0.2em;
               color: #fff;
             }
-            a:after {
-              content: "";
-              display: block;
-              height: 1.5px;
-              background: #00ffcb;
-              transform: scaleX(0);
-              transition: transform 0.5s;
-              margin-top: 5px;
-              opacity: 0.5;
+  
+          }
+        
+          /* ------ subMenu ----- */
+          .dropDown {
+            position: relative;
+  
+            .dropbtn {
+              background-color: transparent;
+              border: none;
+              cursor: pointer;
+              width: fit-content;
+  
+              i {
+                background-color: transparent;
+                color: #00ffcb;
+              }
+  
             }
-            a:hover:after {
-              transform: scaleX(1);
-              transition: transform 0.3s;
-              height: 1.5px;
-              opacity: 1;
+  
+            .dropdownContent {
+              display: none;
+              position: absolute;
+              background-color: #212121;
+              color: #fff;
+              width: 250px;
+              height: fit-content;
+              box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.475);
+              z-index: 1;
+              right: -47px;
+              border-radius: 25px;
+              padding: 1em auto;
+              border: 1px solid #00ffcb;
+  
+              .dropHeader {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 1em 0em;
+                border-bottom: 1px solid #00ffcb;
+
+                i {
+                  font-size: $sizeIconProfileSubMenu;
+                  padding-left: 1rem;
+                  background-color: transparent;
+                  color: #00ffcb;
+                }
+  
+                h4 {
+                  margin-left: 0,5em;
+                  font-size: $sizeHeadingSubMenu;
+                  color: #00ffcb;
+                  text-align: center;
+                }
+              }
+  
+              .content {
+                list-style: none;
+                border-bottom: 1px solid #00ffcb;
+  
+                .navList {
+                  padding: 0.5em 0.1em;
+                  font-weight: 300;
+                  font-size: $sizeSubHeadingsSubMenu;
+  
+                  a {
+                    text-decoration: none;
+                    font-weight: 300;
+                    font-size: $sizeSubHeadingsSubMenu;
+                    color: #fff;
+                  }
+  
+                  a:after {
+                    content: "";
+                    display: block;
+                    height: 1.5px;
+                    background: #00ffcb;
+                    transform: scaleX(0);
+                    transition: transform 0.5s;
+                    margin-top: 5px;
+                    opacity: 0.5;
+                  }
+  
+                  a:hover:after {
+                    transform: scaleX(1);
+                    transition: transform 0.3s;
+                    height: 1.5px;
+                    opacity: 1;
+                  }
+  
+                }
+  
+  
+              }
+  
+  
+            }
+  
+            #subMenuGuest {
+              display: none;
+            }
+  
+          }
+  
+            .dropDown:hover .dropdownContent {
+              display: block;
+          }
+    
+        }
+  }
+      /* ------ buttonResponsive ----- */
+  
+      .buttonResponsive{
+        color: #ffff;
+        font-size: $sizeHambuergerMenu;
+  
+        i{
+          margin-top: 0.5em;
+          margin-bottom: 0.5em;
+          margin-left: 13px;
+        }
+  
+        /* ------ containerLinks ----- */
+  
+      .containerLinks{
+        display: none;
+  
+        .navList {
+            display: none;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            
+            .navItem {
+                padding: 0.5em 0.5em;
+  
+                a {
+                    border: transparent;
+                    text-decoration: none;
+                }
+
+                &:after {
+                  content: "";
+                  display: block;
+                  height: 1.5px;
+                  background: #00ffcb;
+                  transform: scaleX(0);
+                  transition: transform 0.5s;
+                  margin-top: 5px;
+                  opacity: 0.5;
+              }
+
+                &:hover:after {
+                  transform: scaleX(1);
+                  transition: transform 0.3s;
+                  height: 1.5px;
+                  opacity: 1;
+              }
+  
+                
+                
+                .border {
+                    text-decoration: none;
+                    font-weight: 300;
+                    font-size: $sizeSubTitlesMenu;
+                    color: $colorHeader;
+                    width: 100%;
+                }
+            }
+        }
+    }
+  
+      }
+      .buttonResponsive:hover .containerLinks {
+        display: flex;
+      }
+      .buttonResponsive:hover {
+        color: #00ffcb;
+      }
+    }
+
+    @media screen and (min-width: 600px) {
+
+      .navBar {
+          .containerLeft {
+            justify-content: start;
+          .logo {
+            img {
+              width: $sizeLogoHeaderQ600;
+              border-radius: 50%;
+            }
+          }
+          .search {
+            display: block;
+            width: 60%;
+            margin-left: 15px;
+          }
+    
+          .search input {
+            width: 70%;
+          }
+        }
+    
+        /* ------ containerRight ----- */
+          .containerRight {
+            .buttonsIcons {
+    
+              button {
+                i.fa-user-circle {
+                  font-size: $sizeIconProfileQ600;
+                }
+              }
+    
+              .dropDown {
+                .dropdownContent {
+                  .content {
+                    .navList {
+                      font-size: $sizeSubTitlesMenuQ600;
+                      a {
+                        font-size: $sizeSubTitlesMenuQ600;
+                      }
+                    }
+                  }
+                }
+    
+              }
+            
+          }
+
+          .buttonsIcons i {
+            font-size: 1.3rem;
+          }
+      
+        }
+    
+        /* ------ buttonResponsive ----- */
+          .buttonResponsive{
+            font-size: $sizeHambuergerMenuQ600;
+    
+        /* ------ containerLinks ----- */
+          .containerLinks {
+            .navList {
+              .navItem {
+                .border {
+                  font-size: $sizeSubTitlesMenuQ600;
+                }
+              }
+            }
+          }
+    
+        }
+      }
+    }
+    
+    
+    @media screen and (min-width : 1024px){
+    
+      .navBar {
+        .containerLeft {
+          justify-content: space-between;
+          width: 40%;
+        .logo {
+          img {
+            width: 10em;
+            border-radius: 50%;
+            margin-bottom: 1em;
+          }
+        }
+        .search {
+          display: block;
+          margin-left: 20px;
+        }
+    
+        .search input {
+          width: 100%;
+        }
+      }
+    
+      /* ------ containerRight ----- */
+        .containerRight {
+          padding: 12px;
+          top: 12px;
+          right: 11px;
+          .buttonsIcons {
+            position: absolute;
+            top: 1;
+            right: 1;
+    
+            button {
+              i.fa-user-circle {
+                font-size: sizeIconProfileQ1024;
+              }
+    
+              i {
+                font-size: 1.4rem;
+              }
+            }
+    
+            .dropDown {
+              .dropdownContent {
+                width: 300px;
+                .content {
+                  .navList {
+                    font-size: $sizeSubTitlesMenuQ1024;
+                    a {
+                      font-size: $sizeSubTitlesMenuQ1024;
+                    }
+                  }
+                }
+              }
+  
             }
           }
         }
-      }
+    
+      /* ------ buttonResponsive ----- */
+        .buttonResponsive{
+          font-size: 30px;
+          
+          i {
+            display: none;
+          }
+    
+          .containerLinks {
+            width: auto;
+            position: absolute;
+            top: 14px;
+            right: 200px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+    
+            .navList {
+              list-style: none;
+              display: flex;
+              flex-direction: row;
+              .navItem {
+                padding: 1em 0.5em;
 
+                  a {
+                    border: transparent;
+                    text-decoration: none;
+                }
+
+                &:after {
+                  content: "";
+                  display: block;
+                  height: 1.5px;
+                  background: #00ffcb;
+                  transform: scaleX(0);
+                  transition: transform 0.5s;
+                  margin-top: 5px;
+                  opacity: 0.5;
+              }
+
+                &:hover:after {
+                  transform: scaleX(1);
+                  transition: transform 0.3s;
+                  height: 1.5px;
+                  opacity: 1;
+              }
+
+                .border {
+                  font-size: $sizeSubTitlesMenuQ1024;
+                  text-decoration: none;
+                  font-weight: 300;
+                  color: #fff;
+                }
+
+                
+                
+              }
+            }
+          }
+    
+      }
+    
+    }
+    }
+
+    @media screen and (min-width : 1200px){
+      .navBar {
+            
+        .containerRight {
+          top: 12px;
+          right: 30px;
+        }
+    
+        .buttonResponsive{
+          font-size: 30px;
+        
+          .containerLinks {
+            top: 16px;
+            right: 261px;
+
+          }
+    
+      }
+    
+    }
+    }
   }
 
-}
 
-}
 
   

@@ -7,10 +7,30 @@
     top: 10px;
     text-transform: capitalize;
     padding: 5px;
-    font-size: 12px;
+    font-size: $sizeNameCourse;
+
+    &color{
+        /*@extend .nameCouse;*/
+        background-color:greenyellow;;
+    }
+
+    @media screen and (min-width: 600px) {
+
+        & {
+            font-size: $sizeNameCourseQ600;
+        }
+
+    }
+
+    @media screen and (min-width : 1024px) {
+
+        & {
+            font-size: $sizeNameCourseQ1024;
+        }
+
+    }
+
+
 }
 
-.color{
-    @extend .nameCouse;
-    background-color:greenyellow;;
-}
+
