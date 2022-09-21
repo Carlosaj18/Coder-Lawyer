@@ -21,6 +21,7 @@
 /** @media screen and (min-width : 1024px) */
 /** ------ SECTION SERVICES DETAIL ------ */
 /** ------ SECTION TEACHERS ------ */
+/** ------ SECTION COMMUUNITY ------ */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 * {
   margin: 0;
@@ -67,10 +68,15 @@ body main section {
 /* ------ HEADER ----- */
 header {
   padding: 0px;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: auto;
+  background: #212121;
 }
 header .navBar {
-  /*position: fixed;*/
-  z-index: 1;
+  position: fixed;
+  z-index: 2;
   width: 100%;
   height: auto;
   background: #212121;
@@ -303,7 +309,7 @@ header .navBar .buttonResponsive:hover .containerLinks {
 header .navBar .buttonResponsive:hover {
   color: #00ffcb;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 670px) {
   header .navBar {
     /* ------ containerRight ----- */
     /* ------ buttonResponsive ----- */
@@ -488,4 +494,178 @@ footer .redesFooter a {
   color: #00ffcb;
   font-size: 1rem;
   margin-right: 0.5em;
-}/*# sourceMappingURL=teacherDetail.css.map */
+}
+
+/* ------ section Search ----- */
+/* ------ section Detail Teacher ----- */
+section {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  grid-template-areas: "flexBody" "btn";
+  justify-items: center;
+}
+section .flexBody {
+  grid-area: flexBody;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80vw;
+}
+section .flexBody .image img {
+  width: 300px;
+  height: 300px;
+  border: 2px solid #6243F7;
+  border-radius: 35px;
+  padding: 0.5em;
+  margin-right: 2em;
+  margin-top: 2em;
+}
+section .flexBody .image:hover img {
+  border: 2px solid #00ffcb;
+}
+section .flexBody .text h3 {
+  color: #00FFCB;
+  font-size: 3rem;
+  padding-bottom: 1em;
+  margin-top: 1em;
+  text-align: center;
+}
+section .flexBody .text p {
+  color: #ffffff;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-bottom: 1em;
+}
+section .buttonInfo {
+  grid-area: btn;
+}
+section .buttonInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@-webkit-keyframes un_efecto {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.5);
+  }
+  50% {
+    /*background: rgb(0,255,203);
+    background: linear-gradient(right, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 36%); */
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.5);
+  }
+  100% {
+    /*width: 170px;
+    background: rgb(0,255,203);*/
+    background: linear-gradient(left, rgb(98, 67, 247) 35%);
+    transform: scale(1);
+  }
+}
+@keyframes un_efecto {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.5);
+  }
+  50% {
+    /*background: rgb(0,255,203);
+    background: linear-gradient(right, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 36%); */
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.5);
+  }
+  100% {
+    /*width: 170px;
+    background: rgb(0,255,203);*/
+    background: linear-gradient(left, rgb(98, 67, 247) 35%);
+    transform: scale(1);
+  }
+}
+section .buttonInfo .button {
+  background-color: black;
+  margin-top: 2em;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #6243F7;
+  text-transform: uppercase;
+  padding: 0.5em 3em;
+  border-radius: 5px;
+  border: none;
+}
+section .buttonInfo .button a {
+  text-decoration: none;
+  color: #6243F7;
+}
+section .buttonInfo .button.button:hover {
+  -webkit-animation-name: un_efecto;
+          animation-name: un_efecto;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  border: 1 solid #00ffcb;
+}
+section .buttonInfo .button.button:hover a {
+  color: #00ffcb;
+}
+@media screen and (min-width: 600px) {
+  section .buttonInfo .button {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .buttonInfo .button {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  section .flexBody .image img {
+    margin-right: 5em;
+  }
+  section .flexBody .text h3 {
+    font-size: 3.7rem;
+  }
+  section .flexBody .text p {
+    font-size: 1.2rem;
+  }
+  section .misCursos {
+    font-size: 3.7rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .flexBody {
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    padding: 0em 6em;
+    margin: 5em auto;
+    width: 80vw;
+  }
+  section .flexBody .text h3 {
+    text-align: left;
+    font-size: 4rem;
+  }
+  section .flexBody .text p {
+    text-align: left;
+    font-size: 1.4rem;
+  }
+  section .misCursos {
+    font-size: 4rem;
+  }
+}
+
+/** DESKTOP *//*# sourceMappingURL=deteailTemplateBlog.css.map */

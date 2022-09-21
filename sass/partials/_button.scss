@@ -1,0 +1,81 @@
+.buttonInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @keyframes un_efecto {
+        0% {
+          transform: scale(1);
+        }
+        25%{ 
+            transform: scale(1.5);}
+        50%{ 
+          /*background: rgb(0,255,203);
+          background: linear-gradient(right, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 36%); */
+          transform: scale(1);
+        }
+          75%{ 
+            transform: scale(1.5);}
+        100% {
+          /*width: 170px;
+          background: rgb(0,255,203);*/
+          background: linear-gradient(left,rgba(98,67,247,1) 35%);
+          transform: scale(1);
+        }
+
+    }
+
+    .button {
+
+        background-color: black;
+        margin-top: 2em;
+        font-size: $sizeButton;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: #6243F7;
+        text-transform: uppercase;
+        padding: 0.5em 3em;
+        border-radius: 5px;
+        border: none;
+    
+        a {
+            text-decoration: none;
+            color: #6243F7;
+        }
+
+        &.button:hover {
+            animation-name: un_efecto;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-duration: 1.5s;
+            animation-delay: 0s;
+            border: 1 solid #00ffcb;
+
+          }
+
+          &.button:hover a {
+            color: #00ffcb;
+          }
+
+    }
+
+    @media screen and (min-width: 600px) {
+
+        .button {
+            font-size: $sizeButtonQ600;
+        }
+
+    }
+
+    @media screen and (min-width : 1024px){
+
+        .button {
+            font-size: $sizeButtonQ600;
+        }
+
+    }
+}
+
+
+
+

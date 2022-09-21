@@ -1,12 +1,12 @@
  /** SCSS - GENERALS */
- @import "variables";
- @import "generals";
- @import "fuentes";
- @import "operaciones";
+ @import "./partials/variables";
+ @import "./partials/generals";
+ @import "./partials/fuentes";
+ @import "./partials/operaciones";
 
   /** SCSS - PARTIALS */
- @import "./partials/header.scss";
- @import  "./partials/footer.css";
+ @import "./partials/header";
+ @import  "./partials/footer.scss";
  
   /* ------ section Main Carrusel with Boostrapp----- */
 
@@ -255,7 +255,7 @@
             display: flex;
             transition: all 0.5s;
 
-            @import 'claseExtend';
+            @import './partials/claseExtend';
 
             .nameCouse {
               font-size: $sizeNameCard;
@@ -344,71 +344,7 @@
         }
       }
 
-      .buttonInfo {
-        grid-area: buttonInfo;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        @keyframes un_efecto {
-          0% {
-            transform: scale(1);
-          }
-          25%{ 
-              transform: scale(1.5);}
-          50%{ 
-            /*background: rgb(0,255,203);
-            background: linear-gradient(right, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 36%); */
-            transform: scale(1);
-          }
-            75%{ 
-              transform: scale(1.5);}
-          100% {
-            /*width: 170px;
-            background: rgb(0,255,203);*/
-            background: linear-gradient(left,rgba(98,67,247,1) 35%);
-            transform: scale(1);
-          }
-        }
-
-        .button {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: $sizeTitleButton;
-          width: 140px;
-          height: 40px;
-          border-radius: 14px;
-          border: transparent;
-          position: relative;
-          color: $colorTextButton;
-          background-color: $colorButton;
-          margin-top: 1em;
-          transition: 0.5 opacity ease-in-out;
-
-          a {
-            text-decoration: none;
-            color: #212121;
-          }
-
-          &.button:hover {
-            animation-name: un_efecto;
-            animation-iteration-count: infinite;
-            animation-timing-function: ease-in-out;
-            animation-duration: 1.5s;
-            animation-delay: 0s;
-            /*background: rgb(0,255,203);
-            background: linear-gradient(90deg, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 77%); 
-            width: 160px;
-            height: 50px;*/
-          }
-    
-          &.button a:hover {
-            color: black;
-          }
-
-        }
-      }
+      @import "./partials/button";
 
       @media screen and (min-width: 600px) {
 
@@ -476,37 +412,6 @@
                 }
               }
             }
-      
-            .buttonInfo {      
-              .button {
-                font-size: 1.5rem;
-                width: $sizeButtonWithQ600;
-                height: $sizeButtonHeightQ600;
-          
-      
-                a {
-                  text-decoration: none;
-                  color: #212121;
-                }
-      
-                &.button:hover {
-                  animation-name: un_efecto;
-                  animation-iteration-count: infinite;
-                  animation-timing-function: ease-in-out;
-                  animation-duration: 1.5s;
-                  animation-delay: 0s;
-                  /*background: rgb(0,255,203);
-                  background: linear-gradient(90deg, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 77%); 
-                  width: 160px;
-                  height: 50px;*/
-                }
-          
-                &.button a:hover {
-                  color: black;
-                }
-      
-              }
-            }
         }
 
       }
@@ -569,15 +474,6 @@
               }
             }
       
-            .buttonInfo {      
-              .button {
-                
-                a {
-                  text-decoration: none;
-                  
-                }
-              }
-            }
         }
       }
   }
@@ -765,7 +661,7 @@
     }
 
 
-    @import "containerService";
+    @import "./partials/containerService";
 
 
     .nameCourses .navItem:after {
@@ -815,7 +711,7 @@
         }
       }
       
-      @import "containerService";
+      @import "./partials/containerService";
 
     }
   
@@ -850,7 +746,7 @@
           }
         }
         
-        @import "containerService";
+        @import "./partials/containerService";
   
       }
       
@@ -1003,49 +899,7 @@
           }
         }
 
-        .buttonInfo {
-          grid-area: buttonInfo;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-  
-          .button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            width: 140px;
-            height: 40px;
-            border-radius: 14px;
-            border: transparent;
-            position: relative;
-            background-color: $colorButton;
-            margin-top: 1em;
-            transition: 0.5 opacity ease-in-out;
-  
-            a {
-              text-decoration: none;
-              color: #212121;
-            }
-
-            &:hover {
-              animation-name: un_efecto;
-              animation-iteration-count: infinite;
-              animation-timing-function: ease-in-out;
-              animation-duration: 1.5s;
-              animation-delay: 0s;
-              /*background: rgb(0,255,203);
-              background: linear-gradient(90deg, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 77%); 
-              width: 160px;
-              height: 50px;*/
-            }
-      
-            & a:hover {
-              color: black;
-            }  
-  
-          } 
-        }
+        @import "./partials/button";
       }
 
       @media screen and (min-width: 600px) {
@@ -1115,24 +969,7 @@
               }
       
             }
-    
-            .buttonInfo {
-
-      
-              .button {
-
-                font-size: 1.5rem;
-                width: $sizeButtonWithQ600;
-                height: $sizeButtonHeightQ600;
-
-      
-                a {
-                  text-decoration: none;
-                  color: #212121;
-                }
-
-              } 
-            }
+  
           }
       }
 
@@ -1207,21 +1044,7 @@
               }
       
             }
-    
-            .buttonInfo {
 
-      
-              .button {
-
-                margin-bottom: 4rem;
-      
-                a {
-                  text-decoration: none;
-                  color: #212121;
-                }
-
-              } 
-            }
           }
         
       }

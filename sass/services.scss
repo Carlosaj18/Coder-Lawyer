@@ -1,0 +1,77 @@
+ /** SCSS - GENERALS */
+ @import "./partials/variables";
+ @import "./partials/generals";
+ @import "./partials/fuentes";
+ @import "./partials/operaciones";
+
+  /** SCSS - PARTIALS */
+ @import "./partials/header.scss";
+ @import  "./partials/footer.scss";
+
+ /* ------ section Search ----- */
+ @import "./partials/containerSearchBar";
+
+/* ------ section Services ----- */
+
+ .sectionBkg {
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "category"
+      "containerService"
+    ;
+    justify-items: center;
+    height: auto;
+
+    .category {
+        grid-area: category;
+
+        h2 {
+            grid-area: category;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            font-size: $sizeTitle;
+            text-transform: capitalize;
+            color: $colorTitle;
+            margin-left: 1em;
+            margin-bottom: 0.5em;
+            text-transform: uppercase;
+            padding: 0.5em 0.5em;
+        }
+    }
+
+    .containerService {
+        grid-area: containerService;
+        @import "./partials/containerService";
+    }
+
+    @import "./partials/button";
+
+    @media screen and (min-width: 600px) { 
+
+        & {
+            .category {
+                h2 {
+                    font-size: $sizeTitleQ600;
+                }
+            }
+        }
+
+    }
+
+    @media screen and (min-width : 1024px){
+
+        & {
+            margin-top: 7em;
+            .category {
+                h2 {
+                    font-size: $sizeTitleQ1024;
+                }
+            }
+        }
+
+    }
+ }

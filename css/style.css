@@ -1,11 +1,11 @@
-/** SCSS - GENERALS */ /** Backgorund */
-/** Size header*/
+/** SCSS - GENERALS */ /** ------ INDEX ------ */
+/** Backgorund */
 /** Size */
+/** Size header*/
 /** size card teachers & students */
-/** size services */
-/** 300*2*/
 /** size students */
 /** size form */
+/** size button */
 /** Weight */
 /** Color */
 /** color card teachers & students */
@@ -14,8 +14,13 @@
 /** color form */
 /** $media screen and (min-width: 600px) */
 /** @media screen and (min-width : 1024px) */
+/** ------ SECTION SERVICES ------ */
+/** size services */
+/** 300*2*/
+/** $media screen and (min-width: 600px) */
+/** @media screen and (min-width : 1024px) */
+/** ------ SECTION SERVICES DETAIL ------ */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-@import "./partials/footer.css";
 * {
   margin: 0;
   padding: 0;
@@ -59,8 +64,11 @@ body main section {
 
 /** SCSS - PARTIALS */
 /* ------ HEADER ----- */
+header {
+  padding: 0px;
+}
 header .navBar {
-  position: fixed;
+  /*position: fixed;*/
   z-index: 1;
   width: 100%;
   height: auto;
@@ -179,7 +187,7 @@ header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent {
   z-index: 1;
   right: -47px;
   border-radius: 25px;
-  padding: 1em auto;
+  padding: 1em 1em;
   border: 1px solid #00ffcb;
 }
 header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .dropHeader {
@@ -442,6 +450,43 @@ header .navBar .buttonResponsive:hover {
     top: 16px;
     right: 261px;
   }
+}
+
+footer {
+  background-color: #212121;
+  height: 120px;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer {
+  color: #00ffcb;
+  font-size: 1rem;
+  font-weight: 300;
+}
+footer .footer p {
+  display: inline-block;
+}
+footer .footer ul {
+  list-style: none;
+}
+footer .footer ul li {
+  display: inline-block;
+}
+footer .footer ul li a {
+  text-decoration: none;
+  color: #00ffcb;
+}
+footer .redesFooter {
+  grid-area: redesFooter;
+}
+footer .redesFooter a {
+  text-decoration: none;
+  color: #00ffcb;
+  font-size: 1rem;
+  margin-right: 0.5em;
 }
 
 /* ------ section Main Carrusel with Boostrapp----- */
@@ -741,7 +786,6 @@ header .navBar .buttonResponsive:hover {
   display: none;
 }
 .sectionTeachers .buttonInfo {
-  grid-area: buttonInfo;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -791,23 +835,20 @@ header .navBar .buttonResponsive:hover {
   }
 }
 .sectionTeachers .buttonInfo .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: black;
+  margin-top: 2em;
   font-size: 1rem;
-  width: 140px;
-  height: 40px;
-  border-radius: 14px;
-  border: transparent;
-  position: relative;
-  color: #00FFCB;
-  background-color: #6243f7;
-  margin-top: 1em;
-  transition: 0.5 opacity ease-in-out;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #6243F7;
+  text-transform: uppercase;
+  padding: 0.5em 3em;
+  border-radius: 5px;
+  border: none;
 }
 .sectionTeachers .buttonInfo .button a {
   text-decoration: none;
-  color: #212121;
+  color: #6243F7;
 }
 .sectionTeachers .buttonInfo .button.button:hover {
   -webkit-animation-name: un_efecto;
@@ -820,13 +861,20 @@ header .navBar .buttonResponsive:hover {
           animation-duration: 1.5s;
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
-  /*background: rgb(0,255,203);
-  background: linear-gradient(90deg, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 77%); 
-  width: 160px;
-  height: 50px;*/
+  border: 1 solid #00ffcb;
 }
-.sectionTeachers .buttonInfo .button.button a:hover {
-  color: black;
+.sectionTeachers .buttonInfo .button.button:hover a {
+  color: #00ffcb;
+}
+@media screen and (min-width: 600px) {
+  .sectionTeachers .buttonInfo .button {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sectionTeachers .buttonInfo .button {
+    font-size: 1.5rem;
+  }
 }
 @media screen and (min-width: 600px) {
   .sectionTeachers {
@@ -878,34 +926,6 @@ header .navBar .buttonResponsive:hover {
     width: 250px;
     font-size: 1.2rem;
   }
-  .sectionTeachers .buttonInfo .button {
-    font-size: 1.5rem;
-    width: 13rem;
-    height: 5rem;
-  }
-  .sectionTeachers .buttonInfo .button a {
-    text-decoration: none;
-    color: #212121;
-  }
-  .sectionTeachers .buttonInfo .button.button:hover {
-    -webkit-animation-name: un_efecto;
-            animation-name: un_efecto;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-duration: 1.5s;
-            animation-duration: 1.5s;
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s;
-    /*background: rgb(0,255,203);
-    background: linear-gradient(90deg, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 77%); 
-    width: 160px;
-    height: 50px;*/
-  }
-  .sectionTeachers .buttonInfo .button.button a:hover {
-    color: black;
-  }
 }
 @media screen and (min-width: 1024px) {
   .sectionTeachers {
@@ -940,9 +960,6 @@ header .navBar .buttonResponsive:hover {
   .sectionTeachers .serviceContainer .serviceCard .serviceImg .description {
     width: 250px;
     font-size: 1.4rem;
-  }
-  .sectionTeachers .buttonInfo .button a {
-    text-decoration: none;
   }
 }
 
@@ -1114,7 +1131,7 @@ header .navBar .buttonResponsive:hover {
   width: 300px;
   margin: 1em;
   box-sizing: border-box;
-  border: 1px solid #6243F7;
+  border: 2px solid #6243F7;
 }
 .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
   font-size: 1.5rem;
@@ -1286,7 +1303,7 @@ header .navBar .buttonResponsive:hover {
     width: 300px;
     margin: 1em;
     box-sizing: border-box;
-    border: 1px solid #6243F7;
+    border: 2px solid #6243F7;
   }
   .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
     font-size: 1.5rem;
@@ -1443,7 +1460,7 @@ header .navBar .buttonResponsive:hover {
     width: 300px;
     margin: 1em;
     box-sizing: border-box;
-    border: 1px solid #6243F7;
+    border: 2px solid #6243F7;
   }
   .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
     font-size: 1.5rem;
@@ -1710,30 +1727,49 @@ header .navBar .buttonResponsive:hover {
   display: none;
 }
 .sectionStudents .descriptionStudents .buttonInfo {
-  grid-area: buttonInfo;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+@keyframes un_efecto {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.5);
+  }
+  50% {
+    /*background: rgb(0,255,203);
+    background: linear-gradient(right, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 36%); */
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.5);
+  }
+  100% {
+    /*width: 170px;
+    background: rgb(0,255,203);*/
+    background: linear-gradient(left, rgb(98, 67, 247) 35%);
+    transform: scale(1);
+  }
+}
 .sectionStudents .descriptionStudents .buttonInfo .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: black;
+  margin-top: 2em;
   font-size: 1rem;
-  width: 140px;
-  height: 40px;
-  border-radius: 14px;
-  border: transparent;
-  position: relative;
-  background-color: #6243f7;
-  margin-top: 1em;
-  transition: 0.5 opacity ease-in-out;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #6243F7;
+  text-transform: uppercase;
+  padding: 0.5em 3em;
+  border-radius: 5px;
+  border: none;
 }
 .sectionStudents .descriptionStudents .buttonInfo .button a {
   text-decoration: none;
-  color: #212121;
+  color: #6243F7;
 }
-.sectionStudents .descriptionStudents .buttonInfo .button:hover {
+.sectionStudents .descriptionStudents .buttonInfo .button.button:hover {
   -webkit-animation-name: un_efecto;
           animation-name: un_efecto;
   -webkit-animation-iteration-count: infinite;
@@ -1744,13 +1780,20 @@ header .navBar .buttonResponsive:hover {
           animation-duration: 1.5s;
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
-  /*background: rgb(0,255,203);
-  background: linear-gradient(90deg, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 77%); 
-  width: 160px;
-  height: 50px;*/
+  border: 1 solid #00ffcb;
 }
-.sectionStudents .descriptionStudents .buttonInfo .button a:hover {
-  color: black;
+.sectionStudents .descriptionStudents .buttonInfo .button.button:hover a {
+  color: #00ffcb;
+}
+@media screen and (min-width: 600px) {
+  .sectionStudents .descriptionStudents .buttonInfo .button {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sectionStudents .descriptionStudents .buttonInfo .button {
+    font-size: 1.5rem;
+  }
 }
 @media screen and (min-width: 600px) {
   .sectionStudents .descriptionStudents .studentInfo .header {
@@ -1828,17 +1871,6 @@ header .navBar .buttonResponsive:hover {
   .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg {
     height: 95%;
     width: 100%;
-  }
-}
-@media screen and (min-width: 600px) {
-  .sectionStudents .descriptionStudents .buttonInfo .button {
-    font-size: 1.5rem;
-    width: 13rem;
-    height: 5rem;
-  }
-  .sectionStudents .descriptionStudents .buttonInfo .button a {
-    text-decoration: none;
-    color: #212121;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1927,15 +1959,6 @@ header .navBar .buttonResponsive:hover {
   .sectionStudents .descriptionStudents .serviceContainer .serviceCard .serviceImg {
     height: 95%;
     width: 100%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .sectionStudents .descriptionStudents .buttonInfo .button {
-    margin-bottom: 4rem;
-  }
-  .sectionStudents .descriptionStudents .buttonInfo .button a {
-    text-decoration: none;
-    color: #212121;
   }
 }
 

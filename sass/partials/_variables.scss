@@ -1,5 +1,12 @@
+/** ------ INDEX ------ */
+
 /** Backgorund */
 $fondo: #212121;
+
+/** Size */
+$sizeTitle: 3rem;
+$sizeSubtitle: 2rem;
+$sizePharagrap: 0.8rem;
 
 /** Size header*/
 $sizeLogoHeader:8em;
@@ -11,11 +18,6 @@ $sizeIconProfileSubMenu: 3.5rem;
 $sizeHambuergerMenu: 2.5rem;
 $sizeSubTitlesMenu: 1.2rem;
 
-/** Size */
-$sizeTitle: 3rem;
-$sizeSubtitle: 2rem;
-$sizePharagrap: 0.8rem;
-
 /** size card teachers & students */
 $sizeNamesCard: 1rem;
 $sizePhotoCard: 6rem;
@@ -25,15 +27,6 @@ $sizeNumberStadistics: 6rem;
 $sizeTitleStadistics: 1.5rem;
 $sizeTitleButton: 1rem;
 
-/** size services */
-$sizeTitleService: 2rem;
-$sizeNameService: 0.8rem;
-$sizeCardService: 300px; /** 300*2*/
-$sizeNameService: 1.5rem;
-$sizePrecioService: 1rem;
-$sizeVerService: 1rem;
-$sizeNameServiceSubHeader: 1.2rem;
-
 /** size students */
 $studentsCardWidth: 300px;
 $studentsCardHeight: 200px;
@@ -42,6 +35,11 @@ $sizeNameCourse: 12px;
 /** size form */
 $sizePharagrapForm: 1rem;
 $sizeButtonEnviar: 1rem;
+
+/** size button */
+$sizeButton: 1rem;
+$sizeButtonQ600: 1.5rem;
+$sizeButtonQ1024: 2rem;
 
 
 /** Weight */
@@ -53,12 +51,13 @@ $fontWeightService: 600;
 $colorTitle: #6243F7;
 $colorParragrap: #ffffff;
 $colorHeader: #ffffff;
+$secundaryColor: #00FFCB;
 
 /** color card teachers & students */
 $colorCard: black;
-$colorNameCard: #3651F7;
-$colorTitleCard: #3651F7;
-$colorPhotoCard: #3651F7;
+$colorNameCard: #6243F7;
+$colorTitleCard: #6243F7;
+$colorPhotoCard: #6243F7;
 $colorBackgroundButtonCard: black;
 $colorBorderCard: 2px solid #6243F7;
 $colorBorderCardHover: 1px solid #00FFCB;
@@ -79,8 +78,8 @@ $borderBottomService: 1.5px solid #6243F7;
 $borderPrecioService: 1px solid #6243F7;
 $backgroundColorButton: #6243F7;
 $colorTransitionService: #212121;
-$colorServiceHover: 1px solid #00ffcb;
-$colorCardBorder: 1px solid #6243F7;
+$colorServiceHover: 2px solid #00ffcb;
+$colorCardBorder: 2px solid #6243F7;
 
 /** color form */
 $colorForm: #212121;
@@ -125,3 +124,34 @@ $sizeNumberStadisticsQ1024: 8rem;
 $sizeSubHeaderServiceQ1024: 1.6rem;
 $sizeNameCourseQ1024: 1.2rem;
 $sizeSocialIcionQ1024: 3.5rem;
+
+/** ------ SECTION SERVICES ------ */
+/** size services */
+$sizeTitleService: 2rem;
+$sizeNameService: 0.8rem;
+$sizeCardService: 300px; /** 300*2*/
+$sizeNameService: 1.5rem;
+$sizePrecioService: 1rem;
+$sizeVerService: 1rem;
+$sizeNameServiceSubHeader: 1.2rem;
+
+/** $media screen and (min-width: 600px) */
+$sizePlaceholderQ600: 1rem;
+
+/** @media screen and (min-width : 1024px) */
+$sizePlaceholderQ1024: 1.2rem;
+
+/** ------ SECTION SERVICES DETAIL ------ */
+$sizeImageCardWidh: 300px; 
+$sizeImageCardHeight: 300px; 
+
+/** ------ SECTION TEACHERS ------ */
+$sizeNameTeacherCard: 1.2rem; 
+
+/** ------ SECTION COMMUUNITY ------ */
+$sizePlaceHolderSearchBar: 1rem; 
+$sizeMainHeaders: 1.2rem;
+$sizeMainHeadersQ600: 1.4rem;
+$sizeMainHeadersQ1024: 1.6rem;
+$sizeTitleArticles: 1.4rem;
+$sizePharagrapAticles: 1rem;

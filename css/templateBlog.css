@@ -499,38 +499,37 @@ footer .redesFooter a {
 /* ------ section Search ----- */
 .containerSearchBar {
   width: 100%;
-  height: 80vh;
+  height: 70vh;
   margin: 0em 0em 0em 0em;
-  background-image: url(../images/bkSections.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
   position: relative;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 150px 40px 40px 40px;
-  grid-template-areas: "title" "searchBar1" "searchBar2" "searchBar3";
+  grid-template-rows: 130px 40px;
+  grid-template-areas: "title" "searchBar1" "categories";
   justify-items: center;
-  gap: 20px;
+  gap: 40px;
 }
-.containerSearchBar .title {
+.containerSearchBar .titleHeader {
   grid-area: title;
+  margin-top: 16em;
+}
+.containerSearchBar .titleHeader p {
+  font-size: 3rem;
   font-weight: 500;
   text-transform: capitalize;
   color: #ffffff;
-  margin-bottom: 0.5em;
-  margin-top: 50px;
+  margin-top: 1.5em;
+  margin-bottom: 3.5em;
   text-align: center;
-  margin-top: 14em;
-}
-.containerSearchBar .title p {
-  font-size: 3rem;
 }
 .containerSearchBar .searchBar1 {
   grid-area: searchBar1;
   width: 70%;
   height: 10px;
-  margin-top: 13em;
+  margin-top: 18em;
 }
 .containerSearchBar .searchBar1 i {
   position: absolute;
@@ -549,338 +548,81 @@ footer .redesFooter a {
   font-size: 1rem;
 }
 .containerSearchBar .searchBar1 input::-moz-placeholder {
-  width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: none;
-  padding-inline-start: 40px;
+  padding-inline-start: 0px;
   font-size: 1rem;
 }
 .containerSearchBar .searchBar1 input:-ms-input-placeholder {
-  width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: none;
-  padding-inline-start: 40px;
+  padding-inline-start: 0px;
   font-size: 1rem;
 }
 .containerSearchBar .searchBar1 input::placeholder {
-  width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: none;
-  -webkit-padding-start: 40px;
-          padding-inline-start: 40px;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
   font-size: 1rem;
 }
 .containerSearchBar .searchBar1 input:focus {
   outline: 2px solid #00ffcb;
 }
-.containerSearchBar .searchBar2 {
-  grid-area: searchBar2;
-  width: 70%;
-  height: 10px;
-  margin-top: 13em;
+.containerSearchBar .categories {
+  grid-area: categories;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50px 50px 50px;
+  grid-template-areas: "sections1" "sections2" "sections3";
+  justify-items: center;
+  gap: 10px;
+  margin-top: 20em;
 }
-.containerSearchBar .searchBar2 i {
-  position: absolute;
-  z-index: 22222;
-  margin-top: 12px;
-  margin-left: 13px;
+.containerSearchBar .categories .sections1 {
+  grid-area: sections1;
+  border: 2px solid #6243F7;
+  border-radius: 10px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 1.2rem;
 }
-.containerSearchBar .searchBar2 input {
-  width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: none;
-  -webkit-padding-start: 40px;
-          padding-inline-start: 40px;
-  font-size: 1rem;
+.containerSearchBar .categories .sections1:hover {
+  border: 2px solid #00ffcb;
 }
-.containerSearchBar .searchBar2 input::-moz-placeholder {
-  width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: none;
-  padding-inline-start: 40px;
-  font-size: 1rem;
+.containerSearchBar .categories .sections2 {
+  grid-area: sections2;
+  border: 2px solid #6243F7;
+  border-radius: 10px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 1.2rem;
 }
-.containerSearchBar .searchBar2 input:-ms-input-placeholder {
-  width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: none;
-  padding-inline-start: 40px;
-  font-size: 1rem;
+.containerSearchBar .categories .sections2:hover {
+  border: 2px solid #00ffcb;
 }
-.containerSearchBar .searchBar2 input::placeholder {
-  width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: none;
-  -webkit-padding-start: 40px;
-          padding-inline-start: 40px;
-  font-size: 1rem;
+.containerSearchBar .categories .sections3 {
+  grid-area: sections3;
+  border: 2px solid #6243F7;
+  border-radius: 10px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 1.2rem;
 }
-.containerSearchBar .searchBar2 input:focus {
-  outline: 2px solid #00ffcb;
+.containerSearchBar .categories .sections3:hover {
+  border: 2px solid #00ffcb;
 }
-.containerSearchBar .searchBar3 {
-  grid-area: searchBar3;
-  width: 70%;
-  height: 10px;
-  margin-top: 13em;
-}
-.containerSearchBar .searchBar3 i {
-  position: absolute;
-  z-index: 22222;
-  margin-top: 12px;
-  margin-left: 13px;
-}
-.containerSearchBar .searchBar3 input {
-  width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: none;
-  -webkit-padding-start: 40px;
-          padding-inline-start: 40px;
-  font-size: 1rem;
-}
-.containerSearchBar .searchBar3 input::-moz-placeholder {
-  width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: none;
-  padding-inline-start: 40px;
-  font-size: 1rem;
-}
-.containerSearchBar .searchBar3 input:-ms-input-placeholder {
-  width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: none;
-  padding-inline-start: 40px;
-  font-size: 1rem;
-}
-.containerSearchBar .searchBar3 input::placeholder {
-  width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: none;
-  -webkit-padding-start: 40px;
-          padding-inline-start: 40px;
-  font-size: 1rem;
-}
-.containerSearchBar .searchBar3 input:focus {
-  outline: 2px solid #00ffcb;
-}
-@media screen and (min-width: 432px) {
-  .containerSearchBar .searchBar1 {
-    margin-top: 11em;
-  }
-  .containerSearchBar .searchBar2 {
-    margin-top: 11em;
-  }
-  .containerSearchBar .searchBar3 {
-    margin-top: 11em;
-  }
-}
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 799px) {
   .containerSearchBar {
-    height: 80vh;
+    width: 100%;
+    height: 70vh;
+    gap: 60px;
   }
-  .containerSearchBar .title p {
+  .containerSearchBar .titleHeader p {
     font-size: 3.7rem;
-    margin-top: 0.5em;
-  }
-  .containerSearchBar .searchBar1 {
-    grid-area: searchBar1;
-    width: 70%;
-    height: 10px;
-    margin-top: 13em;
-  }
-  .containerSearchBar .searchBar1 i {
-    position: absolute;
-    z-index: 22222;
-    margin-top: 9px;
-    margin-left: 10px;
-    font-size: 1.5em;
-  }
-  .containerSearchBar .searchBar1 input {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    -webkit-padding-start: 40px;
-            padding-inline-start: 40px;
-    font-size: 1rem;
-    height: 40px;
-  }
-  .containerSearchBar .searchBar1 input::-moz-placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 40px;
-    font-size: 1rem;
-  }
-  .containerSearchBar .searchBar1 input:-ms-input-placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 40px;
-    font-size: 1rem;
-  }
-  .containerSearchBar .searchBar1 input::placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    -webkit-padding-start: 40px;
-            padding-inline-start: 40px;
-    font-size: 1rem;
-  }
-  .containerSearchBar .searchBar1 input:focus {
-    outline: 2px solid #00ffcb;
-  }
-  .containerSearchBar .searchBar2 {
-    grid-area: searchBar2;
-    width: 70%;
-    height: 10px;
-    margin-top: 13em;
-  }
-  .containerSearchBar .searchBar2 i {
-    position: absolute;
-    z-index: 22222;
-    margin-top: 9px;
-    margin-left: 10px;
-    font-size: 1.5em;
-  }
-  .containerSearchBar .searchBar2 input {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    -webkit-padding-start: 40px;
-            padding-inline-start: 40px;
-    font-size: 13px;
-    height: 40px;
-  }
-  .containerSearchBar .searchBar2 input::-moz-placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 40px;
-    font-size: 1rem;
-  }
-  .containerSearchBar .searchBar2 input:-ms-input-placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 40px;
-    font-size: 1rem;
-  }
-  .containerSearchBar .searchBar2 input::placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    -webkit-padding-start: 40px;
-            padding-inline-start: 40px;
-    font-size: 1rem;
-  }
-  .containerSearchBar .searchBar2 input:focus {
-    outline: 2px solid #00ffcb;
-  }
-  .containerSearchBar .searchBar3 {
-    grid-area: searchBar3;
-    width: 70%;
-    height: 10px;
-    margin-top: 13em;
-  }
-  .containerSearchBar .searchBar3 i {
-    position: absolute;
-    z-index: 22222;
-    margin-top: 9px;
-    margin-left: 10px;
-    font-size: 1.5em;
-  }
-  .containerSearchBar .searchBar3 input {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    -webkit-padding-start: 40px;
-            padding-inline-start: 40px;
-    font-size: 13px;
-    height: 40px;
-  }
-  .containerSearchBar .searchBar3 input::-moz-placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 40px;
-    font-size: 1rem;
-  }
-  .containerSearchBar .searchBar3 input:-ms-input-placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 40px;
-    font-size: 1rem;
-  }
-  .containerSearchBar .searchBar3 input::placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    -webkit-padding-start: 40px;
-            padding-inline-start: 40px;
-    font-size: 1rem;
-  }
-  .containerSearchBar .searchBar3 input:focus {
-    outline: 2px solid #00ffcb;
-  }
-}
-@media screen and (min-width: 830px) {
-  .containerSearchBar {
-    height: 100vh;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .containerSearchBar {
-    height: 100vh;
-  }
-  .containerSearchBar .title p {
-    font-size: 4rem;
   }
   .containerSearchBar .searchBar1 {
     grid-area: searchBar1;
@@ -893,6 +635,90 @@ footer .redesFooter a {
     z-index: 22222;
     margin-top: 9px;
     margin-left: 10px;
+    font-size: 1.5em;
+  }
+  .containerSearchBar .searchBar1 input {
+    width: 100%;
+    position: relative;
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    border: none;
+    -webkit-padding-start: 40px;
+            padding-inline-start: 40px;
+    font-size: 1rem;
+    height: 40px;
+  }
+  .containerSearchBar .searchBar1 input::-moz-placeholder {
+    width: 100%;
+    position: relative;
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    border: none;
+    padding-inline-start: 40px;
+    font-size: 1rem;
+  }
+  .containerSearchBar .searchBar1 input:-ms-input-placeholder {
+    width: 100%;
+    position: relative;
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    border: none;
+    padding-inline-start: 40px;
+    font-size: 1rem;
+  }
+  .containerSearchBar .searchBar1 input::placeholder {
+    width: 100%;
+    position: relative;
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    border: none;
+    -webkit-padding-start: 40px;
+            padding-inline-start: 40px;
+    font-size: 1rem;
+  }
+  .containerSearchBar .searchBar1 input:focus {
+    outline: 2px solid #00ffcb;
+  }
+  .containerSearchBar .categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px;
+    grid-template-areas: "sections1 sections2 sections3";
+    justify-items: center;
+    gap: 10px;
+  }
+  .containerSearchBar .categories .sections1 {
+    font-size: 1.4rem;
+    padding: 6px;
+  }
+  .containerSearchBar .categories .sections2 {
+    font-size: 1.4rem;
+    padding: 6px;
+  }
+  .containerSearchBar .categories .sections3 {
+    font-size: 1.4rem;
+    padding: 6px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .containerSearchBar {
+    width: 100%;
+    height: 70vh;
+    gap: 110px;
+  }
+  .containerSearchBar .titleHeader p {
+    font-size: 4rem;
+  }
+  .containerSearchBar .searchBar1 {
+    grid-area: searchBar1;
+    width: 60%;
+    height: 10px;
+  }
+  .containerSearchBar .searchBar1 i {
+    position: absolute;
+    z-index: 22222;
+    margin-top: 9px;
+    margin-left: 10px;
     font-size: 2.5em;
   }
   .containerSearchBar .searchBar1 input {
@@ -937,390 +763,233 @@ footer .redesFooter a {
   .containerSearchBar .searchBar1 input:focus {
     outline: 4px solid #00ffcb;
   }
-  .containerSearchBar .searchBar2 {
-    grid-area: searchBar2;
-    width: 70%;
-    height: 10px;
-    margin-top: 19em;
+  .containerSearchBar .categories .sections1 {
+    font-size: 1.6rem;
+    padding: 5px;
   }
-  .containerSearchBar .searchBar2 i {
-    position: absolute;
-    z-index: 22222;
-    margin-top: 9px;
-    margin-left: 10px;
-    font-size: 2.5em;
+  .containerSearchBar .categories .sections2 {
+    font-size: 1.6rem;
+    padding: 5px;
   }
-  .containerSearchBar .searchBar2 input {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    -webkit-padding-start: 60px;
-            padding-inline-start: 60px;
-    font-size: 1.2rem;
-    height: 60px;
-  }
-  .containerSearchBar .searchBar2 input::-moz-placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 100px;
-    font-size: 1.2rem;
-  }
-  .containerSearchBar .searchBar2 input:-ms-input-placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 100px;
-    font-size: 1.2rem;
-  }
-  .containerSearchBar .searchBar2 input::placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    -webkit-padding-start: 100px;
-            padding-inline-start: 100px;
-    font-size: 1.2rem;
-  }
-  .containerSearchBar .searchBar2 input:focus {
-    outline: 4px solid #00ffcb;
-  }
-  .containerSearchBar .searchBar3 {
-    grid-area: searchBar3;
-    width: 70%;
-    height: 10px;
-    margin-top: 20em;
-  }
-  .containerSearchBar .searchBar3 i {
-    position: absolute;
-    z-index: 22222;
-    margin-top: 9px;
-    margin-left: 10px;
-    font-size: 2.5em;
-  }
-  .containerSearchBar .searchBar3 input {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    -webkit-padding-start: 60px;
-            padding-inline-start: 60px;
-    font-size: 1.2rem;
-    height: 60px;
-  }
-  .containerSearchBar .searchBar3 input::-moz-placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 100px;
-    font-size: 1.2rem;
-  }
-  .containerSearchBar .searchBar3 input:-ms-input-placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 100px;
-    font-size: 1.2rem;
-  }
-  .containerSearchBar .searchBar3 input::placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    -webkit-padding-start: 100px;
-            padding-inline-start: 100px;
-    font-size: 1.2rem;
-  }
-  .containerSearchBar .searchBar3 input:focus {
-    outline: 4px solid #00ffcb;
+  .containerSearchBar .categories .sections3 {
+    font-size: 1.6rem;
+    padding: 5px;
   }
 }
 
-/* ------ section Services ----- */
-.sectionBkg {
+/* ------ Section categories ----- */
+.sectionText {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: auto;
-  grid-template-areas: "category" "containerService";
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "containerText" "articuloTitle" "accordion";
   justify-items: center;
-  height: auto;
+  gap: 10px;
+  margin-top: 7em;
 }
-.sectionBkg .category {
-  grid-area: category;
-}
-.sectionBkg .category h2 {
-  grid-area: category;
+.sectionText .containerText {
+  grid-area: containerText;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  flex-direction: column;
+}
+.sectionText .containerText .ContainerMainSearch .title {
   font-size: 3rem;
+  font-weight: 600;
   text-transform: capitalize;
-  color: #6243F7;
+  color: #6243f7;
+  text-align: center;
+  margin-top: 0.5em;
+}
+.sectionText .containerText .ContainerMainSearch p {
+  padding-right: 3rem;
+  padding-left: 3rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.sectionText .containerText .ContainerAnswers .title {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #6243f7;
   margin-left: 1em;
   margin-bottom: 0.5em;
-  text-transform: uppercase;
   padding: 0.5em 0.5em;
+  text-align: start;
 }
-.sectionBkg .containerService {
-  grid-area: containerService;
-}
-.sectionBkg .containerService .containerCardsServices {
-  grid-area: containerCardsServices;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-right: 1rem;
-}
-.sectionBkg .containerService .containerCardsServices .containerCursos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0em auto;
-  padding: 20px;
-  flex: 0 0 auto;
-}
-.sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso {
-  background-color: black;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2em 2em;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: 300px;
-  margin: 1em;
-  box-sizing: border-box;
-  border: 2px solid #6243F7;
-}
-.sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #ffffff;
-  border-bottom: 1.5px solid #6243F7;
-  margin-bottom: 0.5em;
-  width: 100%;
-  height: auto;
-}
-.sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso div .sub {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  color: #ffffff;
-  display: flex;
-}
-.sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso div .precioCurso {
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: 600;
+.sectionText .containerText .ContainerAnswers p {
+  padding-right: 3rem;
+  padding-left: 3rem;
   text-align: center;
-  margin-top: 1em;
-  border: 1px solid #6243F7;
-  padding: 0.3em;
-  border-radius: 5px;
-  display: none;
+  font-size: 0.8rem;
 }
-.sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso div .precioCurso:hover {
-  background-color: #00FFCB;
-  color: black;
+.sectionText .articuloTitle {
+  grid-area: articuloTitle;
 }
-.sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
-  background-color: #6243F7;
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #212121;
-  padding: 0.5em 1em;
+.sectionText .accordion {
+  grid-area: accordion;
   width: 100%;
-  border-radius: 5px;
-  margin-top: 1em;
+  margin: 15px;
 }
-.sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
-  text-decoration: none;
-  color: black;
-}
-.sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso .btn.verCurso:hover .reservar {
-  color: #ffffff;
-}
-.sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso:hover {
-  border: 2px solid #00ffcb;
-  background-color: #212121;
-}
-.sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso:hover .precioCurso {
+.sectionText .accordion .accordion-item {
   display: flex;
-}
-@media screen and (min-width: 600px) {
-  .sectionBkg .containerService .containerCardsServices {
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding: 15px;
-    justify-content: space-around;
-    scroll-behavior: smooth;
-    gap: 25px;
-  }
-  .sectionBkg .containerService .containerCardsServices .containerCursos {
-    flex: 0 0 auto;
-  }
-  .sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso {
-    width: 350px;
-  }
-  .sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
-    font-size: 2.2rem;
-  }
-  .sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso div .sub {
-    width: 100%;
-  }
-  .sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso div .precioCurso {
-    font-size: 1.2rem;
-    display: flex;
-  }
-  .sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
-    font-size: 1.2rem;
-  }
-  .sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
-    text-decoration: none;
-    color: black;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso {
-    width: 350px;
-  }
-  .sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
-    font-size: 2.5rem;
-  }
-  .sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso div .sub {
-    width: 100%;
-  }
-  .sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso div .precioCurso {
-    font-size: 1.4rem;
-    display: flex;
-  }
-  .sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
-    font-size: 1.2rem;
-  }
-  .sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
-    text-decoration: none;
-    color: black;
-  }
-}
-.sectionBkg .buttonInfo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@-webkit-keyframes un_efecto {
-  0% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.5);
-  }
-  50% {
-    /*background: rgb(0,255,203);
-    background: linear-gradient(right, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 36%); */
-    transform: scale(1);
-  }
-  75% {
-    transform: scale(1.5);
-  }
-  100% {
-    /*width: 170px;
-    background: rgb(0,255,203);*/
-    background: linear-gradient(left, rgb(98, 67, 247) 35%);
-    transform: scale(1);
-  }
-}
-@keyframes un_efecto {
-  0% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.5);
-  }
-  50% {
-    /*background: rgb(0,255,203);
-    background: linear-gradient(right, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 36%); */
-    transform: scale(1);
-  }
-  75% {
-    transform: scale(1.5);
-  }
-  100% {
-    /*width: 170px;
-    background: rgb(0,255,203);*/
-    background: linear-gradient(left, rgb(98, 67, 247) 35%);
-    transform: scale(1);
-  }
-}
-.sectionBkg .buttonInfo .button {
+  flex-direction: column;
   background-color: black;
-  margin-top: 2em;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  color: #6243F7;
-  text-transform: uppercase;
-  padding: 0.5em 3em;
+  padding: 1em;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
   border-radius: 5px;
-  border: none;
+  margin: 15px;
+  border: 2px solid #6243f7;
+  width: 400px;
 }
-.sectionBkg .buttonInfo .button a {
-  text-decoration: none;
-  color: #6243F7;
+.sectionText .accordion .accordion-item .accordion-header .accordion-button {
+  background-color: black;
+  color: #6243f7;
+  font-size: 1.4rem;
 }
-.sectionBkg .buttonInfo .button.button:hover {
-  -webkit-animation-name: un_efecto;
-          animation-name: un_efecto;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  border: 1 solid #00ffcb;
-}
-.sectionBkg .buttonInfo .button.button:hover a {
-  color: #00ffcb;
+.sectionText .accordion .accordion-item .accordion-collapse .accordion-body {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-top: 15px;
+  border-radius: 10px;
+  /*border: 1px solid #6243f7;*/
 }
 @media screen and (min-width: 600px) {
-  .sectionBkg .buttonInfo .button {
-    font-size: 1.5rem;
+  .sectionText .containerText {
+    grid-area: containerText;
+    display: flex;
+    flex-direction: column;
   }
-}
-@media screen and (min-width: 1024px) {
-  .sectionBkg .buttonInfo .button {
-    font-size: 1.5rem;
-  }
-}
-@media screen and (min-width: 600px) {
-  .sectionBkg .category h2 {
+  .sectionText .containerText .ContainerMainSearch .title {
     font-size: 3.7rem;
   }
+  .sectionText .containerText .ContainerMainSearch p {
+    font-size: 1.2rem;
+    text-align: center;
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+  .sectionText .containerText .ContainerAnswers .title {
+    font-size: 3.7rem;
+  }
+  .sectionText .containerText .ContainerAnswers p {
+    padding-right: 3rem;
+    padding-left: 3rem;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .sectionText .accordion {
+    grid-area: accordion;
+    width: 100%;
+  }
+  .sectionText .accordion .accordion-item {
+    width: 400px;
+  }
+  .sectionText .accordion .accordion-item .accordion-header .accordion-button {
+    background-color: black;
+    color: #6243f7;
+    font-size: 1.4rem;
+  }
+  .sectionText .accordion .accordion-item .accordion-collapse .accordion-body {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-top: 15px;
+    border-radius: 10px;
+    /*border: 1px solid #6243f7;*/
+  }
 }
 @media screen and (min-width: 1024px) {
-  .sectionBkg {
-    margin-top: 7em;
+  .sectionText {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "containerText articuloTitle" "containerText accordion";
+    justify-items: center;
+    gap: 10px;
   }
-  .sectionBkg .category h2 {
+  .sectionText .containerText {
+    grid-area: containerText;
+    display: flex;
+    flex-direction: column;
+  }
+  .sectionText .containerText .ContainerMainSearch .title {
     font-size: 4rem;
   }
-}/*# sourceMappingURL=services.css.map */
+  .sectionText .containerText .ContainerMainSearch p {
+    font-size: 1.4rem;
+  }
+  .sectionText .containerText .ContainerAnswers .title {
+    font-size: 4rem;
+  }
+  .sectionText .containerText .ContainerAnswers p {
+    font-size: 1.4rem;
+  }
+  .sectionText .accordion {
+    grid-area: accordion;
+    width: 100%;
+  }
+  .sectionText .accordion .accordion-item {
+    width: 400px;
+  }
+  .sectionText .accordion .accordion-item .accordion-header .accordion-button {
+    background-color: black;
+    color: #6243f7;
+    font-size: 1.4rem;
+  }
+  .sectionText .accordion .accordion-item .accordion-collapse .accordion-body {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-top: 15px;
+    border-radius: 10px;
+    /*border: 1px solid #6243f7;*/
+  }
+}
+
+/*
+@media screen and (min-width : 1024px){
+
+    .titleHeader p {
+    font-size: 2.5rem;
+    }
+
+    .ContainerMainSearch p, .ContainerAnswers p{
+        width: 80%;
+      }
+
+    .containerArticles {
+        justify-items: center;
+    }
+    .sectionText {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "containerText containerArticles"
+        ;
+        justify-items: center;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .sectionText {
+        width: 100%;
+      }
+
+      .accordion {
+        width: 100%;
+      }
+
+      .sectionText {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+          "containerText articuloTitle"
+          "containerText accordion"
+        ;
+        justify-items: center;
+        gap: 10px;
+      }
+}*//*# sourceMappingURL=templateBlog.css.map */

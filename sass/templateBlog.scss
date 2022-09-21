@@ -1,0 +1,311 @@
+ /** SCSS - GENERALS */
+ @import "./partials/variables";
+ @import "./partials/generals";
+ @import "./partials/fuentes";
+ @import "./partials/operaciones";
+ 
+ /** SCSS - PARTIALS */
+ @import "./partials/header.scss";
+ @import  "./partials/footer.scss";
+
+
+  /* ------ section Search ----- */
+
+  @import "./partials/containerHeaderBlog";
+ 
+/* ------ Section categories ----- */
+
+  .sectionText {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+      "containerText"
+      "articuloTitle"
+      "accordion"
+    ;
+    justify-items: center;
+    gap: 10px;
+    margin-top: 7em;
+
+ 
+    .containerText {
+        grid-area: containerText;
+        display: flex;
+        flex-direction: column;
+
+        .ContainerMainSearch {
+
+            .title {
+                font-size: $sizeTitle;
+                font-weight: 600;
+                text-transform: capitalize;
+                color: #6243f7;
+                text-align: center;
+                margin-top: 0.5em;
+            }
+
+            p {
+                padding-right: 3rem;
+                padding-left: 3rem;
+                text-align: center;
+                font-size: $sizePharagrap;
+            }
+        }
+
+        .ContainerAnswers {
+
+            .title {
+                font-size: $sizeTitle;
+                font-weight: 600;
+                text-transform: capitalize;
+                color: #6243f7;
+                margin-left: 1em;
+                margin-bottom: 0.5em;
+                padding: 0.5em 0.5em;
+                text-align: start;
+            }
+            p {
+                padding-right: 3rem;
+                padding-left: 3rem;
+                text-align: center;
+                font-size: $sizePharagrap;
+            }
+        }
+    }
+    
+    .articuloTitle {
+        grid-area: articuloTitle;
+    }
+    
+    .accordion {
+        grid-area: accordion;
+        width: 100%;
+        margin: 15px;
+    
+        .accordion-item {
+              display: flex;
+              flex-direction: column;
+              background-color: black;
+              padding: 1em;
+              height: auto;
+              display: flex;
+              justify-content: flex-end;
+              align-items: flex-end;
+              border-radius: 5px;
+              margin: 15px;
+              border: 2px solid #6243f7;
+              width: 400px;
+    
+            .accordion-header {
+                .accordion-button {
+                    background-color: black;
+                    color: #6243f7;
+                    font-size: $sizeTitleArticles;
+                }
+            }
+    
+            .accordion-collapse {
+                .accordion-body {
+                    color: $colorParragrap;
+                    font-size: $sizePharagrapAticles;
+                    margin-top: 15px;
+                    border-radius: 10px;
+                    /*border: 1px solid #6243f7;*/
+                  }
+            }
+    
+          }
+    }
+
+    @media screen and (min-width: 600px) {
+
+       & {
+
+        .containerText {
+            grid-area: containerText;
+            display: flex;
+            flex-direction: column;
+    
+            .ContainerMainSearch {
+    
+                .title {
+                    font-size: $sizeTitleQ600;
+                }
+    
+                p {
+                    font-size: $sizeParaMediaQ600;
+                    text-align: center;
+                    padding-right: 3rem;
+                    padding-left: 3rem;
+                }
+            }
+    
+            .ContainerAnswers {
+    
+                .title {
+                    font-size: $sizeTitleQ600;
+                }
+                p {
+                    padding-right: 3rem;
+                    padding-left: 3rem;
+                    text-align: center;
+                    font-size: $sizeParaMediaQ600;
+                }
+            }
+        }
+                
+        .accordion {
+            grid-area: accordion;
+            width: 100%;
+
+        
+            .accordion-item {
+
+                  width: 400px;
+        
+                .accordion-header {
+                    .accordion-button {
+                        background-color: black;
+                        color: #6243f7;
+                        font-size: $sizeTitleArticles;
+                    }
+                }
+        
+                .accordion-collapse {
+                    .accordion-body {
+                        color: $colorParragrap;
+                        font-size: $sizePharagrapAticles;
+                        margin-top: 15px;
+                        border-radius: 10px;
+                        /*border: 1px solid #6243f7;*/
+                      }
+                }
+        
+              }
+        }
+
+       }
+    }
+
+    @media screen and (min-width: 1024px) {
+
+        & {
+
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+          "containerText articuloTitle"
+          "containerText accordion"
+        ;
+        justify-items: center;
+        gap: 10px;
+ 
+         .containerText {
+             grid-area: containerText;
+             display: flex;
+             flex-direction: column;
+     
+             .ContainerMainSearch {
+     
+                 .title {
+                     font-size: $sizeTitleQ1024;
+                 }
+     
+                 p {
+                     font-size: $sizeParaMediaQ1024;
+                 }
+             }
+     
+             .ContainerAnswers {
+     
+                 .title {
+                     font-size: $sizeTitleQ1024;
+                 }
+                 p {
+                     font-size: $sizeParaMediaQ1024;
+                 }
+             }
+         }
+                 
+         .accordion {
+             grid-area: accordion;
+             width: 100%;
+ 
+             .accordion-item {
+ 
+                   width: 400px;
+         
+                 .accordion-header {
+                     .accordion-button {
+                         background-color: black;
+                         color: #6243f7;
+                         font-size: $sizeTitleArticles;
+                     }
+                 }
+         
+                 .accordion-collapse {
+                     .accordion-body {
+                         color: $colorParragrap;
+                         font-size: $sizePharagrapAticles;
+                         margin-top: 15px;
+                         border-radius: 10px;
+                         /*border: 1px solid #6243f7;*/
+                       }
+                 }
+         
+               }
+         }
+ 
+        }
+     }
+    
+  }
+
+/*
+@media screen and (min-width : 1024px){
+
+    .titleHeader p {
+    font-size: 2.5rem;
+    }
+
+    .ContainerMainSearch p, .ContainerAnswers p{
+        width: 80%;
+      }
+    
+    .containerArticles {
+        justify-items: center;
+    }
+    .sectionText {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "containerText containerArticles"
+        ;
+        justify-items: center;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .sectionText {
+        width: 100%;
+      }
+
+      .accordion {
+        width: 100%;
+      }
+
+      .sectionText {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+          "containerText articuloTitle"
+          "containerText accordion"
+        ;
+        justify-items: center;
+        gap: 10px;
+      }
+}*/

@@ -21,6 +21,7 @@
 /** @media screen and (min-width : 1024px) */
 /** ------ SECTION SERVICES DETAIL ------ */
 /** ------ SECTION TEACHERS ------ */
+/** ------ SECTION COMMUUNITY ------ */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 * {
   margin: 0;
@@ -67,10 +68,15 @@ body main section {
 /* ------ HEADER ----- */
 header {
   padding: 0px;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: auto;
+  background: #212121;
 }
 header .navBar {
-  /*position: fixed;*/
-  z-index: 1;
+  position: fixed;
+  z-index: 2;
   width: 100%;
   height: auto;
   background: #212121;
@@ -303,7 +309,7 @@ header .navBar .buttonResponsive:hover .containerLinks {
 header .navBar .buttonResponsive:hover {
   color: #00ffcb;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 670px) {
   header .navBar {
     /* ------ containerRight ----- */
     /* ------ buttonResponsive ----- */
@@ -488,4 +494,337 @@ footer .redesFooter a {
   color: #00ffcb;
   font-size: 1rem;
   margin-right: 0.5em;
-}/*# sourceMappingURL=teacherDetail.css.map */
+}
+
+/* ------ section Search ----- */
+/* ------ section Detail Teacher ----- */
+section {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "flexBody" "misCursos" "detailsTeacher";
+  justify-items: center;
+}
+section .flexBody {
+  grid-area: flexBody;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80vw;
+  margin-top: 11em;
+}
+section .flexBody .image img {
+  width: 300px;
+  height: 300px;
+  border: 2px solid #6243F7;
+  border-radius: 35px;
+  padding: 0.5em;
+  margin-right: 2em;
+  margin-top: 2em;
+}
+section .flexBody .image:hover img {
+  border: 2px solid #00ffcb;
+}
+section .flexBody div h3 {
+  color: #00FFCB;
+  font-size: 3rem;
+  padding-bottom: 1em;
+  margin-top: 1em;
+  text-align: center;
+}
+section .flexBody div p {
+  color: #ffffff;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-bottom: 1em;
+}
+section .misCursos {
+  grid-area: misCursos;
+  color: #6243F7;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+section .detailsTeacher {
+  grid-area: detailsTeacher;
+  width: 100%;
+  position: relative;
+}
+section .detailsTeacher .containerServices .containerCardsServices {
+  grid-area: containerCardsServices;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 1rem;
+}
+section .detailsTeacher .containerServices .containerCardsServices .containerCursos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0em auto;
+  padding: 20px;
+  flex: 0 0 auto;
+}
+section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso {
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 2em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 300px;
+  margin: 1em;
+  box-sizing: border-box;
+  border: 2px solid #6243F7;
+}
+section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  border-bottom: 1.5px solid #6243F7;
+  margin-bottom: 0.5em;
+  width: 100%;
+  height: auto;
+}
+section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+  display: flex;
+}
+section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1em;
+  border: 1px solid #6243F7;
+  padding: 0.3em;
+  border-radius: 5px;
+  display: none;
+}
+section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso:hover {
+  background-color: #00FFCB;
+  color: black;
+}
+section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
+  background-color: #6243F7;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #212121;
+  padding: 0.5em 1em;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 1em;
+}
+section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
+  text-decoration: none;
+  color: black;
+}
+section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso:hover .reservar {
+  color: #ffffff;
+}
+section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso:hover {
+  border: 2px solid #00ffcb;
+  background-color: #212121;
+}
+section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso:hover .precioCurso {
+  display: flex;
+}
+@media screen and (min-width: 600px) {
+  section .detailsTeacher .containerServices .containerCardsServices {
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 15px;
+    justify-content: space-around;
+    scroll-behavior: smooth;
+    gap: 25px;
+  }
+  section .detailsTeacher .containerServices .containerCardsServices .containerCursos {
+    flex: 0 0 auto;
+  }
+  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso {
+    width: 350px;
+  }
+  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
+    font-size: 2.2rem;
+  }
+  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
+    width: 100%;
+  }
+  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
+    font-size: 1.2rem;
+    display: flex;
+  }
+  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
+    font-size: 1.2rem;
+  }
+  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
+    text-decoration: none;
+    color: black;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso {
+    width: 350px;
+  }
+  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
+    font-size: 2.5rem;
+  }
+  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
+    width: 100%;
+  }
+  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
+    font-size: 1.4rem;
+    display: flex;
+  }
+  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
+    font-size: 1.2rem;
+  }
+  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
+    text-decoration: none;
+    color: black;
+  }
+}
+section .detailsTeacher .buttonInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@-webkit-keyframes un_efecto {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.5);
+  }
+  50% {
+    /*background: rgb(0,255,203);
+    background: linear-gradient(right, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 36%); */
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.5);
+  }
+  100% {
+    /*width: 170px;
+    background: rgb(0,255,203);*/
+    background: linear-gradient(left, rgb(98, 67, 247) 35%);
+    transform: scale(1);
+  }
+}
+@keyframes un_efecto {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.5);
+  }
+  50% {
+    /*background: rgb(0,255,203);
+    background: linear-gradient(right, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 36%); */
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.5);
+  }
+  100% {
+    /*width: 170px;
+    background: rgb(0,255,203);*/
+    background: linear-gradient(left, rgb(98, 67, 247) 35%);
+    transform: scale(1);
+  }
+}
+section .detailsTeacher .buttonInfo .button {
+  background-color: black;
+  margin-top: 2em;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #6243F7;
+  text-transform: uppercase;
+  padding: 0.5em 3em;
+  border-radius: 5px;
+  border: none;
+}
+section .detailsTeacher .buttonInfo .button a {
+  text-decoration: none;
+  color: #6243F7;
+}
+section .detailsTeacher .buttonInfo .button.button:hover {
+  -webkit-animation-name: un_efecto;
+          animation-name: un_efecto;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  border: 1 solid #00ffcb;
+}
+section .detailsTeacher .buttonInfo .button.button:hover a {
+  color: #00ffcb;
+}
+@media screen and (min-width: 600px) {
+  section .detailsTeacher .buttonInfo .button {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .detailsTeacher .buttonInfo .button {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  section .flexBody {
+    margin-top: 13em;
+  }
+  section .flexBody .image img {
+    margin-right: 5em;
+  }
+  section .flexBody div h3 {
+    font-size: 3.7rem;
+  }
+  section .flexBody div p {
+    font-size: 1.2rem;
+  }
+  section .misCursos {
+    font-size: 3.7rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .flexBody {
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    padding: 0em 6em;
+    margin: 5em auto;
+    width: 80vw;
+    margin-top: 12.5em;
+  }
+  section .flexBody div h3 {
+    text-align: left;
+    font-size: 4rem;
+  }
+  section .flexBody div p {
+    text-align: left;
+    font-size: 1.4rem;
+  }
+  section .misCursos {
+    font-size: 4rem;
+  }
+}
+
+/** DESKTOP *//*# sourceMappingURL=detailView.css.map */

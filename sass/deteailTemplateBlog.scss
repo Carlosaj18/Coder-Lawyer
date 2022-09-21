@@ -1,0 +1,150 @@
+ /** SCSS - GENERALS */
+ @import "./partials/variables";
+ @import "./partials/generals";
+ @import "./partials/fuentes";
+ @import "./partials/operaciones";
+
+  /** SCSS - PARTIALS */
+ @import "./partials/header.scss";
+ @import  "./partials/footer.scss";
+
+  /* ------ section Search ----- */
+
+  /* ------ section Detail Teacher ----- */
+
+  section {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+      "flexBody"
+      "btn"
+    ;
+    justify-items: center;
+
+    .flexBody {
+        grid-area: flexBody;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 80vw;
+    
+        .image {
+    
+            img {
+                width: $sizeImageCardWidh;
+                height: $sizeImageCardHeight;
+                border: $colorCardBorder;
+                border-radius: 35px;
+                padding: 0.5em;
+                margin-right: 2em;
+                margin-top: 2em;
+            }
+
+            &:hover img {
+                border: $colorServiceHover;
+            }
+    
+        }
+
+        .text {
+            h3 {
+                color: $secundaryColor;
+                font-size: $sizeTitle;
+                padding-bottom: 1em;
+                margin-top: 1em;
+                text-align: center;
+            }
+    
+            p {
+                color: $colorParragrap;
+                font-size: $sizePharagrap;
+                text-align: center;
+                margin-bottom: 1em;
+            }
+        }
+    }
+
+    .buttonInfo {
+        grid-area: btn;
+    }
+
+    & {
+        @import "./partials/button";
+    }
+    
+    
+
+    
+
+    @media screen and (min-width: 600px) {
+
+        & {
+            .flexBody {
+
+                .image {
+    
+                    img {
+                        margin-right: 5em;
+                    }
+            
+                }
+                
+                .text  {
+                    h3 {
+                        font-size: $sizeTitleQ600;
+                    }
+            
+                    p {
+                        font-size: $sizeParaMediaQ600;
+                    }
+                }
+            }
+        
+            .misCursos {
+                font-size: $sizeTitleQ600;    
+            }
+        }
+
+    }
+
+    @media screen and (min-width : 1024px){
+
+        & {
+
+            .flexBody {
+                justify-content: flex-start;
+                flex-direction: row;
+                align-items: center;
+                padding: 0em 6em;
+                margin: 5em auto;
+                width: 80vw;
+
+                .text  {
+                    h3 {
+                        text-align: left;
+                        font-size: $sizeTitleQ1024;
+                    }
+
+                    p {
+                        text-align: left;
+                        font-size: $sizeParaMediaQ1024;
+                    }
+                }
+            }
+
+            .misCursos {
+                font-size: $sizeTitleQ1024;    
+            }
+            
+        }
+
+    }        
+        
+
+  }
+
+
+
+/** DESKTOP */
