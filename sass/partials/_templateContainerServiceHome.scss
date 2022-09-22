@@ -65,6 +65,7 @@
         --bs-progress-bg: #050505;
         background-color: black;
         width: 80%;
+        height: 20px;
       }
 
      &:hover {
@@ -132,6 +133,7 @@
           --bs-progress-bg: #050505;
           background-color: black;
           width: 80%;
+          height: 20px;
    
         }
       }
@@ -185,13 +187,14 @@
         }
 
         .container {
-          margin-left: 10em;
+          margin-left: 1em;
           .progress {
             --bs-progress-bar-bg: #6243F7;
             --bs-progress-bg: #050505;
             --bs-progress-width: 100%;
             background-color: black;
-            width: 80%;
+            width: 400px;
+            height: 30px;
      
           }
         }
@@ -199,5 +202,25 @@
 
     }
     
+  }
+
+  @media screen and (min-width : 1224px){ 
+
+    & {
+      .containerCardsServices {
+        .containerCursos {
+          margin: 0em 5em;
+        }
+
+        .container {
+          margin-left: 6em;
+          .progress {
+            width: 100%;
+     
+          }
+        }
+      }
+    }
+  
   }
 }

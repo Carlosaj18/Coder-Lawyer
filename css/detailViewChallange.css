@@ -504,7 +504,7 @@ section {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto auto auto;
-  grid-template-areas: "flexBody" "misCursos" "detailsTeacher";
+  grid-template-areas: "flexBody" "misCursos" "container" "content-container";
   justify-items: center;
 }
 section .flexBody {
@@ -550,12 +550,28 @@ section .misCursos {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-section .detailsTeacher {
+section .container {
+  margin-left: 3em;
+  grid-area: container;
+  align-items: center;
+  width: 100%;
+}
+section .container .progress {
+  --bs-progress-bar-bg: #6243F7;
+  --bs-progress-bg: #050505;
+  background-color: black;
+  width: 70%;
+  height: 20px;
+}
+section .container:hover {
+  --bs-progress-bar-bg: #00ffcb;
+}
+section .content-container .detailsChallange {
   grid-area: detailsTeacher;
   width: 100%;
   position: relative;
 }
-section .detailsTeacher .containerServices .containerCardsServices {
+section .content-container .detailsChallange .containerServices .containerCardsServices {
   grid-area: containerCardsServices;
   display: flex;
   justify-content: center;
@@ -563,15 +579,16 @@ section .detailsTeacher .containerServices .containerCardsServices {
   flex-direction: column;
   margin-right: 1rem;
 }
-section .detailsTeacher .containerServices .containerCardsServices .containerCursos {
+section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0em auto;
   padding: 20px;
   flex: 0 0 auto;
+  width: 100%;
 }
-section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso {
+section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso {
   background-color: black;
   border-radius: 20px;
   display: flex;
@@ -582,12 +599,12 @@ section .detailsTeacher .containerServices .containerCardsServices .containerCur
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 300px;
+  width: 100%;
   margin: 1em;
   box-sizing: border-box;
   border: 2px solid #6243F7;
 }
-section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
+section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
   font-size: 1.5rem;
   font-weight: 600;
   color: #ffffff;
@@ -596,14 +613,14 @@ section .detailsTeacher .containerServices .containerCardsServices .containerCur
   width: 100%;
   height: auto;
 }
-section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
+section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
   width: 100%;
   display: flex;
   justify-content: space-between;
   color: #ffffff;
   display: flex;
 }
-section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
+section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
   color: #ffffff;
   font-size: 1rem;
   font-weight: 600;
@@ -614,11 +631,11 @@ section .detailsTeacher .containerServices .containerCardsServices .containerCur
   border-radius: 5px;
   display: none;
 }
-section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso:hover {
+section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso:hover {
   background-color: #00FFCB;
   color: black;
 }
-section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
+section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
   background-color: #6243F7;
   font-size: 1rem;
   font-weight: 600;
@@ -629,22 +646,22 @@ section .detailsTeacher .containerServices .containerCardsServices .containerCur
   border-radius: 5px;
   margin-top: 1em;
 }
-section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
+section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
   text-decoration: none;
   color: black;
 }
-section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso:hover .reservar {
+section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso:hover .reservar {
   color: #ffffff;
 }
-section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso:hover {
+section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso:hover {
   border: 2px solid #00ffcb;
   background-color: #212121;
 }
-section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso:hover .precioCurso {
+section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso:hover .precioCurso {
   display: flex;
 }
 @media screen and (min-width: 600px) {
-  section .detailsTeacher .containerServices .containerCardsServices {
+  section .content-container .detailsChallange .containerServices .containerCardsServices {
     flex-wrap: wrap;
     flex-direction: row;
     padding: 15px;
@@ -652,53 +669,51 @@ section .detailsTeacher .containerServices .containerCardsServices .containerCur
     scroll-behavior: smooth;
     gap: 25px;
   }
-  section .detailsTeacher .containerServices .containerCardsServices .containerCursos {
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos {
     flex: 0 0 auto;
   }
-  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso {
-    width: 350px;
-  }
-  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
     font-size: 2.2rem;
   }
-  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
     width: 100%;
   }
-  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
-    font-size: 1.2rem;
-    display: flex;
-  }
-  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
     font-size: 1.2rem;
   }
-  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
+    font-size: 1.2rem;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
     text-decoration: none;
     color: black;
   }
 }
 @media screen and (min-width: 1024px) {
-  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso {
-    width: 350px;
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos {
+    justify-content: start;
   }
-  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
-    font-size: 2.5rem;
-  }
-  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso {
     width: 100%;
   }
-  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
-    font-size: 1.4rem;
-    display: flex;
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
+    font-size: 2.5rem;
   }
-  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
+    width: 100%;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
+    font-size: 1.4rem;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
     font-size: 1.2rem;
   }
-  section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
     text-decoration: none;
     color: black;
   }
 }
-section .detailsTeacher .buttonInfo {
+section .content-container .detailsChallange .buttonInfo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -747,7 +762,7 @@ section .detailsTeacher .buttonInfo {
     transform: scale(1);
   }
 }
-section .detailsTeacher .buttonInfo .button {
+section .content-container .detailsChallange .buttonInfo .button {
   background-color: black;
   margin-top: 2em;
   font-size: 1rem;
@@ -759,11 +774,11 @@ section .detailsTeacher .buttonInfo .button {
   border-radius: 5px;
   border: none;
 }
-section .detailsTeacher .buttonInfo .button a {
+section .content-container .detailsChallange .buttonInfo .button a {
   text-decoration: none;
   color: #6243F7;
 }
-section .detailsTeacher .buttonInfo .button.button:hover {
+section .content-container .detailsChallange .buttonInfo .button.button:hover {
   -webkit-animation-name: un_efecto;
           animation-name: un_efecto;
   -webkit-animation-iteration-count: infinite;
@@ -776,18 +791,21 @@ section .detailsTeacher .buttonInfo .button.button:hover {
           animation-delay: 0s;
   border: 1 solid #00ffcb;
 }
-section .detailsTeacher .buttonInfo .button.button:hover a {
+section .content-container .detailsChallange .buttonInfo .button.button:hover a {
   color: #00ffcb;
 }
 @media screen and (min-width: 600px) {
-  section .detailsTeacher .buttonInfo .button {
+  section .content-container .detailsChallange .buttonInfo .button {
     font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  section .detailsTeacher .buttonInfo .button {
+  section .content-container .detailsChallange .buttonInfo .button {
     font-size: 1.5rem;
   }
+}
+section .content-container .filter-section {
+  display: none;
 }
 @media screen and (min-width: 600px) {
   section .flexBody {
@@ -804,6 +822,26 @@ section .detailsTeacher .buttonInfo .button.button:hover a {
   }
   section .misCursos {
     font-size: 3.7rem;
+  }
+  section .container {
+    margin-left: 3em;
+    grid-area: container;
+  }
+  section .container .progress {
+    --bs-progress-bar-bg: #6243F7;
+    --bs-progress-bg: #050505;
+    background-color: black;
+    width: 95%;
+    height: 30px;
+  }
+  section .container:hover {
+    --bs-progress-bar-bg: #00ffcb;
+  }
+}
+@media screen and (min-width: 738px) {
+  section .container .progress {
+    width: 100%;
+    height: 30px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -827,6 +865,318 @@ section .detailsTeacher .buttonInfo .button.button:hover a {
   section .misCursos {
     font-size: 4rem;
   }
+  section .container .progress {
+    width: 90%;
+  }
+  section .content-container {
+    display: flex;
+    flex-direction: row;
+  }
+  section .content-container .detailsChallange {
+    grid-area: detailsTeacher;
+    width: 70%;
+    position: relative;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices {
+    grid-area: containerCardsServices;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 1rem;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0em auto;
+    padding: 20px;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso {
+    background-color: black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 2em;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    margin: 1em;
+    box-sizing: border-box;
+    border: 2px solid #6243F7;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    border-bottom: 1.5px solid #6243F7;
+    margin-bottom: 0.5em;
+    width: 100%;
+    height: auto;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    display: flex;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1em;
+    border: 1px solid #6243F7;
+    padding: 0.3em;
+    border-radius: 5px;
+    display: none;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso:hover {
+    background-color: #00FFCB;
+    color: black;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
+    background-color: #6243F7;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #212121;
+    padding: 0.5em 1em;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 1em;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
+    text-decoration: none;
+    color: black;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso:hover .reservar {
+    color: #ffffff;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso:hover {
+    border: 2px solid #00ffcb;
+    background-color: #212121;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso:hover .precioCurso {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 600px) {
+  section .content-container .detailsChallange .containerServices .containerCardsServices {
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 15px;
+    justify-content: space-around;
+    scroll-behavior: smooth;
+    gap: 25px;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos {
+    flex: 0 0 auto;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
+    font-size: 2.2rem;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
+    width: 100%;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
+    font-size: 1.2rem;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
+    font-size: 1.2rem;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
+    text-decoration: none;
+    color: black;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos {
+    justify-content: start;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso {
+    width: 100%;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
+    font-size: 2.5rem;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
+    width: 100%;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
+    font-size: 1.4rem;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
+    font-size: 1.2rem;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
+    text-decoration: none;
+    color: black;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .content-container .detailsChallange .buttonInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @-webkit-keyframes un_efecto {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.5);
+    }
+    50% {
+      /*background: rgb(0,255,203);
+      background: linear-gradient(right, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 36%); */
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(1.5);
+    }
+    100% {
+      /*width: 170px;
+      background: rgb(0,255,203);*/
+      background: linear-gradient(left, rgb(98, 67, 247) 35%);
+      transform: scale(1);
+    }
+  }
+  @keyframes un_efecto {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.5);
+    }
+    50% {
+      /*background: rgb(0,255,203);
+      background: linear-gradient(right, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 36%); */
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(1.5);
+    }
+    100% {
+      /*width: 170px;
+      background: rgb(0,255,203);*/
+      background: linear-gradient(left, rgb(98, 67, 247) 35%);
+      transform: scale(1);
+    }
+  }
+  section .content-container .detailsChallange .buttonInfo .button {
+    background-color: black;
+    margin-top: 2em;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #6243F7;
+    text-transform: uppercase;
+    padding: 0.5em 3em;
+    border-radius: 5px;
+    border: none;
+  }
+  section .content-container .detailsChallange .buttonInfo .button a {
+    text-decoration: none;
+    color: #6243F7;
+  }
+  section .content-container .detailsChallange .buttonInfo .button.button:hover {
+    -webkit-animation-name: un_efecto;
+            animation-name: un_efecto;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    border: 1 solid #00ffcb;
+  }
+  section .content-container .detailsChallange .buttonInfo .button.button:hover a {
+    color: #00ffcb;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 600px) {
+  section .content-container .detailsChallange .buttonInfo .button {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  section .content-container .detailsChallange .buttonInfo .button {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .content-container .filter-section {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+  section .content-container .filter-section .status {
+    width: 100%;
+    padding-top: 30px;
+    height: 170px;
+    border-bottom: 1px solid #00ffcb;
+    gap: 10px;
+  }
+  section .content-container .filter-section .status h3 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+  }
+  section .content-container .filter-section .status input {
+    margin-left: -0.5em;
+  }
+  section .content-container .filter-section .status label {
+    color: #6243F7;
+    font-size: 1.4rem;
+  }
+  section .content-container .filter-section .skills, section .content-container .filter-section .difficulty {
+    width: 100%;
+    padding-top: 30px;
+    height: 200px;
+    border-bottom: 1px solid #00ffcb;
+    gap: 10px;
+  }
+  section .content-container .filter-section .skills h3, section .content-container .filter-section .difficulty h3 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+  }
+  section .content-container .filter-section .skills input, section .content-container .filter-section .difficulty input {
+    margin-right: 0.5em;
+  }
+  section .content-container .filter-section .skills label, section .content-container .filter-section .difficulty label {
+    color: #6243F7;
+    font-size: 1.4rem;
+  }
+  section .content-container .filter-section .subdomain {
+    width: 100%;
+    padding-top: 30px;
+    height: 580px;
+    border-bottom: 1px solid #00ffcb;
+    gap: 10px;
+  }
+  section .content-container .filter-section .subdomain h3 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+  }
+  section .content-container .filter-section .subdomain input {
+    margin-right: 0.5em;
+  }
+  section .content-container .filter-section .subdomain label {
+    color: #6243F7;
+    font-size: 1.4rem;
+  }
 }
 
-/** DESKTOP *//*# sourceMappingURL=detailView.css.map */
+/** DESKTOP *//*# sourceMappingURL=detailViewChallange.css.map */

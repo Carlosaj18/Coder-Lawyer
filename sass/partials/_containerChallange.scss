@@ -1,0 +1,192 @@
+
+
+.containerCardsServices {
+
+    grid-area: containerCardsServices;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 1rem;;
+
+    .containerCursos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0em auto;
+        padding: 20px;
+        flex: 0 0 auto;
+        width: 100%;
+
+        .cardCurso {
+            background-color: $colorBackgroundCardService;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2em 2em;
+            height: fit-content;
+            width: 100%;
+            margin: 1em;
+            box-sizing: border-box;
+            border: $colorCardBorder;
+
+            div {
+                .nombreCurso {
+                    font-size: $sizeNameService;
+                    font-weight: $fontWeightService;
+                    color: $colorTextSeverices;
+                    border-bottom: $borderBottomService;
+                    margin-bottom: 0.5em;
+                    width: 100%;
+                    height: auto;
+                }
+                .sub {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    color: $colorTextSeverices;
+                    display: flex;
+                }
+                .precioCurso {
+                    color: $colorTextSeverices;
+                    font-size: $sizePrecioService;
+                    font-weight: $fontWeightService;
+                    text-align: center;
+                    margin-top: 1em;
+                    border: $borderPrecioService;
+                    padding: 0.3em;
+                    border-radius: 5px;
+                    display: none;
+                }
+                .precioCurso:hover {
+                    background-color: $colorPrecioBackgroundHover;
+                    color: $colorPrecioHover;
+                }
+         
+            }
+
+            .btn.verCurso {
+                background-color: $backgroundColorButton;
+                font-size: $sizeVerService;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: #212121;
+                padding: 0.5em 1em;
+                width: 100%;
+                border-radius: 5px;
+                margin-top: 1em;
+                .reservar {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+            
+            .btn.verCurso:hover .reservar {
+                color:$colorTextSeverices;
+            }
+        }
+
+        .cardCurso:hover {
+            border: $colorServiceHover;
+            background-color: $colorTransitionService;
+          }
+        .cardCurso:hover .precioCurso {
+            display: flex;
+        }
+    }
+
+    @media screen and (min-width: 600px) {
+
+        & {
+            flex-wrap: wrap;
+            flex-direction: row;
+            padding: 15px;
+            justify-content: space-around;
+            scroll-behavior: smooth;
+            gap: 25px;
+        
+            .containerCursos {
+                flex: 0 0 auto;
+        
+                .cardCurso {
+                    
+                    div {
+                        .nombreCurso {
+                            font-size: $sizeSubtitleMediaQ600;
+  
+                        }
+                        .sub {
+                            width: 100%;
+
+                        }
+                        .precioCurso {
+                            font-size: $sizeParaMediaQ600;
+                          
+                        }                 
+                    }
+        
+                    .btn.verCurso {
+                        font-size: $sizeParaMediaQ600;
+        
+                        .reservar {
+                            text-decoration: none;
+                            color: black;
+                        }
+                    }
+                    
+                }
+        
+            }
+        }
+    
+    }
+    
+    @media screen and (min-width : 1024px){ 
+
+        & {
+        
+            .containerCursos {
+                justify-content: start;
+
+                .cardCurso {
+                    width: 100%;
+                    
+                    div {
+                        .nombreCurso {
+                            font-size: $sizeSubtitleMediaQ1024;
+  
+                        }
+                        .sub {
+                            width: 100%;
+
+                        }
+                        .precioCurso {
+                            font-size: $sizeParaMediaQ1024;
+                    
+                            
+                        }                 
+                    }
+        
+                    .btn.verCurso {
+                        font-size: $sizeParaMediaQ600;
+        
+                        .reservar {
+                            text-decoration: none;
+                            color: black;
+                        }
+                    }
+                    
+                }
+        
+            }
+        }
+          
+    }
+}
+
+
+
+
+  
