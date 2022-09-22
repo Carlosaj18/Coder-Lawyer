@@ -1,86 +1,1064 @@
-
-
-.backGround {
-    width: 100%;
-    height: 60vh;
-    margin: 0em 0em 0em 0em;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center top;
-    position: relative;
+/** SCSS - GENERALS */ /** ------ INDEX ------ */
+/** Backgorund */
+/** Size */
+/** Size header*/
+/** size card teachers & students */
+/** size students */
+/** size form */
+/** size button */
+/** Weight */
+/** Color */
+/** color card teachers & students */
+/** Color numbers */
+/** color services */
+/** color form */
+/** $media screen and (min-width: 600px) */
+/** @media screen and (min-width : 1024px) */
+/** ------ SECTION SERVICES ------ */
+/** size services */
+/** 300*2*/
+/** $media screen and (min-width: 600px) */
+/** @media screen and (min-width : 1024px) */
+/** ------ SECTION SERVICES DETAIL ------ */
+/** ------ SECTION TEACHERS ------ */
+/** ------ SECTION COMMUUNITY ------ */
+/** ------ SECTION MY COURSES ------ */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*font-size: $sizePharagrap;*/
+}
+* p {
+  color: #ffffff;
 }
 
-.title {
-    grid-area: title;
-    font-size: 2rem;
-    font-weight: 500;
-    text-transform: capitalize;
-    color: #000000;
-    margin-bottom: 0.5em;
-    text-align: center;
-   }
+body {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+body main {
+  width: 100%;
+  height: 100%;
+}
+body main section {
+  width: 100%;
+  height: 100%;
+}
 
-   .title p {
-    padding: 1em
-   }
+.containerBody {
+  background-color: #212121;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
 
-   .containerProgress {
-    grid-area: containerProgress;
-    background-color: #000000;
-    width: 180;
-    height: 180px;
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+.carousel {
+  background-color: #212121;
+  max-width: 100%;
+  /*max-width: $ancho/2; */ /* Ancho de 360*/
+}
+
+/** SCSS - PARTIALS */
+/* ------ HEADER ----- */
+header {
+  padding: 0px;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: auto;
+  background: #212121;
+}
+header .navBar {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: auto;
+  background: #212121;
+  /* ------ containerLeft ----- */
+  /* ------ containerRight ----- */
+  /* ------ buttonResponsive ----- */
+}
+header .navBar .containerLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+header .navBar .containerLeft .logo {
+  margin-top: 1em;
+}
+header .navBar .containerLeft .logo img {
+  width: 8em;
+  border-radius: 50%;
+}
+header .navBar .containerLeft .search {
+  display: none;
+  width: 60%;
+  margin-right: 10px;
+}
+header .navBar .containerLeft .search i {
+  position: absolute;
+  z-index: 22222;
+  margin-top: 6px;
+  margin-left: 10px;
+}
+header .navBar .containerLeft .search input {
+  width: 100%;
+  position: relative;
+  padding: 0.5em 1em;
+  border-radius: 50px;
+  border: none;
+  -webkit-padding-start: 40px;
+          padding-inline-start: 40px;
+  font-size: 13px;
+}
+header .navBar .containerLeft .search input::-moz-placeholder {
+  padding-inline-start: 0px;
+}
+header .navBar .containerLeft .search input:-ms-input-placeholder {
+  padding-inline-start: 0px;
+}
+header .navBar .containerLeft .search input::placeholder {
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+}
+header .navBar .containerLeft .search .input:focus {
+  outline: 2px solid #00ffcb;
+}
+header .navBar .containerRight {
+  display: flex;
+  direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding: 13px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+header .navBar .containerRight .buttonsIcons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1rem;
+  background-color: transparent;
+  /* ------ subMenu ----- */
+}
+header .navBar .containerRight .buttonsIcons button i {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+header .navBar .containerRight .buttonsIcons button i.fa-user-circle {
+  font-size: 4rem;
+  margin: 0.2em;
+  color: #fff;
+}
+header .navBar .containerRight .buttonsIcons .dropDown {
+  position: relative;
+}
+header .navBar .containerRight .buttonsIcons .dropDown .dropbtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+header .navBar .containerRight .buttonsIcons .dropDown .dropbtn i {
+  background-color: transparent;
+  color: #00ffcb;
+}
+header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #212121;
+  color: #fff;
+  width: 250px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.475);
+  z-index: 1;
+  right: -47px;
+  border-radius: 25px;
+  padding: 1em 1em;
+  border: 1px solid #00ffcb;
+}
+header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .dropHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1em 0em;
+  border-bottom: 1px solid #00ffcb;
+}
+header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .dropHeader i {
+  font-size: 3.5rem;
+  padding-left: 1rem;
+  background-color: transparent;
+  color: #00ffcb;
+}
+header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .dropHeader h4 {
+  margin-left: 0, 5em;
+  font-size: 1.5rem;
+  color: #00ffcb;
+  text-align: center;
+}
+header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content {
+  list-style: none;
+  border-bottom: 1px solid #00ffcb;
+}
+header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList {
+  padding: 0.5em 0.1em;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList a {
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #fff;
+}
+header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList a:after {
+  content: "";
+  display: block;
+  height: 1.5px;
+  background: #00ffcb;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  margin-top: 5px;
+  opacity: 0.5;
+}
+header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList a:hover:after {
+  transform: scaleX(1);
+  transition: transform 0.3s;
+  height: 1.5px;
+  opacity: 1;
+}
+header .navBar .containerRight .buttonsIcons .dropDown #subMenuGuest {
+  display: none;
+}
+header .navBar .containerRight .buttonsIcons .dropDown:hover .dropdownContent {
+  display: block;
+}
+header .navBar .buttonResponsive {
+  color: white;
+  font-size: 2.5rem;
+  /* ------ containerLinks ----- */
+}
+header .navBar .buttonResponsive i {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 13px;
+}
+header .navBar .buttonResponsive .containerLinks {
+  display: none;
+}
+header .navBar .buttonResponsive .containerLinks .navList {
+  display: none;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+header .navBar .buttonResponsive .containerLinks .navList .navItem {
+  padding: 0.5em 0.5em;
+}
+header .navBar .buttonResponsive .containerLinks .navList .navItem a {
+  border: transparent;
+  text-decoration: none;
+}
+header .navBar .buttonResponsive .containerLinks .navList .navItem:after {
+  content: "";
+  display: block;
+  height: 1.5px;
+  background: #00ffcb;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  margin-top: 5px;
+  opacity: 0.5;
+}
+header .navBar .buttonResponsive .containerLinks .navList .navItem:hover:after {
+  transform: scaleX(1);
+  transition: transform 0.3s;
+  height: 1.5px;
+  opacity: 1;
+}
+header .navBar .buttonResponsive .containerLinks .navList .navItem .border {
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #ffffff;
+  width: 100%;
+}
+header .navBar .buttonResponsive:hover .containerLinks {
+  display: flex;
+}
+header .navBar .buttonResponsive:hover {
+  color: #00ffcb;
+}
+@media screen and (min-width: 670px) {
+  header .navBar {
+    /* ------ containerRight ----- */
+    /* ------ buttonResponsive ----- */
+  }
+  header .navBar .containerLeft {
+    justify-content: start;
+  }
+  header .navBar .containerLeft .logo img {
+    width: 10em;
+    border-radius: 50%;
+  }
+  header .navBar .containerLeft .search {
+    display: block;
+    width: 60%;
+    margin-left: 15px;
+  }
+  header .navBar .containerLeft .search input {
+    width: 70%;
+  }
+  header .navBar .containerRight .buttonsIcons button i.fa-user-circle {
+    font-size: 4.2rem;
+  }
+  header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList {
+    font-size: 1.3rem;
+  }
+  header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList a {
+    font-size: 1.3rem;
+  }
+  header .navBar .containerRight .buttonsIcons i {
+    font-size: 1.3rem;
+  }
+  header .navBar .buttonResponsive {
+    font-size: 2.7rem;
+    /* ------ containerLinks ----- */
+  }
+  header .navBar .buttonResponsive .containerLinks .navList .navItem .border {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .navBar {
+    /* ------ containerRight ----- */
+    /* ------ buttonResponsive ----- */
+  }
+  header .navBar .containerLeft {
+    justify-content: space-between;
+    width: 40%;
+  }
+  header .navBar .containerLeft .logo img {
+    width: 10em;
+    border-radius: 50%;
+    margin-bottom: 1em;
+  }
+  header .navBar .containerLeft .search {
+    display: block;
+    margin-left: 20px;
+  }
+  header .navBar .containerLeft .search input {
+    width: 100%;
+  }
+  header .navBar .containerRight {
+    padding: 12px;
+    top: 12px;
+    right: 11px;
+  }
+  header .navBar .containerRight .buttonsIcons {
+    position: absolute;
+    top: 1;
+    right: 1;
+  }
+  header .navBar .containerRight .buttonsIcons button i.fa-user-circle {
+    font-size: sizeIconProfileQ1024;
+  }
+  header .navBar .containerRight .buttonsIcons button i {
+    font-size: 1.4rem;
+  }
+  header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent {
+    width: 300px;
+  }
+  header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList {
+    font-size: 1.2rem;
+  }
+  header .navBar .containerRight .buttonsIcons .dropDown .dropdownContent .content .navList a {
+    font-size: 1.2rem;
+  }
+  header .navBar .buttonResponsive {
+    font-size: 30px;
+  }
+  header .navBar .buttonResponsive i {
+    display: none;
+  }
+  header .navBar .buttonResponsive .containerLinks {
+    width: auto;
+    position: absolute;
+    top: 14px;
+    right: 200px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: row;
     align-items: center;
-    border-radius: 10px;
-    padding: 10px;
-    border: 2px solid #00FFCB;
-   }
+  }
+  header .navBar .buttonResponsive .containerLinks .navList {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+  }
+  header .navBar .buttonResponsive .containerLinks .navList .navItem {
+    padding: 1em 0.5em;
+  }
+  header .navBar .buttonResponsive .containerLinks .navList .navItem a {
+    border: transparent;
+    text-decoration: none;
+  }
+  header .navBar .buttonResponsive .containerLinks .navList .navItem:after {
+    content: "";
+    display: block;
+    height: 1.5px;
+    background: #00ffcb;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+    margin-top: 5px;
+    opacity: 0.5;
+  }
+  header .navBar .buttonResponsive .containerLinks .navList .navItem:hover:after {
+    transform: scaleX(1);
+    transition: transform 0.3s;
+    height: 1.5px;
+    opacity: 1;
+  }
+  header .navBar .buttonResponsive .containerLinks .navList .navItem .border {
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 300;
+    color: #fff;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header .navBar .containerRight {
+    top: 12px;
+    right: 30px;
+  }
+  header .navBar .buttonResponsive {
+    font-size: 30px;
+  }
+  header .navBar .buttonResponsive .containerLinks {
+    top: 16px;
+    right: 261px;
+  }
+}
 
-   .subtitle {
-    color: #00FFCB;
-   }
+footer {
+  background-color: #212121;
+  height: 120px;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer {
+  color: #00ffcb;
+  font-size: 1rem;
+  font-weight: 300;
+}
+footer .footer p {
+  display: inline-block;
+}
+footer .footer ul {
+  list-style: none;
+}
+footer .footer ul li {
+  display: inline-block;
+}
+footer .footer ul li a {
+  text-decoration: none;
+  color: #00ffcb;
+}
+footer .redesFooter {
+  grid-area: redesFooter;
+}
+footer .redesFooter a {
+  text-decoration: none;
+  color: #00ffcb;
+  font-size: 1rem;
+  margin-right: 0.5em;
+}
 
-   .kit {
-    color: #00FFCB;
-   }
+/* ------ section Search ----- */
+.containerSearchBar {
+  height: 85vh !important;
+}
 
-   .element {
-    color: #00FFCB;
-   }
-
-   .descriptionProgress {
-    color: #00FFCB;
-    text-align: center;
-   }
-
-   .buttonProgress button {
-    background-color: #212121;
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    color: #00FFCB;
-    text-transform: uppercase;
-    padding: 0.5em 0.5em;
-    border-radius: 10px;
-   }
-
-   .backGround {
+.containerSearchBar {
+  width: 100%;
+  height: 70vh;
+  margin: 0em 0em 0em 0em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 130px 40px;
+  grid-template-areas: "title" "searchBar1" "categories";
+  justify-items: center;
+  gap: 40px;
+}
+.containerSearchBar .titleHeader {
+  grid-area: title;
+  margin-top: 16em;
+}
+.containerSearchBar .titleHeader p {
+  font-size: 3rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #ffffff;
+  margin-top: 1.5em;
+  margin-bottom: 3.5em;
+  text-align: center;
+}
+.containerSearchBar .searchBar1 {
+  grid-area: searchBar1;
+  width: 70%;
+  height: 10px;
+  margin-top: 18em;
+}
+.containerSearchBar .searchBar1 i {
+  position: absolute;
+  z-index: 22222;
+  margin-top: 12px;
+  margin-left: 13px;
+}
+.containerSearchBar .searchBar1 input {
+  width: 100%;
+  position: relative;
+  padding: 0.5em 1em;
+  border-radius: 50px;
+  border: none;
+  -webkit-padding-start: 40px;
+          padding-inline-start: 40px;
+  font-size: 1rem;
+}
+.containerSearchBar .searchBar1 input::-moz-placeholder {
+  padding-inline-start: 0px;
+  font-size: 1rem;
+}
+.containerSearchBar .searchBar1 input:-ms-input-placeholder {
+  padding-inline-start: 0px;
+  font-size: 1rem;
+}
+.containerSearchBar .searchBar1 input::placeholder {
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+  font-size: 1rem;
+}
+.containerSearchBar .searchBar1 input:focus {
+  outline: 2px solid #00ffcb;
+}
+.containerSearchBar .categories {
+  grid-area: categories;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50px 50px 50px;
+  grid-template-areas: "sections1" "sections2" "sections3";
+  justify-items: center;
+  gap: 10px;
+  margin-top: 20em;
+}
+.containerSearchBar .categories .sections1 {
+  grid-area: sections1;
+  border: 2px solid #6243F7;
+  border-radius: 10px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+.containerSearchBar .categories .sections1:hover {
+  border: 2px solid #00ffcb;
+}
+.containerSearchBar .categories .sections2 {
+  grid-area: sections2;
+  border: 2px solid #6243F7;
+  border-radius: 10px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+.containerSearchBar .categories .sections2:hover {
+  border: 2px solid #00ffcb;
+}
+.containerSearchBar .categories .sections3 {
+  grid-area: sections3;
+  border: 2px solid #6243F7;
+  border-radius: 10px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+.containerSearchBar .categories .sections3:hover {
+  border: 2px solid #00ffcb;
+}
+@media screen and (min-width: 799px) {
+  .containerSearchBar {
+    width: 100%;
+    height: 70vh;
+    gap: 60px;
+  }
+  .containerSearchBar .titleHeader p {
+    font-size: 3.7rem;
+  }
+  .containerSearchBar .searchBar1 {
+    grid-area: searchBar1;
+    width: 70%;
+    height: 10px;
+    margin-top: 18em;
+  }
+  .containerSearchBar .searchBar1 i {
+    position: absolute;
+    z-index: 22222;
+    margin-top: 9px;
+    margin-left: 10px;
+    font-size: 1.5em;
+  }
+  .containerSearchBar .searchBar1 input {
+    width: 100%;
+    position: relative;
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    border: none;
+    -webkit-padding-start: 40px;
+            padding-inline-start: 40px;
+    font-size: 1rem;
+    height: 40px;
+  }
+  .containerSearchBar .searchBar1 input::-moz-placeholder {
+    width: 100%;
+    position: relative;
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    border: none;
+    padding-inline-start: 40px;
+    font-size: 1rem;
+  }
+  .containerSearchBar .searchBar1 input:-ms-input-placeholder {
+    width: 100%;
+    position: relative;
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    border: none;
+    padding-inline-start: 40px;
+    font-size: 1rem;
+  }
+  .containerSearchBar .searchBar1 input::placeholder {
+    width: 100%;
+    position: relative;
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    border: none;
+    -webkit-padding-start: 40px;
+            padding-inline-start: 40px;
+    font-size: 1rem;
+  }
+  .containerSearchBar .searchBar1 input:focus {
+    outline: 2px solid #00ffcb;
+  }
+  .containerSearchBar .categories {
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 130px 40px;
-    grid-template-areas: 
-      "title"
-      "containerProgress"
-    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px;
+    grid-template-areas: "sections1 sections2 sections3";
     justify-items: center;
     gap: 10px;
-   }
+  }
+  .containerSearchBar .categories .sections1 {
+    font-size: 1.4rem;
+    padding: 6px;
+  }
+  .containerSearchBar .categories .sections2 {
+    font-size: 1.4rem;
+    padding: 6px;
+  }
+  .containerSearchBar .categories .sections3 {
+    font-size: 1.4rem;
+    padding: 6px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .containerSearchBar {
+    width: 100%;
+    height: 80vh;
+    gap: 110px;
+    margin-bottom: 60px;
+  }
+  .containerSearchBar .titleHeader p {
+    font-size: 4rem;
+  }
+  .containerSearchBar .searchBar1 {
+    grid-area: searchBar1;
+    width: 60%;
+    height: 10px;
+  }
+  .containerSearchBar .searchBar1 i {
+    position: absolute;
+    z-index: 22222;
+    margin-top: 9px;
+    margin-left: 10px;
+    font-size: 2.5em;
+  }
+  .containerSearchBar .searchBar1 input {
+    width: 100%;
+    position: relative;
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    border: none;
+    -webkit-padding-start: 60px;
+            padding-inline-start: 60px;
+    font-size: 1.2rem;
+    height: 60px;
+  }
+  .containerSearchBar .searchBar1 input::-moz-placeholder {
+    width: 100%;
+    position: relative;
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    border: none;
+    padding-inline-start: 100px;
+    font-size: 1.2rem;
+  }
+  .containerSearchBar .searchBar1 input:-ms-input-placeholder {
+    width: 100%;
+    position: relative;
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    border: none;
+    padding-inline-start: 100px;
+    font-size: 1.2rem;
+  }
+  .containerSearchBar .searchBar1 input::placeholder {
+    width: 100%;
+    position: relative;
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    border: none;
+    -webkit-padding-start: 100px;
+            padding-inline-start: 100px;
+    font-size: 1.2rem;
+  }
+  .containerSearchBar .searchBar1 input:focus {
+    outline: 4px solid #00ffcb;
+  }
+  .containerSearchBar .categories .sections1 {
+    font-size: 1.6rem;
+    padding: 5px;
+  }
+  .containerSearchBar .categories .sections2 {
+    font-size: 1.6rem;
+    padding: 5px;
+  }
+  .containerSearchBar .categories .sections3 {
+    font-size: 1.6rem;
+    padding: 5px;
+  }
+}
 
-   a {
+/* ------ section title & progress----- */
+/* TODO*/
+/* ------ section challanges by topic----- */
+.containerServices {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "category" "nameCourses" "containerCardsServices";
+  justify-items: start;
+  height: auto;
+}
+.containerServices .categoryFirst h2 {
+  font-size: 2rem;
+  color: #6243F7;
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+  padding: 0.5em 0.5em;
+}
+.containerServices .category {
+  grid-area: category;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.containerServices .category h2 {
+  font-size: 2rem;
+  color: #6243F7;
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+  padding: 0.5em 0.5em;
+}
+.containerServices .nameCourses {
+  grid-area: nameCourses;
+  color: #ffffff;
+  text-align: start;
+}
+.containerServices .nameCourses .navListService {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2.7em;
+  list-style: circle;
+}
+.containerServices .nameCourses .navListService .navItem {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.containerServices .containerCardsServices {
+  grid-area: containerCardsServices;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 1rem;
+}
+.containerServices .containerCardsServices .containerCursos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0em auto;
+  padding: 20px;
+  flex: 0 0 auto;
+}
+.containerServices .containerCardsServices .containerCursos .cardCurso {
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 2em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 300px;
+  margin: 1em;
+  box-sizing: border-box;
+  border: 2px solid #6243F7;
+}
+.containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  border-bottom: 1.5px solid #6243F7;
+  margin-bottom: 0.5em;
+  width: 100%;
+  height: auto;
+}
+.containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+  display: flex;
+}
+.containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1em;
+  border: 1px solid #6243F7;
+  padding: 0.3em;
+  border-radius: 5px;
+  display: none;
+}
+.containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso:hover {
+  background-color: #00FFCB;
+  color: black;
+}
+.containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
+  background-color: #6243F7;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #212121;
+  padding: 0.5em 1em;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 1em;
+}
+.containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
+  text-decoration: none;
+  color: black;
+}
+.containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso:hover .reservar {
+  color: #ffffff;
+}
+.containerServices .containerCardsServices .containerCursos .cardCurso:hover {
+  border: 2px solid #00ffcb;
+  background-color: #212121;
+}
+.containerServices .containerCardsServices .containerCursos .cardCurso:hover .precioCurso {
+  display: flex;
+}
+@media screen and (min-width: 600px) {
+  .containerServices .containerCardsServices {
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 15px;
+    justify-content: space-around;
+    scroll-behavior: smooth;
+    gap: 25px;
+  }
+  .containerServices .containerCardsServices .containerCursos {
+    flex: 0 0 auto;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso {
+    width: 350px;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
+    font-size: 2.2rem;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
+    width: 100%;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
+    font-size: 1.2rem;
+    display: flex;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
+    font-size: 1.2rem;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
     text-decoration: none;
-   }
+    color: black;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .containerServices .containerCardsServices .containerCursos .cardCurso {
+    width: 350px;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso {
+    font-size: 2.5rem;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
+    width: 100%;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso {
+    font-size: 1.4rem;
+    display: flex;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
+    font-size: 1.2rem;
+  }
+  .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .reservar {
+    text-decoration: none;
+    color: black;
+  }
+}
+.containerServices .containerCardsServices .container {
+  margin-left: 2em;
+}
+.containerServices .containerCardsServices .container .progress {
+  --bs-progress-bar-bg: #6243F7;
+  --bs-progress-bg: #050505;
+  background-color: black;
+  width: 80%;
+}
+.containerServices .containerCardsServices .container:hover {
+  --bs-progress-bar-bg: #00ffcb;
+}
+.containerServices .nameCourses .navItem:after {
+  content: "";
+  display: block;
+  height: 1.5px;
+  background: #00ffcb;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  margin-top: 5px;
+  opacity: 0.5;
+}
+.containerServices .nameCourses .navItem:hover:after {
+  transform: scaleX(1);
+  transition: transform 0.3s;
+  height: 1.5px;
+  opacity: 1;
+}
+@media screen and (min-width: 600px) {
+  .containerServices .categoryFirst h2 {
+    font-size: 2.2rem;
+  }
+  .containerServices .category h2 {
+    font-size: 2.2rem;
+  }
+  .containerServices .nameCourses .navListService {
+    flex-direction: row;
+    margin-left: 3.5em;
+    list-style: none;
+    gap: 1.2em;
+  }
+  .containerServices .nameCourses .navListService .navItem {
+    font-size: 1.4rem;
+  }
+  .containerServices .containerCardsServices .container {
+    margin-left: 8em;
+  }
+  .containerServices .containerCardsServices .container .progress {
+    --bs-progress-bar-bg: #6243F7;
+    --bs-progress-bg: #050505;
+    background-color: black;
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .containerServices .categoryFirst h2 {
+    font-size: 2.5rem;
+  }
+  .containerServices .category h2 {
+    font-size: 2.5rem;
+  }
+  .containerServices .nameCourses .navListService .navItem {
+    font-size: 1.6rem;
+  }
+  .containerServices .containerCardsServices {
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 15px;
+    justify-content: space-around;
+    scroll-behavior: smooth;
+    gap: 25px;
+    width: 80%;
+  }
+  .containerServices .containerCardsServices .containerCursos {
+    margin: 0em 5em;
+  }
+  .containerServices .containerCardsServices .container {
+    margin-left: 10em;
+  }
+  .containerServices .containerCardsServices .container .progress {
+    --bs-progress-bar-bg: #6243F7;
+    --bs-progress-bg: #050505;
+    --bs-progress-width: 100%;
+    background-color: black;
+    width: 80%;
+  }
+}/*# sourceMappingURL=myChallanges.css.map */

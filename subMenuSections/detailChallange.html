@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SubMenu - My Courses</title>
+    <title>NavBar - Teachers</title>
     <script
       src="https://kit.fontawesome.com/3964fc737d.js"
       crossorigin="anonymous"
@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/myCoursesTemplate.css" />
+    <link rel="stylesheet" href="../css/detailView.css" />
   </head>
   <body>
     <header id="topHeader">
@@ -138,134 +138,93 @@
       </nav>
     </header>
     <main class="containerBody">
-      <!-- section title -->
+      <!-- section Detail Teacher -->
       <section>
-        <div class="containerSearchBar">
-          <div class="titleHeader">
-            <p>My Courses</p>
+        <div class="flexBody">
+          <div class="image">
+            <img src="../images/legaltech.jpg" alt="profe" class="avatar" />
           </div>
-          <div class="searchBar1">
-            <i class="fas fa-search"></i>
-            <input
-              class="input"
-              type="search"
-              name="buscar"
-              placeholder="How can we help?"
-            />
-          </div>
-          <div class="categories">
-            <div class="sections1">Enrolled</div>
-            <div class="sections2">Upcoming</div>
-            <div class="sections3">Finished</div>
+          <div>
+            <h3>Legal Tech</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+              ipsum debitis autem accusamus dolore omnis sint eveniet iure
+              dignissimos veniam? Praesentium dolorem nisi corporis earum atque
+              velit unde iusto tempore.
+            </p>
           </div>
         </div>
-      </section>
-      <!-- section courses -->
-      <section class="mainSection">
-        <div class="category">
-          <h2 class="categoryTitle">NLP</h2>
-        </div>
-        <div class="containerService">
-          <div class="containerCardsServices">
-            <div class="containerCursos">
-              <div class="cardCurso">
-                <div style="width: 100%">
-                  <p class="nombreCurso">Legal Tech</p>
-                  <div class="sub">
-                    <p class="diasCurso">Lunes, Miércoles</p>
-                    <p class="diasCurso">18:00 pm</p>
+        <p class="misCursos">Related Courses</p>
+        <div id="sectionServicios" class="detailsTeacher" onload="reset()">
+          <div class="containerServices">
+            <div class="containerCardsServices">
+              <div class="containerCursos">
+                <div class="cardCurso">
+                  <div style="width: 100%">
+                    <p class="nombreCurso">Legal Tech</p>
+                    <div class="sub">
+                      <p class="diasCurso">Lunes, Miércoles</p>
+                      <p class="diasCurso">18:00 pm</p>
+                    </div>
+                    <p class="precioCurso">$2400 por hora</p>
                   </div>
-                  <p class="precioCurso">$2400 por hora</p>
+                  <button class="btn verCurso">
+                    <a
+                      href="../navBarSections/detailServices.html"
+                      id="myBtn"
+                      class="reservar"
+                      >See Course</a
+                    >
+                  </button>
                 </div>
-                <button class="btn verCurso">
-                  <a
-                    href="../navBarSections/detailServices.html"
-                    id="myBtn"
-                    class="reservar"
-                    >See Course</a
-                  >
-                </button>
               </div>
-            </div>
-            <div class="containerCursos">
-              <div class="cardCurso">
-                <div style="width: 100%">
-                  <p class="nombreCurso">Legal Tech</p>
-                  <div class="sub">
-                    <p class="diasCurso">Lunes, Miércoles</p>
-                    <p class="diasCurso">18:00 pm</p>
+              <div class="containerCursos">
+                <div class="cardCurso">
+                  <div style="width: 100%">
+                    <p class="nombreCurso">Legal Tech</p>
+                    <div class="sub">
+                      <p class="diasCurso">Lunes, Miércoles</p>
+                      <p class="diasCurso">18:00 pm</p>
+                    </div>
+                    <p class="precioCurso">$2400 por hora</p>
                   </div>
-                  <p class="precioCurso">$2400 por hora</p>
+                  <button class="btn verCurso">
+                    <a
+                      href="../navBarSections/detailServices.html"
+                      id="myBtn"
+                      class="reservar"
+                      >See Course</a
+                    >
+                  </button>
                 </div>
-                <button class="btn verCurso">
-                  <a
-                    href="../navBarSections/detailServices.html"
-                    id="myBtn"
-                    class="reservar"
-                    >See Course</a
-                  >
-                </button>
               </div>
-            </div>
-            <div class="containerCursos">
-              <div class="cardCurso">
-                <div style="width: 100%">
-                  <p class="nombreCurso">Legal Tech</p>
-                  <div class="sub">
-                    <p class="diasCurso">Lunes, Miércoles</p>
-                    <p class="diasCurso">18:00 pm</p>
+              <div class="containerCursos">
+                <div class="cardCurso">
+                  <div style="width: 100%">
+                    <p class="nombreCurso">Legal Tech</p>
+                    <div class="sub">
+                      <p class="diasCurso">Lunes, Miércoles</p>
+                      <p class="diasCurso">18:00 pm</p>
+                    </div>
+                    <p class="precioCurso">$2400 por hora</p>
                   </div>
-                  <p class="precioCurso">$2400 por hora</p>
+                  <button class="btn verCurso">
+                    <a
+                      href="../navBarSections/detailServices.html"
+                      id="myBtn"
+                      class="reservar"
+                      >See Course</a
+                    >
+                  </button>
                 </div>
-                <button class="btn verCurso">
-                  <a
-                    href="../navBarSections/detailServices.html"
-                    id="myBtn"
-                    class="reservar"
-                    >See Course</a
-                  >
-                </button>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- section teacher by course -->
-      <section class="sectionBkg">
-        <div class="containerProfes">
-          <div class="contenedorImg">
-            <div class="borde">
-              <div class="hovereffect">
-                <div class="start">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-                <img
-                  class="img-responsive"
-                  src="../images/profeDos.png"
-                  alt="nombre Profesor"
-                />
-                <div class="overlay">
-                  <a
-                    href="../navBarSections/detailTeachers.html"
-                    id="myBtn"
-                    class="reservar"
-                    >Conocer</a
-                  >
-                </div>
-              </div>
-            </div>
-            <p class="nombre">Carlos Jaramillo</p>
+          <div class="buttonInfo">
+            <button class="button" type="submit">
+              <a href="#">See More</a>
+            </button>
           </div>
-        </div>
-        <div class="infoTeacher">
-          <div class="subInfo">Days: Martes y Jueves</div>
-          <div class="subInfo">Time: 19:00 a 20:30hs</div>
-          <div class="subInfo">Platform: Zoom</div>
-          <div class="subInfo">Type: Law Course</div>
         </div>
       </section>
     </main>

@@ -41,21 +41,7 @@
         }
     }
 
-    .containerProfes {
-        grid-area: containerProfes;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 2em;
-        width: 100vw;
-        margin: 1em auto 1em;
-        padding: 0em 1em 0em;
-
-        @import "./partials/containerImagePhoto";
-        
-        
-    }
+    @import "./partials/containerImagePhoto";
 
     @import "./partials/button";
 

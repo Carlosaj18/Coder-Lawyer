@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/myCourses.css" />
+    <link rel="stylesheet" href="../css/myCoursesTemplate.css" />
   </head>
   <body>
     <header id="topHeader">
@@ -137,28 +137,34 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main class="containerBody">
+      <!-- section title -->
       <!-- section title -->
       <section>
         <div class="containerSearchBar">
-          <div class="title">
+          <div class="titleHeader">
             <p>My Schools</p>
           </div>
-          <div class="searchBar">
+          <div class="searchBar1">
             <i class="fas fa-search"></i>
             <input
               class="input"
               type="search"
               name="buscar"
-              placeholder="Search by Course"
+              placeholder="How can we help?"
             />
+          </div>
+          <div class="categories">
+            <div class="sections1">Enrolled</div>
+            <div class="sections2">Upcoming</div>
+            <div class="sections3">Finished</div>
           </div>
         </div>
       </section>
-      <!-- section courses -->
+      <!-- section schools -->
       <section class="mainSection">
         <div class="category">
-          <h2 class="categoryTitle">NLP</h2>
+          <h2 class="categoryTitle">Big Data for Law</h2>
         </div>
         <div class="containerService">
           <div class="containerCardsServices">
@@ -225,44 +231,42 @@
           </div>
         </div>
       </section>
-      <!-- section teacher by course -->
-      <section>
-        <div class="backGround">
-          <div class="containerProfes">
-            <div class="contenedorImg">
-              <div class="borde">
-                <div class="hovereffect">
-                  <div class="start">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                  </div>
-                  <img
-                    class="img-responsive"
-                    src="../images/profeDos.png"
-                    alt="nombre Profesor"
-                  />
-                  <div class="overlay">
-                    <a
-                      href="../navBarSections/detailTeachers.html"
-                      id="myBtn"
-                      class="reservar"
-                      >Conocer</a
-                    >
-                  </div>
+      <!-- section teacher by school -->
+      <section class="sectionBkg">
+        <div class="containerProfes">
+          <div class="contenedorImg">
+            <div class="borde">
+              <div class="hovereffect">
+                <div class="start">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <img
+                  class="img-responsive"
+                  src="../images/profeDos.png"
+                  alt="nombre Profesor"
+                />
+                <div class="overlay">
+                  <a
+                    href="../navBarSections/detailTeachers.html"
+                    id="myBtn"
+                    class="reservar"
+                    >Conocer</a
+                  >
                 </div>
               </div>
-              <p class="nombre">Carlos Jaramillo</p>
             </div>
+            <p class="nombre">Carlos Jaramillo</p>
           </div>
-          <div class="infoTeacher">
-            <div class="subInfo">Days: Martes y Jueves</div>
-            <div class="subInfo">Time: 19:00 a 20:30hs</div>
-            <div class="subInfo">Platform: Zoom</div>
-            <div class="subInfo">Type: Law Course</div>
-          </div>
+        </div>
+        <div class="infoTeacher">
+          <div class="subInfo">Days: Martes y Jueves</div>
+          <div class="subInfo">Time: 19:00 a 20:30hs</div>
+          <div class="subInfo">Platform: Zoom</div>
+          <div class="subInfo">Type: Law Course</div>
         </div>
       </section>
     </main>

@@ -1,0 +1,125 @@
+ /** SCSS - GENERALS */
+ @import "./partials/variables";
+ @import "./partials/generals";
+ @import "./partials/fuentes";
+ @import "./partials/operaciones";
+ 
+ /** SCSS - PARTIALS */
+ @import "./partials/header.scss";
+ @import  "./partials/footer.scss";
+
+
+  /* ------ section Search ----- */
+  .containerSearchBar {
+    height: 85vh !important;
+  }
+  @import "./partials/containerHeaderBlog";
+
+  /* ------ section courses ----- */
+
+  .mainSection {
+    height: 100%;
+    .category {
+        .categoryTitle {
+            font-size: $sizeTitle;
+            color: $colorTitle;
+            text-align: center;
+        }
+    }
+
+    .containerService {
+        @import "./partials/containerService";
+    }
+
+    @media screen and (min-width: 600px) { 
+        
+        & {
+            .category {
+                .categoryTitle {
+                    font-size: $sizeTitleQ600;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 1024px) { 
+        
+        & {
+            .category {
+                .categoryTitle {
+                    font-size: $sizeTitleQ1024;
+                }
+            }
+        }
+    }
+  }
+
+  /* ------ section teacher by course ----- */
+
+  .sectionBkg {
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+      "containerProfes"
+      "infoTeacher"
+    ;
+    justify-items: center;
+    height: auto;
+
+    .containerProfes {
+        grid-area: containerProfes;
+    }
+    @import "./partials/containerImagePhoto";
+
+    .infoTeacher {
+        grid-area: infoTeacher;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1em;
+
+        .subInfo {
+            background-color: black;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            color: $secundaryColor;
+            font-size: $sizeInfoTeachers;
+        }
+    
+        &:hover .sub{
+            border: $colorServiceHover;
+        }
+    }
+
+    @media screen and (min-width: 600px) {
+
+        .infoTeacher {    
+            .subInfo {
+                font-size: $sizeParaMediaQ600;
+            }
+        }
+
+    }
+
+    @media screen and (min-width: 1024px) {
+
+        & {
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto;
+            grid-template-areas: 
+                "containerProfes infoTeacher";
+            justify-items: center;
+            align-items: center;
+            .infoTeacher {    
+                .subInfo {
+                    font-size: $sizeParaMediaQ1024;
+                }
+            }
+        }
+        
+    }
+
+  }
+  

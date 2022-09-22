@@ -22,6 +22,7 @@
 /** ------ SECTION SERVICES DETAIL ------ */
 /** ------ SECTION TEACHERS ------ */
 /** ------ SECTION COMMUUNITY ------ */
+/** ------ SECTION MY COURSES ------ */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 * {
   margin: 0;
@@ -703,8 +704,9 @@ footer .redesFooter a {
 @media screen and (min-width: 1024px) {
   .containerSearchBar {
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     gap: 110px;
+    margin-bottom: 60px;
   }
   .containerSearchBar .titleHeader p {
     font-size: 4rem;

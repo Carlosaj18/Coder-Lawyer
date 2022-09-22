@@ -1,0 +1,25 @@
+ /** SCSS - GENERALS */
+ @import "./partials/variables";
+ @import "./partials/generals";
+ @import "./partials/fuentes";
+ @import "./partials/operaciones";
+ 
+ /** SCSS - PARTIALS */
+ @import "./partials/header.scss";
+ @import  "./partials/footer.scss";
+
+   /* ------ section Search ----- */
+   .containerSearchBar {
+    height: 85vh !important;
+  }
+   @import "./partials/containerHeaderBlog";
+
+   /* ------ section title & progress----- */
+    /* TODO*/
+
+    /* ------ section challanges by topic----- */
+  @import "./partials/templateContainerServiceHome";
+
+  
+  
+
