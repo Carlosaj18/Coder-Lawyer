@@ -1,0 +1,292 @@
+ /** SCSS - GENERALS */
+ @import "./partials/variables";
+ @import "./partials/generals";
+ @import "./partials/fuentes";
+ @import "./partials/operaciones";
+
+  /** SCSS - PARTIALS */
+ @import "./partials/header";
+ @import  "./partials/footer.scss";
+
+ .container {
+    display: grid;
+    
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "title"
+      "BiilingTable"
+    ;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+    
+
+    .containerTitle {
+        grid-area: title;
+        margin-top: 17em;
+        h1 {
+            font-size: $sizeTitle;
+            color: $colorTitle;
+        }
+    }    
+
+    .containerTable {
+        grid-area: BiilingTable;
+        border: 2px solid #6243F7;
+        overflow-x:auto;
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: auto;
+        border-radius: 15px;   
+
+        .table {
+
+            
+            thead {
+                margin-left: auto;
+                margin-right: auto;
+                
+                .header {
+                    
+                    th {
+                        text-align: center;
+                        padding: 8px;
+                        border: 2px solid #6243F7;
+                        color: black;
+                        background-color: #6243F7;
+                        width: 300px;
+                        
+                    }
+
+                    .border-left {
+                        width: 10%;
+                        border-top-left-radius: 15px;
+                    }
+
+                    .border-right {
+                        width: 30%;
+                        border-top-right-radius: 15px;
+                    }
+                }
+            }
+    
+            tbody {
+              
+                tr {
+                    border-bottom: 1px solid #6243F7;
+                    border-left: 1px solid #6243F7;
+                    th {
+                        text-align: center;
+                        color: $colorParragrap;
+                    }
+                    td {
+                        text-align: center;
+                        padding: 8px;
+                        color: $colorParragrap;
+                        text-align: center;
+                        font-size:$sizePharagrap;
+                    }
+                    .border-botton {
+                        border-bottom: 1px solid #6243F7;
+                        border-right: 1px solid #6243F7;
+                    }
+
+                    .right {
+                        border-right: none !important;
+                    }
+
+                    .border-right {
+                        border-right: 1px solid #6243F7;
+                    }
+
+                }
+                tr:nth-child(even) {
+                    background-color: #212121;
+                }
+            }
+
+            &:hover .header th {
+                background-color: #00FFCB;
+                border: 2px solid #00FFCB;
+            }
+    
+            &:hover tbody .border-botton {
+                border-bottom: 1px solid #00FFCB;
+                border-right: 1px solid #00FFCB;
+            }
+    
+            &:hover tbody .border-right {
+                border-right: 1px solid #00FFCB;
+            }
+        }
+
+        
+
+        &:hover {
+            border: 2px solid #00FFCB;
+        }
+
+        
+    }
+
+    @media screen and (min-width: 600px) {
+
+        & {
+            height: 120vh;
+
+            .containerTitle {
+                h1 {
+                    font-size: $sizeTitleQ600;
+                }
+            }    
+        
+            .containerTable {
+        
+                .table {
+    
+                    thead {
+                        
+                        .header {
+                            
+                            th {
+                                text-align: center;
+                                padding: 8px;
+                                border: 2px solid #6243F7;
+                                color: black;
+                                background-color: #6243F7;
+                                width: 300px;
+                                font-size: $sizeParaMediaQ600;
+                                
+                            }
+    
+                            .width-description {
+                                width: 400px !important;
+                            }
+        
+                            .border-left {
+                                width: 10%;
+                                border-top-left-radius: 15px;
+                            }
+        
+                            .border-right {
+                                width: 30%;
+                                border-top-right-radius: 15px;
+                            }
+                        }
+                    }
+            
+                    tbody {
+                       
+                        tr {
+                            border-bottom: 1px solid #6243F7;
+                            border-left: 1px solid #6243F7;
+                            th {
+                                font-size: 1rem;
+                            }
+                            td {
+                                
+                                font-size: 1rem;
+                            }
+                            .border-botton {
+                                border-bottom: 1px solid #6243F7;
+                                border-right: 1px solid #6243F7;
+                            }
+        
+                            .right {
+                                border-right: none !important;
+                            }
+        
+                            .border-right {
+                                border-right: 1px solid #6243F7;
+                            }
+        
+                        }
+                        tr:nth-child(even) {
+                            background-color: #212121;
+                        }
+                    }
+                }
+            }
+        }
+        
+
+    }
+
+    @media screen and (min-width: 600px) {
+
+        & {
+            height: 120vh;
+
+            .containerTitle {
+                h1 {
+                    font-size: $sizeTitleQ1024;
+                }
+            }    
+        
+            .containerTable {
+        
+                .table {
+    
+                    thead {
+                        
+                        .header {
+                            
+                            th {
+                                font-size: $sizeParaMediaQ1024;
+                                
+                            }
+    
+                            .width-description {
+                                width: 400px !important;
+                            }
+        
+                            .border-left {
+                                width: 10%;
+                                border-top-left-radius: 15px;
+                            }
+        
+                            .border-right {
+                                width: 30%;
+                                border-top-right-radius: 15px;
+                            }
+                        }
+                    }
+            
+                    tbody {
+                       
+                        tr {
+                            border-bottom: 1px solid #6243F7;
+                            border-left: 1px solid #6243F7;
+                            th {
+                                font-size: $sizeParaMediaQ1024;
+                            }
+                            td {
+                                
+                                font-size: $sizeParaMediaQ1024;
+                            }
+                            .border-botton {
+                                border-bottom: 1px solid #6243F7;
+                                border-right: 1px solid #6243F7;
+                            }
+        
+                            .right {
+                                border-right: none !important;
+                            }
+        
+                            .border-right {
+                                border-right: 1px solid #6243F7;
+                            }
+        
+                        }
+                        tr:nth-child(even) {
+                            background-color: #212121;
+                        }
+                    }
+                }
+            }
+        }
+
+        
+
+    }
+ }

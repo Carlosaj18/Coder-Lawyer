@@ -24,6 +24,7 @@
 /** ------ SECTION COMMUUNITY ------ */
 /** ------ SECTION MY COURSES ------ */
 /** ------ SECTION MY CHALLANGE ------ */
+/** ------ SECTION PROFILE ------ */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 * {
   margin: 0;
@@ -613,6 +614,9 @@ section .content-container .detailsChallange .containerServices .containerCardsS
   width: 100%;
   height: auto;
 }
+section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso.solved {
+  border-bottom: 1px solid #00ffcb;
+}
 section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
   width: 100%;
   display: flex;
@@ -631,9 +635,15 @@ section .content-container .detailsChallange .containerServices .containerCardsS
   border-radius: 5px;
   display: none;
 }
+section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso.solved {
+  border: 1px solid #00ffcb;
+}
 section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso:hover {
   background-color: #00FFCB;
   color: black;
+}
+section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso:hover.solved {
+  background-color: #6243F7;
 }
 section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
   background-color: #6243F7;
@@ -650,8 +660,24 @@ section .content-container .detailsChallange .containerServices .containerCardsS
   text-decoration: none;
   color: black;
 }
+section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .solve {
+  background-color: #00ffcb !important;
+}
+section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso.solved {
+  background-color: #00ffcb !important;
+}
+section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso.solved .reservar {
+  text-decoration: none;
+  color: black;
+}
 section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso:hover .reservar {
   color: #ffffff;
+}
+section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso.solved {
+  border: 2px solid #00ffcb !important;
+}
+section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso.solved:hover {
+  border: 2px solid #6243F7 !important;
 }
 section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso:hover {
   border: 2px solid #00ffcb;
@@ -919,6 +945,9 @@ section .content-container .filter-section {
     width: 100%;
     height: auto;
   }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .nombreCurso.solved {
+    border-bottom: 1px solid #00ffcb;
+  }
   section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .sub {
     width: 100%;
     display: flex;
@@ -937,9 +966,15 @@ section .content-container .filter-section {
     border-radius: 5px;
     display: none;
   }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso.solved {
+    border: 1px solid #00ffcb;
+  }
   section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso:hover {
     background-color: #00FFCB;
     color: black;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso div .precioCurso:hover.solved {
+    background-color: #6243F7;
   }
   section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
     background-color: #6243F7;
@@ -956,8 +991,24 @@ section .content-container .filter-section {
     text-decoration: none;
     color: black;
   }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso .solve {
+    background-color: #00ffcb !important;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso.solved {
+    background-color: #00ffcb !important;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso.solved .reservar {
+    text-decoration: none;
+    color: black;
+  }
   section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso:hover .reservar {
     color: #ffffff;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso.solved {
+    border: 2px solid #00ffcb !important;
+  }
+  section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso.solved:hover {
+    border: 2px solid #6243F7 !important;
   }
   section .content-container .detailsChallange .containerServices .containerCardsServices .containerCursos .cardCurso:hover {
     border: 2px solid #00ffcb;

@@ -1,0 +1,380 @@
+ /** SCSS - GENERALS */
+ @import "./partials/variables";
+ @import "./partials/generals";
+ @import "./partials/fuentes";
+ @import "./partials/operaciones";
+
+  /** SCSS - PARTIALS */
+ @import "./partials/header.scss";
+ @import  "./partials/footer.scss";
+
+
+
+ .contenedorConfiguracion {
+    background-color: #212121;
+    height: fit-content;
+    margin: 0em auto;
+    padding: 10% 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .titulo {
+
+        h1 {
+            color: #00FFCB;
+            margin-top: 4em;
+            font-size: $sizeTitle;
+            text-align: center;
+        }   
+
+        p {
+            color: $colorParragrap;
+            font-size: $sizeSubtitle;
+            font-style: italic;
+            font-weight: 500;
+            margin-bottom: -0.8em;
+            text-align: center;
+            margin:0.5em auto
+        }
+    }
+
+    .formulario {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90vw;
+        .flexInput {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin: auto;
+            margin-top: 3em;
+            
+            .contentColumn {
+            
+                .contentInput {
+                    margin: 1em;
+                    label {
+                        font-size: $sizeTitlesInputUpdate;
+                        color: #fff;
+                        padding-left: 1em;
+                        margin-bottom: 0.2em;
+                    }
+                    input {
+                        height: 35px;
+                        width: 100%;
+                        border: none;
+                        background-color: #00FFCB;
+                        border-radius: 10px;
+                        color: #212121;
+                        padding-inline-start: 1em;
+                        font-size: $sizeTitlesInputUpdate;
+                       
+                    }
+                }
+
+                .disabled {
+                    
+                    label {
+                        font-size: $sizeTitlesInputUpdate;
+                        color: #fff;
+                        padding-left: 1em;
+                        margin-bottom: 0.2em;
+                    }
+                    input {
+                        height: 35px;
+                        width: 100%;
+                        border: none;
+                        background-color: #DAD9DE;
+                        border-radius: 10px;
+                        color: #212121;
+                        padding-inline-start: 1em;
+                        font-size: $sizeTitlesInputUpdate;
+                    }
+                }
+
+                .contentSubir {
+                    label {
+                        font-size: 18px;
+                        color: #fff;
+                        padding-left: 1em;
+                        margin-bottom: 0.2em;
+                    }
+
+                }
+
+                .subir {
+                    display: flex !important;
+                    width: 100%;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin: 1em auto;
+                }
+
+                .inputSubir::-webkit-file-upload-button {
+                    visibility: hidden;
+                    width: 0%;
+                }
+
+                .inputSubir::before {
+                    content: "Subir imagen";
+                    display: inline-block;
+                    background: #00ffcb;
+                    border: none;
+                    border-radius: 10px;
+                    padding: 0.5em 1em;
+                    outline: none;
+                    white-space: nowrap;
+                    cursor: pointer;
+                    font-weight: 700;
+                    font-size: 1rem;
+                }
+
+                .inputSubir:hover::before {
+                    background: #fff;
+                    color: #212121;
+                  }
+                .inputSubir:active::before {
+                    background: #212121;
+                    color: #00ffcb;
+                  }
+
+            }
+        }
+
+        @import "./partials/button";
+
+        .buttonInfo {
+
+            .button {
+                animation-name: none !important;
+            }
+
+        }
+
+        
+    }
+
+    @media screen and (min-width: 600px) { 
+
+        .titulo {
+
+            h1 {
+                font-size: $sizeTitleQ600;
+
+            }   
+    
+            p {
+                font-size: $sizeSubtitleMediaQ600;
+                padding: 15px;
+    
+            }
+        }
+    
+        .formulario {
+            width: 100vw;
+            .flexInput {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                margin: auto;
+                margin-top: 3em;
+                
+                .contentColumn {
+                
+                    .contentInput {
+          
+                        label {
+                            font-size: $sizeTitlesInputUpdateQ600;
+        
+                        }
+                        input {
+        
+                            font-size: $sizeTitlesInputUpdateQ600;                     
+                        }
+                    }
+    
+                    .disabled {
+                        
+                        label {
+                            font-size: $sizeTitlesInputUpdateQ600;
+                        }
+                        input {
+                            font-size: $sizeTitlesInputUpdateQ600;;
+                        }
+                    }
+    
+                    .contentSubir {
+                        label {
+                            font-size: $sizeTitlesInputUpdateQ600;;
+                        }
+    
+                    }    
+                }
+            }
+    
+            @import "./partials/button";
+    
+            .buttonInfo {
+    
+                .button {
+                    animation-name: none !important;
+                }
+    
+            }
+    
+            
+        }
+
+    }
+
+    @media screen and (min-width: 1024px) { 
+
+        .titulo {
+
+            h1 {
+                font-size: $sizeTitleQ1024;
+
+            }   
+    
+            p {
+                font-size: $sizeSubtitleMediaQ1024;
+                padding: 15px;
+    
+            }
+        }
+    
+        .formulario {
+            width: 100vw;
+            .flexInput {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                width: 80%;
+                margin: auto;
+                margin-top: 3em;
+                
+                .contentColumn {
+                
+                    .contentInput {
+          
+                        label {
+                            font-size: $sizeTitlesInputUpdateQ1024;
+        
+                        }
+                        input {
+        
+                            font-size: $sizeTitlesInputUpdateQ1024;                     
+                        }
+                    }
+    
+                    .disabled {
+                        
+                        label {
+                            font-size: $sizeTitlesInputUpdateQ1024;
+                        }
+                        input {
+                            font-size: $sizeTitlesInputUpdateQ1024;;
+                        }
+                    }
+    
+                    .contentSubir {
+                        label {
+                            font-size: $sizeTitlesInputUpdateQ1024;;
+                        }
+    
+                    }    
+                }
+            }
+    
+            @import "./partials/button";
+    
+            .buttonInfo {
+    
+                .button {
+                    animation-name: none !important;
+                }
+    
+            }
+    
+            
+        }
+
+    }
+ }
+
+ .sectionBkg {
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+      "containerProfes"
+      "infoTeacher"
+    ;
+    justify-items: center;
+    height: auto;
+
+    .containerProfes {
+        grid-area: containerProfes;
+    }
+    @import "./partials/containerImagePhoto";
+
+    .infoTeacher {
+        grid-area: infoTeacher;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1em;
+
+        .subInfo {
+            background-color: black;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            color: $secundaryColor;
+            font-size: $sizeInfoTeachers;
+        }
+    
+        &:hover .sub{
+            border: $colorServiceHover;
+        }
+    }
+
+    @media screen and (min-width: 600px) {
+
+        .infoTeacher {    
+            .subInfo {
+                font-size: $sizeParaMediaQ600;
+            }
+        }
+
+    }
+
+    @media screen and (min-width: 1230px) {
+
+        & {
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto;
+            grid-template-areas: 
+                "containerProfes infoTeacher";
+            justify-items: center;
+            align-items: center;
+            padding: 0.5em;
+            .infoTeacher {    
+                .subInfo {
+                    font-size: $sizeParaMediaQ1024;
+                }
+            }
+        }
+        
+    }
+
+  }

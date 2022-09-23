@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/configuration.css" />
+    <link rel="stylesheet" href="../css/profileUpdate.css" />
   </head>
   <body>
     <header id="topHeader">
@@ -137,12 +137,12 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main class="containerBody">
       <!-- section updated -->
       <section class="contenedorConfiguracion">
         <div class="titulo">
           <h1>Profile Update</h1>
-          <p style="font-size: 1.5rem;margin:0.5em auto">
+          <p>
             Carlos sube tu avatar para conocernos!
           </p>
         </div>
@@ -193,49 +193,49 @@
               <div id="nuestroInputPreview"></div>
             </div>
           </div>
-          <div style="margin: auto;text-align: center;">
-            <button class="btn crear" type="submit">Save<i class="fas fa-check"></i></i> </button>
-          </div>
-          <div class="errores-form">
-            <ul></ul>
+          <div class="buttonInfo">
+            <button class="button" type="submit">
+              <a href="#">Save <i class="fas fa-check"></i> </a>
+            </button>
           </div>
         </form>
       </section>
       <!-- section profile -->
-      <section>
-        <div class="backGround">
-          <div class="containerProfes">
-            <div class="contenedorImg">
-              <div class="borde">
-                <div class="hovereffect">
-                  <div class="start">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                  </div>
-                  <img
-                    class="img-responsive"
-                    src="../images/profeDos.png"
-                    alt="nombre Profesor"
-                  />
-                  <div class="overlay">
-                    <a href="#"id="myBtn" class="reservar"
-                      >Conocer</a
-                    >
-                  </div>
+      <section class="sectionBkg">
+        <div class="containerProfes">
+          <div class="contenedorImg">
+            <div class="borde">
+              <div class="hovereffect">
+                <div class="start">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <img
+                  class="img-responsive"
+                  src="../images/profeDos.png"
+                  alt="nombre Profesor"
+                />
+                <div class="overlay">
+                  <a
+                    href="../navBarSections/detailTeachers.html"
+                    id="myBtn"
+                    class="reservar"
+                    >Conocer</a
+                  >
                 </div>
               </div>
-              <p class="nombre">Carlos Jaramillo</p>
             </div>
+            <p class="nombre">Carlos Jaramillo</p>
           </div>
-          <div class="infoTeacher">
-            <div class="subInfo">Name: Carlos Jaramillo</div>
-            <div class="subInfo">Profession: Lawyer </div>
-            <div class="subInfo">Interests: NLP</div>
-            <div class="subInfo">Email: cjaramilloportilla@gmail.com</div>
-          </div>
+        </div>
+        <div class="infoTeacher">
+          <div class="subInfo">Days: Martes y Jueves</div>
+          <div class="subInfo">Time: 19:00 a 20:30hs</div>
+          <div class="subInfo">Platform: Zoom</div>
+          <div class="subInfo">Type: Law Course</div>
         </div>
       </section>
     </main>

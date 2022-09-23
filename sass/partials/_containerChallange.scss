@@ -41,7 +41,12 @@
                     margin-bottom: 0.5em;
                     width: 100%;
                     height: auto;
+
+                    &.solved {
+                        border-bottom: 1px solid #00ffcb;
+                    }
                 }
+
                 .sub {
                     width: 100%;
                     display: flex;
@@ -59,10 +64,18 @@
                     padding: 0.3em;
                     border-radius: 5px;
                     display: none;
+
+                    &.solved {
+                        border: 1px solid #00ffcb;
+                    }
                 }
                 .precioCurso:hover {
                     background-color: $colorPrecioBackgroundHover;
                     color: $colorPrecioHover;
+
+                    &.solved {
+                        background-color: #6243F7;
+                    }
                 }
          
             }
@@ -81,17 +94,38 @@
                     text-decoration: none;
                     color: black;
                 }
+
+                .solve {
+                    background-color: #00ffcb !important;
+                }
+            }
+
+            .btn.verCurso.solved {
+                background-color: #00ffcb !important;
+                .reservar {
+                    text-decoration: none;
+                    color: black;
+                }
             }
             
             .btn.verCurso:hover .reservar {
                 color:$colorTextSeverices;
+            }
+
+            &.solved {
+                border: 2px solid #00ffcb !important;
+            }
+
+            &.solved:hover {
+                border: 2px solid #6243F7 !important;
             }
         }
 
         .cardCurso:hover {
             border: $colorServiceHover;
             background-color: $colorTransitionService;
-          }
+    
+        }
         .cardCurso:hover .precioCurso {
             display: flex;
         }

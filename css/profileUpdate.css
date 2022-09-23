@@ -499,582 +499,496 @@ footer .redesFooter a {
   margin-right: 0.5em;
 }
 
-/* ------ section Search ----- */
-.containerSearchBar {
-  width: 100%;
-  height: 80vh;
-  margin: 0em 0em 0em 0em;
-  background-image: url(../images/bkSections.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
-  position: relative;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 150px 40px 40px 40px;
-  grid-template-areas: "title" "searchBar1" "searchBar2" "searchBar3";
-  justify-items: center;
-  gap: 20px;
+.contenedorConfiguracion {
+  background-color: #212121;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0em auto;
+  padding: 10% 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.containerSearchBar .title {
-  grid-area: title;
-  font-weight: 500;
-  text-transform: capitalize;
-  color: #ffffff;
-  margin-bottom: 0.5em;
-  margin-top: 50px;
-  text-align: center;
-  margin-top: 14em;
-}
-.containerSearchBar .title p {
+.contenedorConfiguracion .titulo h1 {
+  color: #00FFCB;
+  margin-top: 4em;
   font-size: 3rem;
+  text-align: center;
 }
-.containerSearchBar .searchBar1 {
-  grid-area: searchBar1;
-  width: 70%;
-  height: 10px;
-  margin-top: 13em;
+.contenedorConfiguracion .titulo p {
+  color: #ffffff;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: -0.8em;
+  text-align: center;
+  margin: 0.5em auto;
 }
-.containerSearchBar .searchBar1 i {
-  position: absolute;
-  z-index: 22222;
-  margin-top: 12px;
-  margin-left: 13px;
+.contenedorConfiguracion .formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
 }
-.containerSearchBar .searchBar1 input {
+.contenedorConfiguracion .formulario .flexInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 3em;
+}
+.contenedorConfiguracion .formulario .flexInput .contentColumn .contentInput {
+  margin: 1em;
+}
+.contenedorConfiguracion .formulario .flexInput .contentColumn .contentInput label {
+  font-size: 1.2rem;
+  color: #fff;
+  padding-left: 1em;
+  margin-bottom: 0.2em;
+}
+.contenedorConfiguracion .formulario .flexInput .contentColumn .contentInput input {
+  height: 35px;
   width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
   border: none;
-  -webkit-padding-start: 40px;
-          padding-inline-start: 40px;
+  background-color: #00FFCB;
+  border-radius: 10px;
+  color: #212121;
+  -webkit-padding-start: 1em;
+          padding-inline-start: 1em;
+  font-size: 1.2rem;
+}
+.contenedorConfiguracion .formulario .flexInput .contentColumn .disabled label {
+  font-size: 1.2rem;
+  color: #fff;
+  padding-left: 1em;
+  margin-bottom: 0.2em;
+}
+.contenedorConfiguracion .formulario .flexInput .contentColumn .disabled input {
+  height: 35px;
+  width: 100%;
+  border: none;
+  background-color: #DAD9DE;
+  border-radius: 10px;
+  color: #212121;
+  -webkit-padding-start: 1em;
+          padding-inline-start: 1em;
+  font-size: 1.2rem;
+}
+.contenedorConfiguracion .formulario .flexInput .contentColumn .contentSubir label {
+  font-size: 18px;
+  color: #fff;
+  padding-left: 1em;
+  margin-bottom: 0.2em;
+}
+.contenedorConfiguracion .formulario .flexInput .contentColumn .subir {
+  display: flex !important;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1em auto;
+}
+.contenedorConfiguracion .formulario .flexInput .contentColumn .inputSubir::-webkit-file-upload-button {
+  visibility: hidden;
+  width: 0%;
+}
+.contenedorConfiguracion .formulario .flexInput .contentColumn .inputSubir::before {
+  content: "Subir imagen";
+  display: inline-block;
+  background: #00ffcb;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5em 1em;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  font-weight: 700;
   font-size: 1rem;
 }
-.containerSearchBar .searchBar1 input::-moz-placeholder {
-  width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: none;
-  padding-inline-start: 40px;
-  font-size: 1rem;
+.contenedorConfiguracion .formulario .flexInput .contentColumn .inputSubir:hover::before {
+  background: #fff;
+  color: #212121;
 }
-.containerSearchBar .searchBar1 input:-ms-input-placeholder {
-  width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: none;
-  padding-inline-start: 40px;
-  font-size: 1rem;
+.contenedorConfiguracion .formulario .flexInput .contentColumn .inputSubir:active::before {
+  background: #212121;
+  color: #00ffcb;
 }
-.containerSearchBar .searchBar1 input::placeholder {
-  width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: none;
-  -webkit-padding-start: 40px;
-          padding-inline-start: 40px;
-  font-size: 1rem;
+.contenedorConfiguracion .formulario .buttonInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.containerSearchBar .searchBar1 input:focus {
-  outline: 2px solid #00ffcb;
-}
-.containerSearchBar .searchBar2 {
-  grid-area: searchBar2;
-  width: 70%;
-  height: 10px;
-  margin-top: 13em;
-}
-.containerSearchBar .searchBar2 i {
-  position: absolute;
-  z-index: 22222;
-  margin-top: 12px;
-  margin-left: 13px;
-}
-.containerSearchBar .searchBar2 input {
-  width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: none;
-  -webkit-padding-start: 40px;
-          padding-inline-start: 40px;
-  font-size: 1rem;
-}
-.containerSearchBar .searchBar2 input::-moz-placeholder {
-  width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: none;
-  padding-inline-start: 40px;
-  font-size: 1rem;
-}
-.containerSearchBar .searchBar2 input:-ms-input-placeholder {
-  width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: none;
-  padding-inline-start: 40px;
-  font-size: 1rem;
-}
-.containerSearchBar .searchBar2 input::placeholder {
-  width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: none;
-  -webkit-padding-start: 40px;
-          padding-inline-start: 40px;
-  font-size: 1rem;
-}
-.containerSearchBar .searchBar2 input:focus {
-  outline: 2px solid #00ffcb;
-}
-.containerSearchBar .searchBar3 {
-  grid-area: searchBar3;
-  width: 70%;
-  height: 10px;
-  margin-top: 13em;
-}
-.containerSearchBar .searchBar3 i {
-  position: absolute;
-  z-index: 22222;
-  margin-top: 12px;
-  margin-left: 13px;
-}
-.containerSearchBar .searchBar3 input {
-  width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: none;
-  -webkit-padding-start: 40px;
-          padding-inline-start: 40px;
-  font-size: 1rem;
-}
-.containerSearchBar .searchBar3 input::-moz-placeholder {
-  width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: none;
-  padding-inline-start: 40px;
-  font-size: 1rem;
-}
-.containerSearchBar .searchBar3 input:-ms-input-placeholder {
-  width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: none;
-  padding-inline-start: 40px;
-  font-size: 1rem;
-}
-.containerSearchBar .searchBar3 input::placeholder {
-  width: 100%;
-  position: relative;
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  border: none;
-  -webkit-padding-start: 40px;
-          padding-inline-start: 40px;
-  font-size: 1rem;
-}
-.containerSearchBar .searchBar3 input:focus {
-  outline: 2px solid #00ffcb;
-}
-@media screen and (min-width: 432px) {
-  .containerSearchBar .searchBar1 {
-    margin-top: 11em;
+@-webkit-keyframes un_efecto {
+  0% {
+    transform: scale(1);
   }
-  .containerSearchBar .searchBar2 {
-    margin-top: 11em;
+  25% {
+    transform: scale(1.5);
   }
-  .containerSearchBar .searchBar3 {
-    margin-top: 11em;
+  50% {
+    /*background: rgb(0,255,203);
+    background: linear-gradient(right, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 36%); */
+    transform: scale(1);
   }
+  75% {
+    transform: scale(1.5);
+  }
+  100% {
+    /*width: 170px;
+    background: rgb(0,255,203);*/
+    background: linear-gradient(left, rgb(98, 67, 247) 35%);
+    transform: scale(1);
+  }
+}
+@keyframes un_efecto {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.5);
+  }
+  50% {
+    /*background: rgb(0,255,203);
+    background: linear-gradient(right, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 36%); */
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.5);
+  }
+  100% {
+    /*width: 170px;
+    background: rgb(0,255,203);*/
+    background: linear-gradient(left, rgb(98, 67, 247) 35%);
+    transform: scale(1);
+  }
+}
+.contenedorConfiguracion .formulario .buttonInfo .button {
+  background-color: black;
+  margin-top: 2em;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #6243F7;
+  text-transform: uppercase;
+  padding: 0.5em 3em;
+  border-radius: 5px;
+  border: none;
+}
+.contenedorConfiguracion .formulario .buttonInfo .button a {
+  text-decoration: none;
+  color: #6243F7;
+}
+.contenedorConfiguracion .formulario .buttonInfo .button.button:hover {
+  -webkit-animation-name: un_efecto;
+          animation-name: un_efecto;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  border: 1 solid #00ffcb;
+}
+.contenedorConfiguracion .formulario .buttonInfo .button.button:hover a {
+  color: #00ffcb;
 }
 @media screen and (min-width: 600px) {
-  .containerSearchBar {
-    height: 80vh;
-  }
-  .containerSearchBar .title p {
-    font-size: 3.7rem;
-    margin-top: 0.5em;
-  }
-  .containerSearchBar .searchBar1 {
-    grid-area: searchBar1;
-    width: 70%;
-    height: 10px;
-    margin-top: 13em;
-  }
-  .containerSearchBar .searchBar1 i {
-    position: absolute;
-    z-index: 22222;
-    margin-top: 9px;
-    margin-left: 10px;
-    font-size: 1.5em;
-  }
-  .containerSearchBar .searchBar1 input {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    -webkit-padding-start: 40px;
-            padding-inline-start: 40px;
-    font-size: 1rem;
-    height: 40px;
-  }
-  .containerSearchBar .searchBar1 input::-moz-placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 40px;
-    font-size: 1rem;
-  }
-  .containerSearchBar .searchBar1 input:-ms-input-placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 40px;
-    font-size: 1rem;
-  }
-  .containerSearchBar .searchBar1 input::placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    -webkit-padding-start: 40px;
-            padding-inline-start: 40px;
-    font-size: 1rem;
-  }
-  .containerSearchBar .searchBar1 input:focus {
-    outline: 2px solid #00ffcb;
-  }
-  .containerSearchBar .searchBar2 {
-    grid-area: searchBar2;
-    width: 70%;
-    height: 10px;
-    margin-top: 13em;
-  }
-  .containerSearchBar .searchBar2 i {
-    position: absolute;
-    z-index: 22222;
-    margin-top: 9px;
-    margin-left: 10px;
-    font-size: 1.5em;
-  }
-  .containerSearchBar .searchBar2 input {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    -webkit-padding-start: 40px;
-            padding-inline-start: 40px;
-    font-size: 13px;
-    height: 40px;
-  }
-  .containerSearchBar .searchBar2 input::-moz-placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 40px;
-    font-size: 1rem;
-  }
-  .containerSearchBar .searchBar2 input:-ms-input-placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 40px;
-    font-size: 1rem;
-  }
-  .containerSearchBar .searchBar2 input::placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    -webkit-padding-start: 40px;
-            padding-inline-start: 40px;
-    font-size: 1rem;
-  }
-  .containerSearchBar .searchBar2 input:focus {
-    outline: 2px solid #00ffcb;
-  }
-  .containerSearchBar .searchBar3 {
-    grid-area: searchBar3;
-    width: 70%;
-    height: 10px;
-    margin-top: 13em;
-  }
-  .containerSearchBar .searchBar3 i {
-    position: absolute;
-    z-index: 22222;
-    margin-top: 9px;
-    margin-left: 10px;
-    font-size: 1.5em;
-  }
-  .containerSearchBar .searchBar3 input {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    -webkit-padding-start: 40px;
-            padding-inline-start: 40px;
-    font-size: 13px;
-    height: 40px;
-  }
-  .containerSearchBar .searchBar3 input::-moz-placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 40px;
-    font-size: 1rem;
-  }
-  .containerSearchBar .searchBar3 input:-ms-input-placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 40px;
-    font-size: 1rem;
-  }
-  .containerSearchBar .searchBar3 input::placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    -webkit-padding-start: 40px;
-            padding-inline-start: 40px;
-    font-size: 1rem;
-  }
-  .containerSearchBar .searchBar3 input:focus {
-    outline: 2px solid #00ffcb;
-  }
-}
-@media screen and (min-width: 830px) {
-  .containerSearchBar {
-    height: 100vh;
+  .contenedorConfiguracion .formulario .buttonInfo .button {
+    font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  .containerSearchBar {
-    height: 80vh;
+  .contenedorConfiguracion .formulario .buttonInfo .button {
+    font-size: 1.5rem;
   }
-  .containerSearchBar .title p {
+}
+.contenedorConfiguracion .formulario .buttonInfo .button {
+  -webkit-animation-name: none !important;
+          animation-name: none !important;
+}
+@media screen and (min-width: 600px) {
+  .contenedorConfiguracion .titulo h1 {
+    font-size: 3.7rem;
+  }
+  .contenedorConfiguracion .titulo p {
+    font-size: 2.2rem;
+    padding: 15px;
+  }
+  .contenedorConfiguracion .formulario {
+    width: 100vw;
+  }
+  .contenedorConfiguracion .formulario .flexInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 3em;
+  }
+  .contenedorConfiguracion .formulario .flexInput .contentColumn .contentInput label {
+    font-size: 1.4rem;
+  }
+  .contenedorConfiguracion .formulario .flexInput .contentColumn .contentInput input {
+    font-size: 1.4rem;
+  }
+  .contenedorConfiguracion .formulario .flexInput .contentColumn .disabled label {
+    font-size: 1.4rem;
+  }
+  .contenedorConfiguracion .formulario .flexInput .contentColumn .disabled input {
+    font-size: 1.4rem;
+  }
+  .contenedorConfiguracion .formulario .flexInput .contentColumn .contentSubir label {
+    font-size: 1.4rem;
+  }
+  .contenedorConfiguracion .formulario .buttonInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @-webkit-keyframes un_efecto {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.5);
+    }
+    50% {
+      /*background: rgb(0,255,203);
+      background: linear-gradient(right, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 36%); */
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(1.5);
+    }
+    100% {
+      /*width: 170px;
+      background: rgb(0,255,203);*/
+      background: linear-gradient(left, rgb(98, 67, 247) 35%);
+      transform: scale(1);
+    }
+  }
+  @keyframes un_efecto {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.5);
+    }
+    50% {
+      /*background: rgb(0,255,203);
+      background: linear-gradient(right, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 36%); */
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(1.5);
+    }
+    100% {
+      /*width: 170px;
+      background: rgb(0,255,203);*/
+      background: linear-gradient(left, rgb(98, 67, 247) 35%);
+      transform: scale(1);
+    }
+  }
+  .contenedorConfiguracion .formulario .buttonInfo .button {
+    background-color: black;
+    margin-top: 2em;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #6243F7;
+    text-transform: uppercase;
+    padding: 0.5em 3em;
+    border-radius: 5px;
+    border: none;
+  }
+  .contenedorConfiguracion .formulario .buttonInfo .button a {
+    text-decoration: none;
+    color: #6243F7;
+  }
+  .contenedorConfiguracion .formulario .buttonInfo .button.button:hover {
+    -webkit-animation-name: un_efecto;
+            animation-name: un_efecto;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    border: 1 solid #00ffcb;
+  }
+  .contenedorConfiguracion .formulario .buttonInfo .button.button:hover a {
+    color: #00ffcb;
+  }
+}
+@media screen and (min-width: 600px) and (min-width: 600px) {
+  .contenedorConfiguracion .formulario .buttonInfo .button {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 600px) and (min-width: 1024px) {
+  .contenedorConfiguracion .formulario .buttonInfo .button {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .contenedorConfiguracion .formulario .buttonInfo .button {
+    -webkit-animation-name: none !important;
+            animation-name: none !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contenedorConfiguracion .titulo h1 {
     font-size: 4rem;
   }
-  .containerSearchBar .searchBar1 {
-    grid-area: searchBar1;
-    width: 70%;
-    height: 10px;
-    margin-top: 18em;
+  .contenedorConfiguracion .titulo p {
+    font-size: 2.5rem;
+    padding: 15px;
   }
-  .containerSearchBar .searchBar1 i {
-    position: absolute;
-    z-index: 22222;
-    margin-top: 9px;
-    margin-left: 10px;
-    font-size: 2.5em;
+  .contenedorConfiguracion .formulario {
+    width: 100vw;
   }
-  .containerSearchBar .searchBar1 input {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
+  .contenedorConfiguracion .formulario .flexInput {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    margin-top: 3em;
+  }
+  .contenedorConfiguracion .formulario .flexInput .contentColumn .contentInput label {
+    font-size: 1.6rem;
+  }
+  .contenedorConfiguracion .formulario .flexInput .contentColumn .contentInput input {
+    font-size: 1.6rem;
+  }
+  .contenedorConfiguracion .formulario .flexInput .contentColumn .disabled label {
+    font-size: 1.6rem;
+  }
+  .contenedorConfiguracion .formulario .flexInput .contentColumn .disabled input {
+    font-size: 1.6rem;
+  }
+  .contenedorConfiguracion .formulario .flexInput .contentColumn .contentSubir label {
+    font-size: 1.6rem;
+  }
+  .contenedorConfiguracion .formulario .buttonInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @-webkit-keyframes un_efecto {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.5);
+    }
+    50% {
+      /*background: rgb(0,255,203);
+      background: linear-gradient(right, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 36%); */
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(1.5);
+    }
+    100% {
+      /*width: 170px;
+      background: rgb(0,255,203);*/
+      background: linear-gradient(left, rgb(98, 67, 247) 35%);
+      transform: scale(1);
+    }
+  }
+  @keyframes un_efecto {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.5);
+    }
+    50% {
+      /*background: rgb(0,255,203);
+      background: linear-gradient(right, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 36%); */
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(1.5);
+    }
+    100% {
+      /*width: 170px;
+      background: rgb(0,255,203);*/
+      background: linear-gradient(left, rgb(98, 67, 247) 35%);
+      transform: scale(1);
+    }
+  }
+  .contenedorConfiguracion .formulario .buttonInfo .button {
+    background-color: black;
+    margin-top: 2em;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #6243F7;
+    text-transform: uppercase;
+    padding: 0.5em 3em;
+    border-radius: 5px;
     border: none;
-    -webkit-padding-start: 60px;
-            padding-inline-start: 60px;
-    font-size: 1.2rem;
-    height: 60px;
   }
-  .containerSearchBar .searchBar1 input::-moz-placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 100px;
-    font-size: 1.2rem;
+  .contenedorConfiguracion .formulario .buttonInfo .button a {
+    text-decoration: none;
+    color: #6243F7;
   }
-  .containerSearchBar .searchBar1 input:-ms-input-placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 100px;
-    font-size: 1.2rem;
+  .contenedorConfiguracion .formulario .buttonInfo .button.button:hover {
+    -webkit-animation-name: un_efecto;
+            animation-name: un_efecto;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    border: 1 solid #00ffcb;
   }
-  .containerSearchBar .searchBar1 input::placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    -webkit-padding-start: 100px;
-            padding-inline-start: 100px;
-    font-size: 1.2rem;
+  .contenedorConfiguracion .formulario .buttonInfo .button.button:hover a {
+    color: #00ffcb;
   }
-  .containerSearchBar .searchBar1 input:focus {
-    outline: 4px solid #00ffcb;
+}
+@media screen and (min-width: 1024px) and (min-width: 600px) {
+  .contenedorConfiguracion .formulario .buttonInfo .button {
+    font-size: 1.5rem;
   }
-  .containerSearchBar .searchBar2 {
-    grid-area: searchBar2;
-    width: 70%;
-    height: 10px;
-    margin-top: 19em;
+}
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  .contenedorConfiguracion .formulario .buttonInfo .button {
+    font-size: 1.5rem;
   }
-  .containerSearchBar .searchBar2 i {
-    position: absolute;
-    z-index: 22222;
-    margin-top: 9px;
-    margin-left: 10px;
-    font-size: 2.5em;
-  }
-  .containerSearchBar .searchBar2 input {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    -webkit-padding-start: 60px;
-            padding-inline-start: 60px;
-    font-size: 1.2rem;
-    height: 60px;
-  }
-  .containerSearchBar .searchBar2 input::-moz-placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 100px;
-    font-size: 1.2rem;
-  }
-  .containerSearchBar .searchBar2 input:-ms-input-placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 100px;
-    font-size: 1.2rem;
-  }
-  .containerSearchBar .searchBar2 input::placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    -webkit-padding-start: 100px;
-            padding-inline-start: 100px;
-    font-size: 1.2rem;
-  }
-  .containerSearchBar .searchBar2 input:focus {
-    outline: 4px solid #00ffcb;
-  }
-  .containerSearchBar .searchBar3 {
-    grid-area: searchBar3;
-    width: 70%;
-    height: 10px;
-    margin-top: 20em;
-  }
-  .containerSearchBar .searchBar3 i {
-    position: absolute;
-    z-index: 22222;
-    margin-top: 9px;
-    margin-left: 10px;
-    font-size: 2.5em;
-  }
-  .containerSearchBar .searchBar3 input {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    -webkit-padding-start: 60px;
-            padding-inline-start: 60px;
-    font-size: 1.2rem;
-    height: 60px;
-  }
-  .containerSearchBar .searchBar3 input::-moz-placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 100px;
-    font-size: 1.2rem;
-  }
-  .containerSearchBar .searchBar3 input:-ms-input-placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    padding-inline-start: 100px;
-    font-size: 1.2rem;
-  }
-  .containerSearchBar .searchBar3 input::placeholder {
-    width: 100%;
-    position: relative;
-    padding: 0.5em 1em;
-    border-radius: 50px;
-    border: none;
-    -webkit-padding-start: 100px;
-            padding-inline-start: 100px;
-    font-size: 1.2rem;
-  }
-  .containerSearchBar .searchBar3 input:focus {
-    outline: 4px solid #00ffcb;
+}
+@media screen and (min-width: 1024px) {
+  .contenedorConfiguracion .formulario .buttonInfo .button {
+    -webkit-animation-name: none !important;
+            animation-name: none !important;
   }
 }
 
 .sectionBkg {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: auto;
-  grid-template-areas: "category" "containerProfes" "button";
+  grid-template-rows: auto auto;
+  grid-template-areas: "containerProfes" "infoTeacher";
   justify-items: center;
   height: auto;
 }
-.sectionBkg .category {
-  grid-area: category;
-}
-.sectionBkg .category h2 {
-  grid-area: category;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  font-size: 3rem;
-  text-transform: capitalize;
-  color: #6243F7;
-  margin-left: 1em;
-  margin-bottom: 0.5em;
-  text-transform: uppercase;
-  padding: 0.5em 0.5em;
+.sectionBkg .containerProfes {
+  grid-area: containerProfes;
 }
 .sectionBkg .containerProfes {
   grid-area: containerProfes;
@@ -1206,107 +1120,38 @@ footer .redesFooter a {
     width: 302px;
   }
 }
-.sectionBkg .buttonInfo {
+.sectionBkg .infoTeacher {
+  grid-area: infoTeacher;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1em;
 }
-@-webkit-keyframes un_efecto {
-  0% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.5);
-  }
-  50% {
-    /*background: rgb(0,255,203);
-    background: linear-gradient(right, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 36%); */
-    transform: scale(1);
-  }
-  75% {
-    transform: scale(1.5);
-  }
-  100% {
-    /*width: 170px;
-    background: rgb(0,255,203);*/
-    background: linear-gradient(left, rgb(98, 67, 247) 35%);
-    transform: scale(1);
-  }
-}
-@keyframes un_efecto {
-  0% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.5);
-  }
-  50% {
-    /*background: rgb(0,255,203);
-    background: linear-gradient(right, rgba(0,255,203,1) 36%, rgba(98,67,247,1) 36%); */
-    transform: scale(1);
-  }
-  75% {
-    transform: scale(1.5);
-  }
-  100% {
-    /*width: 170px;
-    background: rgb(0,255,203);*/
-    background: linear-gradient(left, rgb(98, 67, 247) 35%);
-    transform: scale(1);
-  }
-}
-.sectionBkg .buttonInfo .button {
+.sectionBkg .infoTeacher .subInfo {
   background-color: black;
-  margin-top: 2em;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #00FFCB;
   font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  color: #6243F7;
-  text-transform: uppercase;
-  padding: 0.5em 3em;
-  border-radius: 5px;
-  border: none;
 }
-.sectionBkg .buttonInfo .button a {
-  text-decoration: none;
-  color: #6243F7;
-}
-.sectionBkg .buttonInfo .button.button:hover {
-  -webkit-animation-name: un_efecto;
-          animation-name: un_efecto;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  border: 1 solid #00ffcb;
-}
-.sectionBkg .buttonInfo .button.button:hover a {
-  color: #00ffcb;
+.sectionBkg .infoTeacher:hover .sub {
+  border: 2px solid #00ffcb;
 }
 @media screen and (min-width: 600px) {
-  .sectionBkg .buttonInfo .button {
-    font-size: 1.5rem;
+  .sectionBkg .infoTeacher .subInfo {
+    font-size: 1.2rem;
   }
 }
-@media screen and (min-width: 1024px) {
-  .sectionBkg .buttonInfo .button {
-    font-size: 1.5rem;
-  }
-}
-@media screen and (min-width: 600px) {
-  .sectionBkg .category h2 {
-    font-size: 3.7rem;
-  }
-}
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1230px) {
   .sectionBkg {
-    margin-top: 7em;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: "containerProfes infoTeacher";
+    justify-items: center;
+    align-items: center;
+    padding: 0.5em;
   }
-  .sectionBkg .category h2 {
-    font-size: 4rem;
+  .sectionBkg .infoTeacher .subInfo {
+    font-size: 1.4rem;
   }
-}/*# sourceMappingURL=teachers.css.map */
+}/*# sourceMappingURL=profileUpdate.css.map */
