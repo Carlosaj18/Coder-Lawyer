@@ -1,0 +1,559 @@
+ /** SCSS - GENERALS */
+ @import "./partials/variables";
+ @import "./partials/generals";
+ @import "./partials/fuentes";
+ @import "./partials/operaciones";
+
+  /** SCSS - PARTIALS */
+ @import "./partials/header.scss";
+ @import  "./partials/footer.scss";
+
+ body {
+
+        /** HEADER */
+    .navBar {
+        .containerLeft {
+            .search {
+                display: none !important; 
+            }
+        }
+        .containerRight {
+            .buttonsIcons {
+                .shoppingCart {
+                    i.fa-shopping-cart {
+                        display: none !important;
+                    } 
+                }
+
+                .heart {
+                    background-color: $fondo !important;
+                    background-color: transparent;
+                    i.fa-heart {
+                        display: none !important;
+                        background-color: transparent;
+                        
+                    }
+                }
+
+                .dropDown {
+                    margin-left: 34em;
+                    .dropdownContent {
+                        right: -25px !important;
+                    }
+
+
+                }
+
+
+            }
+        }
+    }
+
+    main {
+
+        /** Section Left */
+        .leftContainer {
+            display: none;
+        }
+
+        .rightContainer {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "title"
+            "flexIcon"
+            "containerForm"
+            ;
+            justify-items: center;
+        
+            .title {
+                grid-area: title;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 12em;
+        
+                .register {
+                    color: #6243f7;
+                    font-size: $sizeTitle;
+                    align-self: center;
+                }
+            }
+        
+            .flexIcon {
+                grid-area: flexIcon;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+        
+                .circulo {
+                    background-color: black;    
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    margin-right: 0.5em;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid #6243f7;
+        
+                    i {
+                        color: #6243f7;
+                        font-size: 2.5rem;
+                        text-align: center;
+                    }
+        
+                    &:hover i {
+                        color: #00FFCB;
+                        
+                    }
+                }
+            }
+        
+            .containerForm {
+                grid-area: containerForm;
+                text-align: center;
+                width: 100%;    
+                margin-bottom: 4em;    
+        
+                .fields{
+                    
+                    display: flex;
+                    flex-direction: column;
+                    align-content: center;
+                    align-items: center;
+        
+                    label {
+                        font-size: $sizeTitlesInputUpdate;
+                        color: #fff;
+                        padding-left: 1em;
+                        margin-bottom: 0.2em;
+                    }
+        
+                    .checkboxConditions {
+                        
+                        color: #00FFCB;
+                    }
+        
+                    .inputForm {
+                        display: block;
+                        width: 80%;
+                        margin: 0.5em auto;
+                        background-color: #6243F7;
+                        padding: 0.5em 1em;
+                        border-radius: 15px;
+                        border: none;
+                        font-size: 1rem;
+                        color: #212121;
+                    }
+        
+                    .inputForm,
+                        input::placeholder {
+                        color: #212121;
+                        opacity: 1;
+                    }
+                    
+                    input:focus {
+                        border: 3px solid #00FFCB;
+                    }
+        
+                    .inputForm:focus,
+                        input:focus,
+                        input[type]:focus {
+                        outline: 2px solid #6243F7;
+                        background-color: #00FFCB;
+        
+                    }
+        
+                    select.inputForm {
+                        background-color: #6243F7;
+                        border: transparent;
+                        color: black;
+                    }
+        
+                    .bot-tyc {
+                        border: 3px solid #6243F7;
+                    }
+                }
+        
+                .checkBox {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content:center;
+                    align-items: center;
+                    margin-top:3em;
+                    margin-bottom: 2em;
+                }
+        
+                .forgot-pass {
+                    color: #6243F7;
+                    position: relative;
+                    font-size: 1rem;
+                    margin: 1em auto;
+                    text-decoration: underline #6243F7 1px;
+                }
+        
+                @import "./partials/button";
+        
+                .buttonInfo {
+        
+                    .button {
+                        animation-name: none !important;
+                    }
+        
+                }
+            }
+        
+        }
+
+    }
+
+    @media screen and (min-width: 600px){
+    
+        main {
+        .rightContainer {
+            height: 120vh;
+    
+                .title {
+                    margin-bottom: 5em; 
+        
+                    .register {
+                        color: #6243f7;
+                        font-size: $sizeTitleQ600;
+                        align-self: center;
+                    }
+                }
+            
+                .flexIcon {
+                    grid-area: flexIcon;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 5em; 
+        
+                    .circulo {
+                        width: 90px;
+                        height: 90px;    
+                        i {
+                            color: #6243f7;
+                            font-size: 2.7rem;
+                            text-align: center;
+                        }
+            
+                        &:hover i {
+                            color: #00FFCB;
+                            
+                        }
+                    }
+                }
+            
+                .containerForm {
+                    grid-area: containerForm;
+                    text-align: center;
+                    width: 80%;    
+                    margin-bottom: 8em;  
+        
+            
+                    .fields{
+                        
+                        display: flex;
+                        flex-direction: column;
+                        align-content: center;
+                        align-items: center;
+            
+                        label {
+                            font-size: $sizeTitlesInputUpdateQ600;
+                        }
+            
+                        .checkboxConditions {
+                            
+                            color: #00FFCB;
+                        }
+            
+                        .inputForm {
+                            font-size: $sizeTitlesInputUpdateQ600;
+                        }
+            
+                        .inputForm,
+                            input::placeholder {
+                            color: #212121;
+                            opacity: 1;
+                        }
+                        
+                        input:focus {
+                            border: 3px solid #00FFCB;
+                        }
+            
+                        .inputForm:focus,
+                            input:focus,
+                            input[type]:focus {
+                            outline: 2px solid #6243F7;
+                            background-color: #00FFCB;
+            
+                        }
+            
+                        select.inputForm {
+                            background-color: #6243F7;
+                            border: transparent;
+                            color: black;
+                        }
+            
+                        .bot-tyc {
+                            border: 3px solid #6243F7;
+                        }
+                    }
+            
+                    .checkBox {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content:center;
+                        align-items: center;
+                        margin-top:3em;
+                        margin-bottom: 2em;
+                    }
+            
+                    .forgot-pass {
+                        color: #6243F7;
+                        position: relative;
+                        font-size: 1.2rem;
+                        margin: 1em auto;
+                        text-decoration: underline #6243F7 1px;
+                    }
+            
+                    @import "./partials/button";
+            
+                    .buttonInfo {
+            
+                        .button {
+                            animation-name: none !important;
+                            margin-bottom: 8em !important;  
+        
+                        }
+            
+                    }
+                }
+            }
+        }    
+    }
+
+    @media screen and (min-width: 1024px){
+
+        .navBar {
+
+            .containerRight {
+                .buttonsIcons {
+                  
+                    .dropDown {
+                        margin-left: 134em;
+                        .dropdownContent {
+                            right: 4px !important;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    
+    @media screen and (min-width: 1250px){
+    
+        .navBar {
+            .containerLeft {
+
+                .logo {
+                    display: none !important;
+                    margin-top: 3em;
+                }
+                .search {
+                    display: none !important; 
+                }
+            }
+            .containerRight {
+                .buttonsIcons {
+                    .shoppingCart {
+                        i.fa-shopping-cart {
+                            display: none !important;
+                        } 
+                    }
+    
+                    .heart {
+                        background-color: $fondo !important;
+                        background-color: transparent;
+                        i.fa-heart {
+                            display: none !important;
+                            background-color: transparent;
+                            
+                        }
+                    }
+    
+                    .dropDown {
+                        margin-left: 34em;
+                        .dropdownContent {
+                            right: -25px !important;
+                        }
+    
+    
+                    }
+    
+    
+                }
+            }
+
+            /*.buttonResponsive {
+                .containerLinks {
+                    margin-right: 17em;
+                }
+            }*/
+            .buttonResponsive{
+                color: #ffff;
+                font-size: $sizeHambuergerMenu;
+            
+                i{
+                  margin-top: 0.5em;
+                  margin-bottom: 0.5em;
+                  margin-left: 13px;
+                  display: block !important;
+                }
+          
+                /* ------ containerLinks ----- */
+          
+              .containerLinks{
+                display: none;
+                top: -16px !important;
+                right: 140px !important;
+          
+                .navList {
+                    display: none;
+                    list-style: none;
+                    display: flex;
+                    flex-direction: row;
+                    
+                    .navItem {
+                        /*padding: 0.5em 0.5em;*/
+                        margin-bottom: 1em;;
+          
+                        a {
+                            border: transparent;
+                            text-decoration: none;
+                        }
+        
+                        &:after {
+                          content: "";
+                          display: block;
+                          height: 1.5px;
+                          background: #00ffcb;
+                          transform: scaleX(0);
+                          transition: transform 0.5s;
+                          margin-top: 5px;
+                          opacity: 0.5;
+                      }
+        
+                        &:hover:after {
+                          transform: scaleX(1);
+                          transition: transform 0.3s;
+                          height: 1.5px;
+                          opacity: 1;
+                      }
+          
+                        
+                        
+                        .border {
+                            text-decoration: none;
+                            font-weight: 300;
+                            font-size: $sizeSubTitlesMenu;
+                            color: $colorHeader;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+          
+              }
+            .buttonResponsive:hover .containerLinks {
+                display: block !important;
+            }
+
+            .buttonResponsive:hover {
+                color: #00ffcb;
+            }
+
+        }
+
+        main {
+            display: flex;
+            height: 120vh;
+            overflow-y: hidden;
+            width: 100%;
+
+            .leftContainer {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 70%;
+
+                .containerBkg {
+                    .flexBkgLogin {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100vh;
+                        .logo {
+                            width: 100%;
+                            margin: auto;
+                            border-radius: 50%;
+                            margin-top: 2em;
+                        }
+
+                        .icons {
+                            color: #00ffcb;
+                            font-size: 5rem;
+                            margin-top: 2em;
+                            
+                            li {
+                                display: inline;
+                                padding-right: 6px;
+                                margin-right: 0.5em;
+
+                            }
+                        }
+
+                        .cr {
+                            margin-top: 2em;
+                            color: #ffffff;
+                            font-size: $sizeSubTitlesMenuQ1024;
+                        }
+                    }
+                }
+            }
+
+            .rightContainer {
+                height: 120vh;
+                width: 50%;     
+            }
+        }
+    }
+}
+
+ 
+
+
+ 
+
+
+
+
+
+
+
+

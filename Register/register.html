@@ -13,18 +13,114 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/register.css" />
+    <link rel="stylesheet" href="../css/templateRegisterLogin.css" />
   </head>
   <body>
-    <header>
+    <header id="topHeader">
+      <nav class="navBar">
+        <!-- container Logo & Search Bar -->
+        <div class="containerLeft">
+          <!-- Logo Coder Lawyer-->
+          <a class="logo" href="./index.html">
+            <img src="../images/LogoCoderLawyer.jpg" alt="Logo Coder Lawyer" />
+          </a>
+          <div class="search">
+            <i class="fas fa-search"></i>
+            <input
+              class="input"
+              type="search"
+              name="buscar"
+              placeholder="What do you want to Learning?"
+            />
+          </div>
+        </div>
+        <!-- shopping car & subMenu - Change if it is guest or student/teacher-->
+        <div class="containerRight">
+          <!-- icons -->
+          <div class="buttonsIcons">
+            <!-- shopping Cart Icon -->
+            <button class="shoppingCart" onclick="openNav()">
+              <i class="fas fa-shopping-cart"></i>
+            </button>
+            <!-- profile Icon -->
+            <div class="dropDown">
+              <button class="dropbtn">
+                <i class="far fa-user-circle"></i>
+              </button>
+              <!-- submenu students-->
+              <div class="dropdownContent" id="subMenu">
+                <div class="dropHeader">
+                  <i class="far fa-user-circle"></i>
+                  <h4>Hi Student, Carlos!</h4>
+                </div>
+                <!-- submenu Links -->
+                <ul class="content">
+                  <li class="navList">
+                    <a href="../Login/login.html">Login</a>
+                  </li>
+                </ul>
+                <ul class="content">
+                  <li class="navList">
+                    <a href="../subMenuSections/help.html">Help</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- submenu guest -->
+              <div class="dropdownContent" id="subMenuGuest">
+                <ul class="outline">
+                  <li><a href="#">Registration</a></li>
+                  <li><a href="#">Login</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- heart Icon -->
+            <button class="heart">
+              <i class="far fa-heart"></i>
+            </button>
+          </div>
+        </div>
+        <!-- NabBar redirections Links -->
+        <div class="buttonResponsive" id="toggleButton">
+          <!-- App Menu Responsive-->
+          <i class="fas fa-bars"> </i>
+          <!-- navbar links - Change if it is guest, student or teacher -->
+          <div class="containerLinks" id="navBarStudent">
+            <ul class="navList">
+              <li class="navItem">
+                <a class="border" href="#"
+                  >Courses</a
+                >
+              </li>
+              <li class="navItem">
+                <a class="border" href="#"
+                  >Teachers</a
+                >
+              </li>
+              <li class="navItem">
+                <a class="border" href="#"
+                  >Community</a
+                >
+              </li>
+              <li class="navItem">
+                <a class="border" href="#">Blog</a>
+              </li>
+              <li class="navItem">
+                <a class="border" href="#">En</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+   <!--<header>
       <div class="imageLoginMobile">
         <img src="../images/LogoCoderLawyer.jpg" alt="logo" class="logo" />
       </div>
       <div class="hamburger">
         <i class="fas fa-bars"> </i>
       </div>
-    </header>
-    <main class="mainContent">
+    </header>-->
+    <main class="containerBody">
       <!-- Left Container-->
       <section class="leftContainer">
         <div class="containerBkg">
@@ -74,7 +170,6 @@
           class="containerForm"
           action="/users/login"
           method="POST"
-          style="width: 60%"
         >
           <div class="fields">
             <label for="username"></label>
@@ -85,7 +180,7 @@
               class="inputForm"
               id="username"
             />
-            <div class="textDanger"></div>
+            
           </div>
           <div class="fields">
             <label for="password"></label>
@@ -96,7 +191,7 @@
               class="inputForm"
               id="password"
             />
-            <div class="text-danger"></div>
+            
           </div>
           <div class="fields">
             <label for="userRol:"></label>
@@ -105,8 +200,8 @@
               <option value="">Teacher</option>
             </select>
           </div>
-          
-          <div class="fields">
+          <div class="fields checkBox">
+            
             <input
               class="bot-tyc"
               type="checkbox"
@@ -117,7 +212,13 @@
               Terms & Conditions
             </label>
           </div>
-          <button type="submit" class="registerButton">Register</button>
+          <div class="forgot-pass">
+            Forgot Password
+          </div>
+          <div class="buttonInfo">
+            <button class="button" type="submit">
+              <a href="#">Save <i class="fas fa-check"></i> </a>
+            </button>
           </div>
         </form>
       </section>
