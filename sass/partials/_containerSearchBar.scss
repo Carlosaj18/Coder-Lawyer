@@ -323,10 +323,10 @@
 
         }
 
-       @media screen and (min-width : 1024px){
+       @media screen and (min-width : 1024px) and (max-width: 1900px) {
 
         & {
-            height: 80vh;
+            height: 100vh;
             .title {
         
                 p {

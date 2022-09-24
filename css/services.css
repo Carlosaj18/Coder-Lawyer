@@ -878,9 +878,9 @@ footer .redesFooter a {
     height: 100vh;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1800px) {
   .containerSearchBar {
-    height: 80vh;
+    height: 100vh;
   }
   .containerSearchBar .title p {
     font-size: 4rem;

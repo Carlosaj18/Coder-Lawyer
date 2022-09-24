@@ -502,7 +502,7 @@ footer .redesFooter a {
 /* ------ section Search ----- */
 .containerSearchBar {
   width: 100%;
-  height: 70vh;
+  height: 100vh;
   margin: 0em 0em 0em 0em;
   background-repeat: no-repeat;
   background-size: cover;
@@ -621,7 +621,7 @@ footer .redesFooter a {
 @media screen and (min-width: 799px) {
   .containerSearchBar {
     width: 100%;
-    height: 70vh;
+    height: 100vh;
     gap: 60px;
   }
   .containerSearchBar .titleHeader p {
@@ -703,10 +703,9 @@ footer .redesFooter a {
     padding: 6px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1800px) {
   .containerSearchBar {
     width: 100%;
-    height: 80vh;
     gap: 110px;
     margin-bottom: 60px;
   }
