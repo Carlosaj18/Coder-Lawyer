@@ -857,6 +857,20 @@ footer .redesFooter a {
   background-color: #00FFCB;
   color: black;
 }
+.mainSection .containerService .containerCardsServices .containerCursos .cardCurso .action-block {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1rem;
+}
+.mainSection .containerService .containerCardsServices .containerCursos .cardCurso .action-block .action-img {
+  cursor: pointer;
+  height: 2rem;
+  color: white;
+}
+.mainSection .containerService .containerCardsServices .containerCursos .cardCurso .action-block .action-img:active {
+  transform: scale(0.97);
+}
 .mainSection .containerService .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
   background-color: #6243F7;
   font-size: 1rem;

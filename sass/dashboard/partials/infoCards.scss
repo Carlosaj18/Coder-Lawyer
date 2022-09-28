@@ -1,0 +1,73 @@
+
+/* info cards section */
+.info-cards {
+    grid-row: 2;
+    grid-column: 1/9;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    /*grid-template-columns: repeat(auto-fit, 200px);
+ 
+    For this grid, we have a set width of 1000px and we are telling it to fill in our columns with tracks of 200px each. As long as there are at least five grid items, this will result in a 5-column layout no matter what. In this case, auto-fill would actually do the same thing.
+ 
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+ 
+    */
+
+    .info-card {
+        border: 2px solid #dfe0eb;
+        border-radius: 0.5rem;
+        background: #fff;
+        text-align: center;
+        font-weight: bold;
+        padding: 1.5rem 0;
+
+        &:hover {
+            box-shadow: inset 0 0 0 2px #3751ff;
+         }
+         
+        &:last-child {
+            margin-right: 0;
+         }
+         
+        & > p:first-child {
+            color: #9fa2b4;
+            font-size: 1.1rem;
+         }
+         
+        & > p:last-child {
+            font-size: 2.25rem;
+            padding-top: 0.75rem;
+            color: #252733;
+         }
+         
+        &:hover > p {
+            color: #3751ff;
+         }
+         
+     }
+
+    
+
+     
+ }
+ 
+ 
+ 
+ 
+
+ /*@media (max-width: 1080px) {
+    .info-cards {
+       grid-template-columns: repeat(2, 1fr);
+    }
+ }
+ 
+ @media (max-width: 500px) {
+    .info-cards {
+       grid-template-columns: repeat(1, 1fr);
+    }
+ }*/

@@ -66,6 +66,26 @@
          
             }
 
+            .action-block {
+                display: flex;
+                justify-content: flex-end;
+                gap: 1rem;
+                padding: 1rem;
+
+                @mixin botton-like {
+                    cursor: pointer;
+                    &:active {
+                      transform: scale(0.97);
+                    }
+                  }
+
+                .action-img {
+                  @include botton-like();
+                  height: 2rem;
+                  color: white;
+                }
+              }
+
             .btn.verCurso {
                 background-color: $backgroundColorButton;
                 font-size: $sizeVerService;

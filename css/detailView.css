@@ -619,6 +619,20 @@ section .detailsTeacher .containerServices .containerCardsServices .containerCur
   background-color: #00FFCB;
   color: black;
 }
+section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso .action-block {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1rem;
+}
+section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso .action-block .action-img {
+  cursor: pointer;
+  height: 2rem;
+  color: white;
+}
+section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso .action-block .action-img:active {
+  transform: scale(0.97);
+}
 section .detailsTeacher .containerServices .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
   background-color: #6243F7;
   font-size: 1rem;

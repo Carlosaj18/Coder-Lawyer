@@ -28,7 +28,7 @@
     <title>TOP: Admin Dashboard</title>
     <link rel="stylesheet" href="../css/dashboard.css" />
   </head>
-  <body >
+  <body>
     <div class="hamburger">
       <div></div>
       <div></div>
@@ -45,27 +45,27 @@
         <ul>
           <li class="selected">
             <i class="fa-solid fa-chart-pie"></i>
-            <p><a href="#" >Overview</a></p>
+            <p><a href="#">Overview</a></p>
           </li>
           <li>
             <i class="fa-solid fa-ticket"></i>
-            <p><a href="#">Courses & Schools</a></p>
+            <p><a href="./dashboardProductView.html">Courses & Schools</a></p>
           </li>
           <li>
             <i class="fa-solid fa-lightbulb"></i>
-            <p><a href="#">Challanges</a></p>
+            <p><a href="./dashboardProductView.html">Challanges</a></p>
           </li>
           <li>
             <i class="fa-solid fa-users"></i>
-            <p><a href="#">Students</a></p>
+            <p><a href="./dashboardStudentsView.html">Students</a></p>
           </li>
           <li>
             <i class="fa-solid fa-user-tie"></i>
-            <p><a href="#">Teachers</a></p>
+            <p><a href="./dashboardTeachersView.html">Teachers</a></p>
           </li>
           <li>
             <i class="fa-solid fa-book"></i>
-            <p><a href="#">Articles</a></p>
+            <p><a href="./dashboardArticleViews.html">Articles</a></p>
           </li>
         </ul>
 
@@ -91,7 +91,7 @@
             <i class="fa-solid fa-magnifying-glass"></i>
             <i class="fa-solid fa-bell"></i>
           </div>
-          <p class="name">Hi, Carlos </p>
+          <p class="name">Hi, Carlos</p>
           <div class="user-img">
             <img src="../images/userimg.jpg" alt="user image" />
           </div>
@@ -119,29 +119,35 @@
 
       <div class="trends-container">
         <div class="trends">
-          <p class="trend-title">Today Student's Trends </p>
+          <p class="trend-title">Today Student's Trends</p>
           <img src="../images/svg-chart.svg" alt="chart" />
         </div>
-        <div class="data-container">
+        <div class="data-container1">
           <div class="data-item">
             <p>Students in NLP</p>
             <p>149</p>
           </div>
           <div class="data-item">
-            <p>Days of the Week </p>
-            <p>Monday, Wednesday, Friday</p>
+            <p>Days of the Week</p>
+            <p>Monday, Friday</p>
           </div>
           <div class="data-item">
             <p>Status of the Course</p>
             <p>Active</p>
           </div>
+        </div>
+        <div class="data-container">
           <div class="data-item">
             <p>Porcentage of the Course</p>
             <p>94%</p>
           </div>
           <div class="data-item">
             <p>Teacher</p>
-            <p>Valentina Martinez </p>
+            <p>Valentina Martinez</p>
+          </div>
+          <div class="data-item">
+            <p>Monitor</p>
+            <p>Pedro Valencia</p>
           </div>
         </div>
       </div>
@@ -220,11 +226,86 @@
                 <input type="checkbox" id="checkbox4" />
                 <label for="checkbox4"></label>
               </div>
-              <p>Teacher Assigned for the Course </p>
+              <p>Teacher Assigned for the Course</p>
             </div>
             <p class="badge" style="background-color: #3751ff; color: #fff">
               Assigned
             </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="announ-and-trending">
+        <div class="announcements">
+          <h4>Announcements</h4>
+          <div class="announ-content">
+            <div class="Announcement">
+              <h6>New Update</h6>
+              <p>Our page is growing by four feet</p>
+            </div>
+            <div class="Announcement-border"></div>
+            <div class="Announcement">
+              <h6>Dog's name</h6>
+              <p>I can't decide whether to call the dog Sudo or Byte.</p>
+            </div>
+            <div class="Announcement-border"></div>
+            <div class="Announcement">
+              <h6>Site Maintenance</h6>
+              <p>
+                Instead of lorem ipsum I have used
+                <a href="https://doggoipsum.com/">Doggo Ipsum</a>, check it out!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4>Trending</h4>
+          <div class="trending-content">
+            <div class="trend">
+              <img
+                class="trend-img"
+                src="./img/trend-img_4.jpg"
+                alt="dog trend image"
+              />
+              <p>
+                <span class="trend-tag">@teganan</span><br />
+                <span class="trend-text">World Peace Builder</span>
+              </p>
+            </div>
+            <div class="trend">
+              <img
+                class="trend-img"
+                src="./img/trend-img_3.jpg"
+                alt="dog trend image"
+              />
+              <p>
+                <span class="trend-tag">@morgan</span><br />
+                <span class="trend-text">Super Cool Project</span>
+              </p>
+            </div>
+            <div class="trend">
+              <img
+                class="trend-img"
+                src="./img/trend-img_2.jpg"
+                alt="dog trend image"
+              />
+              <p>
+                <span class="trend-tag">@kendall</span><br />
+                <span class="trend-text">Life Changing App</span>
+              </p>
+            </div>
+            <div class="trend">
+              <img
+                class="trend-img"
+                src="./img/trend-img_1.jpg"
+                alt="dog trend image"
+              />
+              <p>
+                <span class="trend-tag">@alex</span><br />
+                <span class="trend-text">No Traffic Maker</span>
+              </p>
+            </div>
           </div>
         </div>
       </div>

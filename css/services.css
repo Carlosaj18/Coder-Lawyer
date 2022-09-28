@@ -878,7 +878,7 @@ footer .redesFooter a {
     height: 100vh;
   }
 }
-@media screen and (min-width: 1024px) and (max-width: 1800px) {
+@media screen and (min-width: 1024px) and (max-width: 1900px) {
   .containerSearchBar {
     height: 100vh;
   }
@@ -1142,6 +1142,20 @@ footer .redesFooter a {
 .sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso div .precioCurso:hover {
   background-color: #00FFCB;
   color: black;
+}
+.sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso .action-block {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1rem;
+}
+.sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso .action-block .action-img {
+  cursor: pointer;
+  height: 2rem;
+  color: white;
+}
+.sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso .action-block .action-img:active {
+  transform: scale(0.97);
 }
 .sectionBkg .containerService .containerCardsServices .containerCursos .cardCurso .btn.verCurso {
   background-color: #6243F7;

@@ -1,0 +1,290 @@
+@import "./partials/generals.scss";
+@import "../partials/variables";
+
+body {
+  margin: 0;
+  background-color: #f7f8fc;
+  min-height: 100vh;
+  height: 100%;
+  display: grid;
+  /*clamp(minimum-size, ideal-size, maximum-size)*/
+  grid-template-columns: clamp(220px, 25%, 280px) 1fr;
+  /* grid-template-columns: clamp(220px, 25%, 280px 220px) 1fr; */
+
+  font-family: "mulish", sans-serif;
+
+  /* hamburger styles */
+  .hamburger {
+     display: block;
+     position: absolute;
+     left: 1.5rem;
+     top: 1.85rem;
+     cursor: pointer;
+  
+     & > div {
+     width: 25px;
+     height: 3px;
+     background: #252733;
+     margin: 6px 0;
+     border-radius: 2px;
+  }
+
+  @media (max-width: 740px) {
+     & {
+        display: block;
+     }
+  }
+  }
+
+  /** SIDEBAR LAYOUT */
+  @import "./partials/sideBar.scss";
+  
+  /** MAIN LAYOUT */
+  main {
+     grid-column-start: 2;
+     display: grid;
+     grid-template-rows: auto auto 2fr auto auto;
+     /*grid-template-columns: repeat(8, 1fr);*/
+     grid-template-columns: repeat(12, 1fr);
+     padding: 0 1.5rem 1.5rem;
+     max-height: 100%;
+     resize: both;
+     overflow: auto;
+  
+     /** REVIEW 
+     grid-template-rows: repeat(2, min(200px, 50%));
+     grid-template-columns: repeat(5, max(120px, 15%));
+     grid-template-columns: repeat(5, minmax(150px, 200px));
+     */
+
+     /* Titlebar Style */
+     @import "./partials/header.scss";
+
+
+     /* Info-Cards Style*/
+     @import "./partials/infoCards.scss";
+
+        @media screen and (max-width:1264px){
+     
+           .info-cards {
+              grid-column: 1/-1;
+           }
+        }
+
+      /* Name Courses */
+      .nameCourses {
+        color: black;
+        grid-row: 3/4;
+        grid-column: 2/-1;
+    
+        .navListService {
+          display: flex;
+          flex-direction: column;
+          list-style:none;
+          gap: 2em;
+    
+          .navItem {
+            text-decoration: none;
+            font-size: $sizeSubHeaderServiceQ1024;
+          }
+        }
+      }
+
+      .nameCourses .navItem:after {
+        content: "";
+        display: block;
+        height: 1.5px;
+        background: #00ffcb;
+        transform: scaleX(0);
+        transition: transform 0.5s;
+        margin-top: 5px;
+        opacity: 0.5;
+      }
+    
+      .nameCourses .navItem:hover:after {
+        transform: scaleX(1);
+        transition: transform 0.3s;
+        height: 1.5px;
+        opacity: 1;
+      }
+
+
+     /* Courses-Container*/
+
+       .containerCardsServices {
+         grid-row: 3/-1;
+         grid-column: 1/9;
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         column-gap: 1.5rem;
+         row-gap: 1rem;
+         margin-top: 1rem;
+         margin-bottom: 1.5rem;
+
+         
+         .containerCursos {   
+          
+           .cardCurso {
+               background-color: $colorBackgroundCardService;
+               border-radius: 20px;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               justify-content: center;
+               padding: 2em 2em;
+               height: fit-content;
+               width: $sizeCardService;
+               margin: 1em;
+               box-sizing: border-box;
+               border: $colorCardBorder;
+   
+               div {
+                   .nombreCurso {
+                       font-size: $sizeNameService;
+                       font-weight: $fontWeightService;
+                       color: $colorTextSeverices;
+                       border-bottom: $borderBottomService;
+                       margin-bottom: 0.5em;
+                       width: 100%;
+                       height: auto;
+                   }
+                   .sub {
+                       width: 100%;
+                       display: flex;
+                       justify-content: space-between;
+                       color: $colorTextSeverices;
+                       display: flex;
+                   }
+                   .precioCurso {
+                       color: $colorTextSeverices;
+                       font-size: $sizePrecioService;
+                       font-weight: $fontWeightService;
+                       text-align: center;
+                       margin-top: 1em;
+                       border: $borderPrecioService;
+                       padding: 0.3em;
+                       border-radius: 5px;
+                       display: none;
+                   }
+                   .precioCurso:hover {
+                       background-color: $colorPrecioBackgroundHover;
+                       color: $colorPrecioHover;
+                   }
+            
+               }
+   
+               .action-block {
+                   display: flex;
+                   justify-content: flex-end;
+                   gap: 1rem;
+                   padding: 1rem;
+   
+                   @mixin botton-like {
+                       cursor: pointer;
+                       &:active {
+                         transform: scale(0.97);
+                       }
+                     }
+   
+                   .action-img {
+                     @include botton-like();
+                     height: 2rem;
+                     color: white;
+                   }
+                 }
+   
+               .btn.verCurso {
+                   background-color: $backgroundColorButton;
+                   font-size: $sizeVerService;
+                   font-weight: 600;
+                   text-transform: uppercase;
+                   color: #212121;
+                   padding: 0.5em 1em;
+                   width: 100%;
+                   border-radius: 5px;
+                   margin-top: 1em;
+                   .reservar {
+                       text-decoration: none;
+                       color: black;
+                   }
+               }
+               
+               .btn.verCurso:hover .reservar {
+                   color:$colorTextSeverices;
+               }
+           }
+   
+           .cardCurso:hover {
+               border: $colorServiceHover;
+               background-color: $colorTransitionService;
+             }
+           .cardCurso:hover .precioCurso {
+               display: flex;
+           }
+       }
+
+       @import "../partials/button";
+
+       .buttonInfo {
+        display: grid;
+        justify-content: center;
+        grid-column: 1;
+      
+           .button {
+               animation-name: none !important;
+               display: grid !important;
+               justify-content: center;
+           }
+
+       }
+
+       @media  screen and (min-width: 895px) {
+
+        .buttonInfo {
+          grid-column: 1/3;
+        }
+        
+      }
+
+      @media screen and (min-width: 1749px) {
+        .buttonInfo {
+          grid-column: 2/3;
+        }
+      }
+
+     }
+
+       @media screen and (max-width:1264px){
+        
+         .containerCardsServices {
+            grid-column: 1/-1;
+         }
+      }   
+
+     /** Announ & Trending */
+     
+     @import "./partials/announ&Trending.scss";
+
+     @media (max-width: 1264px) { 
+
+       .announ-and-trending {
+          display: grid;
+          grid-row: -1;
+          grid-column: 1 / -1;
+       }
+     }
+
+
+  }
+
+  @media (max-width: 740px) {
+
+     & {
+        grid-template-columns: 1fr;
+     }
+  }
+
+}
+
+

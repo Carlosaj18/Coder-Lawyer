@@ -1,0 +1,81 @@
+/* trends graph section */
+.trends-container {
+  grid-row: 3/4;
+  grid-column: 1/9;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+.trends-container .trends {
+  grid-column: 1/-1;
+  background: #fff;
+  border: 2px solid #dfe0eb;
+  border-right: none;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.trends-container .trends .trend-title {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.trends-container .trends img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.trends-container .data-container1 {
+  grid-column: 1/-1;
+  background: #fff;
+  border: 2px solid #dfe0eb;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.trends-container .data-container1 .data-item {
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+.trends-container .data-container1 .data-item ~ .data-item {
+  border-top: 1.65px solid #dfe0eb;
+}
+.trends-container .data-container1 .data-item > p:first-child {
+  font-size: 1rem;
+  color: #9fa2b4;
+  margin-bottom: 0.5rem;
+}
+.trends-container .data-container1 .data-item > p:last-child {
+  font-size: 1.5rem;
+  color: #252733;
+  font-weight: bold;
+}
+.trends-container .data-container {
+  grid-column: 1/-1;
+  background: #fff;
+  border: 2px solid #dfe0eb;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.trends-container .data-container .data-item {
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+.trends-container .data-container .data-item ~ .data-item {
+  border-top: 1.65px solid #dfe0eb;
+}
+.trends-container .data-container .data-item > p:first-child {
+  font-size: 1rem;
+  color: #9fa2b4;
+  margin-bottom: 0.5rem;
+}
+.trends-container .data-container .data-item > p:last-child {
+  font-size: 1.5rem;
+  color: #252733;
+  font-weight: bold;
+}/*# sourceMappingURL=trendsContainer.css.map */

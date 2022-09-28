@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <script
+      src="https://kit.fontawesome.com/3964fc737d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <script src="index.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/6faef4fc76.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>TOP: Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboardStudentView.css" />
+  </head>
+  <body>
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="sidebar">
+      <div class="logo-container">
+        <img src="../images/LogoCoderLawyer.jpg" alt="logo" />
+        <i class="fa-solid fa-xmark close-btn"></i>
+      </div>
+
+      <nav class="sidebar-nav">
+        <ul>
+          <li class="selected">
+            <i class="fa-solid fa-chart-pie"></i>
+            <p><a href="./dashboard.html">Overview</a></p>
+          </li>
+          <li>
+            <i class="fa-solid fa-ticket"></i>
+            <p><a href="./dashboardProductView.html">Courses & Schools</a></p>
+          </li>
+          <li>
+            <i class="fa-solid fa-lightbulb"></i>
+            <p><a href="./dashboardProductView.html">Challanges</a></p>
+          </li>
+          <li>
+            <i class="fa-solid fa-users"></i>
+            <p><a href="./dashboardStudentsView.html">Students</a></p>
+          </li>
+          <li>
+            <i class="fa-solid fa-user-tie"></i>
+            <p><a href="./dashboardTeachersView.html">Teachers</a></p>
+          </li>
+          <li>
+            <i class="fa-solid fa-book"></i>
+            <p><a href="./dashboardArticleViews.html">Articles</a></p>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <i class="fa-solid fa-gear"></i>
+            <p><a href="#">Setting</a></p>
+          </li>
+          <li>
+            <i class="fa-solid fa-award"></i>
+            <p><a href="#">Subscription</a></p>
+          </li>
+        </ul>
+      </nav>
+      <div class="fill-bottom"></div>
+    </div>
+
+    <main>
+      <header class="header">
+        <h1>Overview</h1>
+        <div class="user">
+          <div class="icons">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-bell"></i>
+          </div>
+          <p class="name">Hi, Carlos</p>
+          <div class="user-img">
+            <img src="../images/userimg.jpg" alt="user image" />
+          </div>
+        </div>
+      </header>
+
+      <div class="info-cards">
+        <div class="info-card">
+          <p>Courses</p>
+          <p>590</p>
+        </div>
+        <div class="info-card">
+          <p>Schools</p>
+          <p>43</p>
+        </div>
+        <div class="info-card">
+          <p>Challanges</p>
+          <p>135</p>
+        </div>
+        <div class="info-card">
+          <p>Students</p>
+          <p>976</p>
+        </div>
+      </div>
+
+      <!--<div class="nameCourses">
+        <ul class="navListService">
+          <li class="navItem">Courses</li>
+          <li class="navItem">Schools</li>
+          <li class="navItem">Challanges</li>
+        </ul>
+      </div>-->
+
+      <div class="container">
+        <div class="containerTitle">
+            <h1>Students List </h1>
+          </div>
+          <div class="containerTable">
+            <table class="table"  class="border border-success">
+              <thead>
+                <tr class="header">
+                  <th scope="col" class="border-left">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col" class="width-description">Class</th>
+                  <th scope="col">State</th>
+                  <th scope="col" class="border-right">Porcentage of the Course</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" class="border-botton">1</th>
+                  <td class="border-botton">Carlos Jaramillo</td>
+                  <td class="border-botton">NLP for lawyers </td>
+                  <td class="border-botton">Pendding</td>
+                  <td class="border-botton right">%50</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-botton">2</th>
+                  <td class="border-botton">Carlos Jaramillo</td>
+                  <td class="border-botton">NLP for lawyers </td>
+                  <td class="border-botton">Pendding</td>
+                  <td class="border-botton right">%50</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-botton">3</th>
+                  <td class="border-botton">Carlos Jaramillo</td>
+                  <td class="border-botton">NLP for lawyers </td>
+                  <td class="border-botton">Pendding</td>
+                  <td class="border-botton right">%50</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-botton">4</th>
+                  <td class="border-botton">Carlos Jaramillo</td>
+                  <td class="border-botton">NLP for lawyers </td>
+                  <td class="border-botton">Pendding</td>
+                  <td class="border-botton right">%50</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-botton">5</th>
+                  <td class="border-botton">Carlos Jaramillo</td>
+                  <td class="border-botton">NLP for lawyers </td>
+                  <td class="border-botton">Pendding</td>
+                  <td class="border-botton right">%50</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-botton">6</th>
+                  <td class="border-botton">Carlos Jaramillo</td>
+                  <td class="border-botton">NLP for lawyers </td>
+                  <td class="border-botton">Pendding</td>
+                  <td class="border-botton right">%50</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-botton">7</th>
+                  <td class="border-botton">Carlos Jaramillo</td>
+                  <td class="border-botton">NLP for lawyers </td>
+                  <td class="border-botton">Pendding</td>
+                  <td class="border-botton right">%50</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-botton">8</th>
+                  <td class="border-botton">Carlos Jaramillo</td>
+                  <td class="border-botton">NLP for lawyers </td>
+                  <td class="border-botton">Pendding</td>
+                  <td class="border-botton right">%50</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-botton">9</th>
+                  <td class="border-botton">Carlos Jaramillo</td>
+                  <td class="border-botton">NLP for lawyers </td>
+                  <td class="border-botton">Pendding</td>
+                  <td class="border-botton right">%50</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-botton">10</th>
+                  <td class="border-botton">Carlos Jaramillo</td>
+                  <td class="border-botton">NLP for lawyers </td>
+                  <td class="border-botton">Pendding</td>
+                  <td class="border-botton right">%50</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-right">11</th>
+                  <td class="border-right">Carlos Jaramillo</td>
+                  <td class="border-right">NLP for lawyers </td>
+                  <td class="border-right">Paid</td>
+                  <td class="right">97%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </div>
+
+      <div class="announ-and-trending">
+        <div class="announcements">
+          <h4>Announcements</h4>
+          <div class="announ-content">
+            <div class="Announcement">
+              <h6>New Update</h6>
+              <p>Our page is growing by four feet</p>
+            </div>
+            <div class="Announcement-border"></div>
+            <div class="Announcement">
+              <h6>Dog's name</h6>
+              <p>I can't decide whether to call the dog Sudo or Byte.</p>
+            </div>
+            <div class="Announcement-border"></div>
+            <div class="Announcement">
+              <h6>Site Maintenance</h6>
+              <p>
+                Instead of lorem ipsum I have used
+                <a href="https://doggoipsum.com/">Doggo Ipsum</a>, check it out!
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <h4>Trending</h4>
+          <div class="trending-content">
+            <div class="trend">
+              <img
+                class="trend-img"
+                src="./img/trend-img_4.jpg"
+                alt="dog trend image"
+              />
+              <p>
+                <span class="trend-tag">@teganan</span><br />
+                <span class="trend-text">World Peace Builder</span>
+              </p>
+            </div>
+            <div class="trend">
+              <img
+                class="trend-img"
+                src="./img/trend-img_3.jpg"
+                alt="dog trend image"
+              />
+              <p>
+                <span class="trend-tag">@morgan</span><br />
+                <span class="trend-text">Super Cool Project</span>
+              </p>
+            </div>
+            <div class="trend">
+              <img
+                class="trend-img"
+                src="./img/trend-img_2.jpg"
+                alt="dog trend image"
+              />
+              <p>
+                <span class="trend-tag">@kendall</span><br />
+                <span class="trend-text">Life Changing App</span>
+              </p>
+            </div>
+            <div class="trend">
+              <img
+                class="trend-img"
+                src="./img/trend-img_1.jpg"
+                alt="dog trend image"
+              />
+              <p>
+                <span class="trend-tag">@alex</span><br />
+                <span class="trend-text">No Traffic Maker</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+    </main>
+
+  </body>
+</html>
