@@ -529,7 +529,9 @@ body main .leftContainer {
   display: none;
 }
 body main .rightContainer {
-  height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -539,6 +541,7 @@ body main .rightContainer {
   grid-template-rows: auto;
   grid-template-areas: "title" "flexIcon" "containerForm";
   justify-items: center;
+  gap: 3em;
 }
 body main .rightContainer .title {
   grid-area: title;
@@ -753,10 +756,12 @@ body main .rightContainer .containerForm .buttonInfo .button {
 }
 @media screen and (min-width: 600px) {
   body main .rightContainer {
-    height: 120vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   body main .rightContainer .title {
-    margin-bottom: 5em;
+    margin-top: 15em;
   }
   body main .rightContainer .title .register {
     color: #6243f7;
@@ -967,7 +972,7 @@ body main .rightContainer .containerForm .fields input[type]:focus {
   }
   body .navBar .containerLeft .logo {
     display: none !important;
-    margin-top: 3em;
+    margin-top: 2em;
   }
   body .navBar .containerLeft .search {
     display: none !important;
@@ -1050,9 +1055,12 @@ body main .rightContainer .containerForm .fields input[type]:focus {
   }
   body main {
     display: flex;
-    height: 120vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     overflow-y: hidden;
     width: 100%;
+    height: fit-content;
   }
   body main .leftContainer {
     position: relative;
@@ -1073,7 +1081,7 @@ body main .rightContainer .containerForm .fields input[type]:focus {
     width: 100%;
     margin: auto;
     border-radius: 50%;
-    margin-top: 2em;
+    margin-top: 10em;
   }
   body main .leftContainer .containerBkg .flexBkgLogin .icons {
     color: #00ffcb;
@@ -1091,7 +1099,9 @@ body main .rightContainer .containerForm .fields input[type]:focus {
     font-size: 1.2rem;
   }
   body main .rightContainer {
-    height: 120vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     width: 50%;
   }
 }/*# sourceMappingURL=templateRegisterLogin.css.map */

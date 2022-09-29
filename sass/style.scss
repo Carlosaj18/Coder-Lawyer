@@ -19,8 +19,7 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 110vh;
-    padding-top: 80px;
+    height: fit-content;
   
     .characteristics {
 
@@ -309,7 +308,7 @@
     
           }
 
-          @import "mixin";
+          @import "./partials/mixin";
 
           &:hover .serviceImg button {
             background-color: #212121;
@@ -665,7 +664,7 @@
               display: flex;
               transition: all 0.5s;
   
-              @import 'claseExtend';
+              @import './partials/claseExtend';
   
               .headerInfo {
                 display: flex;
@@ -711,7 +710,7 @@
       
             }
   
-            @import "mixin";
+            @import "./partials/mixin";
 
             &:hover .serviceImg button {
               
@@ -777,7 +776,7 @@
                   width: $sizeStudentsCardWidthQ600;
                   height: $sizeStudentsCardHeightQ600;
                   
-                  @import 'claseExtend';
+                  @import './partials/claseExtend';
       
                   .headerInfo {
       
@@ -808,7 +807,7 @@
           
                 }
       
-                @import "mixin";
+                @import "./partials/mixin";
     
               }
       
@@ -852,7 +851,7 @@
                   width: $sizeStudentsCardWidthQ600;
                   height: $sizeStudentsCardHeightQ600;
                   
-                  @import 'claseExtend';
+                  @import './partials/claseExtend';
       
                   .headerInfo {
       
@@ -883,7 +882,1151 @@
           
                 }
       
-                @import "mixin";
+                @import "./partials/mixin";
+    
+              }
+      
+            }
+
+          }
+        
+      }
+  }
+
+/* ------ section Coder Lawyer download App ----- */
+  .containerImageApp{
+    margin: 2em 0;
+    width: auto;
+
+    img {
+      width: 100%
+    }
+  }
+
+/* ------ section contact ----- */
+  .contactoHome {
+    .flexContacto {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+      grid-template-areas: 
+        "titleContact"
+        "formulario"
+      ;
+      justify-items: start;
+      height: fit-content;
+      .titleContact {
+        grid-area: titleContact;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+
+        h3 {
+          font-size: 55px;
+          color: #00ffcb;
+          font-weight: 600;
+        }
+
+        p {
+          font-size: 20px;
+          font-weight: 400;
+          color: #fff;
+          padding: 0.2em 1em 1em;
+        }
+
+        .redes {
+          ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            li {
+              margin: 0.5em 0em;
+
+              a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 45px;
+                font-weight: 400;
+
+                i {
+                  color: #00FFCB;
+                }
+
+                span {
+                  color: #fff;
+                  font-size: 20px;
+                }
+
+              }
+
+            }
+
+          }
+        }
+
+      }
+      .formulario {
+        grid-area:formulario;
+        width: 100%;
+        padding: 20px;
+
+        form {
+          .input-form {
+            display: block;
+            width: 100%;
+            margin: 1em auto;
+            background-color: $backgroundColorForm;
+            padding: 0.5em 1em;
+            border-radius: 15px;
+            border: none;
+            font-size: $sizePharagrapForm;
+            color: $colorForm;
+          }
+
+          .input-form,
+            input::placeholder {
+            color: $colorForm;
+            opacity: 1;
+          }
+
+          .input-form:focus,
+            input:focus,
+            input[type]:focus {
+            outline: 0 none;
+          }
+
+          textarea::placeholder {
+            color: $colorForm;
+            opacity: 1;
+          
+            #consulta {
+              display: block;
+              width: 100%;
+              margin: 1em auto;
+              background-color: $backgroundColorForm;
+              padding: 0.5em 1em;
+              border-radius: 15px;
+              border: none;
+              font-size: 1rem;
+              color: $colorForm;
+            }
+
+          }
+
+          button.enviar {
+            border: none;
+            background-color: $backgroundColorButtonForm;
+            color: $colorParragrap;
+            font-size: $sizeButtonEnviar;
+            font-weight: 500;
+            width: 200px;
+            padding: 1em;
+            text-transform: capitalize;
+            border-radius: 15px;
+            float: right;
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 600px) {
+
+      & {
+        .flexContacto {
+          justify-items: center;
+        
+          .titleContact {
+            width: 100%;
+            h3 {
+              font-size: $sizeTitleQ600;
+              font-weight: 600;
+            }
+    
+            p {
+              font-size: $sizeParaMediaQ600;
+              font-weight: 400;
+              
+            }
+    
+            .redes {
+              ul {
+                flex-direction: row;
+                gap: 20px;
+                li {    
+                  a {    
+                    i {
+                      font-size: $sizeSocialIcionQ600;
+                    }
+    
+                    span {
+                      font-size: $sizeParaMediaQ600;
+                    }
+    
+                  }
+    
+                }
+    
+              }
+            }
+    
+          }
+          .formulario {
+            width: 90%;
+            
+          }
+        }
+  
+      }
+
+    }
+  
+    @media screen and (min-width : 1024px){ 
+
+      & {
+        .flexContacto {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto;
+          grid-template-areas: 
+            "titleContact formulario";
+
+        
+          .titleContact {
+            width: 100%;
+            h3 {
+              font-size: $sizeTitleQ1024;
+              font-weight: 600;
+            }
+    
+            p {
+              font-size: $sizeParaMediaQ1024;
+              font-weight: 400;
+              
+            }
+    
+            .redes {
+              ul {
+                
+                li {    
+                  a {    
+                    i {
+                      font-size: $sizeSocialIcionQ1024;
+                    }
+    
+                    span {
+                      font-size: $sizeParaMediaQ1024;
+                    }
+    
+                  }
+    
+                }
+    
+              }
+            }
+    
+          }
+          .formulario {
+            width: 90%;
+            
+          }
+        }
+  
+      }
+      
+    }
+  }
+
+
+
+   /** SCSS - GENERALS */
+ @import "./partials/variables";
+ @import "./partials/generals";
+ @import "./partials/fuentes";
+ @import "./partials/operaciones";
+
+  /** SCSS - PARTIALS */
+ @import "./partials/header";
+ @import  "./partials/footer.scss";
+ 
+  /* ------ section Main Carrusel with Boostrapp----- */
+
+  /* ------ Section Characterisitcs ----- */
+  .contentCharacteristics {
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+  
+    .characteristics {
+
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      grid-template-areas: 
+        "circle"
+        "titleCharacterisitc"
+        "parraCharacterisitc"
+      ;
+      justify-items: center;
+      margin-top: 50px;
+      gap: 10px;
+
+      .circle {
+        grid-area: circle;
+        background-color: #6243f7;
+        color: #00ffcb;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-bottom: 0.5em;
+
+        i {
+          font-size: 80px;
+          display: flex;
+          justify-content: center;
+          margin-top: 17px;
+        }
+
+      }
+    
+      .circle:hover {
+        transform: scale(1.2) rotate(45deg);
+      }
+
+      .titleCharacterisitc {
+        grid-area: titleCharacterisitc;
+      }
+    
+      .titleCharacterisitc {
+        font-size: $sizeSubtitle;
+        text-transform: capitalize;
+        color: #6243f7;
+        margin-bottom: 0.5em;
+      }
+    
+      .parraCharacterisitc {
+        grid-area: parraCharacterisitc;
+      }
+    
+      .parraCharacterisitc {
+        font-size: $sizePharagrap;
+        color: #fff;
+        text-align: center;
+        width: 50%;
+      }
+
+    }
+
+    @media screen and (min-width: 600px) {
+
+      & {
+        height: 100%;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0px;
+  
+        .characteristics {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto auto;
+          justify-items: center;
+          gap: 10px;
+  
+          .circle {
+            width: $sizeCircleCharacterMediaQ600;
+            height: $sizeCircleCharacterMediaQ600;
+  
+            i {
+              font-size: 140px;
+              margin-top: 27px;
+            }
+  
+            &:hover {
+              transform: scale(1.2);
+            }
+  
+          }
+  
+          .titleCharacterisitc {
+            font-size: $sizeSubtitleMediaQ600;
+          
+          }
+  
+          .parraCharacterisitc {
+            font-size: $sizeParaMediaQ600;
+            width: 50%;
+          }
+          
+        }
+      
+      }
+
+  }
+
+    @media screen and (min-width : 1024px){ 
+
+    & {
+      height: 100vh;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+
+      .characteristics {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        align-items: center;
+        gap: 40px;
+        margin: 1em;;
+        
+
+        .circle {
+          width: $sizeCircleCharacterMediaQ1024;
+          height: $sizeCircleCharacterMediaQ1024;
+
+          i {
+            font-size: 160px;
+            margin-top: 27px;
+          
+          }
+
+          &:hover {
+            transform: scale(1.2);
+          }
+
+        }
+
+        .titleCharacterisitc {
+          font-size: $sizeSubtitleMediaQ1024;
+        
+        }
+
+        .parraCharacterisitc {
+          font-size: $sizeParaMediaQ1024;
+          width: 100%;
+        }
+      }
+    }
+  }
+  }
+
+  /* ------ section Coder Laywer Teachers  ----- */
+  .sectionTeachers {
+    width: 100%;
+    height: auto;
+    margin: 0em 0em 0em 0em;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+    margin-bottom: 50px;
+
+      .descriptionTeachers {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      grid-template-areas: 
+        "teacherInfo"
+        "serviceContainer"
+        "buttonInfo"
+      ;
+      justify-items: center;
+      margin-top: 50px;
+
+      .teacherInfo {
+        grid-area: teacherInfo;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+
+        .header {
+          text-align: center;
+          font-size: $sizeTitle;
+          font-weight: $fontWeight;
+          color: $colorTitle;
+          height: auto;
+          margin-bottom: 0.5em;
+          margin-top: 1em;
+          }
+        }
+        .info {
+          p {
+            font-size: $sizePharagrap;
+            text-align: center;
+            padding: 2em;
+          }
+        }
+      }
+
+      .serviceContainer {
+        grid-area: serviceContainer;
+        overflow-y: hidden;
+        overflow-x: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        scroll-behavior: smooth;
+        gap: 25px;
+
+        /*padding: 0 10vw 0 1vw;*/
+        .serviceCard {
+          flex: 0 0 auto;
+          width: 300px;
+          height: 200px;
+
+          .serviceImg {
+            border: $colorBorderCard;
+            position: relative;
+            overflow: hidden;
+            background-color: $colorCard;
+            border-radius: 25px;
+            display: flex;
+            transition: all 0.5s;
+
+            @import './partials/claseExtend';
+
+            .nameCouse {
+              font-size: $sizeNameCard;
+            }
+
+            .headerInfo {
+              display: flex;
+              flex-direction: column;
+              padding: 15px;
+
+              i {
+                font-size: $sizePhotoCard;
+                color: $colorPhotoCard;
+                padding-top: 4px;
+                margin-bottom: 15px;
+                margin-top: 22px;
+                margin-left: 25px;
+              }
+              button {
+                outline: none;
+                border: none;
+                background-color: $colorBackgroundButtonCard;
+                a {
+                  font-size: $sizeNamesCard;
+                  text-align: center;
+                  color: $colorNameCard;
+                }
+              }
+            }
+            h4 {
+              font-size: $sizeTitleCard;
+              text-align: center;
+              color: $colorTitleCard;
+              text-transform: uppercase;
+              padding-top: 5px;
+              position:absolute;
+
+            }
+            .description {
+              margin-top: 5em;
+              width: 200px;
+              text-align: center;
+              border: none;
+              transition: 0.5s;
+              opacity: 0;
+              font-size: $sizePharagrap;
+              color: $colorParragrap;
+              transition: all 0.5s;
+              position: absolute;
+            }
+    
+          }
+
+          @import "./partials/mixin";
+
+          &:hover .serviceImg button {
+            background-color: #212121;
+            border-radius: 15px;
+            transition: all 0s;
+            
+          }
+  
+          &:hover a {
+            margin-bottom: 20px;
+          }
+  
+          &:hover .serviceImg {
+            background-color: #212121;
+          }
+  
+          &:hover .serviceImg {
+            border: $colorBorderCardHover;
+          }
+  
+          &:hover .description {
+            opacity: 1;
+          }
+
+          &:hover i {
+            opacity: 0;
+          }
+        }
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+
+      @import "./partials/button";
+
+      @media screen and (min-width: 600px) {
+
+        &{
+          width: 100%;
+          height: auto;
+
+          .descriptionTeachers {
+            margin-top: 0px;
+                
+            .teacherInfo {
+          
+              .header {
+                font-size: $sizeTitleQ600;
+                margin-bottom: 0em;
+                margin-top: 0em;
+                }
+              }
+              .info {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p {
+                  font-size: $sizeParaMediaQ600;
+                  width: 70%;
+                }
+              }
+            }
+      
+            .serviceContainer {
+              /*padding: 0 10vw 0 1vw;*/
+              flex-wrap: wrap;
+              flex-direction: row;
+              padding: 15px;
+
+              .serviceCard {
+                width: 450px;
+                height: 300px;
+      
+                .serviceImg {   
+                  .nameCouse {
+                    font-size:$sizeNameCardQ600;
+                  }   
+                  .headerInfo {
+     
+                    i {
+                      font-size: $sizePhotoCardQ600;
+                      margin-top: 60px;
+                      margin-left: 67px;
+                      
+                    }
+                    button {
+                      a {
+                        font-size: $sizeNamesCardQ600;
+                      }
+                    }
+                  }
+                  h4 {
+                    font-size: $sizeTitleCardQ600;  
+                  }
+                  .description {
+                    width: 250px;
+                    font-size: $sizeParaMediaQ600;
+                  }
+                }
+              }
+            }
+        }
+
+      }
+   
+      @media screen and (min-width : 1024px){ 
+
+        &{
+          width: 100%;
+          height: auto;
+
+          .descriptionTeachers {
+
+            .teacherInfo {
+          
+              .header {
+                font-size: $sizeTitleQ1024;
+                }
+              }
+              .info {
+
+                p {
+                  font-size: $sizeParaMediaQ1024;
+                  width: 80%;
+                }
+              }
+            }
+      
+            .serviceContainer {
+
+              .serviceCard {
+                width: 450px;
+                height: 300px;
+      
+                .serviceImg {   
+                  .nameCouse {
+                    font-size:$sizeNameCardQ600;
+                  }   
+                  .headerInfo {
+     
+                    i {
+                      font-size: $sizePhotoCardQ1024;
+                      margin-top: 41px;
+                      margin-left: 74px;
+                      
+                    }
+                    button {
+                      a {
+                        font-size: $sizeNamesCardQ1024;
+                      }
+                    }
+                  }
+                  h4 {
+                    font-size: $sizeTitleCardQ600;  
+                  }
+                  .description {
+                    width: 250px;
+                    font-size: $sizeParaMediaQ1024;
+                  }
+                }
+              }
+            }
+      
+        }
+      }
+  }
+
+  /* ------ section Coder Laywer Stadistics  ----- */
+  .est {
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto ;
+    grid-template-areas: 
+      "titleEstadisticas"
+      "cantidades"
+    ;
+    justify-items: center;
+
+    .titleEstadisticas {
+      grid-area: titleEstadisticas;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: fit-content;
+
+      h2 {
+        text-align: center;
+        font-size: $sizeTitle;
+        font-weight: $fontWeight;
+        color: $colorTitle;
+        height: auto;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+      }
+    }
+
+    .cantidades {
+      grid-area: cantidades;
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+
+      .info {
+        display: flex;
+        flex-direction: column;
+
+        .number {
+          font-size: $sizeNumberStadistics;
+          font-weight: $fontWeightStadistics;
+          color: $colorNumbersStadistics;
+          text-align: center;
+          margin: 0;
+        }
+        
+        .text {
+          font-size: $sizeTitleStadistics;
+          font-weight: $fontWeightStadistics;
+          color: $colorParragrap;
+          text-align: center;
+          margin: 0;
+        }
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    @media screen and (min-width: 600px) {
+
+    & {
+
+      h2 {
+        font-size: $sizeTitleQ600;
+      }
+    }
+
+    .cantidades {
+      .info {
+        .number {
+          font-size: $sizeNumberStadisticsQ600;
+        }
+        
+        .text {
+          font-size: $sizeSubtitleMediaQ600;
+        }
+      }
+    }
+
+    }
+  
+    @media screen and (min-width : 1024px){ 
+
+      & {
+        height: 80vh;
+
+        h2 {
+          font-size: $sizeTitleQ1024;
+        }
+      }
+  
+      .cantidades {
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 50px;
+    
+        .info {
+          .number {
+            font-size: $sizeNumberStadisticsQ1024;
+          }
+          
+          .text {
+            font-size: $sizeSubtitleMediaQ1024;
+          }
+        }
+      }
+      
+    }
+
+  }
+
+  /* ------ section Coder Laywer service Grid ----- */
+  @import "./partials/templateContainerServiceHome";
+
+/* ------ section Coder Laywer students ----- */
+  .sectionStudents {
+    
+    .descriptionStudents {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      grid-template-areas: 
+        "studentInfo"
+        "serviceContainer"
+        "buttonInfo"
+      ;
+      justify-items: center;
+      margin-top: 50px;
+
+      .studentInfo {
+        grid-area: studentInfo;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+
+        .header {
+          text-align: center;
+          font-size: $sizeTitle;
+          font-weight: $fontWeight;
+          color: $colorTitle;
+          height: auto;
+          margin-bottom: 0.5em;
+          margin-top: 0.5em;
+          }
+
+          .info {
+            p {
+              font-size: $sizePharagrap;
+              color: $colorParragrap;
+              text-align: center;
+              padding: 2em;
+            }
+          }
+        }
+
+        .serviceContainer {
+          grid-area: serviceContainer;
+          overflow-y: hidden;
+          overflow-x: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          scroll-behavior: smooth;
+          gap: 25px;
+  
+          /*padding: 0 10vw 0 1vw;*/
+          .serviceCard {
+            flex: 0 0 auto;
+            width: $studentsCardWidth;
+            height: $studentsCardHeight;
+  
+            .serviceImg {
+              border: $colorBorderCard;
+              position: relative;
+              overflow: hidden;
+              background-color: $colorBackgroundButtonCard;
+              border-radius: 25px;
+              display: flex;
+              transition: all 0.5s;
+  
+              @import './partials/claseExtend';
+  
+              .headerInfo {
+                display: flex;
+                flex-direction: column;
+                padding: 15px;
+  
+                i {
+                  font-size: $sizePhotoCard;
+                  color: $colorPhotoCard;
+                  margin-bottom: 22px;
+                  padding-top: 4px;
+                }
+                button {
+                  outline: none;
+                  border: none;
+                  background-color: $colorBackgroundButtonCard;
+                  a {
+                    font-size: $sizeNamesCard;
+                    text-align: center;
+                    color: $colorNameCard;
+                  }
+                }
+              }
+              h4 {
+                font-size: $sizeTitleCard;
+                text-align: center;
+                color: $colorTitleCard;
+                text-transform: uppercase;
+                padding-top: 5px;
+              }
+              .description {
+                margin-top: 5em;
+                width: 150px;
+                text-align: center;
+                border: none;
+                transition: 0.5s;
+                opacity: 0;
+                font-size: $sizePharagrap;
+                color: $colorParragrap;
+                transition: all 0.5s;
+                margin-right: 1.2em;
+              }
+      
+            }
+  
+            @import "./partials/mixin";
+
+            &:hover .serviceImg button {
+              
+              background-color: $colorBackgroundButtonHover;
+              border-radius: 15px;
+              transition: all 0s;
+              
+            }
+    
+            &:hover a {
+              margin-bottom: 20px;
+            }
+    
+            &:hover .serviceImg {
+              background-color: $colorBackgroundButtonHover;
+            }
+    
+            &:hover .serviceImg {
+              border: $colorBorderCardHover;
+            }
+    
+            &:hover .description {
+              opacity: 1;
+            }
+          }
+  
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+
+        @import "./partials/button";
+      }
+
+      @media screen and (min-width: 600px) {
+
+        .descriptionStudents{
+
+    
+          .studentInfo {
+   
+    
+            .header {
+              text-align: center;
+              font-size: $sizeTitleQ600;
+              }
+    
+              .info {
+                p {
+                  font-size: $sizeParaMediaQ600;
+                }
+              }
+            }
+    
+            .serviceContainer {
+      
+              .serviceCard {
+                flex: 0 0 auto;
+                width: 400px;
+                height: 300px;
+      
+                .serviceImg {
+                  width: $sizeStudentsCardWidthQ600;
+                  height: $sizeStudentsCardHeightQ600;
+                  
+                  @import './partials/claseExtend';
+      
+                  .headerInfo {
+      
+                    i {
+                      font-size: $sizePhotoCardQ600;
+                      margin-left: 20px;
+                  
+                    }
+                    button {
+   
+                      a {
+                        font-size: $sizeNamesCardQ600;
+   
+                      }
+                    }
+                  }
+                  h4 {
+                    font-size: $sizeTitleCardQ600;
+
+                  }
+                  .description {
+                    margin-top: 4em;
+                    width: 200px;
+                    font-size: $sizeParaCardStudentsMediaQ600;
+                    margin-right: 1.2em;
+                    
+                  }
+          
+                }
+      
+                @import "./partials/mixin";
+    
+              }
+      
+            }
+  
+          }
+      }
+
+      
+      @media screen and (min-width : 1024px){ 
+
+        .descriptionStudents{
+          
+          .studentInfo {
+            .header {
+              font-size: $sizeTitleQ1024;
+              }    
+              .info {
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                p {
+                  font-size: $sizeParaMediaQ1024;
+                  width: 80%;
+                }
+              }
+            }
+    
+            .serviceContainer {
+
+              flex-wrap: wrap;
+              flex-direction: row; 
+              padding: 15px;     
+      
+              .serviceCard {
+                flex: 0 0 auto;
+                width: 450px;
+                height: 380px;
+      
+                .serviceImg {
+                  width: $sizeStudentsCardWidthQ600;
+                  height: $sizeStudentsCardHeightQ600;
+                  
+                  @import './partials/claseExtend';
+      
+                  .headerInfo {
+      
+                    i {
+                      font-size: $sizePhotoCardQ1024;
+                      margin-left: 20px;
+                  
+                    }
+                    button {
+   
+                      a {
+                        font-size: $sizeNamesCardQ1024;
+   
+                      }
+                    }
+                  }
+                  h4 {
+                    font-size: $sizeTitleCardQ600;
+
+                  }
+                  .description {
+                    margin-top: 4em;
+                    width: 200px;
+                    font-size: $sizeParaMediaQ1024;
+                    margin-right: 1.2em;
+                    
+                  }
+          
+                }
+      
+                @import "./partials/mixin";
     
               }
       

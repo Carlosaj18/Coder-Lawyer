@@ -57,7 +57,7 @@
         }
 
         .rightContainer {
-            height: 100vh;
+            height: fit-content;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -71,6 +71,7 @@
             "containerForm"
             ;
             justify-items: center;
+            gap: 3em;
         
             .title {
                 grid-area: title;
@@ -219,10 +220,11 @@
     
         main {
         .rightContainer {
-            height: 120vh;
+            height: fit-content;
     
                 .title {
-                    margin-bottom: 5em; 
+                    
+                    margin-top: 15em;
         
                     .register {
                         color: #6243f7;
@@ -370,7 +372,7 @@
 
                 .logo {
                     display: none !important;
-                    margin-top: 3em;
+                    margin-top: 2em;
                 }
                 .search {
                     display: none !important; 
@@ -489,9 +491,10 @@
 
         main {
             display: flex;
-            height: 120vh;
+            height: fit-content;
             overflow-y: hidden;
             width: 100%;
+            height: fit-content;
 
             .leftContainer {
                 position: relative;
@@ -512,7 +515,7 @@
                             width: 100%;
                             margin: auto;
                             border-radius: 50%;
-                            margin-top: 2em;
+                            margin-top: 10em;
                         }
 
                         .icons {
@@ -538,7 +541,7 @@
             }
 
             .rightContainer {
-                height: 120vh;
+                height: fit-content;
                 width: 50%;     
             }
         }
