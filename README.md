@@ -168,7 +168,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/Ca
 [issues-url]: https://github.com/Carlosaj18/Coder-Lawyer/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/carlos-jaramillo-full-stack-developer/
-[product-screenshot]: https://user-images.githubusercontent.com/62365628/214900293-01493ad4-4a27-407b-a2dc-ca6edbd4d5ec.jpeg
+[product-screenshot]: https://user-images.githubusercontent.com/62365628/214900581-b099fe74-bd68-4e6a-b9b7-d154ce606cf8.jpeg
 [product-screenshot2]: https://user-images.githubusercontent.com/62365628/214899755-acf77102-a5cd-4ff0-b7d1-8d9ded0dad0f.jpeg
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
