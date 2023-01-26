@@ -105,31 +105,15 @@ Here's why:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
 ### Prerequisites
 
-* npm
-  ```sh
-  npm install npm@latest -g
+* Open with Live Server 
   ```
-
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/Carlosaj18/Legal-App-.git
-   ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
-3. Start the Project
-   ```sh
-   npm start
-   ```
+    Live Server
+  ```
    
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -137,13 +121,12 @@ Here's why:
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Search for your document
-- [x] Add it to your templates 
-- [ ] Download the document 
-- [ ] Use the document based on your needs
-- [ ] All your documents will be save in your central repository
+- [x] Search for your course
+- [x] Add it to your favorites  
+- [ ] Learn the new skills 
+- [ ] Solve the challanges 
 
-See the [open issues](https://github.com/Carlosaj18/Legal-App-/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Carlosaj18/Coder-Lawyer/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -168,7 +151,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/Carlosaj18/Legal-App]
+Project Link: [https://github.com/your_username/repo_name](https://github.com/Carlosaj18/Coder-Lawyer]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -185,8 +168,8 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/Ca
 [issues-url]: https://github.com/Carlosaj18/Coder-Lawyer/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/carlos-jaramillo-full-stack-developer/
-[product-screenshot]: https://user-images.githubusercontent.com/62365628/213933933-376cf361-be21-481e-a876-93f794866c4c.jpg
-[product-screenshot2]: https://user-images.githubusercontent.com/62365628/214895567-c305eda7-4195-48f6-ad85-2212b550ee9a.jpeg
+[product-screenshot]: https://user-images.githubusercontent.com/62365628/214899720-4ee9dc9b-fb68-4e9b-a874-67cde16f1bd9.jpeg
+[product-screenshot2]: https://user-images.githubusercontent.com/62365628/214899755-acf77102-a5cd-4ff0-b7d1-8d9ded0dad0f.jpeg
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React-url]: https://reactjs.org/
