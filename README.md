@@ -35,16 +35,16 @@
   <h3 align="center">Best App for Legal Documents </h3>
 
   <p align="center">
-    An awesome App for your Legal Documents needs!
+    An awesome Website for Legal Courses!
     <br />
-    <a href="https://github.com/Carlosaj18/Legal-App"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Carlosaj18/Coder-Lawyer"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Carlosaj18/Legal-App">View Demo</a>
+    <a href="https://github.com/Carlosaj18/Coder-Lawyer">View Demo</a>
     ·
-    <a href="https://github.com/Carlosaj18/Legal-App/issues">Report Bug</a>
+    <a href="https://github.com/Carlosaj18/Coder-Lawyer/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Carlosaj18/Legal-App/issues">Request Feature</a>
+    <a href="https://github.com/Carlosaj18/Coder-Lawyer/issues">Request Feature</a>
   </p>
 </div>
 
@@ -82,12 +82,12 @@
 ![Product Name Screen Shot][product-screenshot2]
 
 
-It is a project that seeks to generate a centralization of legal documents at hand. Where you can download our templates, and use right after. You will have all your documents organized.
+It is a website to organize the best and last law courses. 
 
 Here's why:
-* We value your time. Your time should be focused on creating something amazing. We will handle your legal documents needs.
-* You shouldn't be doing the same tasks over and over like creating legal documents from scratch
-* You should implement DRY principles to the rest of your life :smile:
+* We know that lawyers need to be updaded with new skills. 
+* In the law program they are teaching the same clasess. 
+* We can articulate the law with the tecnology to created the new law environment. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -177,13 +177,13 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/Ca
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/Carlosaj18/Legal-App/graphs/contributors
+[contributors-url]: https://github.com/Carlosaj18/Coder-Lawyer/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/Carlosaj18/Legal-App/network/members
+[forks-url]: https://github.com/Carlosaj18/Coder-Lawyer/network/members
 [stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
 [stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/Carlosaj18/Legal-App/issues
+[issues-url]: https://github.com/Carlosaj18/Coder-Lawyer/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/carlos-jaramillo-full-stack-developer/
 [product-screenshot]: https://user-images.githubusercontent.com/62365628/213933933-376cf361-be21-481e-a876-93f794866c4c.jpg
