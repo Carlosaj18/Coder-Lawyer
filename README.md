@@ -78,9 +78,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project!
 
-![Product Name Screen Shot][product-screenshot2]
-![Product Name Screen Shot][product-screenshot]
 
+https://www.veed.io/view/d3d5cd24-f0fd-47b5-bfdc-88b0cdf57305?source=compressor-sharing
 
 It is a website to organize the best and last law courses. 
 
